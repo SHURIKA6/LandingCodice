@@ -36,6 +36,8 @@ O build Astro existente foi congelado em `public/estudo/`: painel e três prévi
 | Servidor em background | `scripts/dev.mjs` |
 | Acervo Astro | `docs/next-lando-2026-10-19/archive/` |
 
+`src/` contém apenas a aplicação Next.js em TypeScript e TSX. A árvore Astro saiu de `src/` em 19/10/2026 e permanece preservada, byte-idêntica, apenas em `docs/next-lando-2026-10-19/archive/`, que traz `package.json` próprio com Astro 7.4.0 e o procedimento `preserve-studies.py`. O cache `.astro/` foi eliminado; o build Astro em `dist/` foi mantido para permitir reexecutar esse procedimento sem reconstrução.
+
 Para iniciar o servidor, use `npm run dev -- --background`. Para gerenciar: `npm run dev -- status`, `npm run dev -- logs` e `npm run dev -- stop`. As verificações da nova aplicação são `npm run typecheck` e `npm run build`. O protocolo corrente está também em [AGENTS.md](../../AGENTS.md); os comandos Astro anteriores continuam documentados como histórico.
 
 ## Registro de execução
@@ -44,6 +46,7 @@ Para iniciar o servidor, use `npm run dev -- --background`. Para gerenciar: `npm
 | --- | --- |
 | Concluído | Fonte Astro copiada com hashes; quatro estudos exportados e suas referências verificadas. |
 | Concluído | App Router, componentes React, hero autoral, Lenis, Framer Motion e composição responsiva implementados. |
+| Concluído | Árvore Astro removida de `src/` (11 componentes, 2 layouts, 5 páginas, 2 scripts, 6 folhas de estilo e `src/data/study.ts`) e `astro.config.mjs` eliminado. As 21 fontes eram byte-idênticas ao archive, com SHA-256 conferido antes da remoção. `src/` passou a conter apenas TypeScript e TSX, e o `tsconfig.json` passou a varrer `src/` inteiro. |
 | Verificado | Build e typecheck passaram. QA próprio repetido sobre o build de produção, com zero erros de página/console. |
 | Verificado | Cinco larguras, teclado, toque, foco, links, menu, catálogo, replay, movimento reduzido ao vivo e no-JS. Revisão independente: **ship**. |
 | Fora desta entrega | Publicação e configuração de domínio final. |

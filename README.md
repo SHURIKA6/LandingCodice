@@ -26,7 +26,7 @@ A nova direção tem uma composição central com arte abstrata, tons de marfim 
 
 Para desenvolver, use `npm run dev -- --background`. Consulte `npm run dev -- status`, `npm run dev -- logs` e `npm run dev -- stop` para gerenciar o servidor. As verificações da nova stack são `npm run typecheck` e `npm run build`; veja também [AGENTS.md](AGENTS.md).
 
-Os estudos possuem quatro HTMLs e nove bundles próprios, com 55 referências locais verificadas. Rewrites mantêm `/estudo/`, `/estudo/forma/`, `/estudo/fluxo/` e `/estudo/ritmo/`; essas rotas ficam `noindex` e fora do sitemap. A fonte Astro completa, configurações e documentação anterior foram arquivadas antes da migração, com 148 arquivos e hashes conferidos. Os contatos de Fernando (`5566999356646`) e Eduardo (`556684184488`) continuam literais; não adicionar dígitos por inferência.
+Os estudos possuem quatro HTMLs e nove bundles próprios, com 55 referências locais verificadas. Rewrites mantêm `/estudo/`, `/estudo/forma/`, `/estudo/fluxo/` e `/estudo/ritmo/`; essas rotas ficam `noindex` e fora do sitemap. A fonte Astro completa, configurações e documentação anterior foram arquivadas antes da migração, com 148 arquivos e hashes conferidos. Em 19/10/2026 a árvore Astro saiu de `src/` e o `astro.config.mjs` foi eliminado: essas fontes existem somente em `docs/next-lando-2026-10-19/archive/`, byte-idênticas, e `src/` passou a conter apenas TypeScript e TSX. Os contatos de Fernando (`5566999356646`) e Eduardo (`556684184488`) continuam literais; não adicionar dígitos por inferência.
 
 ## Histórico preservado — entrega Ritmo em Astro, anterior à migração de 19/10/2026
 

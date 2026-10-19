@@ -16,7 +16,15 @@ npm run dev -- logs
 npm run dev -- stop
 ```
 
-Valide a aplicação com `npm run typecheck` e `npm run build`. O App Router está em `src/app/`; a experiência interativa usa componentes React em `src/components/experience/`. A oferta e os contatos continuam em `src/data/offer.ts`, `src/data/landing.ts` e `src/data/site.ts`.
+Para expor o servidor na rede local, de modo que outros dispositivos no mesmo wifi alcancem a página, acrescente `--lan`:
+
+```sh
+npm run dev -- --background --lan
+```
+
+Com `--lan`, o Next.js escuta em `0.0.0.0` em vez de `127.0.0.1` e o gerenciador imprime os endereços alcançáveis, com o IP da rota padrão primeiro. Sem a flag, o servidor fica restrito à máquina. A flag vale para os modos dev e produção.
+
+Valide a aplicação com `npm run typecheck` e `npm run build`. O App Router está em `src/app/`; a experiência interativa usa componentes React em `src/components/experience/`. A oferta e os contatos continuam em `src/data/offer.ts`, `src/data/landing.ts` e `src/data/site.ts`. `src/` contém apenas TypeScript e TSX; não reintroduzir componentes `.astro`, `src/pages/` ou `astro.config.mjs`.
 
 Antes de alterar tarefas relacionadas, consulte a documentação oficial vigente:
 
@@ -26,7 +34,7 @@ Antes de alterar tarefas relacionadas, consulte a documentação oficial vigente
 - [CSS e Tailwind](https://nextjs.org/docs/app/getting-started/css)
 - [Metadados e imagens de compartilhamento](https://nextjs.org/docs/app/getting-started/metadata-and-og-images)
 
-As fontes Astro, configurações e documentação anteriores foram copiadas com hashes para `docs/next-lando-2026-10-19/archive/`. Os estudos estão congelados como HTML/CSS/JS em `public/estudo/`; as rotas são resolvidas por rewrites e permanecem `noindex`, fora do sitemap. Não apagar o acervo, seus prompts, capturas ou licenças. A documentação da migração está em `docs/next-lando-2026-10-19/README.md`.
+As fontes Astro, configurações e documentação anteriores foram copiadas com hashes para `docs/next-lando-2026-10-19/archive/`. Em 19/10/2026 a árvore Astro foi removida de `src/` e o `astro.config.mjs` foi eliminado: a fonte histórica existe somente no archive, byte-idêntica e com SHA-256 conferido. Os estudos estão congelados como HTML/CSS/JS em `public/estudo/`, sem dependência de `/_astro/`; as rotas são resolvidas por rewrites e permanecem `noindex`, fora do sitemap. Não apagar o acervo, seus prompts, capturas ou licenças. A documentação da migração está em `docs/next-lando-2026-10-19/README.md`.
 
 ## Histórico preservado — desenvolvimento Astro, anterior à autorização de 19/10/2026
 
