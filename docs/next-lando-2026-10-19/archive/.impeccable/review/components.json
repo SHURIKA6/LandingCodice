@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 3,
+  "stage": "components",
+  "id": "components",
+  "title": "Plan and asset review",
+  "comp": {
+    "path": ".impeccable/mocks/02-encadernacao-escura.png",
+    "width": 1440,
+    "height": 1100
+  },
+  "specSha256": "769d4987a702c9121c07070b63054c2d3519eb4dab336e774c25a1d7f9b7d5f5",
+  "components": [
+    {
+      "id": "cover-material",
+      "name": "Cover material",
+      "kind": "plate",
+      "role": "asset",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.5091
+      },
+      "note": "Aged dark leather book cover with left bound spine and fine gold edge, all visible type and controls separate",
+      "medium": "raster",
+      "preview": {
+        "kind": "image",
+        "path": "assets/plates/cover-material.png"
+      },
+      "dependencies": []
+    },
+    {
+      "id": "cta-ground",
+      "name": "Cta ground",
+      "kind": "plate",
+      "role": "asset",
+      "box": {
+        "x": 0.1007,
+        "y": 0.3909,
+        "w": 0.2597,
+        "h": 0.0764
+      },
+      "note": "Ivory paper button surface with subtle fine gold edge",
+      "medium": "raster",
+      "preview": {
+        "kind": "image",
+        "path": "assets/plates/cta-ground.png"
+      },
+      "dependencies": []
+    },
+    {
+      "id": "folio-material",
+      "name": "Folio material",
+      "kind": "plate",
+      "role": "asset",
+      "box": {
+        "x": 0,
+        "y": 0.5091,
+        "w": 1,
+        "h": 0.4909
+      },
+      "note": "Light ivory paper folio background with left binding edge; screenshots and headings rendered separately",
+      "medium": "raster",
+      "preview": {
+        "kind": "image",
+        "path": "assets/plates/folio-material.png"
+      },
+      "dependencies": []
+    },
+    {
+      "id": "corretor-shot",
+      "name": "Corretor shot",
+      "kind": "image",
+      "role": "asset",
+      "box": {
+        "x": 0.091,
+        "y": 0.5955,
+        "w": 0.5444,
+        "h": 0.2964
+      },
+      "note": "Real public Corretor website screenshot, use original browser capture as project evidence",
+      "medium": "raster",
+      "preview": {
+        "kind": "image",
+        "path": "assets/plates/corretor-shot.png"
+      },
+      "dependencies": []
+    },
+    {
+      "id": "roger-shot",
+      "name": "Roger shot",
+      "kind": "image",
+      "role": "asset",
+      "box": {
+        "x": 0.4139,
+        "y": 0.8845,
+        "w": 0.5417,
+        "h": 0.1155
+      },
+      "note": "Real Roger services website screenshot partially visible at viewport bottom, use original browser capture",
+      "medium": "raster",
+      "preview": {
+        "kind": "image",
+        "path": "assets/plates/roger-shot.png"
+      },
+      "dependencies": []
+    }
+  ],
+  "codeRegions": [
+    {
+      "id": "brand",
+      "name": "Brand",
+      "kind": "text",
+      "box": {
+        "x": 0.0965,
+        "y": 0.0136,
+        "w": 0.1132,
+        "h": 0.0609
+      },
+      "note": "Gold Codice wordmark in serif lettering"
+    },
+    {
+      "id": "nav-work",
+      "name": "Nav work",
+      "kind": "text",
+      "box": {
+        "x": 0.6528,
+        "y": 0.0364,
+        "w": 0.0569,
+        "h": 0.0245
+      },
+      "note": "Trabalhos navigation link"
+    },
+    {
+      "id": "nav-services",
+      "name": "Nav services",
+      "kind": "text",
+      "box": {
+        "x": 0.7292,
+        "y": 0.0364,
+        "w": 0.0514,
+        "h": 0.0245
+      },
+      "note": "Serviços navigation link"
+    },
+    {
+      "id": "nav-founders",
+      "name": "Nav founders",
+      "kind": "text",
+      "box": {
+        "x": 0.7979,
+        "y": 0.0364,
+        "w": 0.0556,
+        "h": 0.0245
+      },
+      "note": "A dupla navigation link"
+    },
+    {
+      "id": "nav-contact",
+      "name": "Nav contact",
+      "kind": "text",
+      "box": {
+        "x": 0.866,
+        "y": 0.0364,
+        "w": 0.059,
+        "h": 0.0245
+      },
+      "note": "Contato navigation link"
+    },
+    {
+      "id": "hero-heading",
+      "name": "Hero heading",
+      "kind": "text",
+      "box": {
+        "x": 0.1,
+        "y": 0.1236,
+        "w": 0.3757,
+        "h": 0.1927
+      },
+      "note": "Sites e sistemas sob medida para o seu negócio, three lines in large ivory serif, last phrase italic"
+    },
+    {
+      "id": "hero-founders",
+      "name": "Hero founders",
+      "kind": "text",
+      "box": {
+        "x": 0.1062,
+        "y": 0.3327,
+        "w": 0.2972,
+        "h": 0.0209
+      },
+      "note": "Fernando Riad e Eduardo Gobatto sentence"
+    },
+    {
+      "id": "hero-location",
+      "name": "Hero location",
+      "kind": "text",
+      "box": {
+        "x": 0.1062,
+        "y": 0.3582,
+        "w": 0.3229,
+        "h": 0.0209
+      },
+      "note": "De Sinop para projetos em todo o Brasil sentence"
+    },
+    {
+      "id": "cta-label",
+      "name": "Cta label",
+      "kind": "text",
+      "box": {
+        "x": 0.1292,
+        "y": 0.4155,
+        "w": 0.1833,
+        "h": 0.0273
+      },
+      "note": "Conversar sobre meu projeto primary action label"
+    },
+    {
+      "id": "cta-arrow",
+      "name": "Cta arrow",
+      "kind": "chrome",
+      "box": {
+        "x": 0.316,
+        "y": 0.4164,
+        "w": 0.0146,
+        "h": 0.0218
+      },
+      "note": "Small arrow indicating the primary action"
+    },
+    {
+      "id": "work-heading",
+      "name": "Work heading",
+      "kind": "text",
+      "box": {
+        "x": 0.0882,
+        "y": 0.5373,
+        "w": 0.3736,
+        "h": 0.0464
+      },
+      "note": "Trabalhos que já saíram do papel serif section heading"
+    },
+    {
+      "id": "corretor-title",
+      "name": "Corretor title",
+      "kind": "text",
+      "box": {
+        "x": 0.659,
+        "y": 0.6273,
+        "w": 0.175,
+        "h": 0.0445
+      },
+      "note": "Corretor project name"
+    },
+    {
+      "id": "corretor-description",
+      "name": "Corretor description",
+      "kind": "text",
+      "box": {
+        "x": 0.659,
+        "y": 0.6718,
+        "w": 0.2667,
+        "h": 0.0318
+      },
+      "note": "Site e sistema imobiliário subtitle"
+    },
+    {
+      "id": "roger-title",
+      "name": "Roger title",
+      "kind": "text",
+      "box": {
+        "x": 0.0882,
+        "y": 0.9427,
+        "w": 0.3014,
+        "h": 0.0364
+      },
+      "note": "Roger Estética Automotiva project name"
+    },
+    {
+      "id": "roger-description",
+      "name": "Roger description",
+      "kind": "text",
+      "box": {
+        "x": 0.0882,
+        "y": 0.98,
+        "w": 0.3014,
+        "h": 0.02
+      },
+      "note": "Presença digital para um negócio local subtitle"
+    }
+  ]
+}

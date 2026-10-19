@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+import { siteContent } from '../data/site';
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : undefined;
+const title = 'Codice — Sites e sistemas sob medida';
+const organization = {
+  '@context': 'https://schema.org', '@type': 'Organization', name: 'Codice', description: siteContent.description,
+  ...(Astro.site ? { url: Astro.site.href } : {}),
+  foundingLocation: { '@type': 'City', name: 'Sinop, Mato Grosso, Brasil' },
+  founder: siteContent.founders.map((person) => ({ '@type': 'Person', name: person.name, sameAs: person.githubHref })),
+};
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={siteContent.description} />
+    <meta name="theme-color" content="#251b17" />
+    <link rel="icon" type="image/svg+xml" href="/codice.svg" />
+    <link rel="preload" href="/fonts/cormorant-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/images/codice-cover.webp" as="image" />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta property="og:type" content="website" /><meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Codice" /><meta property="og:title" content={title} />
+    <meta property="og:description" content={siteContent.description} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta name="twitter:card" content="summary" /><meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={siteContent.description} />
+    <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(organization).replace(/</g, '\\u003c')} />
+    <script is:inline>document.documentElement.classList.add('js');</script>
+  </head>
+  <body><a class="skip-link" href="#conteudo">Ir para o conteúdo</a><slot /></body>
+</html>

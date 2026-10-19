@@ -1,0 +1,90 @@
+---
+import Page from '../layouts/Page.astro';
+import Arrow from '../components/Arrow.astro';
+import { siteOffer as offer } from '../data/offer';
+import { landing } from '../data/landing';
+import { whatsappUrl } from '../data/site';
+const { project, media } = landing;
+const year = new Date().getFullYear();
+---
+<Page>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#inicio" aria-label="Codice — início">codice</a>
+      <nav aria-label="Navegação principal"><a href="#trabalho">Nosso trabalho</a><a href="#pacote">O pacote</a></nav>
+      <a class="header-contact" href={offer.href} target="_blank" rel="noopener noreferrer">Vamos conversar <Arrow /><span class="sr-only"> pelo WhatsApp de Fernando (abre em outra aba)</span></a>
+    </div>
+  </header>
+  <main id="conteudo" tabindex="-1">
+    <section class="hero" id="inicio" aria-labelledby="page-title" data-ritmo-stage>
+      <div class="wrap hero-grid">
+        <h1 id="page-title">Seu trabalho merece uma <span>presença profissional.</span></h1>
+        <div class="hero-offer">
+          <p class="hero-description">{offer.headline}</p>
+          <p class="hero-price"><strong>{offer.price}</strong><span>Site de uma página<br />com até seis seções</span></p>
+          <a class="button" href={offer.href} target="_blank" rel="noopener noreferrer">{offer.cta}<Arrow /><span class="sr-only"> pelo WhatsApp de Fernando (abre em outra aba)</span></a>
+          <a class="text-link hero-secondary" href="#trabalho">Conhecer nosso trabalho <Arrow /></a>
+        </div>
+      </div>
+      <div class="kinetic-art" aria-hidden="true">
+        <div class="kinetic-echo">codice</div>
+        <div class="kinetic-word">{Array.from('codice').map((letter, index) => <span style={`--sign:${index % 2 === 0 ? 1 : -1}`}>{letter}</span>)}</div>
+      </div>
+      <div class="wrap hero-foot"><p>De Sinop, MT · Para prestadores de serviços da região</p><button type="button" data-ritmo-play hidden>Reproduzir movimento <Arrow /></button></div>
+    </section>
+
+    <section class="work-section" id="trabalho" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section-intro work-intro"><h2 id="work-title">Do que você faz.<br /><span>Ao que o cliente vê.</span></h2><p>Um trabalho da dupla: site e sistema imobiliário, com catálogo, filtros de busca e área de gestão.</p></div>
+        <div class="case-grid">
+          <figure class="case-media">
+            <div class="browser-frame">
+              <div class="browser-bar" aria-hidden="true"><span class="browser-dots"><i></i><i></i><i></i></span><span>Corretor · ambiente de demonstração</span><Arrow /></div>
+              <img class="case-still" src={media.poster} alt={project.image.alt} width="1440" height="900" loading="lazy" decoding="async" />
+            </div>
+            <figcaption><span>Corretor · Projeto realizado</span><span>Captura real da interface</span></figcaption>
+            <a class="text-link" href={project.repositoryHref} target="_blank" rel="noopener noreferrer">Ver código do projeto <Arrow /><span class="sr-only"> no GitHub (abre em outra aba)</span></a>
+          </figure>
+          <div class="case-story">
+            <article><h3>Apresentar com clareza.</h3><p>Um catálogo reúne os imóveis com fotos e informações para quem está procurando um lugar.</p></article>
+            <article><h3>Facilitar a procura.</h3><p>Os filtros ajudam o visitante a explorar os imóveis de acordo com o que procura.</p></article>
+            <article><h3>Organizar por dentro.</h3><p>Além da página pública, desenvolvemos uma área de gestão para o trabalho imobiliário.</p></article>
+            <p class="case-scope">Este projeto inclui um sistema e tem escopo próprio. O pacote de R$ 1.500 abaixo é para um site de apresentação de uma página.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="package-section wrap" id="pacote" aria-labelledby="package-title">
+      <div class="section-intro package-intro"><h2 id="package-title">Seu negócio.<br /><span>Bem apresentado.</span></h2><p>Uma estrutura reaproveitável, com apresentação personalizada para o seu negócio. O essencial para mostrar seus serviços e facilitar o contato.</p></div>
+      <div class="package-grid">
+        <div class="package-summary">
+          <p class="package-price">{offer.price}</p><p>Um site de uma página.<br />Até seis seções, conforme sua necessidade.</p><p class="section-examples">Apresentação, serviços, trabalhos, sobre, localização e contato.</p>
+          <a class="button" href={offer.href} target="_blank" rel="noopener noreferrer">{offer.cta}<Arrow /><span class="sr-only"> pelo WhatsApp de Fernando (abre em outra aba)</span></a>
+          <p class="package-payment">R$ 750 no início, após acordo de escopo por escrito.<br />R$ 750 na aprovação final, antes da publicação.</p>
+        </div>
+        <div class="package-details">
+          <h3>O que está incluído</h3>
+          <ul class="inclusions">{offer.inclusions.slice(1).map(item => <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m3 9 4 4 8-8" stroke="currentColor" stroke-width="1.5" /></svg><span>{item}</span></li>)}</ul>
+          <div class="package-terms"><h3>Combinado desde o começo</h3>{offer.conditions.map(condition => <p>{condition}</p>)}</div>
+        </div>
+      </div>
+      <div class="process"><h3>Da primeira conversa ao site no ar.</h3><ol>{landing.process.map(step => <li><h4>{step.title}</h4><p>{step.text}</p></li>)}</ol></div>
+      <p class="authorial-note">A experiência visual da própria Codice é autoral. No pacote, a apresentação é personalizada dentro de uma estrutura reaproveitável, com o escopo combinado na proposta.</p>
+    </section>
+
+    <section class="contact-section" id="contato" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="section-intro contact-intro"><h2 id="contact-title">Prazer.<br />Quem faz, <span>fala com você.</span></h2><div><p>Somos Fernando e Eduardo, estudantes de Sistemas de Informação em Sinop. Criamos a Codice para colocar o que sabemos fazer a serviço de negócios como o seu.</p><p>Conte o que você faz e o que precisa apresentar. A primeira conversa é direto com a gente.</p></div></div>
+        <a class="button button-dark" href={offer.href} target="_blank" rel="noopener noreferrer">{offer.cta}<Arrow /><span class="sr-only"> pelo WhatsApp de Fernando (abre em outra aba)</span></a>
+        <div class="founders">{landing.founders.map(founder => <article class="founder"><div><h3>{founder.name}</h3><a class="text-link github-link" href={founder.githubHref} target="_blank" rel="noopener noreferrer">Trabalhos no GitHub <Arrow /><span class="sr-only"> (abre em outra aba)</span></a></div><a class="founder-contact" href={whatsappUrl(founder.whatsappNumber, 'Olá! Quero conversar sobre o site de uma página da Codice, por R$ 1.500.')} target="_blank" rel="noopener noreferrer"><span><strong>Falar com {founder.name.split(' ')[0]}</strong><span>{founder.phoneLabel}</span></span><Arrow /><span class="sr-only"> pelo WhatsApp (abre em outra aba)</span></a></article>)}</div>
+        <p class="other-work">Precisa de um sistema ou de uma automação? Também podemos conversar, com orçamento separado.</p>
+      </div>
+      <footer class="wrap colophon"><a class="wordmark" href="#inicio" aria-label="Codice — voltar ao início">codice</a><p>Sinop, Mato Grosso</p><small>© {year} Codice</small></footer>
+    </section>
+  </main>
+</Page>
+<script>
+  import { setupLanding } from '../scripts/landing';
+  setupLanding();
+</script>

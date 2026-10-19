@@ -1,0 +1,188 @@
+{
+  "matrix": [
+    {
+      "width": 320,
+      "documentWidth": 305,
+      "brokenImages": 0,
+      "missingAnchors": 0,
+      "priceTop": 574.265625,
+      "ctaTop": 626.265625,
+      "anchorTop": 110.265625,
+      "scrollEngine": "lenis"
+    },
+    {
+      "width": 390,
+      "documentWidth": 375,
+      "brokenImages": 0,
+      "missingAnchors": 0,
+      "priceTop": 626.4375,
+      "ctaTop": 678.4375,
+      "anchorTop": 132.734375,
+      "scrollEngine": "lenis"
+    },
+    {
+      "width": 768,
+      "documentWidth": 753,
+      "brokenImages": 0,
+      "missingAnchors": 0,
+      "priceTop": 620.15625,
+      "ctaTop": 718.75,
+      "anchorTop": 167.75,
+      "scrollEngine": "lenis"
+    },
+    {
+      "width": 1024,
+      "documentWidth": 1009,
+      "brokenImages": 0,
+      "missingAnchors": 0,
+      "priceTop": 708.203125,
+      "ctaTop": 769,
+      "anchorTop": 155,
+      "scrollEngine": "lenis"
+    },
+    {
+      "width": 1440,
+      "documentWidth": 1425,
+      "brokenImages": 0,
+      "missingAnchors": 0,
+      "priceTop": 780.203125,
+      "ctaTop": 841,
+      "anchorTop": 144,
+      "scrollEngine": "lenis"
+    }
+  ],
+  "interaction": [
+    "Keyboard skip/focus; menu Enter/Escape/focus return/anchor close; project Enter/Space and single selected state; replay; live reduced-motion/native scroll/restore",
+    "Touch menu, project selection, primary and both founder WhatsApps; destinations intercepted, no message sent"
+  ],
+  "fallbacks": [
+    {
+      "mode": "no-js",
+      "offer": true,
+      "terms": true,
+      "menu": true,
+      "errors": []
+    },
+    {
+      "mode": "reduced-motion",
+      "offer": true,
+      "terms": true,
+      "menu": true,
+      "errors": []
+    }
+  ],
+  "accessibility": [
+    {
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".hero-word"
+            ],
+            [
+              "#hero-title"
+            ],
+            [
+              "#hero-title > span"
+            ],
+            [
+              ".hero-copy > p"
+            ],
+            [
+              ".hero-price > strong"
+            ],
+            [
+              ".hero-price > span"
+            ],
+            [
+              ".scroll-link"
+            ],
+            [
+              ".replay-button"
+            ],
+            [
+              "#package-title > span"
+            ],
+            [
+              "#contact-title > span"
+            ]
+          ]
+        }
+      ],
+      "passes": 25
+    },
+    {
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".hero-word"
+            ],
+            [
+              "#hero-title"
+            ],
+            [
+              "#hero-title > span"
+            ],
+            [
+              ".hero-copy > p"
+            ],
+            [
+              ".hero-price > strong"
+            ],
+            [
+              ".hero-price > span"
+            ],
+            [
+              ".scroll-link"
+            ],
+            [
+              "#package-title > span"
+            ],
+            [
+              "#contact-title > span"
+            ]
+          ]
+        }
+      ],
+      "passes": 25
+    }
+  ],
+  "studies": [
+    {
+      "path": "/estudo/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "header": "noindex, nofollow",
+      "brokenImages": 0
+    },
+    {
+      "path": "/estudo/forma/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "header": "noindex, nofollow",
+      "brokenImages": 0
+    },
+    {
+      "path": "/estudo/fluxo/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "header": "noindex, nofollow",
+      "brokenImages": 0
+    },
+    {
+      "path": "/estudo/ritmo/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "header": "noindex, nofollow",
+      "brokenImages": 0
+    }
+  ],
+  "pageErrors": []
+}

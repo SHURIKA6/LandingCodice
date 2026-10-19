@@ -1,0 +1,333 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T13:48:19.726Z",
+  "title": "Design System: Codice — Em evidência",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Marfim",
+        "canonical": "#f4f4ed",
+        "tonalRamp": [
+          "oklch(15.00% 0.0093 106.57)",
+          "oklch(26.43% 0.0093 106.57)",
+          "oklch(37.86% 0.0093 106.57)",
+          "oklch(49.29% 0.0093 106.57)",
+          "oklch(60.71% 0.0093 106.57)",
+          "oklch(72.14% 0.0093 106.57)",
+          "oklch(83.57% 0.0093 106.57)",
+          "oklch(95.00% 0.0093 106.57)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Oliva profundo",
+        "canonical": "#25291f",
+        "tonalRamp": [
+          "oklch(15.00% 0.0188 125.36)",
+          "oklch(26.43% 0.0188 125.36)",
+          "oklch(37.86% 0.0188 125.36)",
+          "oklch(49.29% 0.0188 125.36)",
+          "oklch(60.71% 0.0188 125.36)",
+          "oklch(72.14% 0.0188 125.36)",
+          "oklch(83.57% 0.0188 125.36)",
+          "oklch(95.00% 0.0188 125.36)"
+        ]
+      },
+      "acid": {
+        "role": "primary",
+        "displayName": "Lima ácido",
+        "canonical": "#d2ff00",
+        "tonalRamp": [
+          "oklch(15.00% 0.2260 121.71)",
+          "oklch(26.43% 0.2260 121.71)",
+          "oklch(37.86% 0.2260 121.71)",
+          "oklch(49.29% 0.2260 121.71)",
+          "oklch(60.71% 0.2260 121.71)",
+          "oklch(72.14% 0.2260 121.71)",
+          "oklch(83.57% 0.2260 121.71)",
+          "oklch(95.00% 0.2260 121.71)"
+        ]
+      },
+      "quiet": {
+        "role": "neutral",
+        "displayName": "Oliva secundário",
+        "canonical": "#626857",
+        "tonalRamp": [
+          "oklch(15.00% 0.0272 123.19)",
+          "oklch(26.43% 0.0272 123.19)",
+          "oklch(37.86% 0.0272 123.19)",
+          "oklch(49.29% 0.0272 123.19)",
+          "oklch(60.71% 0.0272 123.19)",
+          "oklch(72.14% 0.0272 123.19)",
+          "oklch(83.57% 0.0272 123.19)",
+          "oklch(95.00% 0.0272 123.19)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Filete sobre marfim",
+        "canonical": "#b8bdaf",
+        "tonalRamp": [
+          "oklch(15.00% 0.0202 122.92)",
+          "oklch(26.43% 0.0202 122.92)",
+          "oklch(37.86% 0.0202 122.92)",
+          "oklch(49.29% 0.0202 122.92)",
+          "oklch(60.71% 0.0202 122.92)",
+          "oklch(72.14% 0.0202 122.92)",
+          "oklch(83.57% 0.0202 122.92)",
+          "oklch(95.00% 0.0202 122.92)"
+        ]
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "Filete sobre oliva",
+        "canonical": "#5a604e",
+        "tonalRamp": [
+          "oklch(15.00% 0.0290 122.49)",
+          "oklch(26.43% 0.0290 122.49)",
+          "oklch(37.86% 0.0290 122.49)",
+          "oklch(49.29% 0.0290 122.49)",
+          "oklch(60.71% 0.0290 122.49)",
+          "oklch(72.14% 0.0290 122.49)",
+          "oklch(83.57% 0.0290 122.49)",
+          "oklch(95.00% 0.0290 122.49)"
+        ]
+      },
+      "dark-text": {
+        "role": "neutral",
+        "displayName": "Texto secundário claro",
+        "canonical": "#c8cdbd",
+        "tonalRamp": [
+          "oklch(15.00% 0.0225 121.03)",
+          "oklch(26.43% 0.0225 121.03)",
+          "oklch(37.86% 0.0225 121.03)",
+          "oklch(49.29% 0.0225 121.03)",
+          "oklch(60.71% 0.0225 121.03)",
+          "oklch(72.14% 0.0225 121.03)",
+          "oklch(83.57% 0.0225 121.03)",
+          "oklch(95.00% 0.0225 121.03)"
+        ]
+      },
+      "ink-hover": {
+        "role": "neutral",
+        "displayName": "Oliva de resposta",
+        "canonical": "#414934",
+        "tonalRamp": [
+          "oklch(15.00% 0.0356 124.95)",
+          "oklch(26.43% 0.0356 124.95)",
+          "oklch(37.86% 0.0356 124.95)",
+          "oklch(49.29% 0.0356 124.95)",
+          "oklch(60.71% 0.0356 124.95)",
+          "oklch(72.14% 0.0356 124.95)",
+          "oklch(83.57% 0.0356 124.95)",
+          "oklch(95.00% 0.0356 124.95)"
+        ]
+      },
+      "acid-hover": {
+        "role": "neutral",
+        "displayName": "Lima de resposta",
+        "canonical": "#e0ff50",
+        "tonalRamp": [
+          "oklch(15.00% 0.1948 119.04)",
+          "oklch(26.43% 0.1948 119.04)",
+          "oklch(37.86% 0.1948 119.04)",
+          "oklch(49.29% 0.1948 119.04)",
+          "oklch(60.71% 0.1948 119.04)",
+          "oklch(72.14% 0.1948 119.04)",
+          "oklch(83.57% 0.1948 119.04)",
+          "oklch(95.00% 0.1948 119.04)"
+        ]
+      },
+      "header-hover": {
+        "role": "neutral",
+        "displayName": "Lima compacto de resposta",
+        "canonical": "#bce300",
+        "tonalRamp": [
+          "oklch(15.00% 0.2064 121.37)",
+          "oklch(26.43% 0.2064 121.37)",
+          "oklch(37.86% 0.2064 121.37)",
+          "oklch(49.29% 0.2064 121.37)",
+          "oklch(60.71% 0.2064 121.37)",
+          "oklch(72.14% 0.2064 121.37)",
+          "oklch(83.57% 0.2064 121.37)",
+          "oklch(95.00% 0.2064 121.37)"
+        ]
+      },
+      "browser-surface": {
+        "role": "neutral",
+        "displayName": "Moldura clara",
+        "canonical": "#e6e9df",
+        "tonalRamp": [
+          "oklch(15.00% 0.0137 120.29)",
+          "oklch(26.43% 0.0137 120.29)",
+          "oklch(37.86% 0.0137 120.29)",
+          "oklch(49.29% 0.0137 120.29)",
+          "oklch(60.71% 0.0137 120.29)",
+          "oklch(72.14% 0.0137 120.29)",
+          "oklch(83.57% 0.0137 120.29)",
+          "oklch(95.00% 0.0137 120.29)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Archivo Black monumental",
+        "purpose": "Marca em grande escala"
+      },
+      "headline": {
+        "displayName": "Archivo Black",
+        "purpose": "Títulos de seção"
+      },
+      "hero-title": {
+        "displayName": "Manrope com ênfase em Archivo Black",
+        "purpose": "Título comercial do hero"
+      },
+      "body": {
+        "displayName": "Manrope",
+        "purpose": "Leitura, legendas e informações comerciais"
+      },
+      "button": {
+        "displayName": "Manrope 800",
+        "purpose": "Ações claras e compactas"
+      }
+    },
+    "shadows": [
+      {
+        "name": "sculpture",
+        "value": "drop-shadow(0 28px 22px #25291f24)",
+        "purpose": "Profundidade da arte central; propriedade filter"
+      },
+      {
+        "name": "sculpture-reduced",
+        "value": "drop-shadow(0 18px 20px #25291f1c)",
+        "purpose": "Sombra da composição estática com movimento reduzido; propriedade filter"
+      },
+      {
+        "name": "menu",
+        "value": "0 18px 50px #25291f26",
+        "purpose": "Separar o painel do menu do campo claro"
+      }
+    ],
+    "motion": [
+      {
+        "name": "action-color",
+        "value": "background-color .2s, color .2s",
+        "purpose": "Resposta de hover dos botões"
+      },
+      {
+        "name": "lenis-wheel",
+        "value": "lerp: 0.1; autoRaf: false; anchors: true; syncTouch: false",
+        "purpose": "Roda suavizada por uma RAF; toque nativo. Destruído com movimento reduzido ou aba oculta; scroll-margin CSS responde pelo afastamento das âncoras."
+      },
+      {
+        "name": "hero-replay",
+        "value": "1.2s; cubic-bezier(.16,1,.3,1)",
+        "purpose": "Replay opcional da arte, interrompido fora da tela ou com a aba oculta"
+      },
+      {
+        "name": "hero-pointer",
+        "value": "spring stiffness: 95; damping: 24",
+        "purpose": "Resposta ao ponteiro de mouse, reiniciada fora da tela/aba e desativada com preferência reduzida"
+      },
+      {
+        "name": "project-opacity",
+        "value": ".3s; reduced: 0s",
+        "purpose": "Troca entre as duas capturas reais"
+      },
+      {
+        "name": "live-reduced-preference",
+        "value": "useSyncExternalStore; matchMedia change listener; serverSnapshot: true",
+        "purpose": "Hook próprio do hero/case acompanha mudanças de preferência ao vivo e mantém SSR estático"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-min",
+        "value": "1800px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1100px"
+      },
+      {
+        "name": "tablet-max",
+        "value": "800px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "540px"
+      }
+    ],
+    "derivedRampNote": "Rampas OKLCH derivadas para visualização do painel; não são tokens de uma escala implementada no CSS."
+  },
+  "components": [
+    {
+      "name": "Botão escuro",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Ação sobre marfim ou lima.",
+      "html": "<a class=\"ds-button ds-ink\" href=\"#contato\">Conversar sobre meu site <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-height:58px;padding:15px 22px;border-radius:8px;font:800 13px/1.4 Manrope,sans-serif;text-decoration:none;transition:background-color .2s,color .2s}.ds-button:focus-visible{outline:2px solid currentColor;outline-offset:6px}.ds-button svg{flex-shrink:0}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-ink{background:var(--ink,#25291f);color:var(--paper,#f4f4ed)}.ds-ink:hover{background:#414934}"
+    },
+    {
+      "name": "Botão lima",
+      "kind": "button",
+      "refersTo": "button-lime",
+      "description": "Ação em destaque com tinta oliva.",
+      "html": "<a class=\"ds-button ds-lime\" href=\"#contato\">Conversar sobre meu site <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-height:58px;padding:15px 22px;border-radius:8px;font:800 13px/1.4 Manrope,sans-serif;text-decoration:none;transition:background-color .2s,color .2s}.ds-button:focus-visible{outline:2px solid currentColor;outline-offset:6px}.ds-button svg{flex-shrink:0}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-lime{background:var(--acid,#d2ff00);color:var(--ink,#25291f)}.ds-lime:hover{background:#e0ff50}"
+    },
+    {
+      "name": "Navegação nativa",
+      "kind": "nav",
+      "description": "Menu details com painel oliva e links de seção.",
+      "html": "<details class=\"ds-menu\"><summary>Menu <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></summary><nav aria-label=\"Navegação\"><a href=\"#trabalho\">O trabalho <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a><a href=\"#pacote\">O pacote <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a><a href=\"#contato\">A dupla <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></nav></details>",
+      "css": ".ds-menu{font:700 13px/1.6 Manrope,sans-serif;max-width:330px;color:var(--ink,#25291f)}.ds-menu summary{display:flex;align-items:center;justify-content:space-between;gap:24px;list-style:none;min-height:48px;padding:0 16px;border:1px solid currentColor;border-radius:8px;cursor:pointer}.ds-menu summary::-webkit-details-marker{display:none}.ds-menu nav{margin-top:16px;padding:24px;border-radius:12px;background:var(--ink,#25291f);color:var(--paper,#f4f4ed);box-shadow:0 18px 50px #25291f26}.ds-menu nav a{display:flex;align-items:center;justify-content:space-between;gap:32px;min-height:58px;border-bottom:1px solid var(--dark-line,#5a604e);font-size:24px;text-decoration:none;color:inherit}.ds-menu nav a:hover{color:var(--acid,#d2ff00)}.ds-menu summary:hover{background:var(--acid,#d2ff00)}.ds-menu summary:focus-visible,.ds-menu a:focus-visible{outline:2px solid currentColor;outline-offset:6px}"
+    },
+    {
+      "name": "Seletor de captura",
+      "kind": "custom",
+      "description": "Estado selecionado em lima; botões do projeto real.",
+      "html": "<div class=\"ds-views\" role=\"group\" aria-label=\"Escolher captura do projeto\"><button type=\"button\" aria-pressed=\"true\">Apresentação<span aria-hidden=\"true\"></span></button><button type=\"button\" aria-pressed=\"false\">Catálogo<span aria-hidden=\"true\"></span></button></div>",
+      "css": ".ds-views{max-width:300px;padding:20px;background:var(--ink,#25291f);color:var(--dark-text,#c8cdbd)}.ds-views button{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;background:none;color:inherit;border:0;border-bottom:1px solid var(--dark-line,#5a604e);padding:16px 0;min-height:58px;text-align:left;font:700 16px/1.6 Manrope,sans-serif;cursor:pointer}.ds-views button span{height:9px;width:9px;border:1px solid currentColor;border-radius:50%;flex-shrink:0}.ds-views button[aria-pressed=true]{color:var(--acid,#d2ff00)}.ds-views button[aria-pressed=true] span{background:var(--acid,#d2ff00);border-color:var(--acid,#d2ff00)}.ds-views button:hover{color:var(--paper,#f4f4ed)}.ds-views button:focus-visible{outline:2px solid currentColor;outline-offset:6px}"
+    },
+    {
+      "name": "Condições expansíveis",
+      "kind": "custom",
+      "description": "Consulta nativa dos termos no fluxo da página.",
+      "html": "<details class=\"ds-conditions\"><summary>Custos e próximos passos<span aria-hidden=\"true\">+</span></summary><p>Domínio e eventual hospedagem são pagos diretamente pelo cliente, em suas próprias contas.</p></details>",
+      "css": ".ds-conditions{max-width:520px;background:var(--paper,#f4f4ed);color:var(--ink,#25291f);border-top:1px solid var(--line,#b8bdaf);border-bottom:1px solid var(--line,#b8bdaf);padding:22px 0;font-family:Manrope,sans-serif}.ds-conditions summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:16px;font-weight:800;min-height:44px;cursor:pointer}.ds-conditions summary::-webkit-details-marker{display:none}.ds-conditions summary>span{font-size:24px;line-height:1;transition:transform .2s}.ds-conditions[open] summary>span{transform:rotate(45deg)}.ds-conditions p{font-size:13px;line-height:1.6;color:var(--quiet,#626857);margin:20px 0 0}.ds-conditions summary:hover{text-decoration:underline;text-underline-offset:.3em}.ds-conditions summary:focus-visible{outline:2px solid currentColor;outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-conditions summary>span{transition:none}}"
+    },
+    {
+      "name": "Marca tipográfica",
+      "kind": "custom",
+      "description": "Wordmark compacto em Archivo Black, com ponto geométrico.",
+      "html": "<a class=\"ds-brand\" href=\"#inicio\" aria-label=\"Codice — início\">codice<span aria-hidden=\"true\"></span></a>",
+      "css": ".ds-brand{display:inline-flex;align-items:center;gap:5px;min-height:48px;color:var(--ink,#25291f);font:400 34px/1 \"Archivo Black\",sans-serif;letter-spacing:-.04em;text-decoration:none}.ds-brand span{display:inline-block;width:8px;height:8px;border-radius:50%;background:currentColor;margin-top:17px}.ds-brand:hover{text-decoration:underline;text-underline-offset:.15em}.ds-brand:focus-visible{outline:2px solid currentColor;outline-offset:6px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Em evidência",
+    "overview": "Marca tipográfica em grande escala e objeto escultórico dão presença à Codice. Marfim e oliva sustentam a leitura; o lima marca ações e muda o tom de capítulos inteiros. Textos e controles existem antes da interação.\n\nO usuário pediu Next.js, React, TypeScript, Tailwind, Lenis e Framer Motion, com o nível de acabamento da referência Lando Norris. Essa referência orienta escala, composição e fluidez; os ativos do piloto não foram copiados. A arte abstrata é da Codice e não representa um produto de cliente.",
+    "keyCharacteristics": [
+      "Tipografia monumental e arte escultórica com papéis distintos do texto comercial.",
+      "Campos contínuos de marfim, oliva e lima, com divisores finos.",
+      "Capturas reais de trabalho em uma apresentação editorial.",
+      "Interação opcional, foco visível e conteúdo estático completo."
+    ],
+    "rules": [],
+    "dos": [
+      "Do manter leitura, preço e contato independentes da arte e da interação.",
+      "Do usar as fontes locais, os secundários adequados a cada superfície e foco visível nos controles.",
+      "Do preservar a apresentação completa com movimento reduzido e sem JavaScript.",
+      "Do manter capturas reais e proveniência das artes separadas."
+    ],
+    "donts": [
+      "Don't copiar retratos, logos ou materiais da referência Lando Norris.",
+      "Don't apresentar a escultura raster como modelo 3D real ou produto de cliente.",
+      "Don't tratar Ritmo lilás ou a identidade de livro como sistema vigente.",
+      "Don't usar verificações Astro anteriores como validação da nova aplicação Next.js."
+    ]
+  }
+}

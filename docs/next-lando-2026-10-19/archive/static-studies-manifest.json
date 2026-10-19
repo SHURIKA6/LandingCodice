@@ -1,0 +1,104 @@
+{
+  "createdUtc": "2026-10-19T13:29:10.769389+00:00",
+  "htmlCount": 4,
+  "assetCount": 9,
+  "checkedLocalReferences": 55,
+  "frameworkRoutes": [
+    "/"
+  ],
+  "allStudiesNoindex": true,
+  "rootLandingCopied": false,
+  "files": [
+    {
+      "source": "dist/estudo/fluxo/index.html",
+      "sourceSha256": "5a4af304b79bb12ff366443390190c53683f12f362dc46a9eff3ca810d2933c2",
+      "path": "public/estudo/fluxo/index.html",
+      "sha256": "37cdc069e3b1a4d6763f9194d2310871c4caa9a7d14fff1afec49b4ed743f581",
+      "bytes": 12358
+    },
+    {
+      "source": "dist/estudo/forma/index.html",
+      "sourceSha256": "42def0e497560429729831c0ef5fc447e27d0355c8812e90662abeee833fe38d",
+      "path": "public/estudo/forma/index.html",
+      "sha256": "86e37d5283bd6faf6287f13915f71131e2005b6bb98c510aa3de7a4c7bfb9352",
+      "bytes": 12187
+    },
+    {
+      "source": "dist/estudo/index.html",
+      "sourceSha256": "cec1c029b19f3f828b55b4361475fa7cf19939ddaa9d2321e3ab5fda0a336b9e",
+      "path": "public/estudo/index.html",
+      "sha256": "b96553f69ad3628790dd3db93e4afe4bb2aa5914ffadade625d679917470fec1",
+      "bytes": 11421
+    },
+    {
+      "source": "dist/estudo/ritmo/index.html",
+      "sourceSha256": "05e1de7d574d0e0e94c9f2d4fa2c77d4d3a89490c7a6c25909faa979a5941079",
+      "path": "public/estudo/ritmo/index.html",
+      "sha256": "392c069864a3fb278dbf9dba2b2453e33a3aa8bc4d833e2c1532affc44d44c6e",
+      "bytes": 11604
+    },
+    {
+      "source": "dist/_astro/Arrow.BNaByegu.css",
+      "sourceSha256": "976307d13e3104a8a1fe5a8d90d60f4fa2086e28be5435fef4d8a1628f65fc15",
+      "path": "public/estudo/assets/Arrow.BNaByegu.css",
+      "sha256": "45be042b133923977df3a468d5b72ee887fe31b67e3412618213247ddcb20e70",
+      "bytes": 8051
+    },
+    {
+      "source": "dist/_astro/fluxo.BHkBJBb7.css",
+      "sourceSha256": "d94796f77134708f6f20e5e49c96b3e0b53137b68395559cb47a1ff441f7c3c9",
+      "path": "public/estudo/assets/fluxo.BHkBJBb7.css",
+      "sha256": "296a8fe952f3cc95231e8347e0a8ff83975e96be48bcc5114f7dc6d7dd3d2748",
+      "bytes": 8360
+    },
+    {
+      "source": "dist/_astro/fluxo.astro_astro_type_script_index_0_lang.RKiG4cke.js",
+      "sourceSha256": "d701b36c96146997ccaea86e0f708c1085cada0aa8683b1fb5d2f8742eae6458",
+      "path": "public/estudo/assets/fluxo.astro_astro_type_script_index_0_lang.RKiG4cke.js",
+      "sha256": "d701b36c96146997ccaea86e0f708c1085cada0aa8683b1fb5d2f8742eae6458",
+      "bytes": 44
+    },
+    {
+      "source": "dist/_astro/forma.Cp_HhVd0.css",
+      "sourceSha256": "68bfb8954ee88118b4395472b0c2ae9705a002b7e469adef8f795e914f66b63c",
+      "path": "public/estudo/assets/forma.Cp_HhVd0.css",
+      "sha256": "bd09ff2dab5152a632ea7d2623fbaeb8f68e0e09b3f734c348fd1717615f7fe0",
+      "bytes": 6394
+    },
+    {
+      "source": "dist/_astro/forma.astro_astro_type_script_index_0_lang.CeDRVmWo.js",
+      "sourceSha256": "3378db223c01ac4f327967c6b26d1ea9411f9151025afdcd8aebba0735015cf2",
+      "path": "public/estudo/assets/forma.astro_astro_type_script_index_0_lang.CeDRVmWo.js",
+      "sha256": "3378db223c01ac4f327967c6b26d1ea9411f9151025afdcd8aebba0735015cf2",
+      "bytes": 44
+    },
+    {
+      "source": "dist/_astro/index.zbyMoetK.css",
+      "sourceSha256": "807999d562b623b6d30c9880a59df363004a917fcc012c4f6e09e50f05d6e397",
+      "path": "public/estudo/assets/index.zbyMoetK.css",
+      "sha256": "695fe828cfb72d4812e9eefaf90e8e5ae8d94b08bf0f36578fa862ed8c70d4d0",
+      "bytes": 7794
+    },
+    {
+      "source": "dist/_astro/ritmo.B21SEl1A.css",
+      "sourceSha256": "1eead36dc7dbb93c6ae3bf40df4bc4a355d5527f3f5f0ce1e01529587d958e36",
+      "path": "public/estudo/assets/ritmo.B21SEl1A.css",
+      "sha256": "4f554369591eab52dc685c649061952e9698ae960321d65b29ed9bd58b64cdef",
+      "bytes": 4824
+    },
+    {
+      "source": "dist/_astro/ritmo.astro_astro_type_script_index_0_lang.D7wNi3HE.js",
+      "sourceSha256": "e2701c6150700acddba68857499aa76d753ddf9966d38517b9c9fb1e12ff4193",
+      "path": "public/estudo/assets/ritmo.astro_astro_type_script_index_0_lang.D7wNi3HE.js",
+      "sha256": "e2701c6150700acddba68857499aa76d753ddf9966d38517b9c9fb1e12ff4193",
+      "bytes": 44
+    },
+    {
+      "source": "dist/_astro/study.JK6JueAX.js",
+      "sourceSha256": "1a61fca78743bdfe88112bbbd57fea0afb123788e7aa139b702c44db1ab16e31",
+      "path": "public/estudo/assets/study.JK6JueAX.js",
+      "sha256": "1a61fca78743bdfe88112bbbd57fea0afb123788e7aa139b702c44db1ab16e31",
+      "bytes": 3161
+    }
+  ]
+}

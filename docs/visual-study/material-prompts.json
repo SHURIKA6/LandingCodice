@@ -1,0 +1,14 @@
+[
+  {
+    "id": "cover-material",
+    "prompt": "Produce a production website background asset from this approved dark-leather codex cover reference. Reconstruct ONLY the original richly worn dark brown leather cover, the real raised bound spine along the left, delicate aged gold outer border, and the fine horizontal gold header rule. The blank leather is the dominant surface, with the same subdued brown lighting and fine scratches as the reference. Remove ALL text, black/redaction blocks, UI, the ivory button and any letters; reconstruct continuous matching leather behind everything removed, with absolutely no rectangular ghosts. Keep the exact wide front-on cover shape and its left-spine proportions, filling the frame, no desk or surrounding props. Requested 2160x840 pixels, opaque background. This is the empty material beneath semantic HTML text, not a finished page."
+  },
+  {
+    "id": "folio-material",
+    "prompt": "Produce a clean production website paper background from this approved codex folio reference. Reconstruct ONLY the warm light ivory old-paper surface, fine natural fibers, gently worn outer edges, the left binding fold, and subtle age variations. Remove ALL website screenshots, screenshot frames, text, rules, ink, masks and opaque redaction blocks; seamlessly reconstruct the underlying pale parchment. Keep the original warm ivory color and very restrained texture; central page must be calm and readable for HTML text placed later. Entire frame is this single paper folio front-on, no book on a table, no extra props or pages. Requested 2160x810 pixels, opaque, wide composition matching the reference. No text, glyphs, logos or illustration."
+  },
+  {
+    "id": "cta-ground",
+    "prompt": "Reconstruct just this blank old-ivory-paper button background as an isolated production UI asset on a genuinely transparent background. One horizontal wide parchment rectangle with small softly worn rounded corners and a very fine aged gold edge, warm ivory surface matching the reference. Remove all letters, arrow, masks and flat redaction rectangles and reconstruct uninterrupted subtle paper grain. No dark leather around it. The button itself must be clean and empty and occupy nearly the whole frame with only a narrow transparent margin. Long horizontal shape, approximately 4.5:1, target 748x168 pixels or larger. Transparent PNG, no shadow beyond a small natural edge, no text or symbols."
+  }
+]

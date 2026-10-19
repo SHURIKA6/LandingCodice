@@ -1,0 +1,1439 @@
+{
+  "tool": "comp-spec",
+  "version": 1,
+  "createdAt": "2026-10-17T05:38:37.490Z",
+  "comp": ".impeccable\\mocks\\02-encadernacao-escura.png",
+  "warnings": [
+    "region cover-material: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)",
+    "region folio-material: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)",
+    "region corretor-shot: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)",
+    "region roger-shot: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+  ],
+  "uncoveredInkCells": [],
+  "compSize": {
+    "width": 1440,
+    "height": 1100
+  },
+  "aspect": 1.3091,
+  "orientation": "landscape",
+  "palette": [
+    {
+      "hex": "#251b17",
+      "coverage": 0.5521
+    },
+    {
+      "hex": "#e8d7c2",
+      "coverage": 0.2919
+    },
+    {
+      "hex": "#183757",
+      "coverage": 0.0695
+    },
+    {
+      "hex": "#172858",
+      "coverage": 0.0591
+    },
+    {
+      "hex": "#4b3728",
+      "coverage": 0.0274
+    }
+  ],
+  "bands": [
+    {
+      "y": 0.1837,
+      "strength": 0.3747
+    },
+    {
+      "y": 0.2143,
+      "strength": 0.309
+    },
+    {
+      "y": 0.2449,
+      "strength": 0.3519
+    },
+    {
+      "y": 0.2755,
+      "strength": 0.2412
+    },
+    {
+      "y": 0.398,
+      "strength": 0.5517
+    },
+    {
+      "y": 0.4592,
+      "strength": 0.5461
+    },
+    {
+      "y": 0.4898,
+      "strength": 0.2678
+    },
+    {
+      "y": 0.5102,
+      "strength": 1
+    },
+    {
+      "y": 0.5714,
+      "strength": 0.2872
+    },
+    {
+      "y": 0.5918,
+      "strength": 0.683
+    },
+    {
+      "y": 0.6531,
+      "strength": 0.2178
+    },
+    {
+      "y": 0.8878,
+      "strength": 0.7002
+    },
+    {
+      "y": 0.949,
+      "strength": 0.2055
+    },
+    {
+      "y": 0.9694,
+      "strength": 0.3655
+    }
+  ],
+  "regions": [
+    {
+      "id": "cover-material",
+      "kind": "plate",
+      "note": "Aged dark leather book cover with left bound spine and fine gold edge, all visible type and controls separate",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.5091
+      },
+      "px": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 560
+      },
+      "aspect": 2.5714,
+      "palette": [
+        {
+          "hex": "#261b17",
+          "coverage": 0.8938
+        },
+        {
+          "hex": "#4c3729",
+          "coverage": 0.0457
+        },
+        {
+          "hex": "#ebdac2",
+          "coverage": 0.0391
+        },
+        {
+          "hex": "#775030",
+          "coverage": 0.015
+        },
+        {
+          "hex": "#e4bd8f",
+          "coverage": 0.0063
+        }
+      ],
+      "detail": {
+        "energy": 26.7582
+      },
+      "medium": "raster",
+      "plate": "assets/plates/cover-material.png",
+      "text": null
+    },
+    {
+      "id": "brand",
+      "kind": "text",
+      "note": "Gold Codice wordmark in serif lettering",
+      "grid": null,
+      "box": {
+        "x": 0.0965,
+        "y": 0.0136,
+        "w": 0.1132,
+        "h": 0.0609
+      },
+      "px": {
+        "x": 139,
+        "y": 15,
+        "w": 163,
+        "h": 67
+      },
+      "aspect": 2.4328,
+      "palette": [
+        {
+          "hex": "#372a22",
+          "coverage": 0.8218
+        },
+        {
+          "hex": "#e1b687",
+          "coverage": 0.0732
+        },
+        {
+          "hex": "#644c37",
+          "coverage": 0.0668
+        },
+        {
+          "hex": "#ab8763",
+          "coverage": 0.0342
+        },
+        {
+          "hex": "#855232",
+          "coverage": 0.004
+        }
+      ],
+      "detail": {
+        "energy": 25.1485
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 7,
+          "capHeightPx": 39.9,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.4762,
+          "advTall": 0.376,
+          "advX": 0.5013,
+          "gap": 0.0501,
+          "xRatio": 0.5508,
+          "stemW": 0.1106,
+          "contrast": 2.0375,
+          "serif": null,
+          "densTall": 0.3042,
+          "densX": 0.3874,
+          "weight": 0.3042
+        },
+        "widthClass": "condensed",
+        "weightClass": "light"
+      }
+    },
+    {
+      "id": "nav-work",
+      "kind": "text",
+      "note": "Trabalhos navigation link",
+      "grid": null,
+      "box": {
+        "x": 0.6528,
+        "y": 0.0364,
+        "w": 0.0569,
+        "h": 0.0245
+      },
+      "px": {
+        "x": 940,
+        "y": 40,
+        "w": 82,
+        "h": 27
+      },
+      "aspect": 3.037,
+      "palette": [
+        {
+          "hex": "#271818",
+          "coverage": 0.5523
+        },
+        {
+          "hex": "#2a2717",
+          "coverage": 0.2636
+        },
+        {
+          "hex": "#4f433d",
+          "coverage": 0.0628
+        },
+        {
+          "hex": "#8e817e",
+          "coverage": 0.0628
+        },
+        {
+          "hex": "#dfd8d0",
+          "coverage": 0.0586
+        }
+      ],
+      "detail": {
+        "energy": 23.8203
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 9,
+          "capHeightPx": 13.4,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.5216,
+          "advTall": 0.447,
+          "advX": 0.5402,
+          "gap": 0.0745,
+          "xRatio": 0.6186,
+          "stemW": 0.1745,
+          "contrast": 1.4454,
+          "serif": null,
+          "densTall": 0.5088,
+          "densX": 0.5485,
+          "weight": 0.5088
+        },
+        "widthClass": "condensed",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "nav-services",
+      "kind": "text",
+      "note": "Serviços navigation link",
+      "grid": null,
+      "box": {
+        "x": 0.7292,
+        "y": 0.0364,
+        "w": 0.0514,
+        "h": 0.0245
+      },
+      "px": {
+        "x": 1050,
+        "y": 40,
+        "w": 74,
+        "h": 27
+      },
+      "aspect": 2.7407,
+      "palette": [
+        {
+          "hex": "#261717",
+          "coverage": 0.6574
+        },
+        {
+          "hex": "#272515",
+          "coverage": 0.1898
+        },
+        {
+          "hex": "#968f87",
+          "coverage": 0.0787
+        },
+        {
+          "hex": "#645c56",
+          "coverage": 0.0417
+        },
+        {
+          "hex": "#edeae1",
+          "coverage": 0.0324
+        }
+      ],
+      "detail": {
+        "energy": 20.0836
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 8,
+          "capHeightPx": 12.9,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.6217,
+          "advTall": 0.4469,
+          "advX": 0.6217,
+          "gap": 0.0389,
+          "xRatio": 0.6632,
+          "stemW": 0.1781,
+          "contrast": 1.2046,
+          "serif": 1.4428,
+          "densTall": 0.5496,
+          "densX": 0.5265,
+          "weight": 0.5496
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "nav-founders",
+      "kind": "text",
+      "note": "A dupla navigation link",
+      "grid": null,
+      "box": {
+        "x": 0.7979,
+        "y": 0.0364,
+        "w": 0.0556,
+        "h": 0.0245
+      },
+      "px": {
+        "x": 1149,
+        "y": 40,
+        "w": 80,
+        "h": 27
+      },
+      "aspect": 2.963,
+      "palette": [
+        {
+          "hex": "#261818",
+          "coverage": 0.6923
+        },
+        {
+          "hex": "#282616",
+          "coverage": 0.1624
+        },
+        {
+          "hex": "#aaa49a",
+          "coverage": 0.0556
+        },
+        {
+          "hex": "#453f37",
+          "coverage": 0.0513
+        },
+        {
+          "hex": "#7d7168",
+          "coverage": 0.0385
+        }
+      ],
+      "detail": {
+        "energy": 18.9687
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 6,
+          "capHeightPx": 16,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.4998,
+          "advTall": 0.4373,
+          "advX": 0.4842,
+          "gap": 0.0625,
+          "xRatio": 0.5505,
+          "stemW": 0.1375,
+          "contrast": 1.2743,
+          "serif": null,
+          "densTall": 0.5903,
+          "densX": 0.5687,
+          "weight": 0.5903
+        },
+        "widthClass": "condensed",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "nav-contact",
+      "kind": "text",
+      "note": "Contato navigation link",
+      "grid": null,
+      "box": {
+        "x": 0.866,
+        "y": 0.0364,
+        "w": 0.059,
+        "h": 0.0245
+      },
+      "px": {
+        "x": 1247,
+        "y": 40,
+        "w": 85,
+        "h": 27
+      },
+      "aspect": 3.1481,
+      "palette": [
+        {
+          "hex": "#241717",
+          "coverage": 0.6215
+        },
+        {
+          "hex": "#2c2616",
+          "coverage": 0.2351
+        },
+        {
+          "hex": "#473934",
+          "coverage": 0.0518
+        },
+        {
+          "hex": "#736862",
+          "coverage": 0.0518
+        },
+        {
+          "hex": "#9a8d82",
+          "coverage": 0.0398
+        }
+      ],
+      "detail": {
+        "energy": 19.6127
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 8,
+          "capHeightPx": 13.1,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.4778,
+          "advTall": 0.8791,
+          "advX": 0.5734,
+          "gap": 0.0764,
+          "xRatio": 0.6211,
+          "stemW": 0.1767,
+          "contrast": 1.5647,
+          "serif": 1.2469,
+          "densTall": 0.3436,
+          "densX": 0.5523,
+          "weight": 0.3436
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "hero-heading",
+      "kind": "text",
+      "note": "Sites e sistemas sob medida para o seu negócio, three lines in large ivory serif, last phrase italic",
+      "grid": null,
+      "box": {
+        "x": 0.1,
+        "y": 0.1236,
+        "w": 0.3757,
+        "h": 0.1927
+      },
+      "px": {
+        "x": 144,
+        "y": 136,
+        "w": 541,
+        "h": 212
+      },
+      "aspect": 2.5519,
+      "palette": [
+        {
+          "hex": "#241916",
+          "coverage": 0.8173
+        },
+        {
+          "hex": "#f1e7d5",
+          "coverage": 0.1064
+        },
+        {
+          "hex": "#e9be8e",
+          "coverage": 0.0322
+        },
+        {
+          "hex": "#504439",
+          "coverage": 0.0224
+        },
+        {
+          "hex": "#c3b7a7",
+          "coverage": 0.0216
+        }
+      ],
+      "detail": {
+        "energy": 67.5993
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 23,
+          "capHeightPx": 57.3,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.5686,
+          "advTall": 0.4513,
+          "advX": 0.533,
+          "gap": 0.0338,
+          "xRatio": 0.6318,
+          "stemW": 0.1221,
+          "contrast": 1.7504,
+          "serif": 2.2509,
+          "densTall": 0.364,
+          "densX": 0.4362,
+          "weight": 0.364
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular",
+        "chosen": {
+          "family": "Cormorant Upright",
+          "weight": 700,
+          "fontSizePx": 91,
+          "source": "index",
+          "fp": {
+            "lines": 1,
+            "glyphs": 14,
+            "capHeightPx": 56.2,
+            "inkIsDark": true,
+            "allCaps": false,
+            "advance": 0.4983,
+            "advTall": 0.4271,
+            "advX": 0.5517,
+            "gap": 0.0356,
+            "xRatio": 0.6229,
+            "stemW": 0.1515,
+            "contrast": 1.7475,
+            "serif": 1.263,
+            "densTall": 0.3219,
+            "densX": 0.4296,
+            "weight": 0.3219
+          },
+          "stamp": "cfa4722a3ba8"
+        }
+      }
+    },
+    {
+      "id": "hero-founders",
+      "kind": "text",
+      "note": "Fernando Riad e Eduardo Gobatto sentence",
+      "grid": null,
+      "box": {
+        "x": 0.1062,
+        "y": 0.3327,
+        "w": 0.2972,
+        "h": 0.0209
+      },
+      "px": {
+        "x": 153,
+        "y": 366,
+        "w": 428,
+        "h": 23
+      },
+      "aspect": 18.6087,
+      "palette": [
+        {
+          "hex": "#211714",
+          "coverage": 0.8058
+        },
+        {
+          "hex": "#524a42",
+          "coverage": 0.0594
+        },
+        {
+          "hex": "#b0a8a3",
+          "coverage": 0.0549
+        },
+        {
+          "hex": "#dad5cd",
+          "coverage": 0.045
+        },
+        {
+          "hex": "#7f7870",
+          "coverage": 0.0351
+        }
+      ],
+      "detail": {
+        "energy": 78.4176
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 27,
+          "capHeightPx": 15.4,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.615,
+          "advTall": 0.6474,
+          "advX": 0.615,
+          "gap": 0.1618,
+          "xRatio": 0.7348,
+          "stemW": 0.1504,
+          "contrast": 1.1027,
+          "serif": null,
+          "densTall": 0.4633,
+          "densX": 0.51,
+          "weight": 0.4633
+        },
+        "widthClass": "normal",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "hero-location",
+      "kind": "text",
+      "note": "De Sinop para projetos em todo o Brasil sentence",
+      "grid": null,
+      "box": {
+        "x": 0.1062,
+        "y": 0.3582,
+        "w": 0.3229,
+        "h": 0.0209
+      },
+      "px": {
+        "x": 153,
+        "y": 394,
+        "w": 465,
+        "h": 23
+      },
+      "aspect": 20.2174,
+      "palette": [
+        {
+          "hex": "#211814",
+          "coverage": 0.7934
+        },
+        {
+          "hex": "#ccc5c0",
+          "coverage": 0.0757
+        },
+        {
+          "hex": "#f4f2ec",
+          "coverage": 0.0494
+        },
+        {
+          "hex": "#7d756c",
+          "coverage": 0.0412
+        },
+        {
+          "hex": "#4e463f",
+          "coverage": 0.0403
+        }
+      ],
+      "detail": {
+        "energy": 87.9475
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 32,
+          "capHeightPx": 15.4,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.6159,
+          "advTall": 0.4214,
+          "advX": 0.6159,
+          "gap": 0.1621,
+          "xRatio": 0.7358,
+          "stemW": 0.1493,
+          "contrast": 1.1024,
+          "serif": 0.9686,
+          "densTall": 0.4855,
+          "densX": 0.4965,
+          "weight": 0.4855
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "cta-ground",
+      "kind": "plate",
+      "note": "Ivory paper button surface with subtle fine gold edge",
+      "grid": null,
+      "box": {
+        "x": 0.1007,
+        "y": 0.3909,
+        "w": 0.2597,
+        "h": 0.0764
+      },
+      "px": {
+        "x": 145,
+        "y": 430,
+        "w": 374,
+        "h": 84
+      },
+      "aspect": 4.4524,
+      "palette": [
+        {
+          "hex": "#e9d4b6",
+          "coverage": 0.6523
+        },
+        {
+          "hex": "#1e1813",
+          "coverage": 0.2763
+        },
+        {
+          "hex": "#d5ab80",
+          "coverage": 0.0366
+        },
+        {
+          "hex": "#bca68e",
+          "coverage": 0.0246
+        },
+        {
+          "hex": "#94806e",
+          "coverage": 0.0102
+        }
+      ],
+      "detail": {
+        "energy": 35.3961
+      },
+      "medium": "raster",
+      "plate": "assets/plates/cta-ground.png",
+      "text": null
+    },
+    {
+      "id": "cta-label",
+      "kind": "text",
+      "note": "Conversar sobre meu projeto primary action label",
+      "grid": null,
+      "box": {
+        "x": 0.1292,
+        "y": 0.4155,
+        "w": 0.1833,
+        "h": 0.0273
+      },
+      "px": {
+        "x": 186,
+        "y": 457,
+        "w": 264,
+        "h": 30
+      },
+      "aspect": 8.8,
+      "palette": [
+        {
+          "hex": "#e9d8bc",
+          "coverage": 0.7959
+        },
+        {
+          "hex": "#b6a28d",
+          "coverage": 0.0924
+        },
+        {
+          "hex": "#170d09",
+          "coverage": 0.0433
+        },
+        {
+          "hex": "#42362a",
+          "coverage": 0.0376
+        },
+        {
+          "hex": "#7f6c5d",
+          "coverage": 0.0308
+        }
+      ],
+      "detail": {
+        "energy": 65.285
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 22,
+          "capHeightPx": 15.6,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6102,
+          "advTall": 0.4817,
+          "advX": 0.6423,
+          "gap": 0.0642,
+          "xRatio": 0.6621,
+          "stemW": 0.1538,
+          "contrast": 1.443,
+          "serif": 0.8886,
+          "densTall": 0.3915,
+          "densX": 0.4806,
+          "weight": 0.3915
+        },
+        "widthClass": "normal",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "cta-arrow",
+      "kind": "chrome",
+      "note": "Small arrow indicating the primary action",
+      "grid": null,
+      "box": {
+        "x": 0.316,
+        "y": 0.4164,
+        "w": 0.0146,
+        "h": 0.0218
+      },
+      "px": {
+        "x": 455,
+        "y": 458,
+        "w": 21,
+        "h": 24
+      },
+      "aspect": 0.875,
+      "palette": [
+        {
+          "hex": "#ebd7b9",
+          "coverage": 0.8393
+        },
+        {
+          "hex": "#b8a88e",
+          "coverage": 0.0893
+        },
+        {
+          "hex": "#200808",
+          "coverage": 0.0357
+        },
+        {
+          "hex": "#381810",
+          "coverage": 0.0357
+        }
+      ],
+      "detail": {
+        "energy": 5.3886
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      }
+    },
+    {
+      "id": "folio-material",
+      "kind": "plate",
+      "note": "Light ivory paper folio background with left binding edge; screenshots and headings rendered separately",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0,
+        "y": 0.5091,
+        "w": 1,
+        "h": 0.4909
+      },
+      "px": {
+        "x": 0,
+        "y": 560,
+        "w": 1440,
+        "h": 540
+      },
+      "aspect": 2.6667,
+      "palette": [
+        {
+          "hex": "#e8d7c2",
+          "coverage": 0.5578
+        },
+        {
+          "hex": "#193757",
+          "coverage": 0.1397
+        },
+        {
+          "hex": "#191918",
+          "coverage": 0.1277
+        },
+        {
+          "hex": "#172858",
+          "coverage": 0.1266
+        },
+        {
+          "hex": "#ba9772",
+          "coverage": 0.0482
+        }
+      ],
+      "detail": {
+        "energy": 27.9431
+      },
+      "medium": "raster",
+      "plate": "assets/plates/folio-material.png",
+      "text": null
+    },
+    {
+      "id": "work-heading",
+      "kind": "text",
+      "note": "Trabalhos que já saíram do papel serif section heading",
+      "grid": null,
+      "box": {
+        "x": 0.0882,
+        "y": 0.5373,
+        "w": 0.3736,
+        "h": 0.0464
+      },
+      "px": {
+        "x": 127,
+        "y": 591,
+        "w": 538,
+        "h": 51
+      },
+      "aspect": 10.549,
+      "palette": [
+        {
+          "hex": "#eadbc8",
+          "coverage": 0.8443
+        },
+        {
+          "hex": "#0f0d0d",
+          "coverage": 0.0554
+        },
+        {
+          "hex": "#864523",
+          "coverage": 0.0459
+        },
+        {
+          "hex": "#c7a88e",
+          "coverage": 0.0284
+        },
+        {
+          "hex": "#8c7f71",
+          "coverage": 0.026
+        }
+      ],
+      "detail": {
+        "energy": 69.8978
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 25,
+          "capHeightPx": 31.5,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5556,
+          "advTall": 0.5873,
+          "advX": 0.5397,
+          "gap": 0.0635,
+          "xRatio": 0.6349,
+          "stemW": 0.1128,
+          "contrast": 1.6716,
+          "serif": 0.9732,
+          "densTall": 0.3504,
+          "densX": 0.3897,
+          "weight": 0.3504
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "corretor-shot",
+      "kind": "image",
+      "note": "Real public Corretor website screenshot, use original browser capture as project evidence",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0.091,
+        "y": 0.5955,
+        "w": 0.5444,
+        "h": 0.2964
+      },
+      "px": {
+        "x": 131,
+        "y": 655,
+        "w": 784,
+        "h": 326
+      },
+      "aspect": 2.4049,
+      "palette": [
+        {
+          "hex": "#183857",
+          "coverage": 0.4584
+        },
+        {
+          "hex": "#172858",
+          "coverage": 0.4262
+        },
+        {
+          "hex": "#191912",
+          "coverage": 0.0437
+        },
+        {
+          "hex": "#49596f",
+          "coverage": 0.0359
+        },
+        {
+          "hex": "#eee1cc",
+          "coverage": 0.0358
+        }
+      ],
+      "detail": {
+        "energy": 27.6545
+      },
+      "medium": "raster",
+      "plate": "assets/plates/corretor-shot.png",
+      "text": null
+    },
+    {
+      "id": "corretor-title",
+      "kind": "text",
+      "note": "Corretor project name",
+      "grid": null,
+      "box": {
+        "x": 0.659,
+        "y": 0.6273,
+        "w": 0.175,
+        "h": 0.0445
+      },
+      "px": {
+        "x": 949,
+        "y": 690,
+        "w": 252,
+        "h": 49
+      },
+      "aspect": 5.1429,
+      "palette": [
+        {
+          "hex": "#e9dac8",
+          "coverage": 0.8732
+        },
+        {
+          "hex": "#100d0c",
+          "coverage": 0.0539
+        },
+        {
+          "hex": "#3a352c",
+          "coverage": 0.0357
+        },
+        {
+          "hex": "#a59788",
+          "coverage": 0.0266
+        },
+        {
+          "hex": "#72685d",
+          "coverage": 0.0105
+        }
+      ],
+      "detail": {
+        "energy": 32.5091
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 5,
+          "capHeightPx": 31.2,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.8647,
+          "advTall": 0.8647,
+          "advX": 0.6725,
+          "gap": 0.048,
+          "xRatio": 0.6725,
+          "stemW": 0.1339,
+          "contrast": 1.912,
+          "serif": null,
+          "densTall": 0.2641,
+          "densX": 0.4047,
+          "weight": 0.2641
+        },
+        "widthClass": "normal",
+        "weightClass": "light"
+      }
+    },
+    {
+      "id": "corretor-description",
+      "kind": "text",
+      "note": "Site e sistema imobiliário subtitle",
+      "grid": null,
+      "box": {
+        "x": 0.659,
+        "y": 0.6718,
+        "w": 0.2667,
+        "h": 0.0318
+      },
+      "px": {
+        "x": 949,
+        "y": 739,
+        "w": 384,
+        "h": 35
+      },
+      "aspect": 10.9714,
+      "palette": [
+        {
+          "hex": "#e9dac9",
+          "coverage": 0.8482
+        },
+        {
+          "hex": "#cead92",
+          "coverage": 0.0554
+        },
+        {
+          "hex": "#a97959",
+          "coverage": 0.0541
+        },
+        {
+          "hex": "#7f421e",
+          "coverage": 0.0404
+        },
+        {
+          "hex": "#985d4d",
+          "coverage": 0.002
+        }
+      ],
+      "detail": {
+        "energy": 40.4595
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 21,
+          "capHeightPx": 21,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5721,
+          "advTall": 0.4291,
+          "advX": 0.5721,
+          "gap": 0.0477,
+          "xRatio": 0.6557,
+          "stemW": 0.1292,
+          "contrast": 1.436,
+          "serif": null,
+          "densTall": 0.3788,
+          "densX": 0.4944,
+          "weight": 0.3788
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "roger-title",
+      "kind": "text",
+      "note": "Roger Estética Automotiva project name",
+      "grid": null,
+      "box": {
+        "x": 0.0882,
+        "y": 0.9427,
+        "w": 0.3014,
+        "h": 0.0364
+      },
+      "px": {
+        "x": 127,
+        "y": 1037,
+        "w": 434,
+        "h": 40
+      },
+      "aspect": 10.85,
+      "palette": [
+        {
+          "hex": "#eadcc9",
+          "coverage": 0.8315
+        },
+        {
+          "hex": "#0d0b0b",
+          "coverage": 0.0647
+        },
+        {
+          "hex": "#9c8e80",
+          "coverage": 0.0426
+        },
+        {
+          "hex": "#423833",
+          "coverage": 0.0346
+        },
+        {
+          "hex": "#685f51",
+          "coverage": 0.0266
+        }
+      ],
+      "detail": {
+        "energy": 76.9927
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 18,
+          "capHeightPx": 25.5,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6275,
+          "advTall": 0.8627,
+          "advX": 0.5882,
+          "gap": 0.0392,
+          "xRatio": 0.6463,
+          "stemW": 0.1309,
+          "contrast": 1.7359,
+          "serif": 0.5791,
+          "densTall": 0.3444,
+          "densX": 0.4422,
+          "weight": 0.3444
+        },
+        "widthClass": "normal",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "roger-description",
+      "kind": "text",
+      "note": "Presença digital para um negócio local subtitle",
+      "grid": null,
+      "box": {
+        "x": 0.0882,
+        "y": 0.98,
+        "w": 0.3014,
+        "h": 0.02
+      },
+      "px": {
+        "x": 127,
+        "y": 1078,
+        "w": 434,
+        "h": 22
+      },
+      "aspect": 19.7273,
+      "palette": [
+        {
+          "hex": "#e9dbc8",
+          "coverage": 0.7817
+        },
+        {
+          "hex": "#8a4a2b",
+          "coverage": 0.0777
+        },
+        {
+          "hex": "#aa795b",
+          "coverage": 0.0768
+        },
+        {
+          "hex": "#cda88e",
+          "coverage": 0.0595
+        },
+        {
+          "hex": "#6e2b08",
+          "coverage": 0.0043
+        }
+      ],
+      "detail": {
+        "energy": 61.9975
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 18,
+          "capHeightPx": 16,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.862,
+          "advTall": 1.0344,
+          "advX": 0.6583,
+          "gap": 0.0313,
+          "xRatio": 0.6851,
+          "stemW": 0.1523,
+          "contrast": 1.3923,
+          "serif": 1.0879,
+          "densTall": 0.3936,
+          "densX": 0.5182,
+          "weight": 0.3936
+        },
+        "widthClass": "normal",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "roger-shot",
+      "kind": "image",
+      "note": "Real Roger services website screenshot partially visible at viewport bottom, use original browser capture",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0.4139,
+        "y": 0.8845,
+        "w": 0.5417,
+        "h": 0.1155
+      },
+      "px": {
+        "x": 596,
+        "y": 973,
+        "w": 780,
+        "h": 127
+      },
+      "aspect": 6.1417,
+      "palette": [
+        {
+          "hex": "#191919",
+          "coverage": 0.8265
+        },
+        {
+          "hex": "#4c201b",
+          "coverage": 0.0617
+        },
+        {
+          "hex": "#444547",
+          "coverage": 0.0437
+        },
+        {
+          "hex": "#7d7e7f",
+          "coverage": 0.0397
+        },
+        {
+          "hex": "#e5d2b9",
+          "coverage": 0.0284
+        }
+      ],
+      "detail": {
+        "energy": 27.2794
+      },
+      "medium": "raster",
+      "plate": "assets/plates/roger-shot.png",
+      "text": null
+    }
+  ],
+  "compSha256": "7ef9dd12774553ddaff4d212a9aedc68c15a5ab94552ca363cc9fa44355eb432",
+  "regionsSource": {
+    "path": ".impeccable\\regions.json",
+    "sha256": "78df807de483b5f90c591262d99d89b3731d900255199da606c755a286a1b09c"
+  }
+}

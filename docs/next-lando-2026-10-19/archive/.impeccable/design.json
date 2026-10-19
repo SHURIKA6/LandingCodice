@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T13:21:02.485Z",
+  "title": "Design System: Codice — Ritmo",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "supporting",
+        "tonalRamp": [
+          "oklch(15.00% 0.0101 294.62)",
+          "oklch(26.43% 0.0101 294.62)",
+          "oklch(37.86% 0.0101 294.62)",
+          "oklch(49.29% 0.0101 294.62)",
+          "oklch(60.71% 0.0101 294.62)",
+          "oklch(72.14% 0.0101 294.62)",
+          "oklch(83.57% 0.0101 294.62)",
+          "oklch(95.00% 0.0101 294.62)"
+        ]
+      },
+      "ink": {
+        "role": "supporting",
+        "tonalRamp": [
+          "oklch(15.00% 0.0091 78.28)",
+          "oklch(26.43% 0.0091 78.28)",
+          "oklch(37.86% 0.0091 78.28)",
+          "oklch(49.29% 0.0091 78.28)",
+          "oklch(60.71% 0.0091 78.28)",
+          "oklch(72.14% 0.0091 78.28)",
+          "oklch(83.57% 0.0091 78.28)",
+          "oklch(95.00% 0.0091 78.28)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15.00% 0.1442 295.48)",
+          "oklch(26.43% 0.1442 295.48)",
+          "oklch(37.86% 0.1442 295.48)",
+          "oklch(49.29% 0.1442 295.48)",
+          "oklch(60.71% 0.1442 295.48)",
+          "oklch(72.14% 0.1442 295.48)",
+          "oklch(83.57% 0.1442 295.48)",
+          "oklch(95.00% 0.1442 295.48)"
+        ]
+      },
+      "quiet": {
+        "role": "supporting",
+        "tonalRamp": [
+          "oklch(15.00% 0.0278 304.75)",
+          "oklch(26.43% 0.0278 304.75)",
+          "oklch(37.86% 0.0278 304.75)",
+          "oklch(49.29% 0.0278 304.75)",
+          "oklch(60.71% 0.0278 304.75)",
+          "oklch(72.14% 0.0278 304.75)",
+          "oklch(83.57% 0.0278 304.75)",
+          "oklch(95.00% 0.0278 304.75)"
+        ]
+      },
+      "line": {
+        "role": "supporting",
+        "tonalRamp": [
+          "oklch(15.00% 0.0294 303.82)",
+          "oklch(26.43% 0.0294 303.82)",
+          "oklch(37.86% 0.0294 303.82)",
+          "oklch(49.29% 0.0294 303.82)",
+          "oklch(60.71% 0.0294 303.82)",
+          "oklch(72.14% 0.0294 303.82)",
+          "oklch(83.57% 0.0294 303.82)",
+          "oklch(95.00% 0.0294 303.82)"
+        ]
+      },
+      "primary-hover": {
+        "role": "supporting",
+        "tonalRamp": [
+          "oklch(15.00% 0.0930 297.56)",
+          "oklch(26.43% 0.0930 297.56)",
+          "oklch(37.86% 0.0930 297.56)",
+          "oklch(49.29% 0.0930 297.56)",
+          "oklch(60.71% 0.0930 297.56)",
+          "oklch(72.14% 0.0930 297.56)",
+          "oklch(83.57% 0.0930 297.56)",
+          "oklch(95.00% 0.0930 297.56)"
+        ]
+      },
+      "dark-hover": {
+        "role": "supporting",
+        "tonalRamp": [
+          "oklch(15.00% 0.0473 301.39)",
+          "oklch(26.43% 0.0473 301.39)",
+          "oklch(37.86% 0.0473 301.39)",
+          "oklch(49.29% 0.0473 301.39)",
+          "oklch(60.71% 0.0473 301.39)",
+          "oklch(72.14% 0.0473 301.39)",
+          "oklch(83.57% 0.0473 301.39)",
+          "oklch(95.00% 0.0473 301.39)"
+        ]
+      },
+      "browser-surface": {
+        "role": "supporting",
+        "tonalRamp": [
+          "oklch(15.00% 0.0230 300.02)",
+          "oklch(26.43% 0.0230 300.02)",
+          "oklch(37.86% 0.0230 300.02)",
+          "oklch(49.29% 0.0230 300.02)",
+          "oklch(60.71% 0.0230 300.02)",
+          "oklch(72.14% 0.0230 300.02)",
+          "oklch(83.57% 0.0230 300.02)",
+          "oklch(95.00% 0.0230 300.02)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Archivo Black",
+        "purpose": "Marca e títulos de impacto"
+      },
+      "body": {
+        "displayName": "Manrope",
+        "purpose": "Leitura, controles e informações comerciais"
+      }
+    },
+    "shadows": [
+      {
+        "name": "browser-capture",
+        "value": "0 20px 50px #32204326",
+        "purpose": "Separar a captura real do campo lilás"
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-hover",
+        "value": "background-color .2s",
+        "purpose": "Feedback do CTA"
+      },
+      {
+        "name": "ritmo-replay",
+        "value": "1400ms",
+        "purpose": "Replay opcional, cancelado fora da tela ou com aba oculta; desligado com movimento reduzido"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1100px"
+      },
+      {
+        "name": "single-intro",
+        "value": "800px"
+      },
+      {
+        "name": "mobile",
+        "value": "540px"
+      }
+    ],
+    "derivedRampNote": "As rampas são visualizações derivadas para o painel; não são tokens de uma escala implementada no CSS."
+  },
+  "components": [
+    {
+      "name": "Botão principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Contato sobre a oferta, sobre fundo escuro.",
+      "html": "<a class=\"ds-button\" href=\"#contato\">Conversar sobre meu site <svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;min-height:56px;padding:14px 22px;background:var(--accent,#b69aff);color:var(--ground,#151419);font:800 14px/1.4 Manrope,sans-serif;text-decoration:none;transition:background-color .2s}.ds-button:hover{background:#d0bdff}.ds-button:focus-visible{outline:2px solid var(--accent,#b69aff);outline-offset:6px}.ds-button svg{flex-shrink:0}"
+    },
+    {
+      "name": "Botão escuro",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "A mesma ação sobre campo lilás.",
+      "html": "<a class=\"ds-button ds-button-dark\" href=\"#contato\">Conversar sobre meu site <svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;min-height:56px;padding:14px 22px;background:var(--accent,#b69aff);color:var(--ground,#151419);font:800 14px/1.4 Manrope,sans-serif;text-decoration:none;transition:background-color .2s}.ds-button:hover{background:#d0bdff}.ds-button:focus-visible{outline:2px solid var(--accent,#b69aff);outline-offset:6px}.ds-button svg{flex-shrink:0}.ds-button-dark{background:var(--ground,#151419);color:var(--ink,#f5f1eb)}.ds-button-dark:hover{background:#352b45}.ds-button-dark:focus-visible{outline-color:var(--ground,#151419)}"
+    },
+    {
+      "name": "Link de texto",
+      "kind": "custom",
+      "description": "Ação secundária e navegação ao código do trabalho.",
+      "html": "<a class=\"ds-text-link\" href=\"#trabalho\">Conhecer nosso trabalho <svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-text-link{display:inline-flex;align-items:center;gap:18px;min-height:44px;color:var(--ink,#f5f1eb);font:700 13px/1.6 Manrope,sans-serif;text-decoration:none;text-underline-offset:.3em}.ds-text-link:hover{text-decoration:underline}.ds-text-link:focus-visible{outline:2px solid var(--accent,#b69aff);outline-offset:6px}"
+    },
+    {
+      "name": "Navegação",
+      "kind": "nav",
+      "description": "Links de seção no desktop, com a ação de contato preservada no celular.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navegação\"><a href=\"#trabalho\">Nosso trabalho</a><a href=\"#pacote\">O pacote</a><a class=\"ds-nav-contact\" href=\"#contato\">Vamos conversar</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:32px;font:400 13px/1.6 Manrope,sans-serif}.ds-nav a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink,#f5f1eb);text-decoration:none}.ds-nav a:hover,.ds-nav .ds-nav-contact{color:var(--accent,#b69aff)}.ds-nav a:focus-visible{outline:2px solid var(--accent,#b69aff);outline-offset:6px}@media(max-width:800px){.ds-nav a:not(.ds-nav-contact){display:none}}"
+    },
+    {
+      "name": "Marca tipográfica",
+      "kind": "custom",
+      "description": "Wordmark em Archivo Black. A composição cinética completa é documentada no contrato da landing.",
+      "html": "<a class=\"ds-wordmark\" href=\"#inicio\" aria-label=\"Codice — início\">codice</a>",
+      "css": ".ds-wordmark{display:inline-block;padding-block:12px;color:var(--ink,#f5f1eb);font:400 36px/1 \"Archivo Black\",sans-serif;letter-spacing:-.04em;text-decoration:none}.ds-wordmark:focus-visible{outline:2px solid var(--accent,#b69aff);outline-offset:6px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Ritmo",
+    "overview": "Tipografia em grande escala marca a presença da Codice, enquanto preço, escopo e contato permanecem diretos. A alternância entre fundo escuro e campos lilás conduz a leitura sem depender de efeitos de entrada.",
+    "keyCharacteristics": [
+      "Marca tipográfica, com uma única assinatura de movimento.",
+      "Campos de cor inteiros e hierarquia de leitura clara.",
+      "Trabalho real apresentado por capturas com origem documentada.",
+      "Controles e conteúdo completos antes do JavaScript."
+    ],
+    "rules": [],
+    "dos": [
+      "Do manter preço, escopo e contato legíveis antes do carregamento da interação.",
+      "Do usar as fontes locais e as cores conforme a superfície.",
+      "Do preservar foco visível e a versão estática completa."
+    ],
+    "donts": [
+      "Don't transformar a identidade de livro arquivada em referência vigente.",
+      "Don't atribuir à captura resultados comerciais ou disponibilidade atual da demo."
+    ]
+  }
+}

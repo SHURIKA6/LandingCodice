@@ -1,0 +1,1 @@
+import{t as e}from"./study.JK6JueAX.js";e();

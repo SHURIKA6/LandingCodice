@@ -1,0 +1,19 @@
+{
+  "title": "Manuscrito de projetos",
+  "prompt": "Edit only the unrequested extra copy in this Codice manuscript website concept. Preserve the complete manuscript composition, illuminated initial, binding, palette, materials, approved headline/CTA/navigation, both website screenshot plates and project captions exactly. Remove the handwritten three-word list \"ideias / tecnologia / resultados\" from the upper-right margin, leaving the paper and diagram intact. Remove only the ornamental roman numerals \"I.\" and \"II.\" beside the project names. Preserve the factual marginal notes \"Catálogo de imóveis\" and \"Serviços e contato\", the founders' colophon, and all other text. Make no other changes. Do not add replacement text. Keep canvas dimensions and screenshots unchanged.",
+  "generationPrompt": "Create a high-fidelity desktop WEBSITE landing-page concept for Codice, a Brazilian technology company, edge-to-edge, 1440 × 1100 px, showing the hero and beginning of the portfolio. It must read as an actual usable web page, with crisp Portuguese text, not a poster or a photograph of a book on a desk. Ancient codex materials must determine the page composition. Cormorant Garamond headlines and Source Sans 3 body text.\nCommon exact content: brand \"Codice\"; navigation \"Trabalhos\", \"Serviços\", \"A dupla\", \"Contato\"; headline \"Sites e sistemas sob medida para o seu negócio.\"; supporting text \"Fernando Riad e Eduardo Gobatto. De Sinop para projetos em todo o Brasil.\"; unmistakable primary button \"Conversar sobre meu projeto\"; portfolio heading \"Trabalhos que já saíram do papel\".\nInput 1 is the real Corretor website screenshot; input 2 the real Roger services screenshot. Insert these as faithful rectangular screenshot plates, preserving their actual UI, colors and content, not redesigning or synthesizing the projects. Label \"Corretor\" with \"Site e sistema imobiliário\", and \"Roger Estética Automotiva\" with \"Presença digital para um negócio local\". These screenshots demonstrate technology within the old-book identity. No portraits, invented testimonials, metrics, phones, laptop frames, fantasy symbols or extra slogans.\nDirection: MANUSCRITO DE PROJETOS. A page from an old stitched working manuscript forms the whole web surface. Show a narrow exposed stitch margin on the far left, spacious vellum and a disciplined ruled manuscript text block, not a modern UI with paper texture. A restrained blue initial begins the headline; the title follows the manuscript's line rhythm, while founders occupy a quiet marginal colophon. The blue primary action is plainly a modern clickable button within this manuscript. The portfolio starts as an asymmetric manuscript dossier, with the two supplied real screenshot plates set at unequal sizes and clear reading order; short factual marginal annotations \"Catálogo de imóveis\" and \"Serviços e contato\" identify what the screenshots show. Vellum #F2EBD9, ink #292D2B, blue #264A73, editorial red #9F3B35 and brass #A68D54. Only meaningful annotations; old-book structure, refined manuscript detail and crisp contemporary legibility. No fake calligraphy paragraphs or invented diagrams.",
+  "tool": "image_gen.imagegen",
+  "approved": false,
+  "createdOn": "2026-10-17",
+  "sourceImage": "C:\\Users\\ferna\\.codex\\generated_images\\01a14808-c9a3-7343-8aa8-bdb9af20ca57\\exec-2195c25f-5ecf-4338-b79f-7fcb6a81a646.png",
+  "referenceImages": [
+    "docs/visual-study/references/corretor-public-desktop-1440x900.png",
+    "docs/visual-study/references/roger-services-desktop-1440x900.png"
+  ],
+  "dimensions": {
+    "width": 1440,
+    "height": 1100
+  },
+  "normalization": "Mechanical Lanczos resize to the comparison dimensions; no content compositing or UI retouching.",
+  "status": "awaiting_user_choice"
+}

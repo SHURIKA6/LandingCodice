@@ -1,0 +1,29 @@
+---
+import Study from '../../layouts/Study.astro';
+import Arrow from '../../components/study/Arrow.astro';
+import { directions, studyOffer } from '../../data/study';
+import '../../styles/study/panel.css';
+---
+<Study title="Três direções para a nova Codice">
+  <header class="comparison-nav wrap"><a class="wordmark" href="/estudo/">codice<span aria-hidden="true">.</span></a><span>Nova identidade · Estudo comparativo</span><a href="/">Ver a página anterior <Arrow /></a></header>
+  <main id="conteudo">
+    <section class="comparison-intro wrap"><h1>A mesma oferta.<br /><span>Três presenças.</span></h1><div><p>Um site profissional para apresentar seus serviços e facilitar o contato com seus clientes.</p><p class="comparison-offer">Uma página · <strong>{studyOffer.price}</strong><span>Para prestadores de serviços de Sinop e região.</span></p></div></section>
+    <section class="comparison-workspace wrap" aria-label="Comparar Forma, Fluxo e Ritmo"><div class="comparison-toolbar"><p>Explore a aparência. Experimente o movimento.</p><div class="capture-switch" role="group" aria-label="Formato das imagens"><button data-capture-view="desktop" aria-pressed="true" disabled>Desktop</button><button data-capture-view="mobile" aria-pressed="false" disabled>Celular</button></div></div>
+      <div class="direction-grid">{directions.map(direction=><article class={`direction direction-${direction.id}`}><div class="direction-title"><h2>{direction.name}</h2><div class="palette" role="img" aria-label={`Paleta da direção ${direction.name}`}>{direction.palette.map(color=><span style={`background:${color}`} title={color}></span>)}</div></div><div class="direction-captures"><a data-capture="desktop" class="capture desktop-capture" href={`/study/previews/${direction.id}-desktop.webp`} target="_blank" rel="noopener noreferrer"><img src={`/study/previews/${direction.id}-desktop.webp`} alt={`Composição desktop da direção ${direction.name}; abrir imagem ampliada em nova aba.`} width="1440" height="1100" /><span>Ampliar desktop <Arrow /></span></a><a data-capture="mobile" class="capture mobile-capture" href={`/study/previews/${direction.id}-mobile.webp`} target="_blank" rel="noopener noreferrer"><img src={`/study/previews/${direction.id}-mobile.webp`} alt={`Composição no celular da direção ${direction.name}; abrir imagem ampliada em nova aba.`} width="390" height="1400" /><span>Ampliar celular <Arrow /></span></a></div><div class="direction-description"><h3>{direction.thesis}</h3><p class="direction-character">{direction.character}</p><p>{direction.description}</p><a class="preview-link" href={`/estudo/${direction.id}/`}>Experimentar {direction.name}<Arrow /></a><p class="interaction-hint">{direction.interaction}</p><details><summary>O que observar nesta direção</summary><p>{direction.risk}</p></details></div></article>)}</div>
+    </section>
+    <section class="comparison-criteria wrap"><h2>Qual parece<br />a nossa marca?</h2><div><p>As três direções apresentam a mesma oferta. A escolha é sobre como a Codice se expressa.</p><dl><div><dt>Personalidade</dt><dd>Qual você reconheceria depois de fechar a página?</dd></div><div><dt>Clareza</dt><dd>É fácil entender o serviço, o preço e como conversar?</dd></div><div><dt>Interação</dt><dd>O movimento dá vontade de explorar e ajuda a mensagem?</dd></div><div><dt>Celular</dt><dd>A direção mantém presença e funciona bem na mão?</dd></div></dl></div></section>
+    <section class="comparison-package"><div class="wrap comparison-package-grid"><div><h2>Uma oferta<br />com os pés no chão.</h2><p class="panel-package-price">{studyOffer.price}</p><p>{studyOffer.payment}.</p><p>O prazo é combinado na proposta, conforme materiais e agenda.</p></div><div><h3>O pacote inclui</h3><ul>{studyOffer.inclusions.map(item=><li>{item}</li>)}</ul><details><summary>Condições combinadas</summary>{studyOffer.conditions.map(item=><p>{item}</p>)}</details><p class="panel-scope-note">Estas prévias exploram uma identidade própria para a Codice. O pacote para clientes usa uma estrutura personalizada para cada negócio. Experiências especiais são avaliadas à parte.</p></div></div></section>
+    <footer class="comparison-footer wrap"><p>Forma, Fluxo ou Ritmo. A direção escolhida vai orientar a nova landing.</p><span>Estudo local · Página anterior preservada</span></footer>
+  </main>
+  <script>
+    const buttons = [...document.querySelectorAll<HTMLButtonElement>('[data-capture-view]')];
+    document.documentElement.dataset.captureView = 'desktop';
+    buttons.forEach(button => {
+      button.disabled = false;
+      button.addEventListener('click', () => {
+        document.documentElement.dataset.captureView = button.dataset.captureView;
+        buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      });
+    });
+  </script>
+</Study>

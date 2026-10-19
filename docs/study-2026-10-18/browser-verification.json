@@ -1,0 +1,154 @@
+{
+  "matrix": [
+    {
+      "direction": "forma",
+      "width": 320,
+      "documentWidth": 310,
+      "brokenImages": 0,
+      "missingAnchors": 0
+    },
+    {
+      "direction": "forma",
+      "width": 390,
+      "documentWidth": 380,
+      "brokenImages": 0,
+      "missingAnchors": 0
+    },
+    {
+      "direction": "forma",
+      "width": 768,
+      "documentWidth": 758,
+      "brokenImages": 0,
+      "missingAnchors": 0
+    },
+    {
+      "direction": "forma",
+      "width": 1440,
+      "documentWidth": 1430,
+      "brokenImages": 0,
+      "missingAnchors": 0
+    },
+    {
+      "direction": "fluxo",
+      "width": 320,
+      "documentWidth": 310,
+      "brokenImages": 0,
+      "missingAnchors": 0
+    },
+    {
+      "direction": "fluxo",
+      "width": 390,
+      "documentWidth": 380,
+      "brokenImages": 0,
+      "missingAnchors": 0
+    },
+    {
+      "direction": "fluxo",
+      "width": 768,
+      "documentWidth": 758,
+      "brokenImages": 0,
+      "missingAnchors": 0
+    },
+    {
+      "direction": "fluxo",
+      "width": 1440,
+      "documentWidth": 1430,
+      "brokenImages": 0,
+      "missingAnchors": 0
+    },
+    {
+      "direction": "ritmo",
+      "width": 320,
+      "documentWidth": 310,
+      "brokenImages": 0,
+      "missingAnchors": 0
+    },
+    {
+      "direction": "ritmo",
+      "width": 390,
+      "documentWidth": 380,
+      "brokenImages": 0,
+      "missingAnchors": 0
+    },
+    {
+      "direction": "ritmo",
+      "width": 768,
+      "documentWidth": 758,
+      "brokenImages": 0,
+      "missingAnchors": 0
+    },
+    {
+      "direction": "ritmo",
+      "width": 1440,
+      "documentWidth": 1430,
+      "brokenImages": 0,
+      "missingAnchors": 0
+    }
+  ],
+  "interactions": [
+    "Forma: keyboard open/close, pressed state and live status",
+    "Fluxo: all 3 keyboard selections, single pressed state and live status",
+    "Ritmo: native scroll progress 0.2928, keyboard replay and offscreen pause",
+    "Touch: Forma open and Fluxo contact selection"
+  ],
+  "fallbacks": [
+    {
+      "mode": "no-js",
+      "direction": "forma",
+      "offerVisible": true,
+      "packagePresent": true
+    },
+    {
+      "mode": "no-js",
+      "direction": "fluxo",
+      "offerVisible": true,
+      "packagePresent": true
+    },
+    {
+      "mode": "no-js",
+      "direction": "ritmo",
+      "offerVisible": true,
+      "packagePresent": true
+    },
+    {
+      "mode": "reduced-motion",
+      "direction": "forma",
+      "offerVisible": true,
+      "packagePresent": true
+    },
+    {
+      "mode": "reduced-motion",
+      "direction": "fluxo",
+      "offerVisible": true,
+      "packagePresent": true
+    },
+    {
+      "mode": "reduced-motion",
+      "direction": "ritmo",
+      "offerVisible": true,
+      "packagePresent": true
+    }
+  ],
+  "accessibility": [
+    {
+      "direction": "forma",
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "direction": "fluxo",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "direction": "ritmo",
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "consoleErrors": []
+}

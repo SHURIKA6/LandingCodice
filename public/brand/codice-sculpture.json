@@ -1,0 +1,51 @@
+{
+  "generatedOn": "2026-10-19",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "prompt": "docs/next-lando-2026-10-19/prompt.txt",
+  "provenance": "docs/next-lando-2026-10-19/asset.md",
+  "sourceGenerationId": "01a15457-eef3-7d51-86dc-c99631566245",
+  "purpose": "Decorative original Codice hero sculpture, not a client product or interactive 3D model",
+  "files": [
+    {
+      "path": "public/brand/codice-sculpture.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "bytes": 1457047,
+      "sha256": "fb4ca660cfbdb3b3a2e4201babbd527369862649a102ae3cb93a1804562c5db6",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaCorner": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "beforeProvenanceMetadata": {
+        "sha256": "de03fd0bac5ce2053694ae65d5c555d38a6262a6699367d95704904f8c0974a4",
+        "bytes": 1456167
+      }
+    },
+    {
+      "path": "public/brand/codice-sculpture.webp",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "bytes": 104794,
+      "sha256": "9aba0489c77140e267f509631d2d504d9cf4b5511e79503a1765a843e5e475d6",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaCorner": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  ]
+}

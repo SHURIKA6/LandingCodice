@@ -1,0 +1,447 @@
+html[data-theme=forma] {
+  --ground: #dce4ee;
+  --ink: #15273e;
+  --accent: #2348f5;
+  --quiet: #40536a;
+  --line: #adbbcd;
+  --surface: #f6f8fb;
+  background: var(--ground);
+  color: var(--ink);
+}
+.forma-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 670px;
+  align-items: center;
+  padding-top: 22px;
+  padding-bottom: 58px;
+  gap: 32px;
+}
+.forma-copy {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 20px;
+}
+.forma-copy .hero-title {
+  font-size: clamp(48px,5vw,76px);
+  max-width: 12ch;
+}
+.forma-copy .hero-description {
+  margin-top: 28px;
+  max-width: 37ch;
+}
+.forma-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 32px;
+}
+.forma-art {
+  min-width: 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.spatial-stage {
+  position: relative;
+  width: 100%;
+  height: 470px;
+  perspective: 1100px;
+  isolation: isolate;
+}
+.stage-guide {
+  position: absolute;
+  inset: 4% 1%;
+  border: 1px solid #a0afc54d;
+  border-radius: 50%;
+  transform: rotate(-35deg);
+}
+.stage-guide::after {
+  content: '';
+  position: absolute;
+  inset: 16%;
+  border: 1px solid #a0afc54d;
+  border-radius: 50%;
+}
+.sculpture {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--tilt-y,0deg)) rotateY(var(--tilt-x,0deg));
+  transition: transform .65s cubic-bezier(.16,1,.3,1);
+}
+.form-plane {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 16px 30px 48px #15273e26;
+  backface-visibility: hidden;
+  transition: transform 1s cubic-bezier(.16,1,.3,1),left 1s cubic-bezier(.16,1,.3,1),top 1s cubic-bezier(.16,1,.3,1);
+  transform-origin: center;
+}
+.plane-brand {
+  left: 3%;
+  top: 6%;
+  width: 43%;
+  height: 70%;
+  padding: 24px;
+  background: #2348f5;
+  color: #fff;
+  transform: rotateY(-22deg) rotateX(7deg) rotateZ(-9deg) translateZ(-30px);
+}
+.plane-brand>svg {
+  width: 100%;
+  max-height: 220px;
+}
+.plane-brand>span {
+  margin-top: auto;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.plane-site {
+  left: 36%;
+  top: 18%;
+  width: 50%;
+  height: 66%;
+  background: #f6f8fb;
+  color: #15273e;
+  padding: 24px;
+  transform: rotateY(-19deg) rotateX(7deg) rotateZ(4deg) translateZ(30px);
+}
+.plane-wordmark {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -.03em;
+}
+.plane-line {
+  height: 1px;
+  background: #b9c5d5;
+  margin-block: 18px;
+}
+.plane-site>strong {
+  font-size: clamp(19px,1.8vw,27px);
+  font-weight: 500;
+  letter-spacing: -.035em;
+  line-height: 1.2;
+}
+.plane-services {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+  font-size: 10px;
+  color: #40536a;
+}
+.plane-services>span {
+  padding-block: 7px;
+  border-bottom: 1px solid #c8d1de;
+}
+.plane-bottom {
+  font-size: 8px;
+  margin-top: auto;
+  padding-top: 12px;
+}
+.plane-contact {
+  left: 20%;
+  top: 70%;
+  width: 62%;
+  height: 26%;
+  padding: 20px;
+  background: #15273e;
+  color: #f6f8fb;
+  transform: rotateY(-18deg) rotateX(7deg) rotateZ(-5deg) translateZ(90px);
+  justify-content: space-between;
+}
+.plane-contact>span {
+  font-size: 11px;
+  line-height: 1.4;
+  color: #cfdbeb;
+}
+.plane-contact>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.plane-contact strong {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -.02em;
+}
+.spatial-stage[data-enhanced=true]:not(.is-open) .plane-brand {
+  left: 13%;
+  top: 8%;
+  transform: rotateY(-32deg) rotateX(10deg) rotateZ(-12deg) translateZ(-70px);
+}
+.spatial-stage[data-enhanced=true]:not(.is-open) .plane-site {
+  left: 28%;
+  top: 18%;
+  transform: rotateY(-32deg) rotateX(10deg) rotateZ(-12deg) translateZ(8px);
+}
+.spatial-stage[data-enhanced=true]:not(.is-open) .plane-contact {
+  left: 30%;
+  top: 64%;
+  transform: rotateY(-32deg) rotateX(10deg) rotateZ(-12deg) translateZ(95px);
+}
+.spatial-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+}
+.spatial-controls>p {
+  max-width: 22ch;
+  color: var(--quiet);
+}
+.spatial-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  background: none;
+  border: 0;
+  padding: 8px 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.spatial-toggle:hover {
+  color: var(--accent);
+}
+.spatial-toggle[aria-pressed=true] svg {
+  transform: rotate(-45deg);
+}
+.art-caption {
+  font-size: 10px;
+  color: var(--quiet);
+  margin-top: 8px;
+}
+.forma-next {
+  padding-block: 72px;
+  background: #f6f8fb;
+}
+.forma-next-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+.forma-next h2 {
+  font-size: clamp(36px,4vw,58px);
+  line-height: 1.15;
+  letter-spacing: -.035em;
+  font-weight: 500;
+}
+.forma-next h2 em {
+  font-style: normal;
+  color: #2348f5;
+}
+.forma-next-grid>div>p {
+  max-width: 44ch;
+  font-size: 16px;
+  color: #40536a;
+  margin-bottom: 28px;
+}
+.forma-next dl {
+  margin: 0;
+}
+.forma-next dl>div {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  border-top: 1px solid #ced7e4;
+  padding-block: 18px;
+}
+.forma-next dt {
+  font-size: 14px;
+  font-weight: 700;
+}
+.forma-next dd {
+  margin: 0;
+  font-size: 13px;
+  color: #40536a;
+  line-height: 1.6;
+}
+.stage-guide {
+  inset: 12% 16%;
+  transform: rotate(-28deg);
+}
+@media(min-width:1600px) {
+  .forma-hero {
+    min-height: 730px;
+  }
+  .spatial-stage {
+    height: 510px;
+  }
+}
+@media(max-width:1000px) {
+  .forma-hero {
+    gap: 10px;
+    min-height: 620px;
+  }
+  .forma-copy .hero-title {
+    font-size: clamp(42px,5.5vw,58px);
+  }
+  .spatial-stage {
+    height: 400px;
+  }
+  .plane-brand,.plane-site {
+    padding: 17px;
+  }
+  .plane-contact {
+    padding: 15px;
+  }
+  .plane-services {
+    margin-top: 16px;
+  }
+  .plane-site>strong {
+    font-size: 21px;
+  }
+  .spatial-controls {
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+  .spatial-controls>p {
+    max-width: none;
+  }
+  .forma-next-grid {
+    gap: 44px;
+  }
+  .forma-next dl>div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+@media(max-width:700px) {
+  .forma-hero {
+    grid-template-columns: 1fr;
+    padding-top: 28px;
+    padding-bottom: 36px;
+    gap: 16px;
+  }
+  .forma-copy {
+    padding-bottom: 0;
+  }
+  .forma-copy .hero-title {
+    font-size: clamp(43px,10.7vw,64px);
+    max-width: 13ch;
+  }
+  .forma-copy .hero-description {
+    font-size: 16px;
+    margin-top: 22px;
+    max-width: 37ch;
+  }
+  .forma-action {
+    margin-top: 24px;
+    gap: 20px;
+  }
+  .forma-art {
+    margin-top: 4px;
+  }
+  .spatial-stage {
+    height: clamp(300px,88vw,440px);
+  }
+  .plane-brand {
+    padding: 20px;
+  }
+  .plane-site {
+    padding: 20px;
+  }
+  .plane-site>strong {
+    font-size: clamp(21px,5.5vw,27px);
+  }
+  .plane-services {
+    gap: 2px;
+    margin-top: 13px;
+  }
+  .plane-services>span {
+    padding-block: 5px;
+  }
+  .plane-contact {
+    padding: 15px;
+  }
+  .spatial-controls {
+    flex-wrap: nowrap;
+    font-size: 11px;
+    gap: 12px;
+    margin-top: 4px;
+    padding-top: 10px;
+  }
+  .spatial-controls>p {
+    max-width: 22ch;
+  }
+  .spatial-toggle {
+    font-size: 11px;
+    gap: 8px;
+  }
+  .art-caption {
+    font-size: 9px;
+  }
+  .forma-next {
+    padding-block: 48px;
+  }
+  .forma-next-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .forma-next h2 {
+    font-size: 38px;
+  }
+  .forma-next dl>div {
+    grid-template-columns: 120px 1fr;
+    gap: 14px;
+  }
+  .forma-next dt {
+    font-size: 12px;
+  }
+  .forma-next dd {
+    font-size: 12px;
+  }
+}
+@media(max-width:700px) {
+  .plane-services>span:last-child {
+    display: none;
+  }
+  .plane-site>strong {
+    font-size: clamp(18px,4.7vw,24px);
+  }
+}
+@media(max-width:350px) {
+  .plane-site {
+    padding: 14px;
+  }
+  .plane-site>strong {
+    font-size: 18px;
+  }
+  .plane-wordmark {
+    font-size: 12px;
+  }
+  .plane-line {
+    margin-block: 12px;
+  }
+  .plane-contact strong {
+    font-size: 13px;
+  }
+  .plane-contact>span {
+    font-size: 10px;
+  }
+  .spatial-controls {
+    flex-wrap: wrap;
+  }
+  .forma-next dl>div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .sculpture {
+    transform: none;
+  }
+  .form-plane {
+    transition: none;
+  }
+}
