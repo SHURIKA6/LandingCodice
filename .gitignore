@@ -9,6 +9,14 @@ dist/
 
 # generated design tooling artifacts
 .impeccable/build/
+.impeccable/questions/
+
+# local assistant attachments
+.codex-remote-attachments/
+
+# local deployment metadata
+.vercel/
+
 # generated types
 .astro/
 
