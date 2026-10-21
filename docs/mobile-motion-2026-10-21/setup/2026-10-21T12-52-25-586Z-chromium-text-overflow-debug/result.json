@@ -1,0 +1,38 @@
+{
+  "startedAt": "2026-10-21T12:52:25.589Z",
+  "engine": "chromium",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T12-52-25-586Z-chromium-text-overflow-debug",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T12-52-25-586Z-chromium-text-overflow-debug\\video\\page@9cf76c76079863a86c35baf3a3ac8072.webm",
+      "bytes": 179802
+    }
+  ],
+  "browserVersion": "148.0.7778.96",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\text-overflow-debug.browser.js",
+  "result": {
+    "width": 390,
+    "scrollWidth": 392,
+    "nodes": [
+      {
+        "tag": "HEADER",
+        "className": "site-header",
+        "right": 392,
+        "left": 0,
+        "width": 392,
+        "overflow": "visible",
+        "text": "codicePessoas. Ideias. Trabalho.Vamos conversar  pelo WhatsApp de Fern"
+      }
+    ]
+  },
+  "pageErrors": [],
+  "pass": true,
+  "testFinishedAt": "2026-10-21T12:52:28.390Z",
+  "cleanupWarnings": [],
+  "finishedAt": "2026-10-21T12:52:28.592Z"
+}

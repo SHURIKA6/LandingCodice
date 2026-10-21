@@ -1,0 +1,26 @@
+{
+  "engine": "chromium",
+  "scenario": "new-intro-parallax-stops-on-live-reduced-motion",
+  "before": [
+    {
+      "className": "",
+      "transform": "matrix(1, 0, 0, 1, 0, -48)"
+    },
+    {
+      "className": "hero-description-copy",
+      "transform": "matrix(1, 0, 0, 1, 0, -24)"
+    }
+  ],
+  "after": [
+    {
+      "className": "",
+      "transform": "none"
+    },
+    {
+      "className": "hero-description-copy",
+      "transform": "none"
+    }
+  ],
+  "pass": true,
+  "finishedAt": "2026-10-21T05:42:53.893Z"
+}

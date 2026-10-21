@@ -1,4 +1,114 @@
 ---
+name: Codice — Pessoas em cena
+description: Retratos reais, composição clara e planos fotográficos em profundidade para apresentar as pessoas da Codice.
+colors:
+  paper: "#f7f9fc"
+  ink: "#142033"
+  blue: "#2f4bff"
+  mist: "#dce5f3"
+  quiet: "#526079"
+  line: "#c5cfdf"
+  blue-hover: "#203bd8"
+  mist-line: "#a6b6cd"
+  blue-text: "#e0e7ff"
+  blue-line: "#a4b2ff"
+typography:
+  display:
+    fontFamily: "Bricolage Grotesque, sans-serif"
+    fontWeight: "200–800"
+  body:
+    fontFamily: "Source Sans 3, sans-serif"
+    fontWeight: "200–900"
+---
+
+# Design System: Codice — Pessoas em cena
+
+## Escultura azul na abertura — execução de 21/10/2026
+
+O usuário escolheu recuperar a escultura anterior dos dois Cs entrelaçados e recolocá-la na abertura, com o esmalte em azul de base **`#2f4bff`** e a faixa cromada preservada. A edição é um raster transparente, com novos PNG/WebP e proveniência em `public/brand/codice-sculpture-blue.json`; não substituir os originais nem simular novo modelo 3D.
+
+Desktop usa título → escultura → descrição em três colunas; peça de 128–176 px, conservando a altura da introdução nas cinco larguras desktop comparadas à baseline. Abaixo de 1024 px, peça central de 160 px antes do título, reduzida a 112 px em altura até 700 px. Entrada finita de 850 ms e parallax de até 24 px ocupam wrappers separados, sem transformar ancestrais de sticky ou ações. A imagem tem `alt=""`, dimensões reservadas e repouso estático em SSR/sem JS/reduce. Preservar reflow com texto ampliado.
+
+A apresentação das pessoas e seus 300svh continua após a abertura; navegação, favicon, conteúdo comercial, fotos e contatos não mudam. [Registro](docs/blue-sculpture-2026-10-21/README.md) e [QA próprio concluído em 21/10](docs/blue-sculpture-2026-10-21/verification.md), encerrando o registro inicial em execução. Nove capturas estáveis, três frames intermediários e vídeo da abertura foram inspecionados; revisão independente 13/13 aprovada, assets e archive íntegros. As aprovações mobile abaixo permanecem como baseline anterior, não como prova desta integração.
+
+## Mobile cinematográfico — execução de 21/10/2026
+
+O **“gooo”** autorizou a implementação da [spec mobile](docs/superpowers/specs/2026-10-21-mobile-motion-design.md) após a escolha explícita de retratos e nomes em uma área fixa controlada pelo scroll. O telefone em retrato, abaixo de 1024 px e com altura a partir de 560 px, usa `mobile-story`: introdução fora do sticky, trilho único de 300svh, palco abaixo do header e composição compacta até 700 px de altura. Fernando/Eduardo/Victor têm repousos em .08/.50/.92, com foto proporcional e nome completo. Fotografias cruzam camadas em deslocamento lateral/vertical, escala e rotação plana; nomes percorrem máscaras em sentido oposto. A rolagem inversa recompõe a mesma pose.
+
+Landscape ou altura inferior a 560 px usa `mobile-flow`, com movimento local de fotografias e nomes sem fixar uma cena que não cabe. O palco só começa após carregamento/decodificação das três fotos; demora ou falha mantém o fluxo HTML. `static` cobre SSR e movimento reduzido; `desktop` mantém a cena existente. Esses modos são separados do renderizador `html`/`three`: Three permanece sob demanda somente no desktop elegível.
+
+A antiga política de molduras imóveis no celular é substituída por movimento **somente na mídia**: escala .86→1, deslocamento até 64 px e acomodação oposta de Corretor/Roger, com leitura reversível até 24 px. Capturas trocam com até 8% de deslocamento e crossfade, após preparo da nova imagem. Botões, descrições e links ficam em camada estável. Os capítulos têm superfície e tipografia separadas; preço inteiro, inclusões, trilha vertical do processo, frase de contato e letras finais têm coreografias próprias. Menu continua nativo e o foco resolve entradas imediatamente. A preferência reduzida ao vivo cancela efeitos, com HTML completo.
+
+Paleta, fontes locais/licenças, fotos, oferta e contatos permanecem os mesmos. O [registro da execução](docs/mobile-motion-2026-10-21/README.md) e a [verificação específica](docs/mobile-motion-2026-10-21/verification.md) registram a versão; **QA local concluído em 21/10**, encerrando o estado inicial em andamento. Texto ampliado troca máscaras fixas por fluxo, com reflow do header/preço e espaço para o marcador girado das condições. Ocultação cancela CSS/WAAPI finitos. A revisão independente corrigiu foco na abertura e menu baixo; frames finais foram inspecionados. As aprovações anteriores abaixo pertencem às versões preservadas e não se transferem ao mobile novo.
+
+## Ampliação de movimento — 20/10/2026
+
+**Fechamento em 21/10/2026:** build e typecheck finais, seis testes de geometria, 16 cenários do smoke e seis cenários adicionais de motion passaram. Três tamanhos de notebook baixo também foram conferidos; revisão independente final de código e capturas aprovada. Evidências e limites em [verification.md](docs/pessoas-em-cena-2026-10-20/verification.md).
+
+O usuário elogiou a direção e autorizou ampliar sua coreografia com **“pode seguir”**, citando [Lando Norris](https://landonorris.com/) e [KAIRN no MotionSites](https://motionsites.ai/?prompt=kairn). A assinatura continua sendo a apresentação das três pessoas por fotografias reais. Título por linhas, nomes animados, indicador de três etapas, profundidade e pequena resposta com mola ao ponteiro reforçam esse momento, sem estender os 300svh nem alterar os retratos. O ponteiro retorna ao repouso fora da tela e com a aba oculta.
+
+`MotionChapter` abre os cantos superiores de 64 px para 0 conforme a rolagem e coordena entradas finitas de títulos, grupos de leitura, processo e palavra de fechamento. `ScrollFrame` acomoda as molduras reais de Corretor e Roger com movimento reversível em desktop, neutralizado no celular. Menu usa uma abertura coordenada de painel e links; catálogo conserva a captura anterior até a próxima estar pronta e faz uma transição curta de opacidade. Os estilos complementares das interações estão em `src/components/experience/interaction-motion.css`.
+
+O conteúdo já é visível no HTML. Movimento reduzido ao vivo, ausência de JavaScript, celular e falhas da cena preservam leitura e ações; o foco não aguarda a coreografia. Entradas são finitas, observadores e animações são liberados, e a cena mantém renderização sob demanda e DPR máximo 1,5. O [roteiro](docs/pessoas-em-cena-2026-10-20/motion.md) detalha a proposta.
+
+Build, typecheck, seis testes de movimento e a nova execução dos 16 cenários do smoke passaram; revisão estática independente aprovada. O QA adicional de movimento, rede e toque tem seu estado final em [verification.md](docs/pessoas-em-cena-2026-10-20/verification.md), sem transferir automaticamente a aprovação da baseline preservada abaixo. Sem commit, push ou deploy.
+
+### Tons complementares já existentes
+
+| Papel | Valor |
+| --- | --- |
+| Hover da ação azul | `#203bd8` |
+| Filete sobre campo suave | `#a6b6cd` |
+| Texto secundário sobre azul | `#e0e7ff` |
+| Filete sobre azul | `#a4b2ff` |
+
+Esses tons já eram usados no CSS. O detector executou com exit 0 e registrou dez avisos advisory sobre essas cores preexistentes fora do sidecar. Este registro documenta seus papéis, sem modificar CSS ou sidecar; a saída do detector não substitui QA visual ou de acessibilidade.
+
+## Estado vigente — direção aprovada em 20/10/2026
+
+**Pessoas em cena** apresenta Fernando Riad, Eduardo Gobatto e Victor Rafael por retratos reais, nomes legíveis e uma composição clara. A direção anterior Em evidência, de marfim, oliva, lima e arte abstrata, permanece como histórico abaixo. A restrição antiga sobre acrescentar retratos foi substituída pela autorização explícita de 20/10; os originais autorizados estão documentados em [assets.md](docs/pessoas-em-cena-2026-10-20/assets.md).
+
+**Implementada e verificada localmente.** Build, typecheck, seis testes de movimento, 16 cenários de navegador e revisão independente passaram. A homologação estética do usuário é distinta da revisão técnica. O escopo está no [briefing da implementação](docs/pessoas-em-cena-2026-10-20/README.md); evidências e limites de acessibilidade/desempenho estão em [verification.md](docs/pessoas-em-cena-2026-10-20/verification.md).
+
+### Cor e tipografia
+
+| Papel | Valor |
+| --- | --- |
+| Base clara | `#f7f9fc` |
+| Texto principal | `#142033` |
+| Ação e ênfase azul | `#2f4bff` |
+| Campo suave | `#dce5f3` |
+| Texto secundário | `#526079` |
+| Divisores | `#c5cfdf` |
+
+**Bricolage Grotesque** organiza marca, títulos e nomes; **Source Sans 3** sustenta leitura e controles. As duas famílias são locais, com `font-display: swap`, preservando arquivos e licenças OFL existentes. Os retratos fornecem a matéria visual principal; a cor e a tipografia organizam a leitura e o contato.
+
+### Composição, fotografia e movimento
+
+O hero combina título amplo, apresentação direta e retratos em planos. A sequência fotográfica tem três posições, uma por pessoa, na ordem Fernando, Eduardo e Victor. O progresso acompanha a rolagem e deve permanecer reversível, sem acumular distorções. Os arquivos originais não são alterados; qualquer ajuste de enquadramento na apresentação preserva a proporção e não substitui a fotografia por conteúdo gerado.
+
+A cena Three.js entra por carregamento dinâmico de cliente somente em desktop a partir de 1024 px e quando o usuário permite movimento. O HTML conserva as imagens, os nomes e o conteúdo comercial antes de qualquer aprimoramento. No celular, sem JavaScript, com movimento reduzido ou diante de erro de WebGL, a composição completa continua legível e utilizável. O canvas é complementar e não deve carregar texto ou controles essenciais.
+
+### Conteúdo e acessibilidade
+
+Preservar a ordem semântica, nomes por extenso, textos alternativos simples e foco visível nos controles. A apresentação dos três não permite inferir funções, especialidades, contatos ou condição de estudante de Victor. A informação anterior sobre estudantes de Sistemas de Informação refere-se a Fernando e Eduardo. As ações comerciais continuam direcionadas apenas aos contatos originais em `siteContent.founders`.
+
+Corretor usa evidência de trabalho real; Roger mantém a classificação demonstrativa. Fotografias, capturas de portfólio e arte de marca não comprovam resultados comerciais. Não acrescentar depoimentos, métricas ou prazos sem evidência.
+
+### Implementação e verificação
+
+Os tokens estão em `src/app/globals.css`; os dados de pessoas, em `src/data/team.ts`; o aprimoramento usa `Hero.tsx`, `PortraitScene.tsx` e `portraitMotion.ts` em `src/components/experience/`. Verificar `npm run typecheck`, `npm run build` e `node --experimental-strip-types --test scripts/portrait-motion.test.mjs`, além do QA de teclado, toque, responsividade e alternativas estáticas. As verificações dos arquivos de retrato já executadas não equivalem ao QA da integração.
+
+Preservar estudos, fontes, licenças, prompts, capturas e archives. A versão anterior da experiência está em `docs/pessoas-em-cena-2026-10-20/archive/`; o restante deste documento permanece como registro histórico.
+
+## Histórico preservado — sistema Em evidência, anterior à autorização de 20/10/2026
+
+O frontmatter e as seções anteriores foram mantidos abaixo. Seus tokens, estado de implementação e resultados correspondem àquela versão. Para alterações atuais, prevalecem os critérios de Pessoas em cena acima.
+
+### Frontmatter anterior preservado
+
+```yaml
+---
 name: Codice — Em evidência
 description: Marca monumental, objeto escultórico e campos de cor para uma presença profissional.
 colors:
@@ -72,6 +182,8 @@ components:
     backgroundColor: "{colors.acid-hover}"
     textColor: "{colors.ink}"
 ---
+```
+
 
 # Design System: Codice — Em evidência
 

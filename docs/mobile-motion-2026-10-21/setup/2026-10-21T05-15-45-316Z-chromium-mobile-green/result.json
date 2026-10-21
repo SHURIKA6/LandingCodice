@@ -1,0 +1,60 @@
+{
+  "startedAt": "2026-10-21T05:15:45.317Z",
+  "engine": "chromium",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-15-45-316Z-chromium-mobile-green",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-15-45-316Z-chromium-mobile-green\\video\\page@f185e3cbd32a57e69523b0c1cda14d95.webm",
+      "bytes": 268639
+    }
+  ],
+  "browserVersion": "148.0.7778.96",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\scripts\\verify-mobile-motion.browser.js",
+  "result": {
+    "passed": 1,
+    "results": [
+      {
+        "scenario": "mobile-cinematic-stage-and-reversal",
+        "pass": true,
+        "poses": [
+          {
+            "active": "Fernando Riad",
+            "photo": "none"
+          },
+          {
+            "active": "Eduardo Gobatto",
+            "photo": "matrix(0.881327, -0.0598974, 0.0598974, 0.881327, -74.9031, 25.826)"
+          },
+          {
+            "active": "Eduardo Gobatto",
+            "photo": "matrix(0.815508, -0.0857133, 0.0857133, 0.815508, -115.591, 39.855)"
+          },
+          {
+            "active": "Victor Rafael",
+            "photo": "matrix(0.815508, -0.0857133, 0.0857133, 0.815508, -115.591, 39.855)"
+          },
+          {
+            "active": "Victor Rafael",
+            "photo": "matrix(0.815508, -0.0857133, 0.0857133, 0.815508, -115.591, 39.855)"
+          },
+          {
+            "active": "Eduardo Gobatto",
+            "photo": "matrix(0.815508, -0.0857133, 0.0857133, 0.815508, -115.591, 39.855)"
+          },
+          {
+            "active": "Fernando Riad",
+            "photo": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "pageErrors": [],
+  "pass": true,
+  "finishedAt": "2026-10-21T05:15:48.457Z"
+}

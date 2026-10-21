@@ -1,0 +1,19 @@
+✔ mobile story has three readable photographic stops (2.1371ms)
+✔ invalid and overscrolled progress keep a valid person visible (0.5784ms)
+✔ handoffs never blank the stage or distort photograph proportions (7.996ms)
+✔ poses stay continuous at all reading and handoff boundaries (1.1769ms)
+✔ scroll reversal restores the scene rather than accumulating offsets (2.3758ms)
+✔ invalid or overscrolled progress still selects an existing portrait (4.527ms)
+✔ each of the three readable stops brings its own photo to the front and center (2.1587ms)
+✔ scrolling back restores the same scene and switches names at the nearest stop (1.4949ms)
+✔ portrait handoffs move through depth continuously without stretching their square planes (2.9398ms)
+✔ handoff surfaces stay parallel so neighboring photographs cannot slice through one another (0.7212ms)
+✔ square crops preserve image proportions instead of squeezing a face into a square (0.6852ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 337.767

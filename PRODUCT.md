@@ -2,6 +2,56 @@
 
 <!-- impeccable:product-schema 1 -->
 
+## Escultura azul na abertura — execução de 21/10/2026
+
+O usuário confirmou a antiga escultura decorativa da Codice, formada por dois Cs entrelaçados, e autorizou a edição do esmalte verde para azul **`#2f4bff`**, preservando cromado, volume e transparência. Escolheu integrá-la à abertura da landing. É uma recuperação de identidade visual, sem novo produto, promessa de 3D interativo ou ampliação da oferta comercial. Pessoas em cena, retratos, trilho de 300svh, contatos, header e favicon permanecem no contrato vigente.
+
+O [registro da execução](docs/blue-sculpture-2026-10-21/README.md) guarda assets/proveniência e o [relatório próprio](docs/blue-sculpture-2026-10-21/verification.md) registra **QA local concluído em 21/10**, encerrando a fase inicial em execução, com build/typecheck, geometria, regressões, mobile Chromium/WebKit, revisão e integridade próprios desta alteração. Os resultados anteriores são históricos para esta alteração. Entrega versionada na branch `feat/pessoas-em-cena`, sem push ou deploy.
+
+## Mobile cinematográfico — execução de 21/10/2026
+
+Após pedir movimento mobile muito mais intenso e escolher uma cena fixa com retratos/nomes controlados pela rolagem, o usuário autorizou o [plano](docs/superpowers/plans/2026-10-21-mobile-motion.md) com **“gooo”**. A execução mantém Pessoas em cena, oferta e limites comerciais: sites de uma página por R$ 1.500, até seis seções, contatos originais e classificação real/demonstrativa dos projetos. A experiência autoral de motion não passa a integrar automaticamente o pacote de entrada.
+
+O telefone em retrato tem palco único de 300svh após a introdução, com Fernando → Eduardo → Victor, fotografias originais, nomes completos e indicador. Em landscape/altura curta, a apresentação segue em fluxo com movimentos locais. As mídias dos projetos passam a acompanhar o scroll, enquanto botões, descrições e contatos ficam estáveis. Oferta, processo, contato e menu recebem movimentos distintos, preservando leitura e ação imediatas. Sem JavaScript ou com movimento reduzido, o conteúdo permanece completo em HTML; Three continua opcional e exclusivo do desktop elegível.
+
+O [registro mobile](docs/mobile-motion-2026-10-21/README.md) descreve a implementação. **Verificação local concluída** no [relatório desta execução](docs/mobile-motion-2026-10-21/verification.md), com resultados novos de build, geometria, regressão e mobile em Chromium/WebKit; o registro inicialmente estava em andamento. Texto ampliado pode trocar o palco por fluxo legível. Aparelho físico e aceite estético permanecem distintos. Resultados de 20–21/10 abaixo não validam automaticamente o novo mobile. Entrega versionada na branch `feat/pessoas-em-cena`, sem push ou deploy. A neutralização anterior de molduras no telefone fica preservada como histórico e é substituída nesta execução autorizada.
+
+## Ampliação de movimento — 20/10/2026
+
+**Fechamento em 21/10/2026:** build e typecheck finais, seis testes de geometria, 16 cenários do smoke e seis cenários adicionais de motion passaram. Três tamanhos de notebook baixo também foram conferidos; revisão independente final de código e capturas aprovada. Evidências e limites em [verification.md](docs/pessoas-em-cena-2026-10-20/verification.md).
+
+Após elogiar a landing **Pessoas em cena**, o usuário pediu mais movimentos e transições, com referências em [Lando Norris](https://landonorris.com/) e [KAIRN no MotionSites](https://motionsites.ai/?prompt=kairn). O **“pode seguir”** delegou a escolha da coreografia e autorizou sua implementação. A direção aprovada, as fotografias originais, as pessoas, os contatos, a oferta e a stack continuam preservados; as referências orientam ritmo e continuidade, sem reutilização de suas marcas ou imagens.
+
+A abertura ganhou título por linhas, nomes em movimento, indicador de três etapas e maior profundidade com resposta discreta ao ponteiro, sem aumentar os 300svh. Os capítulos passam a acompanhar a rolagem, as molduras de Corretor e Roger se acomodam no desktop, o processo aparece em sequência e o fechamento tem uma entrada própria. Menu e catálogo comunicam suas mudanças de estado; a captura anterior permanece visível até a próxima estar carregada e decodificada. Celular, movimento reduzido, ausência de JavaScript e falhas da cena conservam o conteúdo HTML completo.
+
+**Evidência desta ampliação:** build e typecheck passaram, os seis testes de movimento passaram e o smoke atualizado foi executado novamente, com **16/16 cenários aprovados**, contra a prévia de produção em `http://localhost:4321/`, restrita à máquina. A revisão estática independente foi aprovada. O estado final do QA adicional de movimento, rede e toque está em [verification.md](docs/pessoas-em-cena-2026-10-20/verification.md); esses resultados não devem ser inferidos da baseline original. Sem commit, push ou deploy. O [roteiro de movimento](docs/pessoas-em-cena-2026-10-20/motion.md) registra o escopo, e os blocos seguintes preservam integralmente a primeira entrega e seus resultados.
+
+## Estado vigente — Pessoas em cena, 20/10/2026
+
+A direção aprovada é **Pessoas em cena**: uma página clara que apresenta Fernando Riad, Eduardo Gobatto e Victor Rafael por seus retratos reais, com tipografia expressiva, planos fotográficos em profundidade no desktop e conteúdo HTML completo em todas as modalidades. A stack vigente continua **Next.js App Router + React + TypeScript + Tailwind CSS + Lenis + Framer Motion**, com **Three.js** para o aprimoramento visual opcional.
+
+A oferta de entrada permanece um **site de uma página por R$ 1.500**, com até seis seções, para prestadores de serviços de Sinop/MT e região. Inclui layout responsivo, textos organizados a partir do briefing, materiais reais aprovados, WhatsApp, localização, metadados básicos, uma rodada consolidada de revisão e configuração/publicação. Correções de defeitos não consomem a revisão. Pagamento: R$ 750 após acordo de escopo para iniciar e R$ 750 após aprovação, antes da publicação; prazo definido na proposta. Domínio e hospedagem são pagos pelo cliente em suas próprias contas; extras recebem orçamento separado. A experiência autoral da Codice não amplia automaticamente esse pacote.
+
+### Pessoas, autorização e contato
+
+Os três nomes e retratos estão em `src/data/team.ts`, na ordem Fernando, Eduardo e Victor. As fotografias de Fernando e Eduardo vieram dos perfis GitHub autorizados; Victor foi fornecido por anexo. A autorização explícita de **20/10/2026 substitui a antiga restrição de não acrescentar retratos**. Os arquivos originais permanecem em `public/team/`, com origem, dimensões, MIME, bytes e SHA-256 no [registro dos assets](docs/pessoas-em-cena-2026-10-20/assets.md) e no manifesto JSON.
+
+A apresentação conjunta não atribui cargos, especialidades ou contatos novos. A informação anterior de que Fernando e Eduardo são estudantes de Sistemas de Informação refere-se apenas aos dois; a condição de Victor não foi confirmada e não deve ser inferida nem agrupada como se os três fossem estudantes. Os contatos comerciais continuam exclusivamente os já fornecidos em `siteContent.founders`: Fernando `5566999356646` e Eduardo `556684184488`, preservados literalmente.
+
+### Experiência e evidência de trabalho
+
+Three.js é carregado dinamicamente no cliente apenas em desktop com largura a partir de 1024 px, quando o movimento reduzido não está solicitado. Celular, uso sem JavaScript, movimento reduzido e falha de WebGL conservam retratos, nomes, oferta, navegação e contatos em HTML. A cena complementa a apresentação; a leitura e a ação comercial não dependem do canvas.
+
+**Corretor** continua apresentado como trabalho efetivamente desenvolvido, por funcionalidades e capturas reais, sem alegações de resultado comercial. **Roger Estética Automotiva** é um projeto demonstrativo de portfólio de uma proposta não contratada; seu link de visita não comprova relação comercial ou resultados. Em 20/10, a página pública de Roger respondeu HTTP 200 com o título esperado. Corretor respondeu primeiro 503 e depois 200, portanto sua disponibilidade mostrou oscilação durante a conferência. Não houve login, envio de formulário ou interação com dados reais nessa verificação.
+
+Oferta, conteúdo e contatos permanecem em `src/data/offer.ts`, `src/data/landing.ts` e `src/data/site.ts`; os novos dados de apresentação ficam separados em `src/data/team.ts`. Preservar estudos, fontes, licenças, capturas, prompts e archives anteriores. A versão imediatamente anterior está arquivada em `docs/pessoas-em-cena-2026-10-20/archive/`.
+
+**Status atual: implementação e verificação local concluídas.** Typecheck, build, seis testes de movimento e 16 cenários de navegador passaram. Código e capturas receberam revisão independente aprovada. Os resultados de acessibilidade, desempenho, integridade e seus limites estão em [verification.md](docs/pessoas-em-cena-2026-10-20/verification.md). O [briefing e registro da implementação](docs/pessoas-em-cena-2026-10-20/README.md) concentra o escopo. A entrega é uma prévia local: sem commit, push ou deploy, e sem substituir a homologação estética do usuário. Resultados anteriores preservados abaixo pertencem às respectivas versões.
+
+## Histórico preservado — Em evidência em Next.js, anterior à autorização de 20/10/2026
+
+Os blocos seguintes registram as decisões e verificações anteriores. Menções a estado vigente, restrição de retratos ou QA concluído referem-se àquelas versões; o contrato de Pessoas em cena acima prevalece para a implementação atual.
+
 ## Estado vigente — nova experiência em Next.js, 19/10/2026
 
 Após a entrega Ritmo em Astro, o usuário autorizou explicitamente **Next.js App Router + React + TypeScript + Tailwind CSS + Lenis + Framer Motion**, pedindo uma experiência com o nível de acabamento da referência [Lando Norris](https://landonorris.com/). A escolha técnica anterior de manter Astro foi substituída. Isso altera a implementação e a experiência de marca, sem ampliar o pacote comercial.

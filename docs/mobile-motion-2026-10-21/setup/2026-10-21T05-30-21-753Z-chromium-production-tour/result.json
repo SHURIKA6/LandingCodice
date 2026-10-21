@@ -1,0 +1,29 @@
+{
+  "startedAt": "2026-10-21T05:30:21.756Z",
+  "engine": "chromium",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-30-21-753Z-chromium-production-tour",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-30-21-753Z-chromium-production-tour\\video\\page@68db8df17b2db672f479dc554996a7e0.webm",
+      "bytes": 5567985
+    }
+  ],
+  "browserVersion": "148.0.7778.96",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\mobile-tour.browser.js",
+  "result": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "frames": 33,
+    "mode": "mobile-story"
+  },
+  "pageErrors": [],
+  "pass": true,
+  "finishedAt": "2026-10-21T05:31:14.209Z"
+}

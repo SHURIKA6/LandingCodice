@@ -1,61 +1,197 @@
 'use client';
 
-import { animate, motion, useInView, useMotionValue, useScroll, useSpring, useTransform } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import type { ComponentType } from 'react';
+import { motion, useInView, useMotionValue, useMotionValueEvent, useScroll, useSpring, useTransform } from 'framer-motion';
+import type { MotionValue } from 'framer-motion';
+import { teamMembers } from '../../data/team';
 import { Arrow } from './Arrow';
-import { useReducedPreference } from './useReducedPreference';
+import { PersonCard } from './PersonCard';
+import { HeroSculpture } from './HeroSculpture';
+import { getMobileStoryFrame } from './mobilePortraitMotion';
+import { useMotionMode } from './useMotionMode';
+import type { MotionMode } from './useMotionMode';
+import type { PortraitSceneProps } from './PortraitScene';
+import './mobile-hero.css';
 
-export function Hero({ href, price, cta }: { href: string; price: string; cta: string }) {
-  const stage = useRef<HTMLElement>(null);
+const portraits = teamMembers.map(member => member.portrait.src);
+
+function PortraitProgress({ progress, active }: { progress: MotionValue<number>; active: number }) {
+  return <div className="portrait-progress" aria-hidden="true">
+    <div className="portrait-progress-track"><motion.span style={{ scaleX: progress }} /></div>
+    <div className="portrait-progress-names">{teamMembers.map((member, index) => <span key={member.id} data-active={active === index}>{member.firstName}</span>)}</div>
+  </div>;
+}
+
+export function Hero({ href, cta }: { href: string; cta: string }) {
+  const hero = useRef<HTMLElement>(null);
+  const story = useRef<HTMLDivElement>(null);
+  const anchor = useRef({ inside: false, index: 0 });
+  const previousMode = useRef<MotionMode>('static');
+  const hasEnhanced = useRef(false);
+  const activeRef = useRef(0);
+  const [failed, setFailed] = useState(false);
+  const [photoFailed, setPhotoFailed] = useState(false);
+  const [loaded, setLoaded] = useState<ReadonlySet<number>>(() => new Set());
+  const [storyFits, setStoryFits] = useState(true);
+  const baseMode = useMotionMode({ sceneFailed: failed });
+  const mode = baseMode === 'mobile-story' && (loaded.size < teamMembers.length || photoFailed || !storyFits) ? 'mobile-flow' : baseMode;
   const [ready, setReady] = useState(false);
-  const reduce = useReducedPreference();
-  const visible = useInView(stage);
-  const { scrollYProgress } = useScroll({ target: stage, offset: ['start start', 'end start'] });
-  const lift = useTransform(scrollYProgress, [0, 1], [0, 130]);
-  const rotation = useTransform(scrollYProgress, [0, 1], [0, 28]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, .82]);
-  const wordLift = useTransform(scrollYProgress, [0, 1], [0, -85]);
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const pulse = useMotionValue(0);
-  const smoothX = useSpring(x, { stiffness: 95, damping: 24 });
-  const smoothY = useSpring(y, { stiffness: 95, damping: 24 });
-  useEffect(() => { setReady(true); return () => { pulse.stop(); }; }, [pulse]);
+  const [active, setActive] = useState(0);
+  const [Scene, setScene] = useState<ComponentType<PortraitSceneProps> | null>(null);
+  const [introduced, setIntroduced] = useState(false);
+  const [headerHeight, setHeaderHeight] = useState(72);
+  const pointerX = useMotionValue(0);
+  const pointerY = useMotionValue(0);
+  const x = useSpring(pointerX, { stiffness: 90, damping: 24, restDelta: .05 });
+  const y = useSpring(pointerY, { stiffness: 90, damping: 24, restDelta: .05 });
+  const inView = useInView(hero);
+  const enhanced = mode === 'desktop';
+  const { scrollYProgress: desktopProgress, scrollY: pageScrollY } = useScroll({ target: hero, offset: ['start start', 'end end'] });
+  const { scrollYProgress: mobileProgress } = useScroll({ target: story, offset: [headerHeight === 80 ? 'start 80px' : 'start 72px', 'end end'] });
+  const progress = mode === 'mobile-story' ? mobileProgress : desktopProgress;
+  const introTitleY = useTransform(pageScrollY, [0, 500], [0, -48]);
+  const introCopyY = useTransform(pageScrollY, [0, 500], [0, -24]);
+  const updateActive = useCallback((index: number) => {
+    // Motion samples scroll on the next frame, after the native scroll listener.
+    // Keep the reading anchor in sync with the person that actually settled.
+    anchor.current = { ...anchor.current, index };
+    if (activeRef.current !== index) { activeRef.current = index; setActive(index); }
+  }, []);
+  const rememberAnchor = useCallback(() => {
+    const root = previousMode.current === 'desktop' ? hero.current : story.current;
+    if (!root) return;
+    const rect = root.getBoundingClientRect();
+    const inside = rect.top <= headerHeight + 1 && rect.bottom > headerHeight;
+    let index = activeRef.current;
+    if (previousMode.current === 'static' || previousMode.current === 'mobile-flow') {
+      const cards = [...root.querySelectorAll<HTMLElement>('.person-card')];
+      const distances = cards.map(node => Math.abs(node.getBoundingClientRect().top + node.offsetHeight / 2 - innerHeight / 2));
+      index = distances.indexOf(Math.min(...distances));
+    }
+    anchor.current = { inside, index: Math.max(0, index) };
+  }, [headerHeight]);
+  const portraitReady = useCallback((index: number) => {
+    rememberAnchor();
+    setLoaded(current => current.has(index) ? current : new Set([...current, index]));
+  }, [rememberAnchor]);
+  const portraitError = useCallback(() => { rememberAnchor(); setPhotoFailed(true); }, [rememberAnchor]);
+  useMotionValueEvent(desktopProgress, 'change', value => {
+    if (mode === 'desktop') updateActive(Math.round(Math.max(0, Math.min(1, value)) * 2));
+  });
+  useMotionValueEvent(mobileProgress, 'change', value => {
+    if (mode === 'mobile-story') updateActive(getMobileStoryFrame(value).activeIndex);
+  });
+
+  useEffect(() => { setIntroduced(true); }, []);
+  useLayoutEffect(() => {
+    const root = hero.current;
+    if (!root) return;
+    const measure = () => {
+      const kicker = root.querySelector<HTMLElement>('.person-kicker');
+      if (!kicker) return;
+      const style = getComputedStyle(kicker);
+      const authoredSize = parseFloat(style.getPropertyValue('--person-kicker-size'));
+      const largeText = parseFloat(style.fontSize) > authoredSize * 1.25;
+      document.documentElement.toggleAttribute('data-large-text', largeText);
+      setStoryFits(!largeText && root.clientWidth > 0 && innerHeight >= 560);
+    };
+    const observer = new ResizeObserver(measure);
+    root.querySelectorAll('.person-kicker, .person-name').forEach(node => observer.observe(node));
+    window.addEventListener('resize', measure, { passive: true });
+    measure();
+    return () => { observer.disconnect(); window.removeEventListener('resize', measure); document.documentElement.removeAttribute('data-large-text'); };
+  }, [mode]);
   useEffect(() => {
-    if (reduce) { x.set(0); y.set(0); pulse.set(0); }
-  }, [reduce, x, y, pulse]);
+    const header = document.querySelector('.site-header');
+    const resize = () => {
+      rememberAnchor();
+      const height = header?.getBoundingClientRect().height ?? 72;
+      setHeaderHeight(height);
+      document.documentElement.style.setProperty('--site-header-height', `${height}px`);
+    };
+    resize();
+    const observer = new ResizeObserver(resize);
+    if (header) observer.observe(header);
+    window.addEventListener('scroll', rememberAnchor, { passive: true });
+    window.addEventListener('resize', rememberAnchor, { passive: true });
+    return () => { observer.disconnect(); window.removeEventListener('scroll', rememberAnchor); window.removeEventListener('resize', rememberAnchor); };
+  }, [rememberAnchor]);
+
+  useLayoutEffect(() => {
+    const prior = previousMode.current;
+    const firstEnhancement = mode !== 'static' && !hasEnhanced.current;
+    if (mode !== 'static') hasEnhanced.current = true;
+    previousMode.current = mode;
+    // On initial hydration the browser owns reload/back-forward restoration.
+    // A temporary SSR flow must not reinterpret that offset as another person.
+    const syncActive = () => {
+      const root = mode === 'desktop' ? hero.current : story.current;
+      if (!root || (mode !== 'desktop' && mode !== 'mobile-story')) return;
+      const inset = mode === 'mobile-story' ? headerHeight : 0;
+      const start = root.getBoundingClientRect().top + scrollY - inset;
+      const range = root.offsetHeight - (innerHeight - inset);
+      const value = Math.max(0, Math.min(1, (scrollY - start) / Math.max(1, range)));
+      updateActive(mode === 'desktop' ? Math.round(value * 2) : getMobileStoryFrame(value).activeIndex);
+    };
+    if (firstEnhancement || prior === mode || !anchor.current.inside || !story.current) {
+      const frame = requestAnimationFrame(syncActive);
+      return () => cancelAnimationFrame(frame);
+    }
+    const saved = anchor.current;
+    const frame = requestAnimationFrame(() => {
+      const root = mode === 'desktop' ? hero.current : story.current;
+      if (!root) return;
+      const start = root.getBoundingClientRect().top + scrollY - (mode === 'mobile-story' ? headerHeight : 0);
+      const range = root.offsetHeight - (innerHeight - (mode === 'mobile-story' ? headerHeight : 0));
+      const card = root.querySelectorAll<HTMLElement>('.person-card')[saved.index];
+      const top = mode === 'mobile-story' || mode === 'desktop'
+        ? start + range * (mode === 'desktop' ? saved.index / 2 : [0.08, .5, .92][saved.index])
+        : card ? card.getBoundingClientRect().top + scrollY - headerHeight - 20 : scrollY;
+      if (Number.isFinite(top)) scrollTo({ top, behavior: 'instant' });
+      syncActive();
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [mode, headerHeight, updateActive]);
+
   useEffect(() => {
-    if (!visible) { pulse.stop(); pulse.set(0); x.set(0); y.set(0); }
-    const stopHidden = () => { if (document.hidden) { pulse.stop(); pulse.set(0); x.set(0); y.set(0); } };
-    document.addEventListener('visibilitychange', stopHidden);
-    return () => document.removeEventListener('visibilitychange', stopHidden);
-  }, [visible, pulse, x, y]);
-  const reset = () => { x.set(0); y.set(0); };
-  const replay = () => {
-    if (reduce) return;
-    pulse.stop();
-    pulse.set(0);
-    animate(pulse, [0, -22, 14, 0], { duration: 1.2, ease: [.16, 1, .3, 1] });
-  };
-  return <section ref={stage} className="hero-stage" id="inicio" aria-labelledby="hero-title" onPointerMove={event => {
-    if (reduce || event.pointerType !== 'mouse') return;
-    const rect = event.currentTarget.getBoundingClientRect();
-    x.set((event.clientX / rect.width - .5) * 30);
-    y.set(((event.clientY - rect.top) / rect.height - .5) * 18);
-  }} onPointerLeave={reset}>
-    <div className="hero-contours" aria-hidden="true"><svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice"><path d="M-180 680C90 1050 600 1040 510 420S950-80 1460 170S1800 820 1090 1150M-260 690C40 1120 680 1130 590 410S1000-170 1550 120S1900 870 1120 1220" /><path d="M-150 30C220 400 290-90 760 70S1320 720 1710 400M-190-10C170 310 330-170 800 0S1370 670 1750 330" /></svg></div>
-    <motion.div className="hero-word" aria-hidden="true" style={{ y: reduce ? 0 : wordLift }}>codice</motion.div>
-    <motion.div className="hero-object" aria-hidden="true" style={{ y: reduce ? 0 : lift, rotate: reduce ? 0 : rotation, scale: reduce ? 1 : scale }}>
-      <motion.div className="hero-object-inner" style={{ x: reduce ? 0 : smoothX, y: reduce ? 0 : smoothY, rotate: reduce ? 0 : pulse }}>
-        {/* Decorative generated sculpture, never presented as a client product. */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/brand/codice-sculpture.webp" width="800" height="800" alt="" fetchPriority="high" draggable="false" />
-      </motion.div>
-    </motion.div>
-    <div className="hero-bottom">
-      <div className="hero-copy"><h1 id="hero-title">Seu trabalho.<br />Em <span>evidência.</span></h1><p>Um site profissional para apresentar seus serviços e facilitar o contato com seus clientes.</p></div>
-      <div className="hero-offer"><p className="hero-price"><strong>{price}</strong><span>Um site. Uma página.<br />Até seis seções.</span></p><a className="button button-ink" href={href} target="_blank" rel="noopener noreferrer">{cta}<Arrow diagonal /><span className="sr-only"> pelo WhatsApp de Fernando (abre em outra aba)</span></a></div>
+    const reset = () => { pointerX.set(0); pointerY.set(0); x.jump(0); y.jump(0); };
+    if (!enhanced || !inView) reset();
+    const visibility = () => { if (document.hidden) reset(); };
+    document.addEventListener('visibilitychange', visibility); window.addEventListener('blur', reset);
+    return () => { document.removeEventListener('visibilitychange', visibility); window.removeEventListener('blur', reset); reset(); };
+  }, [enhanced, inView, pointerX, pointerY, x, y]);
+  useEffect(() => { if (!enhanced) setReady(false); }, [enhanced]);
+  const sceneReady = useCallback(() => setReady(true), []);
+  const sceneError = useCallback(() => { setReady(false); setFailed(true); }, []);
+  useEffect(() => {
+    if (!enhanced) return;
+    let current = true;
+    import('./PortraitScene').then(module => { if (current) setScene(() => module.default); }).catch(() => { if (current) sceneError(); });
+    return () => { current = false; };
+  }, [enhanced, sceneError]);
+
+  return <section ref={hero} className="people-hero" id="inicio" aria-labelledby="hero-title"
+    data-mode={enhanced ? 'scroll' : mode} data-motion-mode={mode} data-renderer={enhanced && ready ? 'three' : 'html'} data-introduced={introduced && mode !== 'static'}>
+    <div className="hero-sticky section-shell" onPointerMove={event => {
+      if (!enhanced || event.pointerType !== 'mouse') return;
+      const bounds = event.currentTarget.getBoundingClientRect();
+      pointerX.set(((event.clientX - bounds.left) / bounds.width - .5) * 22); pointerY.set(((event.clientY - bounds.top) / bounds.height - .5) * 14);
+    }} onPointerLeave={() => { pointerX.set(0); pointerY.set(0); }}>
+      <div className="hero-intro">
+        <HeroSculpture mode={mode} scrollY={pageScrollY} />
+        <motion.div className="hero-heading" style={mode.startsWith('mobile') ? { y: introTitleY } : undefined}><p className="eyebrow"><span className="status-dot" /> De Sinop. Perto da sua ideia.</p><h1 id="hero-title"><span className="title-line"><span>Tecnologia feita</span></span><span className="title-line"><span>por <em>gente.</em></span></span></h1></motion.div>
+        <div className="hero-description"><motion.div className="hero-description-copy" style={mode.startsWith('mobile') ? { y: introCopyY } : undefined}><p>Somos Fernando, Eduardo e Victor.<br />Criamos sites para colocar o seu<br className="desktop-break" /> negócio em evidência.</p></motion.div><a className="hero-skip" href="#trabalho">Ver projetos <Arrow diagonal /></a></div>
+      </div>
+      <div ref={story} className="people-story"><div className="people-stage">
+        <div className="people-viewport"><div className="people-list">
+          {teamMembers.map((member, index) => <PersonCard key={member.id} member={member} index={index} active={active === index} mode={mode} progress={mobileProgress} onReady={portraitReady} onError={portraitError} />)}
+        </div>
+          {enhanced && Scene && <div className="scene-container"><motion.div className="scene-parallax" style={{ x, y }}><Scene portraits={portraits} progress={desktopProgress} onReady={sceneReady} onError={sceneError} /></motion.div></div>}
+        </div>
+        {(enhanced || mode === 'mobile-story') && <PortraitProgress progress={progress} active={active} />}
+        <div className="hero-bottom"><a className="hero-project-link" href="#trabalho">Conheça o que fazemos <Arrow /></a><div className="hero-actions"><span className="hero-scroll-note">Role para conhecer a gente <span aria-hidden="true">↓</span></span><a className="button button-primary" href={href} target="_blank" rel="noopener noreferrer">{cta}<Arrow diagonal /><span className="sr-only"> pelo WhatsApp de Fernando (abre em outra aba)</span></a></div></div>
+      </div></div>
     </div>
-    <div className="hero-end"><a className="scroll-link" href="#trabalho">Conheça o nosso trabalho <Arrow /></a>{ready && !reduce && <button className="replay-button" type="button" onClick={replay}>Girar a ideia <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 10a8 8 0 1 0-1 7M20 4v6h-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></button>}</div>
   </section>;
 }

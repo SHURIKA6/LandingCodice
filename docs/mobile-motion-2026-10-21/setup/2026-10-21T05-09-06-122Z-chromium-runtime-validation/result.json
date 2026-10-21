@@ -1,0 +1,26 @@
+{
+  "startedAt": "2026-10-21T05:09:06.124Z",
+  "engine": "chromium",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-09-06-122Z-chromium-runtime-validation",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-09-06-122Z-chromium-runtime-validation\\video\\page@414d30b4bee6b52f0b1ae4a49e80ba05.webm",
+      "bytes": 320749
+    }
+  ],
+  "browserVersion": "148.0.7778.96",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
+  "status": 200,
+  "initial": {
+    "title": "Codice — Sites profissionais em Sinop por R$ 1.500",
+    "heroMode": "static",
+    "width": 390,
+    "scrollWidth": 390
+  },
+  "pageErrors": [],
+  "pass": true,
+  "finishedAt": "2026-10-21T05:09:10.312Z"
+}

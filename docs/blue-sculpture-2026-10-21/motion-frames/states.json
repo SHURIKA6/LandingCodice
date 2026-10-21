@@ -1,0 +1,22 @@
+[
+  {
+    "label": "early",
+    "transform": "matrix(0.953495, -0.0595193, 0.0595193, 0.953495, 0, 0)",
+    "opacity": "0.821405"
+  },
+  {
+    "label": "middle",
+    "transform": "matrix(0.993569, -0.00886712, 0.00886712, 0.993569, 0, 0)",
+    "opacity": "0.974434"
+  },
+  {
+    "label": "late",
+    "transform": "matrix(0.999595, -0.000565072, 0.000565072, 0.999595, 0, 0)",
+    "opacity": "0.998381"
+  },
+  {
+    "label": "rest",
+    "transform": "none",
+    "opacity": "1"
+  }
+]

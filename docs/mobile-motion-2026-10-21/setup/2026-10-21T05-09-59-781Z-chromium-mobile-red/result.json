@@ -1,0 +1,21 @@
+{
+  "startedAt": "2026-10-21T05:09:59.782Z",
+  "engine": "chromium",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-09-59-781Z-chromium-mobile-red",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-09-59-781Z-chromium-mobile-red\\video\\page@bc3edabbb935ad88b389bfebdf4bfa0b.webm",
+      "bytes": 104161
+    }
+  ],
+  "browserVersion": "148.0.7778.96",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\scripts\\verify-mobile-motion.browser.js",
+  "pass": false,
+  "error": "Error: Mobile has no cinematic stage: null\n    at eval (eval at <anonymous> (file:///C:/Users/ferna/OneDrive/%C3%81rea%20de%20Trabalho/LandingCodice/docs/mobile-motion-2026-10-21/setup/isolated-playwright.mjs:65:22), <anonymous>:8:38)\n    at async file:///C:/Users/ferna/OneDrive/%C3%81rea%20de%20Trabalho/LandingCodice/docs/mobile-motion-2026-10-21/setup/isolated-playwright.mjs:68:21",
+  "finishedAt": "2026-10-21T05:10:01.539Z"
+}

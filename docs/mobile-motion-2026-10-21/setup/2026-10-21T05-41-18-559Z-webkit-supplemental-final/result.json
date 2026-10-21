@@ -1,0 +1,125 @@
+{
+  "startedAt": "2026-10-21T05:41:18.562Z",
+  "engine": "webkit",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-41-18-559Z-webkit-supplemental-final",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-41-18-559Z-webkit-supplemental-final\\video\\page@03dd829268f9f61e6e244e014182d53b.webm",
+      "bytes": 360313
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-41-18-559Z-webkit-supplemental-final\\video\\page@5303118247271e24e060ff48a572eafc.webm",
+      "bytes": 236656
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-41-18-559Z-webkit-supplemental-final\\video\\page@bf64b7b2e5170051e7488e0b5eaa5ad5.webm",
+      "bytes": 655250
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-41-18-559Z-webkit-supplemental-final\\video\\page@c5b8d29393daebbd66529a72ad0b9153.webm",
+      "bytes": 71069
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-41-18-559Z-webkit-supplemental-final\\video\\page@dbea43e0fff47f30ee1fce068b4f2f7b.webm",
+      "bytes": 175436
+    }
+  ],
+  "browserVersion": "26.4",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\webkit-2287\\Playwright.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\supplemental.browser.js",
+  "result": {
+    "passed": 4,
+    "failed": 0,
+    "evidenceDir": "docs/mobile-motion-2026-10-21/setup/supplemental-2026-10-21T05-41-27-957Z",
+    "results": [
+      {
+        "name": "native-text-adjust-200-percent",
+        "pass": true,
+        "supported": false,
+        "baseline": 50.700001,
+        "scaled": 50.700001,
+        "limitation": "This engine ignored CSS text-size-adjust:200%; this is not proof of native text zoom."
+      },
+      {
+        "name": "simulated-hidden-tab-cancels-and-restores",
+        "pass": true,
+        "method": "Getter override plus visibilitychange event; browser-level background throttling was not simulated.",
+        "before": {
+          "running": 14,
+          "y": 5004
+        },
+        "hidden": {
+          "running": 0,
+          "engine": "native",
+          "y": 5004
+        },
+        "restored": {
+          "engine": "lenis",
+          "y": 5004,
+          "running": 0
+        }
+      },
+      {
+        "name": "idle-effects-and-layout-shift-observation",
+        "pass": true,
+        "samples": [
+          {
+            "location": "people",
+            "activeAnimations": 0,
+            "changedTransforms": [],
+            "styleMutations": 0,
+            "rafCallbacks": 45,
+            "rafSources": {
+              "()=>{let r=tM.useManualTiming,a=r?i.timestamp:performance.now();s=!1,r||(i.delta=n?1e3/60:Math.max(Math.min(a-i.timestam": 7,
+              "t=>{e?.raf(t),i=requestAnimationFrame(o)}": 103,
+              "()=>{let t=\"desktop\"===D?u.current:c.current;if(!t||\"desktop\"!==D&&\"mobile-story\"!==D)return;let e=\"mobile-story\"===D?Y:": 2,
+              "() => {\n              if (aborted)\n                return;\n              try {\n                const success = predicate": 3
+            },
+            "cls": {
+              "supported": false,
+              "entries": []
+            }
+          },
+          {
+            "location": "offer",
+            "activeAnimations": 0,
+            "changedTransforms": [],
+            "styleMutations": 0,
+            "rafCallbacks": 40,
+            "rafSources": {
+              "()=>{let r=tM.useManualTiming,a=r?i.timestamp:performance.now();s=!1,r||(i.delta=n?1e3/60:Math.max(Math.min(a-i.timestam": 9,
+              "t=>{e?.raf(t),i=requestAnimationFrame(o)}": 200,
+              "()=>{let t=\"desktop\"===D?u.current:c.current;if(!t||\"desktop\"!==D&&\"mobile-story\"!==D)return;let e=\"mobile-story\"===D?Y:": 2,
+              "() => {\n              if (aborted)\n                return;\n              try {\n                const success = predicate": 3
+            },
+            "cls": {
+              "supported": false,
+              "entries": []
+            }
+          }
+        ],
+        "layoutShift": {
+          "supported": false,
+          "maximumSession": 0,
+          "entries": []
+        },
+        "limitation": "The existing Lenis timing callback remains scheduled while visible. No decorative animation, style mutation or transform change was observed in either 1.2s idle window. These measurements do not establish FPS or performance on a physical device."
+      },
+      {
+        "name": "native-touch-from-photo-media-and-controls",
+        "pass": true,
+        "supported": false,
+        "limitation": "CDP touch gesture synthesis is Chromium-only."
+      }
+    ]
+  },
+  "pageErrors": [],
+  "pass": true,
+  "testFinishedAt": "2026-10-21T05:41:58.888Z",
+  "cleanupWarnings": [],
+  "finishedAt": "2026-10-21T05:42:02.621Z"
+}

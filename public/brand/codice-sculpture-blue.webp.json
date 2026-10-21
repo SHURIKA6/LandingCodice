@@ -1,0 +1,9 @@
+{
+  "createdOn": "2026-10-21",
+  "tool": "image_gen.imagegen",
+  "prompt": "docs/blue-sculpture-2026-10-21/prompt.txt",
+  "source": "public/brand/codice-sculpture-blue.png",
+  "manifest": "public/brand/codice-sculpture-blue.json",
+  "transparentBackground": true,
+  "purpose": "Decorative blue-and-chrome edition of the original Codice sculpture; not a client product or real-time 3D model."
+}

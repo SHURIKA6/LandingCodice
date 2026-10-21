@@ -1,0 +1,159 @@
+{
+  "startedAt": "2026-10-21T05:40:59.408Z",
+  "engine": "chromium",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-40-59-406Z-chromium-release-people",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-40-59-406Z-chromium-release-people\\video\\page@23ab707453e4d87a9770dec382656583.webm",
+      "bytes": 1530970
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-40-59-406Z-chromium-release-people\\video\\page@2c99bdc31d1016cc45689b927c205699.webm",
+      "bytes": 391540
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-40-59-406Z-chromium-release-people\\video\\page@3566ec65196211efc772a3d5d4f5902f.webm",
+      "bytes": 268918
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-40-59-406Z-chromium-release-people\\video\\page@41cbe39719ffeafd6dd5ead711903216.webm",
+      "bytes": 551203
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-40-59-406Z-chromium-release-people\\video\\page@449b824989ca611c458477c8bd575a6c.webm",
+      "bytes": 1180038
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-40-59-406Z-chromium-release-people\\video\\page@7aba723b28408f31ae66aa4d189b7175.webm",
+      "bytes": 236362
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-40-59-406Z-chromium-release-people\\video\\page@7ba2069e5604b260fcb84dc059f936ef.webm",
+      "bytes": 454581
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-40-59-406Z-chromium-release-people\\video\\page@7e35c15be9c02dcd7aaa207887828d99.webm",
+      "bytes": 170085
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-40-59-406Z-chromium-release-people\\video\\page@872688e75c632849cefd462427bf83f0.webm",
+      "bytes": 118492
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-40-59-406Z-chromium-release-people\\video\\page@9598e9efed045ef318b85430a49c71b9.webm",
+      "bytes": 125852
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-40-59-406Z-chromium-release-people\\video\\page@afe8868c1bdcec9d3aa11a33e3065d19.webm",
+      "bytes": 417538
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-40-59-406Z-chromium-release-people\\video\\page@e7963a1a633abd1ef3a0ef6f093773b5.webm",
+      "bytes": 478690
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-40-59-406Z-chromium-release-people\\video\\page@f196d7ba396f1005e0677c4bfccd92b1.webm",
+      "bytes": 211481
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-40-59-406Z-chromium-release-people\\video\\page@f5e61eee5dd1a60c077d576fd9d9ba93.webm",
+      "bytes": 375326
+    }
+  ],
+  "browserVersion": "148.0.7778.96",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\scripts\\verify-people.browser.js",
+  "result": {
+    "passed": 16,
+    "results": [
+      {
+        "scenario": "layout-320",
+        "renderer": "html",
+        "pass": true
+      },
+      {
+        "scenario": "mobile-pinned-story",
+        "pass": true
+      },
+      {
+        "scenario": "layout-390",
+        "renderer": "html",
+        "pass": true
+      },
+      {
+        "scenario": "layout-768",
+        "renderer": "html",
+        "pass": true
+      },
+      {
+        "scenario": "layout-1024",
+        "renderer": "three",
+        "pass": true
+      },
+      {
+        "scenario": "layout-1440",
+        "renderer": "three",
+        "pass": true
+      },
+      {
+        "scenario": "layout-1920",
+        "renderer": "three",
+        "pass": true
+      },
+      {
+        "scenario": "reload-at-middle-portrait",
+        "pass": true
+      },
+      {
+        "scenario": "scroll-forward-reverse-catalogue-keyboard",
+        "stops": [
+          "Fernando Riad",
+          "Eduardo Gobatto",
+          "Eduardo Gobatto",
+          "Victor Rafael",
+          "Victor Rafael",
+          "Eduardo Gobatto",
+          "Fernando Riad"
+        ],
+        "pass": true
+      },
+      {
+        "scenario": "resize-live-reduced-motion-remount-first-frame",
+        "pass": true
+      },
+      {
+        "scenario": "optional-scene-chunk-failure",
+        "pass": true
+      },
+      {
+        "scenario": "webgl-unavailable",
+        "pass": true
+      },
+      {
+        "scenario": "texture-error",
+        "pass": true
+      },
+      {
+        "scenario": "webgl-context-loss",
+        "pass": true
+      },
+      {
+        "scenario": "no-javascript",
+        "pass": true
+      },
+      {
+        "scenario": "reduced-motion-initial",
+        "pass": true
+      }
+    ]
+  },
+  "pageErrors": [],
+  "pass": true,
+  "testFinishedAt": "2026-10-21T05:41:59.879Z",
+  "cleanupWarnings": [],
+  "finishedAt": "2026-10-21T05:42:06.064Z"
+}

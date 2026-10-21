@@ -1,0 +1,24 @@
+{
+  "captures": 8,
+  "idleDrawCalls": 0,
+  "layoutShifts": [],
+  "console": [],
+  "shortViewports": [
+    {
+      "width": 1024,
+      "height": 768,
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 800,
+      "pass": true
+    }
+  ],
+  "completedOn": "2026-10-21"
+}

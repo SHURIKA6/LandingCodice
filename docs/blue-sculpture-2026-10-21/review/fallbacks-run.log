@@ -1,0 +1,8 @@
+{
+  "engine": "chromium",
+  "pass": true,
+  "passed": 3,
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T14-33-57-488Z-chromium-blue-independent-fallbacks",
+  "videos": 4,
+  "cleanupWarnings": []
+}

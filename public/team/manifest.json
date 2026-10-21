@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "recordedOn": "2026-10-20",
+  "description": "Authorized portrait originals for Pessoas em cena. No image transformations have been applied.",
+  "assets": [
+    {
+      "id": "fernando",
+      "name": "Fernando Riad",
+      "file": "fernando.jpg",
+      "sourceType": "github-avatar",
+      "source": "https://avatars.githubusercontent.com/u/65686336?v=4",
+      "profile": "https://github.com/SHURIKA6",
+      "publicPath": "/team/fernando.jpg",
+      "acquiredOn": "2026-10-20",
+      "retrievedAtUtc": "2026-10-21T02:23:52+00:00",
+      "authorization": "User-authorized GitHub photo",
+      "mimeType": "image/jpeg",
+      "format": "JPEG",
+      "width": 460,
+      "height": 460,
+      "bytes": 22322,
+      "sha256": "2f6009e80cec8768c340907245ada145ae6f4f98fb5fe2ce1bf3c0684a006408",
+      "originalBytesPreserved": true,
+      "transformations": [],
+      "http": {
+        "status": 200,
+        "contentType": "image/jpeg",
+        "contentLength": "22322",
+        "finalUrl": "https://avatars.githubusercontent.com/u/65686336?v=4"
+      }
+    },
+    {
+      "id": "eduardo",
+      "name": "Eduardo Gobatto",
+      "file": "eduardo.jpg",
+      "sourceType": "github-avatar",
+      "source": "https://avatars.githubusercontent.com/u/215524121?v=4",
+      "profile": "https://github.com/Edu4rdo-Gobatto",
+      "publicPath": "/team/eduardo.jpg",
+      "acquiredOn": "2026-10-20",
+      "retrievedAtUtc": "2026-10-21T02:23:53+00:00",
+      "authorization": "User-authorized GitHub photo",
+      "mimeType": "image/jpeg",
+      "format": "JPEG",
+      "width": 460,
+      "height": 460,
+      "bytes": 18468,
+      "sha256": "84e3fbd2301240c668f1fcfe6d6cafb303de2547fbff8b7618d8ca4fcf2bbb03",
+      "originalBytesPreserved": true,
+      "transformations": [],
+      "http": {
+        "status": 200,
+        "contentType": "image/jpeg",
+        "contentLength": "18468",
+        "finalUrl": "https://avatars.githubusercontent.com/u/215524121?v=4"
+      }
+    },
+    {
+      "id": "victor",
+      "name": "Victor Rafael",
+      "file": "victor.png",
+      "sourceType": "user-attachment",
+      "source": "codex-clipboard-b1b80861-1fd6-4066-936c-9ff28d25155f.png",
+      "publicPath": "/team/victor.png",
+      "acquiredOn": "2026-10-20",
+      "retrievedAtUtc": "2026-10-21T02:23:53+00:00",
+      "authorization": "User-supplied attachment",
+      "mimeType": "image/png",
+      "format": "PNG",
+      "width": 640,
+      "height": 641,
+      "bytes": 290717,
+      "sha256": "1f1f7cc04f1697b83cd47a66fc6bfbd2dd83e54d5a13dcd4d9cca544344c7a31",
+      "originalBytesPreserved": true,
+      "transformations": []
+    }
+  ]
+}

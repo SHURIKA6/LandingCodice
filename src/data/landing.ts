@@ -2,7 +2,7 @@ import { siteContent } from './site';
 
 export const landing = {
   title: 'Codice — Sites profissionais em Sinop por R$ 1.500',
-  description: 'Um site profissional para apresentar seus serviços e facilitar o contato com seus clientes. Uma página por R$ 1.500. Fale com Fernando e Eduardo, em Sinop/MT.',
+  description: 'Um site profissional para apresentar seus serviços e facilitar o contato com seus clientes. Uma página por R$ 1.500. Conheça Fernando, Eduardo e Victor, da Codice, em Sinop/MT.',
   headline: 'Seu trabalho merece uma presença profissional.',
   founders: siteContent.founders,
   project: siteContent.projects.find(project => project.id === 'corretor')!,

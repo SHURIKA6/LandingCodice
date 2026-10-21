@@ -1,5 +1,90 @@
 # Codice — landing e estudo visual
 
+## Escultura azul na abertura — execução de 21/10/2026
+
+O usuário escolheu recuperar a escultura anterior dos dois Cs entrelaçados, trocar o verde pelo azul **`#2f4bff`** e recolocá-la na abertura. A nova edição conserva cromado, volume e transparência; os originais permanecem preservados. A peça acompanha título e descrição em três colunas no desktop e antecede o título no celular, com entrada finita e parallax limitado. Os retratos e o palco de 300svh continuam na sequência; header, favicon, oferta e contatos mantêm o contrato vigente.
+
+[Registro e assets](docs/blue-sculpture-2026-10-21/README.md) · [Verificação desta integração](docs/blue-sculpture-2026-10-21/verification.md) · [Vídeo da abertura](docs/blue-sculpture-2026-10-21/opening-tour.mp4). **QA local concluído em 21/10**, encerrando o estado inicial em execução: build/typecheck, 11 geometrias, layout 11/11, smoke 16/16, motion 6/6, mobile 18/18 em cada motor e revisão independente 13/13. Os resultados mobile abaixo continuam pertencendo à versão anterior. Entrega versionada na branch `feat/pessoas-em-cena`, sem push ou deploy.
+
+## Mobile cinematográfico — execução de 21/10/2026
+
+O **“gooo”** autorizou implementar o [plano mobile](docs/superpowers/plans/2026-10-21-mobile-motion.md). A apresentação agora tem uma área fixa de **300svh** no telefone em retrato: Fernando → Eduardo → Victor atravessam a cena com fotografia, nomes mascarados e indicador controlados pela rolagem. A introdução fica antes do palco. Landscape e telas baixas usam movimento forte em fluxo; movimento reduzido e ausência de JavaScript mantêm o HTML completo.
+
+Corretor e Roger ganham movimento nas mídias, com controles e links estáveis. Oferta, percurso do processo, fechamento por letras e menu têm ritmos próprios. O palco aguarda o carregamento/decodificação das três fotos; o HTML em fluxo permanece disponível em demora ou falha. Não há Three/canvas no celular, dependências novas ou alteração de oferta, contatos e fotografias.
+
+[Registro da execução](docs/mobile-motion-2026-10-21/README.md) · [Verificação mobile e limites](docs/mobile-motion-2026-10-21/verification.md) · [Vídeo completo](docs/mobile-motion-2026-10-21/mobile-tour.mp4). **QA local encerrado em 21/10:** build/typecheck, 11 testes de geometria, smoke 16/16, motion 6/6 e mobile 18/18 em cada motor (Chromium/WebKit), além das verificações complementares registradas. O registro começou com QA em andamento; os resultados abaixo continuam pertencendo às respectivas versões anteriores. Entrega versionada na branch `feat/pessoas-em-cena`, sem push ou deploy.
+
+Texto ampliado usa fluxo sem cortes em lugar do palco fixo; animações finitas são canceladas com a aba oculta. A prévia de produção está em `http://localhost:4321/`, somente nesta máquina, pelo gerenciador local. Para HMR: `npm run dev -- stop` e `npm run dev -- --background`; para encerrar: `npm run dev -- stop`. Testes em aparelho físico e aceite da intensidade continuam distintos do QA local.
+
+## Histórico do plano mobile — 21/10/2026, antes da implementação
+
+Nova proposta solicitada por `/plan`: [mobile cinematográfico](docs/superpowers/plans/2026-10-21-mobile-motion.md), com [design e roteiro](docs/superpowers/specs/2026-10-21-mobile-motion-design.md). O usuário escolheu palco fixo com retratos e nomes transformados pela rolagem; o plano amplia também os demais capítulos. **Planejado, ainda não implementado.** Os resultados abaixo pertencem à versão existente.
+
+## Ampliação de movimento — 20/10/2026
+
+**Fechamento em 21/10/2026:** build e typecheck finais, seis testes de geometria, 16 cenários do smoke e seis cenários adicionais de motion passaram. Três tamanhos de notebook baixo também foram conferidos; revisão independente final de código e capturas aprovada. Evidências e limites em [verification.md](docs/pessoas-em-cena-2026-10-20/verification.md).
+
+O usuário elogiou **Pessoas em cena**, pediu mais movimentos com referências em [Lando Norris](https://landonorris.com/) e [KAIRN no MotionSites](https://motionsites.ai/?prompt=kairn), e autorizou a coreografia com **“pode seguir”**. A ampliação conserva a identidade clara, os retratos originais, os nomes, os contatos comerciais, a oferta e a stack.
+
+O hero ganhou título por linhas, nomes animados, indicador de três etapas e mais profundidade com ponteiro discreto, mantendo os 300svh. `MotionChapter` coordena contornos e entradas finitas dos capítulos, processo e fechamento; `ScrollFrame` acomoda Corretor e Roger em desktop, sem esse deslocamento no celular. Menu tem abertura coordenada, e o catálogo aguarda a próxima imagem antes de fazer o crossfade. Movimento reduzido ao vivo, HTML sem JavaScript e recuperação de falhas continuam parte do contrato.
+
+**Checks desta ampliação:** typecheck e build passaram; seis testes de movimento e os **16/16 cenários** do smoke atualizado passaram contra o build de produção em `http://localhost:4321/`, em loopback. Revisão estática independente aprovada. O estado final do QA extra de movimento, rede e toque deve ser consultado em [verification.md](docs/pessoas-em-cena-2026-10-20/verification.md). Sem commit, push ou deploy. O [roteiro de movimento](docs/pessoas-em-cena-2026-10-20/motion.md) registra as decisões; os resultados da primeira entrega permanecem abaixo como baseline, sem substituir essa verificação atual.
+
+## Estado vigente — Pessoas em cena, 20/10/2026
+
+A direção aprovada apresenta **Fernando Riad, Eduardo Gobatto e Victor Rafael** com retratos reais em uma composição clara, tipografia Bricolage Grotesque e Source Sans 3 locais, azul de ação e planos fotográficos em profundidade. A aplicação usa **Next.js App Router, React, TypeScript, Tailwind CSS, Lenis, Framer Motion e Three.js**. A oferta permanece **site de uma página, com até seis seções, por R$ 1.500**; as condições completas estão em [PRODUCT.md](PRODUCT.md).
+
+A cena Three.js é um aprimoramento carregado dinamicamente no cliente, habilitado em desktop a partir de 1024 px e com movimento permitido. A versão HTML deve conservar retratos, nomes, preço, navegação e contatos no celular, sem JavaScript, com movimento reduzido e em caso de falha da cena. O canvas não substitui informações essenciais.
+
+A autorização de 20/10/2026 permite as fotografias dos perfis GitHub indicados e o anexo de Victor, substituindo a restrição antiga sobre retratos. Os originais e seus hashes ficam em `public/team/`. Não atribuir funções ou contatos novos aos três nomes. A informação de que Fernando e Eduardo são estudantes não se estende a Victor, cuja condição não foi confirmada. Os contatos comerciais continuam Fernando `5566999356646` e Eduardo `556684184488`, exatamente como fornecidos.
+
+**Implementação e verificação local concluídas.** Typecheck, build, seis testes de movimento e 16 cenários de navegador passaram. Revisões independentes de código e capturas aprovadas no escopo registrado. Axe detectou zero violações nas duas larguras verificadas, com limites de contraste e cobertura descritos em [verification.md](docs/pessoas-em-cena-2026-10-20/verification.md). A prévia de produção está em `http://localhost:4321/`. Não houve commit, push ou deploy; a homologação estética do usuário permanece distinta do QA técnico. Os resultados de versões anteriores abaixo são históricos.
+
+- [Briefing e registro de Pessoas em cena](docs/pessoas-em-cena-2026-10-20/README.md)
+- [Verificação atual e limites](docs/pessoas-em-cena-2026-10-20/verification.md)
+- [Origem e integridade dos retratos](docs/pessoas-em-cena-2026-10-20/assets.md)
+- [Versão anterior preservada](docs/pessoas-em-cena-2026-10-20/archive/)
+- [Produto e condições comerciais](PRODUCT.md)
+- [Direção visual vigente](DESIGN.md)
+
+### Executar localmente
+
+Requer Node.js `>=22.22.0`. Na raiz do projeto:
+
+```sh
+npm install
+npm run dev -- --background
+```
+
+A URL local é `http://localhost:4321/`. Gerencie o servidor com `npm run dev -- status`, `npm run dev -- logs` e `npm run dev -- stop`. Para escutar também na rede local, use `npm run dev -- --background --lan`; o gerenciador informa os endereços disponíveis. A variável `SITE_URL` corresponde ao domínio real de publicação, quando informado; não é necessária para a prévia local.
+
+Verificações desta implementação:
+
+```sh
+npm run typecheck
+npm run build
+node --experimental-strip-types --test scripts/portrait-motion.test.mjs
+node --experimental-strip-types --test scripts/mobile-portrait-motion.test.mjs
+```
+
+Os resultados executados desta entrega estão no relatório atual. O smoke de navegador em `scripts/verify-people.browser.js` também cobre larguras móveis e desktop, teclado, toque emulado, movimento reduzido, ausência de JavaScript e falhas da cena. Para trocar a prévia de produção por desenvolvimento com HMR, pare o servidor pelo gerenciador antes de iniciar novamente sem `--production`.
+
+| Caminho | Responsabilidade vigente |
+| --- | --- |
+| `src/app/layout.tsx`, `src/app/page.tsx` e `src/app/globals.css` | Documento, página, fontes locais, sistema claro, responsividade e foco. |
+| `src/components/experience/Hero.tsx` | Retratos e nomes em HTML com carregamento opcional da cena. |
+| `src/components/experience/PortraitScene.tsx` e `portraitMotion.ts` | Cena Three.js e cálculo determinístico de movimento. |
+| `src/data/team.ts` e `public/team/manifest.json` | Dados tipados das três pessoas e integridade dos originais. |
+| `src/data/offer.ts`, `src/data/landing.ts` e `src/data/site.ts` | Oferta, conteúdo, portfólio e contatos comerciais. |
+| `public/estudo/` e `docs/*/archive/` | Estudos e fontes históricas preservados. |
+| `scripts/dev.mjs` | Gerenciador do servidor em background. |
+
+Corretor permanece trabalho real; Roger permanece projeto demonstrativo, sem contrato ou alegações de resultado. Na conferência somente por GET de 20/10, Roger respondeu HTTP 200 com a página esperada; Corretor alternou entre HTTP 503 e 200. Links externos não equivalem a validação dos sistemas ou dos seus dados. Estudos, assets, licenças e archives anteriores devem ser preservados.
+
+## Histórico preservado — Em evidência em Next.js, anterior à autorização de 20/10/2026
+
+O conteúdo seguinte permanece como registro das versões anteriores. Estados concluídos, identidade visual e restrições ali descritos se aplicam às respectivas etapas; a direção vigente está acima.
+
 ## Estado vigente — migração para Next.js e nova experiência, 19/10/2026
 
 O usuário pediu explicitamente **Next.js App Router + React + TypeScript + Tailwind CSS + Lenis + Framer Motion**, buscando uma experiência com o nível de acabamento do [site de Lando Norris](https://landonorris.com/). A decisão substitui a orientação anterior de manter Astro. A oferta comercial continua sendo **um site de uma página, com até seis seções, por R$ 1.500**, para prestadores de serviços de Sinop/MT e região.

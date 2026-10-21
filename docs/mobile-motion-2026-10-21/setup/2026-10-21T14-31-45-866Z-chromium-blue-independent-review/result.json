@@ -1,0 +1,638 @@
+{
+  "startedAt": "2026-10-21T14:31:45.867Z",
+  "engine": "chromium",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T14-31-45-866Z-chromium-blue-independent-review",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T14-31-45-866Z-chromium-blue-independent-review\\video\\page@090a1181317a12df631f5d24b67bf7f8.webm",
+      "bytes": 171725
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T14-31-45-866Z-chromium-blue-independent-review\\video\\page@2177123c94fe1974728e0563dec2a077.webm",
+      "bytes": 658610
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T14-31-45-866Z-chromium-blue-independent-review\\video\\page@24d0dae1b38bc9a3a109d31dab51392a.webm",
+      "bytes": 287935
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T14-31-45-866Z-chromium-blue-independent-review\\video\\page@32834f85a9938cef58cc22f6b94f46c0.webm",
+      "bytes": 265802
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T14-31-45-866Z-chromium-blue-independent-review\\video\\page@3e4098a9dd285c6add4cc6b58c387853.webm",
+      "bytes": 170703
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T14-31-45-866Z-chromium-blue-independent-review\\video\\page@60896ba4b8812082ceed28f700182fa7.webm",
+      "bytes": 251190
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T14-31-45-866Z-chromium-blue-independent-review\\video\\page@6c93ef6f892ac66dc8f75a79795e6355.webm",
+      "bytes": 119927
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T14-31-45-866Z-chromium-blue-independent-review\\video\\page@abb448c593633a843b3a980baec6cfb0.webm",
+      "bytes": 209018
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T14-31-45-866Z-chromium-blue-independent-review\\video\\page@e53b5abeb193d33f19acf32bc4e22c0b.webm",
+      "bytes": 310015
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T14-31-45-866Z-chromium-blue-independent-review\\video\\page@f403cf85a07d2124e36fbafdd17bc512.webm",
+      "bytes": 131687
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T14-31-45-866Z-chromium-blue-independent-review\\video\\page@f77595076494a6ba3c9c9d013247311a.webm",
+      "bytes": 271597
+    }
+  ],
+  "browserVersion": "148.0.7778.96",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\blue-sculpture-2026-10-21\\review\\review.browser.js",
+  "result": {
+    "passed": 10,
+    "results": [
+      {
+        "width": 1024,
+        "height": 768,
+        "baseline": 152.890625,
+        "state": {
+          "width": 1024,
+          "scrollWidth": 1024,
+          "intro": {
+            "x": 40,
+            "y": 102,
+            "width": 944,
+            "height": 152.890625,
+            "top": 102,
+            "right": 984,
+            "bottom": 254.890625,
+            "left": 40
+          },
+          "heading": {
+            "x": 40,
+            "y": 102,
+            "width": 477.265625,
+            "height": 129.890625,
+            "top": 102,
+            "right": 517.265625,
+            "bottom": 231.890625,
+            "left": 40
+          },
+          "sculpture": {
+            "x": 539.78125,
+            "y": 102.9375,
+            "width": 128,
+            "height": 128,
+            "top": 102.9375,
+            "right": 667.78125,
+            "bottom": 230.9375,
+            "left": 539.78125
+          },
+          "description": {
+            "x": 690.296875,
+            "y": 104.140625,
+            "width": 218.78125,
+            "height": 127.75,
+            "top": 104.140625,
+            "right": 909.078125,
+            "bottom": 231.890625,
+            "left": 690.296875
+          },
+          "image": {
+            "complete": true,
+            "naturalWidth": 800,
+            "alt": "",
+            "hidden": true
+          },
+          "renderer": "three"
+        },
+        "screenshot": "opening-1024x768.png"
+      },
+      {
+        "width": 1280,
+        "height": 740,
+        "baseline": 172.46875,
+        "state": {
+          "width": 1280,
+          "scrollWidth": 1280,
+          "intro": {
+            "x": 56,
+            "y": 102,
+            "width": 1168,
+            "height": 172.46875,
+            "top": 102,
+            "right": 1224,
+            "bottom": 274.46875,
+            "left": 56
+          },
+          "heading": {
+            "x": 56,
+            "y": 102,
+            "width": 608.9375,
+            "height": 149.46875,
+            "top": 102,
+            "right": 664.9375,
+            "bottom": 251.46875,
+            "left": 56
+          },
+          "sculpture": {
+            "x": 693.09375,
+            "y": 112.734375,
+            "width": 128,
+            "height": 128,
+            "top": 112.734375,
+            "right": 821.09375,
+            "bottom": 240.734375,
+            "left": 693.09375
+          },
+          "description": {
+            "x": 849.25,
+            "y": 123.71875,
+            "width": 218.78125,
+            "height": 127.75,
+            "top": 123.71875,
+            "right": 1068.03125,
+            "bottom": 251.46875,
+            "left": 849.25
+          },
+          "image": {
+            "complete": true,
+            "naturalWidth": 800,
+            "alt": "",
+            "hidden": true
+          },
+          "renderer": "three"
+        },
+        "screenshot": "opening-1280x740.png"
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "baseline": 180.375,
+        "state": {
+          "width": 1366,
+          "scrollWidth": 1366,
+          "intro": {
+            "x": 56,
+            "y": 102,
+            "width": 1254,
+            "height": 180.375,
+            "top": 102,
+            "right": 1310,
+            "bottom": 282.375,
+            "left": 56
+          },
+          "heading": {
+            "x": 56,
+            "y": 102,
+            "width": 659.84375,
+            "height": 157.375,
+            "top": 102,
+            "right": 715.84375,
+            "bottom": 259.375,
+            "left": 56
+          },
+          "sculpture": {
+            "x": 745.890625,
+            "y": 116.6875,
+            "width": 128,
+            "height": 128,
+            "top": 116.6875,
+            "right": 873.890625,
+            "bottom": 244.6875,
+            "left": 745.890625
+          },
+          "description": {
+            "x": 903.9375,
+            "y": 131.625,
+            "width": 218.78125,
+            "height": 127.75,
+            "top": 131.625,
+            "right": 1122.71875,
+            "bottom": 259.375,
+            "left": 903.9375
+          },
+          "image": {
+            "complete": true,
+            "naturalWidth": 800,
+            "alt": "",
+            "hidden": true
+          },
+          "renderer": "three"
+        },
+        "screenshot": "opening-1366x768.png"
+      },
+      {
+        "width": 1440,
+        "height": 1000,
+        "baseline": 221.734375,
+        "state": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "intro": {
+            "x": 56,
+            "y": 114,
+            "width": 1328,
+            "height": 221.734375,
+            "top": 114,
+            "right": 1384,
+            "bottom": 335.734375,
+            "left": 56
+          },
+          "heading": {
+            "x": 56,
+            "y": 114,
+            "width": 675.90625,
+            "height": 188.734375,
+            "top": 114,
+            "right": 731.90625,
+            "bottom": 302.734375,
+            "left": 56
+          },
+          "sculpture": {
+            "x": 763.578125,
+            "y": 121.96875,
+            "width": 172.796875,
+            "height": 172.796875,
+            "top": 121.96875,
+            "right": 936.375,
+            "bottom": 294.765625,
+            "left": 763.578125
+          },
+          "description": {
+            "x": 968.046875,
+            "y": 165.703125,
+            "width": 247.9375,
+            "height": 137.03125,
+            "top": 165.703125,
+            "right": 1215.984375,
+            "bottom": 302.734375,
+            "left": 968.046875
+          },
+          "image": {
+            "complete": true,
+            "naturalWidth": 800,
+            "alt": "",
+            "hidden": true
+          },
+          "renderer": "three"
+        },
+        "screenshot": "opening-1440x1000.png"
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "baseline": 256.671875,
+        "state": {
+          "width": 1920,
+          "scrollWidth": 1920,
+          "intro": {
+            "x": 160,
+            "y": 114,
+            "width": 1600,
+            "height": 256.671875,
+            "top": 114,
+            "right": 1760,
+            "bottom": 370.671875,
+            "left": 160
+          },
+          "heading": {
+            "x": 160,
+            "y": 114,
+            "width": 836.9375,
+            "height": 223.671875,
+            "top": 114,
+            "right": 996.9375,
+            "bottom": 337.671875,
+            "left": 160
+          },
+          "sculpture": {
+            "x": 1032.9375,
+            "y": 137.828125,
+            "width": 176,
+            "height": 176,
+            "top": 137.828125,
+            "right": 1208.9375,
+            "bottom": 313.828125,
+            "left": 1032.9375
+          },
+          "description": {
+            "x": 1244.9375,
+            "y": 200.640625,
+            "width": 247.9375,
+            "height": 137.03125,
+            "top": 200.640625,
+            "right": 1492.875,
+            "bottom": 337.671875,
+            "left": 1244.9375
+          },
+          "image": {
+            "complete": true,
+            "naturalWidth": 800,
+            "alt": "",
+            "hidden": true
+          },
+          "renderer": "three"
+        },
+        "screenshot": "opening-1920x1080.png"
+      },
+      {
+        "width": 320,
+        "height": 568,
+        "state": {
+          "width": 320,
+          "scrollWidth": 320,
+          "intro": {
+            "x": 20,
+            "y": 102,
+            "width": 280,
+            "height": 489.296875,
+            "top": 102,
+            "right": 300,
+            "bottom": 591.296875,
+            "left": 20
+          },
+          "heading": {
+            "x": 20,
+            "y": 236,
+            "width": 280,
+            "height": 171.90625,
+            "top": 236,
+            "right": 300,
+            "bottom": 407.90625,
+            "left": 20
+          },
+          "sculpture": {
+            "x": 104,
+            "y": 102,
+            "width": 112,
+            "height": 112,
+            "top": 102,
+            "right": 216,
+            "bottom": 214,
+            "left": 104
+          },
+          "description": {
+            "x": 20,
+            "y": 429.90625,
+            "width": 278.3125,
+            "height": 132.390625,
+            "top": 429.90625,
+            "right": 298.3125,
+            "bottom": 562.296875,
+            "left": 20
+          },
+          "image": {
+            "complete": true,
+            "naturalWidth": 800,
+            "alt": "",
+            "hidden": true
+          },
+          "renderer": "html"
+        },
+        "screenshot": "opening-320x568.png"
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "state": {
+          "width": 390,
+          "scrollWidth": 390,
+          "intro": {
+            "x": 20,
+            "y": 102,
+            "width": 350,
+            "height": 496.28125,
+            "top": 102,
+            "right": 370,
+            "bottom": 598.28125,
+            "left": 20
+          },
+          "heading": {
+            "x": 20,
+            "y": 284,
+            "width": 350,
+            "height": 130.890625,
+            "top": 284,
+            "right": 370,
+            "bottom": 414.890625,
+            "left": 20
+          },
+          "sculpture": {
+            "x": 115,
+            "y": 102,
+            "width": 160,
+            "height": 160,
+            "top": 102,
+            "right": 275,
+            "bottom": 262,
+            "left": 115
+          },
+          "description": {
+            "x": 20,
+            "y": 436.890625,
+            "width": 278.3125,
+            "height": 132.390625,
+            "top": 436.890625,
+            "right": 298.3125,
+            "bottom": 569.28125,
+            "left": 20
+          },
+          "image": {
+            "complete": true,
+            "naturalWidth": 800,
+            "alt": "",
+            "hidden": true
+          },
+          "renderer": "html"
+        },
+        "screenshot": "opening-390x844.png"
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "state": {
+          "width": 768,
+          "scrollWidth": 768,
+          "intro": {
+            "x": 40,
+            "y": 114,
+            "width": 688,
+            "height": 519.03125,
+            "top": 114,
+            "right": 728,
+            "bottom": 633.03125,
+            "left": 40
+          },
+          "heading": {
+            "x": 40,
+            "y": 296,
+            "width": 688,
+            "height": 154.28125,
+            "top": 296,
+            "right": 728,
+            "bottom": 450.28125,
+            "left": 40
+          },
+          "sculpture": {
+            "x": 304,
+            "y": 114,
+            "width": 160,
+            "height": 160,
+            "top": 114,
+            "right": 464,
+            "bottom": 274,
+            "left": 304
+          },
+          "description": {
+            "x": 40,
+            "y": 472.28125,
+            "width": 218.78125,
+            "height": 127.75,
+            "top": 472.28125,
+            "right": 258.78125,
+            "bottom": 600.03125,
+            "left": 40
+          },
+          "image": {
+            "complete": true,
+            "naturalWidth": 800,
+            "alt": "",
+            "hidden": true
+          },
+          "renderer": "html"
+        },
+        "screenshot": "opening-768x1024.png"
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "state": {
+          "width": 844,
+          "scrollWidth": 844,
+          "intro": {
+            "x": 40,
+            "y": 114,
+            "width": 764,
+            "height": 471.03125,
+            "top": 114,
+            "right": 804,
+            "bottom": 585.03125,
+            "left": 40
+          },
+          "heading": {
+            "x": 40,
+            "y": 248,
+            "width": 764,
+            "height": 154.28125,
+            "top": 248,
+            "right": 804,
+            "bottom": 402.28125,
+            "left": 40
+          },
+          "sculpture": {
+            "x": 366,
+            "y": 114,
+            "width": 112,
+            "height": 112,
+            "top": 114,
+            "right": 478,
+            "bottom": 226,
+            "left": 366
+          },
+          "description": {
+            "x": 40,
+            "y": 424.28125,
+            "width": 218.78125,
+            "height": 127.75,
+            "top": 424.28125,
+            "right": 258.78125,
+            "bottom": 552.03125,
+            "left": 40
+          },
+          "image": {
+            "complete": true,
+            "naturalWidth": 800,
+            "alt": "",
+            "hidden": true
+          },
+          "renderer": "html"
+        },
+        "screenshot": "opening-844x390.png"
+      },
+      {
+        "focus": {
+          "top": 519.28125,
+          "focus": true,
+          "ancestors": [
+            {
+              "class": "hero-skip",
+              "transform": "none",
+              "animations": 0
+            },
+            {
+              "class": "hero-description",
+              "transform": "none",
+              "animations": 0
+            },
+            {
+              "class": "hero-intro",
+              "transform": "none",
+              "animations": 0
+            },
+            {
+              "class": "hero-sticky section-shell",
+              "transform": "none",
+              "animations": 0
+            },
+            {
+              "class": "people-hero",
+              "transform": "none",
+              "animations": 0
+            },
+            {
+              "class": "",
+              "transform": "none",
+              "animations": 0
+            },
+            {
+              "class": "",
+              "transform": "none",
+              "animations": 0
+            },
+            {
+              "class": "TgQRFG_variable rKhs1G_variable lenis",
+              "transform": "none",
+              "animations": 0
+            }
+          ]
+        },
+        "reduced": {
+          "animations": 0,
+          "transforms": [],
+          "focused": "hero-skip"
+        }
+      }
+    ]
+  },
+  "pageErrors": [],
+  "pass": true,
+  "testFinishedAt": "2026-10-21T14:32:12.915Z",
+  "cleanupWarnings": [
+    "Error: browser.close exceeded 8000 ms"
+  ],
+  "terminatedOwnedBrowserChildren": [
+    "26532",
+    "6096",
+    "65796",
+    "44988"
+  ],
+  "finishedAt": "2026-10-21T14:32:34.598Z"
+}

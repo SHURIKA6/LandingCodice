@@ -1,0 +1,8 @@
+{
+  "engine": "chromium",
+  "pass": false,
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-34-06-129Z-chromium-final-motion",
+  "videos": 4,
+  "cleanupWarnings": [],
+  "error": "Error: {\"completed\":[{\"scenario\":\"scroll-frame-reversible-and-chapter-arrival\",\"pass\":true,\"before\":{\"scale\":0.9400001671899267,\"y\":48},\"settled\":{\"scale\":1,\"y\":0},\"reversed\":{\"scale\":0.9431409980626225,\"y\":45.4869},\"contactRadiusOnArrival\":56},{\"scenario\":\"chapter-animation-cancelled-by-live-reduced-motion\",\"pass\":true,\"animations\":0,\"engine\":\"native\",\"radius\":\"0px\",\"frames\":[\"none\",\"none\"],\"canvas\":0}],\"error\":\"loading fallback has no pixels\"}\n    at eval (eval at <anonymous> (file:///C:/Users/ferna/OneDrive/%C3%81rea%20de%20Trabalho/LandingCodice/docs/mobile-motion-2026-10-21/setup/isolated-playwright.mjs:83:22), <anonymous>:151:11)\n    at async file:///C:/Users/ferna/OneDrive/%C3%81rea%20de%20Trabalho/LandingCodice/docs/mobile-motion-2026-10-21/setup/isolated-playwright.mjs:86:21"
+}

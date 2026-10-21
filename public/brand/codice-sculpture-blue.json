@@ -1,0 +1,56 @@
+{
+  "createdOn": "2026-10-21",
+  "tool": "image_gen.imagegen",
+  "mode": "precise-object-edit",
+  "source": "public/brand/codice-sculpture.png",
+  "sourceGenerationId": "01a15457-eef3-7d51-86dc-c99631566245",
+  "editGenerationId": "01a15c6d-350a-7651-9d16-ee05c257019f/exec-2ddfc657-e911-445a-99d3-d0831e963fed",
+  "sourceOutput": "C:/Users/ferna/.codex/generated_images/01a15c6d-350a-7651-9d16-ee05c257019f/exec-2ddfc657-e911-445a-99d3-d0831e963fed.png",
+  "prompt": "docs/blue-sculpture-2026-10-21/prompt.txt",
+  "transparentBackground": true,
+  "baseEnamel": "#2f4bff",
+  "conversion": "FFmpeg, Lanczos800x800, libwebp quality90/compression6/picture/yuva420p",
+  "originalHashesPreserved": true,
+  "files": [
+    {
+      "path": "public/brand/codice-sculpture-blue.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 1431514,
+      "sha256": "4d3f2b2ac352c296423ed12f189afc350beb15fe0cafce2b206656fb54478a10",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "public/brand/codice-sculpture-blue.webp",
+      "dimensions": [
+        800,
+        800
+      ],
+      "mode": "RGBA",
+      "bytes": 108282,
+      "sha256": "4196c8c39c158e7e0d30a667d57ead6da383214ad94d01d7527218c2bbf3624f",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaCorners": [
+        1,
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

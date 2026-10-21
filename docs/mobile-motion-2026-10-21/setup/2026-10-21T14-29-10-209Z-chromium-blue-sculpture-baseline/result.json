@@ -1,0 +1,45 @@
+{
+  "startedAt": "2026-10-21T14:29:10.210Z",
+  "engine": "chromium",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T14-29-10-209Z-chromium-blue-sculpture-baseline",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T14-29-10-209Z-chromium-blue-sculpture-baseline\\video\\page@4f6d9cca342ee5cdedb079275ecd191f.webm",
+      "bytes": 497026
+    }
+  ],
+  "browserVersion": "148.0.7778.96",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\blue-sculpture-2026-10-21\\baseline.browser.js",
+  "result": [
+    {
+      "width": 1024,
+      "height": 152.890625
+    },
+    {
+      "width": 1280,
+      "height": 172.46875
+    },
+    {
+      "width": 1366,
+      "height": 180.375
+    },
+    {
+      "width": 1440,
+      "height": 221.734375
+    },
+    {
+      "width": 1920,
+      "height": 256.671875
+    }
+  ],
+  "pageErrors": [],
+  "pass": true,
+  "testFinishedAt": "2026-10-21T14:29:15.565Z",
+  "cleanupWarnings": [],
+  "finishedAt": "2026-10-21T14:29:15.899Z"
+}

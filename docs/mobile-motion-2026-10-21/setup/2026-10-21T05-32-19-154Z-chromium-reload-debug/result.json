@@ -1,0 +1,544 @@
+{
+  "startedAt": "2026-10-21T05:32:19.155Z",
+  "engine": "chromium",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-32-19-154Z-chromium-reload-debug",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-32-19-154Z-chromium-reload-debug\\video\\page@e2fe2aa0153b752a8bab30d73120eab3.webm",
+      "bytes": 253936
+    }
+  ],
+  "browserVersion": "148.0.7778.96",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\reload-debug.browser.js",
+  "result": {
+    "before": {
+      "y": 1040,
+      "mode": "desktop",
+      "active": "Eduardo Gobatto",
+      "hero": {
+        "x": 0,
+        "y": -1040,
+        "width": 1440,
+        "height": 3080,
+        "top": -1040,
+        "right": 1440,
+        "bottom": 2040,
+        "left": 0
+      },
+      "cards": [
+        {
+          "x": 56,
+          "y": 335.734375,
+          "width": 1328,
+          "height": 519.765625,
+          "top": 335.734375,
+          "right": 1384,
+          "bottom": 855.5,
+          "left": 56
+        },
+        {
+          "x": 56,
+          "y": 335.734375,
+          "width": 1328,
+          "height": 519.765625,
+          "top": 335.734375,
+          "right": 1384,
+          "bottom": 855.5,
+          "left": 56
+        },
+        {
+          "x": 56,
+          "y": 335.734375,
+          "width": 1328,
+          "height": 519.765625,
+          "top": 335.734375,
+          "right": 1384,
+          "bottom": 855.5,
+          "left": 56
+        }
+      ]
+    },
+    "after": [
+      {
+        "y": 2080,
+        "mode": "desktop",
+        "active": "Victor Rafael",
+        "hero": {
+          "x": 0,
+          "y": -2080,
+          "width": 1440,
+          "height": 3080,
+          "top": -2080,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 0
+        },
+        "cards": [
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          }
+        ]
+      },
+      {
+        "y": 2080,
+        "mode": "desktop",
+        "active": "Victor Rafael",
+        "hero": {
+          "x": 0,
+          "y": -2080,
+          "width": 1440,
+          "height": 3080,
+          "top": -2080,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 0
+        },
+        "cards": [
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          }
+        ]
+      },
+      {
+        "y": 2080,
+        "mode": "desktop",
+        "active": "Victor Rafael",
+        "hero": {
+          "x": 0,
+          "y": -2080,
+          "width": 1440,
+          "height": 3080,
+          "top": -2080,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 0
+        },
+        "cards": [
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          }
+        ]
+      },
+      {
+        "y": 2080,
+        "mode": "desktop",
+        "active": "Victor Rafael",
+        "hero": {
+          "x": 0,
+          "y": -2080,
+          "width": 1440,
+          "height": 3080,
+          "top": -2080,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 0
+        },
+        "cards": [
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          }
+        ]
+      },
+      {
+        "y": 2080,
+        "mode": "desktop",
+        "active": "Victor Rafael",
+        "hero": {
+          "x": 0,
+          "y": -2080,
+          "width": 1440,
+          "height": 3080,
+          "top": -2080,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 0
+        },
+        "cards": [
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          }
+        ]
+      },
+      {
+        "y": 2080,
+        "mode": "desktop",
+        "active": "Victor Rafael",
+        "hero": {
+          "x": 0,
+          "y": -2080,
+          "width": 1440,
+          "height": 3080,
+          "top": -2080,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 0
+        },
+        "cards": [
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          }
+        ]
+      },
+      {
+        "y": 2080,
+        "mode": "desktop",
+        "active": "Victor Rafael",
+        "hero": {
+          "x": 0,
+          "y": -2080,
+          "width": 1440,
+          "height": 3080,
+          "top": -2080,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 0
+        },
+        "cards": [
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          }
+        ]
+      },
+      {
+        "y": 2080,
+        "mode": "desktop",
+        "active": "Victor Rafael",
+        "hero": {
+          "x": 0,
+          "y": -2080,
+          "width": 1440,
+          "height": 3080,
+          "top": -2080,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 0
+        },
+        "cards": [
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          }
+        ]
+      },
+      {
+        "y": 2080,
+        "mode": "desktop",
+        "active": "Victor Rafael",
+        "hero": {
+          "x": 0,
+          "y": -2080,
+          "width": 1440,
+          "height": 3080,
+          "top": -2080,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 0
+        },
+        "cards": [
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          }
+        ]
+      },
+      {
+        "y": 2080,
+        "mode": "desktop",
+        "active": "Victor Rafael",
+        "hero": {
+          "x": 0,
+          "y": -2080,
+          "width": 1440,
+          "height": 3080,
+          "top": -2080,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 0
+        },
+        "cards": [
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          },
+          {
+            "x": 56,
+            "y": 335.734375,
+            "width": 1328,
+            "height": 519.765625,
+            "top": 335.734375,
+            "right": 1384,
+            "bottom": 855.5,
+            "left": 56
+          }
+        ]
+      }
+    ]
+  },
+  "pageErrors": [],
+  "pass": true,
+  "testFinishedAt": "2026-10-21T05:32:22.488Z",
+  "cleanupWarnings": [],
+  "finishedAt": "2026-10-21T05:32:22.736Z"
+}

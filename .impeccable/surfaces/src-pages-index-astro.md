@@ -2,8 +2,65 @@
 version: 1
 slug: "src-pages-index-astro"
 primary_target: "src/app/page.tsx"
-related_targets: ["src/app/globals.css","src/app/layout.tsx","src/components/experience/Hero.tsx","src/components/experience/ProjectStage.tsx","src/components/experience/SmoothExperience.tsx","src/data/offer.ts","src/data/site.ts"]
+related_targets: ["src/app/globals.css","src/app/layout.tsx","src/components/experience/Hero.tsx","src/components/experience/ProjectStage.tsx","src/components/experience/SmoothExperience.tsx","src/data/offer.ts","src/data/site.ts","src/components/experience/PortraitScene.tsx","src/components/experience/portraitMotion.ts","src/components/experience/MotionChapter.tsx","src/components/experience/ScrollFrame.tsx","src/components/experience/interaction-motion.css","src/data/team.ts","src/components/experience/PersonCard.tsx","src/components/experience/useMotionMode.ts","src/components/experience/mobilePortraitMotion.ts","src/components/experience/mobile-hero.css","src/components/experience/project-motion.css","src/components/experience/mobile-chapters.css","src/components/experience/Header.tsx","src/components/experience/HeroSculpture.tsx","src/components/experience/hero-sculpture.css"]
 ---
+
+# Landing Codice — Pessoas em cena vigente, 20/10/2026
+
+## Escultura azul na abertura — execução de 21/10/2026
+
+O usuário confirmou a antiga escultura dos dois Cs entrelaçados, pediu o verde em azul **`#2f4bff`** com cromado/transparência preservados e escolheu sua posição na abertura. `HeroSculpture.tsx` e `hero-sculpture.css` integram o raster novo: 128–176 px entre título e descrição no desktop; 160 px antes do título no celular, 112 px em altura até 700 px. Entrada finita de 850 ms e parallax até 24 px, com controles e ancestrais do palco estáveis, fallback HTML/reduce e reflow.
+
+[Registro e proveniência](../../docs/blue-sculpture-2026-10-21/README.md) e [verificação própria](../../docs/blue-sculpture-2026-10-21/verification.md), **QA local concluído em 21/10**, encerrando o estado inicial em execução, com revisão independente e inspeção de vídeo/frames aprovadas. A peça não muda retratos, sequência, 300svh, oferta, contatos, header/favicon ou stack. Os originais e os blocos anteriores continuam preservados. Sem commit, push ou deploy.
+
+## Mobile cinematográfico — execução de 21/10/2026
+
+O **“gooo”** autorizou a implementação do [plano mobile](../../docs/superpowers/plans/2026-10-21-mobile-motion.md). Esta camada prevalece sobre a antiga neutralização de molduras e apresentação exclusivamente em fluxo no telefone descritas abaixo. A identidade, pessoas, fotografias, oferta, contatos e desktop continuam vigentes. [Registro](../../docs/mobile-motion-2026-10-21/README.md) e [verificação específica](../../docs/mobile-motion-2026-10-21/verification.md): QA local encerrado em 21/10, após a consolidação final inicialmente pendente; não transferir aprovações das versões anteriores. Texto ampliado usa fluxo sem cortes, e aba oculta cancela efeitos finitos.
+
+`mobile-story` usa uma área sticky de 300svh em retrato, após a introdução, com fotos em camadas, nomes por máscaras e indicador reversíveis. Repousos legíveis em Fernando/Eduardo/Victor. `mobile-flow` mantém movimento forte em landscape/altura curta ou durante a preparação/falha de retratos. `static` conserva HTML completo no SSR/sem JS e movimento reduzido. Modo e renderizador são independentes, com Three exclusivo do desktop elegível.
+
+Corretor/Roger movem somente mídia; controles, descrições e links ficam estáveis. Oferta por grupos, trilha vertical de processo, contato e letras finais têm movimentos distintos. Menu mantém acesso imediato, toque, Escape/foco; preferência reduzida ao vivo cancela efeitos. A árvore de pessoas é única e os originais não mudam. Os registros seguintes permanecem como histórico da baseline anterior a esta execução. Sem commit, push ou deploy.
+
+Modo: Persuade. Rota: `/`. O nome histórico deste arquivo preserva os vínculos existentes; a implementação vigente é Next.js App Router. Este bloco prevalece sobre a superfície de 19/10 preservada abaixo. [Produto](../../PRODUCT.md), [design](../../DESIGN.md), [briefing](../../docs/pessoas-em-cena-2026-10-20/README.md), [roteiro de movimento](../../docs/pessoas-em-cena-2026-10-20/motion.md) e [verificação atual](../../docs/pessoas-em-cena-2026-10-20/verification.md).
+
+## THESIS
+
+Pessoas reais apresentam a Codice antes do trabalho e da oferta. Fernando Riad, Eduardo Gobatto e Victor Rafael entram nessa ordem, com retratos originais e nomes em HTML. Movimento articula a apresentação e a passagem aos projetos, sem bloquear leitura ou contato.
+
+
+### Fechamento da ampliação em 21/10/2026
+
+Build, typecheck, seis testes de geometria, 16 cenários do smoke, seis cenários adicionais de motion e três tamanhos de notebook baixo passaram. Revisão independente final de código e capturas aprovada. Evidências atuais e limites em [verification.md](../../docs/pessoas-em-cena-2026-10-20/verification.md).
+
+## OWN-WORLD
+
+Base clara `#f7f9fc`, tinta `#142033`, ação cobalto `#2f4bff` e campo suave `#dce5f3`; Bricolage Grotesque e Source Sans 3 locais. Fotografias autorizadas permanecem byte-idênticas, com origens e hashes em `public/team/manifest.json`. Não reconstruir rostos, remover fundos ou importar imagens e marcas das referências.
+
+## STORY
+
+Fernando → Eduardo → Victor → Corretor como trabalho real → Roger explicitamente demonstrativo → site de uma página por R$ 1.500, até seis seções → processo e contatos originais de Fernando e Eduardo. Não inferir funções, condição de estudante de Victor, contatos ou resultados comerciais.
+
+## FIRST VIEWPORT
+
+Header fixo e nativo, título amplo por linhas, apresentação direta, pessoa em destaque e ações em HTML. No desktop elegível, três retratos planos ganham profundidade em uma sequência sticky de 300svh; nomes e indicador de três etapas acompanham a rolagem. Celular, movimento reduzido, ausência de JS e falhas da cena mantêm a apresentação completa em fluxo legível.
+
+## FORM
+
+Pessoas em cena foi aprovada em 20/10/2026, incluindo os retratos de Fernando, Eduardo e Victor. Após elogiar a landing, o usuário pediu mais movimento com referências em Lando Norris e KAIRN e respondeu **“pode seguir”**, delegando a coreografia. É ampliação da direção aprovada, sem nova identidade, oferta, pessoas ou assets. A fonte imediatamente anterior permanece em `docs/pessoas-em-cena-2026-10-20/archive/`.
+
+## INTERACTION
+
+Three.js entra por importação opcional no cliente somente a partir de 1024 px, sem movimento reduzido. Planos continuam paralelos, com cálculo reversível e maior profundidade; o ponteiro tem resposta discreta com mola e reset fora da tela/aba oculta. A duração do hero não cresce. `MotionChapter` abre cantos superiores de 64 px para 0 conforme a rolagem e coordena entradas finitas com máscaras/tipografia, processo em sequência e palavra de fechamento. `ScrollFrame` acomoda as molduras de Corretor e Roger reversivelmente no desktop; o deslocamento é neutralizado no celular.
+
+Menu conserva `details`/`summary`, Escape, clique externo e foco, com abertura coordenada do painel e dos links. O catálogo conserva a captura SSR e só revela a seguinte após carregamento e decodificação, com crossfade curto, interrupção por seleção rápida e nova tentativa após falha. CSS e preferência reativa respeitam movimento reduzido ao vivo. Lenis mantém as âncoras e o toque nativo; cena é desenhada sob demanda com DPR máximo 1,5. Recursos, eventos, observadores e animações são liberados. O foco não fica esperando a coreografia.
+
+## Quality bar
+
+Preservar fotos, contatos, oferta, semântica e HTML já visível. Na ampliação, typecheck e build passaram, seis testes de movimento e o smoke atualizado de 16 cenários passaram novamente contra produção local em `http://localhost:4321/`, restrita à máquina. Revisão estática independente aprovada. O estado final do QA adicional de movimento, rede e toque fica na verificação atual; a baseline original e suas capturas não validam automaticamente mudanças posteriores. Sem commit, push ou deploy.
+
+## Histórico preservado — superfície anterior à direção Pessoas em cena
+
+O registro de 19/10 permanece integralmente abaixo. Sua identidade, interações e resultados são históricos e não prevalecem sobre o contrato atual.
 
 # Landing Codice — Next.js vigente, 19/10/2026
 

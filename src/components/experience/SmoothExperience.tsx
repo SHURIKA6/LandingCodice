@@ -29,7 +29,14 @@ export function SmoothExperience({ children }: { children: React.ReactNode }) {
       frame = requestAnimationFrame(raf);
     };
     const visibility = () => {
-      if (document.hidden) stop();
+      if (document.hidden) {
+        stop();
+        // CSS entrances and transitions also need a real cancellation path.
+        // Their authored end states remain visible after the effect is removed.
+        document.getAnimations().forEach(animation => {
+          if (animation.effect?.getTiming().iterations !== Infinity) animation.cancel();
+        });
+      }
       else start();
     };
     start();

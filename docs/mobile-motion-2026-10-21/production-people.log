@@ -1,0 +1,49 @@
+{
+  "startedAt": "2026-10-21T05:30:21.744Z",
+  "engine": "chromium",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-30-21-743Z-chromium-production-people",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-30-21-743Z-chromium-production-people\\video\\page@0a7fe537fc207742a21ac1cbe7171fab.webm",
+      "bytes": 1259854
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-30-21-743Z-chromium-production-people\\video\\page@218c108289357ee6bee35084bb44de76.webm",
+      "bytes": 86249
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-30-21-743Z-chromium-production-people\\video\\page@61973028c3405ff1ee8d07e9103bd139.webm",
+      "bytes": 85011
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-30-21-743Z-chromium-production-people\\video\\page@82b85371e22d98895bc18bc5eccdb7ac.webm",
+      "bytes": 244621
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-30-21-743Z-chromium-production-people\\video\\page@c76f58ed36f62ea392348c79edcdcc03.webm",
+      "bytes": 242351
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-30-21-743Z-chromium-production-people\\video\\page@2a1ca46b0d61cb0719fb0729d03bcb23.webm",
+      "bytes": 295342
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-30-21-743Z-chromium-production-people\\video\\page@e3af9479e307ec2a099b2b376678c713.webm",
+      "bytes": 447878
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-30-21-743Z-chromium-production-people\\video\\page@984a6afe5ddf48186991a12d14fd640d.webm",
+      "bytes": 1989791
+    }
+  ],
+  "browserVersion": "148.0.7778.96",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\scripts\\verify-people.browser.js",
+  "pass": false,
+  "error": "Error: {\"completed\":[{\"scenario\":\"layout-320\",\"renderer\":\"html\",\"pass\":true},{\"scenario\":\"mobile-pinned-story\",\"pass\":true},{\"scenario\":\"layout-390\",\"renderer\":\"html\",\"pass\":true},{\"scenario\":\"layout-768\",\"renderer\":\"html\",\"pass\":true},{\"scenario\":\"layout-1024\",\"renderer\":\"three\",\"pass\":true},{\"scenario\":\"layout-1440\",\"renderer\":\"three\",\"pass\":true},{\"scenario\":\"layout-1920\",\"renderer\":\"three\",\"pass\":true}],\"error\":\"page.waitForFunction: Timeout 30000ms exceeded.\"}\n    at eval (eval at <anonymous> (file:///C:/Users/ferna/OneDrive/%C3%81rea%20de%20Trabalho/LandingCodice/docs/mobile-motion-2026-10-21/setup/isolated-playwright.mjs:65:22), <anonymous>:191:11)\n    at async file:///C:/Users/ferna/OneDrive/%C3%81rea%20de%20Trabalho/LandingCodice/docs/mobile-motion-2026-10-21/setup/isolated-playwright.mjs:68:21",
+  "finishedAt": "2026-10-21T05:31:33.879Z"
+}

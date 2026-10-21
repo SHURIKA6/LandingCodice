@@ -1,0 +1,2553 @@
+{
+  "startedAt": "2026-10-21T05:31:27.390Z",
+  "engine": "webkit",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@01ec41210afc8373a48475c1f80df20c.webm",
+      "bytes": 65964
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@1cee4e083fcaedd434ec662cf1fcae28.webm",
+      "bytes": 775169
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@1dcad5994671c566ec3e5eeb9941cf1f.webm",
+      "bytes": 203009
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@254c3a05b9507dae91ed3a1f2f74791a.webm",
+      "bytes": 175194
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@285e0ea11f8966fa2fe53cab8e0f739f.webm",
+      "bytes": 133395
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@28e6b38c3b31ac7303eaac2eed89a5d6.webm",
+      "bytes": 51678
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@3b94d5c23feb8b6530d7d85f4b40a2cf.webm",
+      "bytes": 206621
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@616bd3f990613a0aa16f1f9a432acdc2.webm",
+      "bytes": 102942
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@65ae0137e20a83f3c896d16a5d86cd36.webm",
+      "bytes": 90143
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@717deb6b7cc91fa75f6d965f160448b8.webm",
+      "bytes": 324457
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@7ca0b05f6b7f27e5c7200b1272bea77d.webm",
+      "bytes": 152474
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@8a074b8994f5888ca73af58e4c0d3780.webm",
+      "bytes": 193775
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@8a951f21c36987c04f365168dc1a24b6.webm",
+      "bytes": 109393
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@8bcac83100e618ee184abb8bb73f0571.webm",
+      "bytes": 135751
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@8be4d5cf13d0f598a22e2416711cd1b8.webm",
+      "bytes": 112021
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@8f72423dbdffbfe084bb8dee2d9e1983.webm",
+      "bytes": 49954
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@b0666a3794cbc3d98ec30d4d4c4001c4.webm",
+      "bytes": 472067
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@c20c1367c3e5231464708bf20c71cee9.webm",
+      "bytes": 83315
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T05-31-27-389Z-webkit-mobile-production-final\\video\\page@dd138d34ba52f760836fd8c19a50cbd6.webm",
+      "bytes": 191906
+    }
+  ],
+  "browserVersion": "26.4",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\webkit-2287\\Playwright.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\scripts\\verify-mobile-motion.browser.js",
+  "result": {
+    "passed": 18,
+    "failed": 0,
+    "evidenceDir": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z",
+    "results": [
+      {
+        "scenario": "matrix-320x568",
+        "pass": true,
+        "mode": "mobile-story",
+        "rests": [
+          {
+            "active": "Fernando Riad",
+            "stage": {
+              "x": 0,
+              "y": 72,
+              "top": 72,
+              "right": 320,
+              "bottom": 567.984375,
+              "left": 0,
+              "width": 320,
+              "height": 495.984375
+            },
+            "header": {
+              "x": 0,
+              "y": 0,
+              "top": 0,
+              "right": 320,
+              "bottom": 72,
+              "left": 0,
+              "width": 320,
+              "height": 72
+            },
+            "photo": {
+              "x": 71.96875,
+              "y": 84,
+              "top": 84,
+              "right": 248.046875,
+              "bottom": 288.015625,
+              "left": 71.96875,
+              "width": 176.078125,
+              "height": 204.015625
+            },
+            "image": {
+              "x": 71.96875,
+              "y": 84,
+              "top": 84,
+              "right": 248.046875,
+              "bottom": 260.078125,
+              "left": 71.96875,
+              "width": 176.078125,
+              "height": 176.078125
+            },
+            "copy": {
+              "x": 20,
+              "y": 311.484375,
+              "top": 311.484375,
+              "right": 300,
+              "bottom": 453.484375,
+              "left": 20,
+              "width": 280,
+              "height": 142
+            },
+            "name": {
+              "x": 20,
+              "y": 338.53125,
+              "top": 338.53125,
+              "right": 300,
+              "bottom": 409.1875,
+              "left": 20,
+              "width": 280,
+              "height": 70.65625
+            },
+            "progress": {
+              "x": 20,
+              "y": 463.484375,
+              "top": 463.484375,
+              "right": 300,
+              "bottom": 488.984375,
+              "left": 20,
+              "width": 280,
+              "height": 25.5
+            },
+            "actions": [
+              {
+                "text": "Conheça o que fazemos",
+                "rect": {
+                  "x": 20,
+                  "y": 511.984375,
+                  "top": 511.984375,
+                  "right": 108,
+                  "bottom": 555.984375,
+                  "left": 20,
+                  "width": 88,
+                  "height": 44
+                }
+              },
+              {
+                "text": "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)",
+                "rect": {
+                  "x": 120,
+                  "y": 509.984375,
+                  "top": 509.984375,
+                  "right": 300,
+                  "bottom": 557.984375,
+                  "left": 120,
+                  "width": 180,
+                  "height": 48
+                }
+              }
+            ],
+            "opacity": 1,
+            "copyOpacity": 1,
+            "photoTransform": "none",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "objectFit": "contain",
+            "width": 320,
+            "height": 568,
+            "scrollWidth": 320,
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/matrix-320x568-rest-0.png"
+          },
+          {
+            "active": "Eduardo Gobatto",
+            "stage": {
+              "x": 0,
+              "y": 72,
+              "top": 72,
+              "right": 320,
+              "bottom": 567.984375,
+              "left": 0,
+              "width": 320,
+              "height": 495.984375
+            },
+            "header": {
+              "x": 0,
+              "y": 0,
+              "top": 0,
+              "right": 320,
+              "bottom": 72,
+              "left": 0,
+              "width": 320,
+              "height": 72
+            },
+            "photo": {
+              "x": 71.96875,
+              "y": 84,
+              "top": 84,
+              "right": 248.046875,
+              "bottom": 288.015625,
+              "left": 71.96875,
+              "width": 176.078125,
+              "height": 204.015625
+            },
+            "image": {
+              "x": 71.96875,
+              "y": 84,
+              "top": 84,
+              "right": 248.046875,
+              "bottom": 260.078125,
+              "left": 71.96875,
+              "width": 176.078125,
+              "height": 176.078125
+            },
+            "copy": {
+              "x": 20,
+              "y": 311.484375,
+              "top": 311.484375,
+              "right": 300,
+              "bottom": 453.484375,
+              "left": 20,
+              "width": 280,
+              "height": 142
+            },
+            "name": {
+              "x": 20,
+              "y": 338.53125,
+              "top": 338.53125,
+              "right": 300,
+              "bottom": 409.1875,
+              "left": 20,
+              "width": 280,
+              "height": 70.65625
+            },
+            "progress": {
+              "x": 20,
+              "y": 463.484375,
+              "top": 463.484375,
+              "right": 300,
+              "bottom": 488.984375,
+              "left": 20,
+              "width": 280,
+              "height": 25.5
+            },
+            "actions": [
+              {
+                "text": "Conheça o que fazemos",
+                "rect": {
+                  "x": 20,
+                  "y": 511.984375,
+                  "top": 511.984375,
+                  "right": 108,
+                  "bottom": 555.984375,
+                  "left": 20,
+                  "width": 88,
+                  "height": 44
+                }
+              },
+              {
+                "text": "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)",
+                "rect": {
+                  "x": 120,
+                  "y": 509.984375,
+                  "top": 509.984375,
+                  "right": 300,
+                  "bottom": 557.984375,
+                  "left": 120,
+                  "width": 180,
+                  "height": 48
+                }
+              }
+            ],
+            "opacity": 1,
+            "copyOpacity": 1,
+            "photoTransform": "none",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "objectFit": "contain",
+            "width": 320,
+            "height": 568,
+            "scrollWidth": 320,
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/matrix-320x568-rest-1.png"
+          },
+          {
+            "active": "Victor Rafael",
+            "stage": {
+              "x": 0,
+              "y": 72,
+              "top": 72,
+              "right": 320,
+              "bottom": 567.984375,
+              "left": 0,
+              "width": 320,
+              "height": 495.984375
+            },
+            "header": {
+              "x": 0,
+              "y": 0,
+              "top": 0,
+              "right": 320,
+              "bottom": 72,
+              "left": 0,
+              "width": 320,
+              "height": 72
+            },
+            "photo": {
+              "x": 71.96875,
+              "y": 84,
+              "top": 84,
+              "right": 248.046875,
+              "bottom": 288.015625,
+              "left": 71.96875,
+              "width": 176.078125,
+              "height": 204.015625
+            },
+            "image": {
+              "x": 71.96875,
+              "y": 84,
+              "top": 84,
+              "right": 248.046875,
+              "bottom": 260.078125,
+              "left": 71.96875,
+              "width": 176.078125,
+              "height": 176.078125
+            },
+            "copy": {
+              "x": 20,
+              "y": 311.484375,
+              "top": 311.484375,
+              "right": 300,
+              "bottom": 453.484375,
+              "left": 20,
+              "width": 280,
+              "height": 142
+            },
+            "name": {
+              "x": 20,
+              "y": 338.53125,
+              "top": 338.53125,
+              "right": 300,
+              "bottom": 409.1875,
+              "left": 20,
+              "width": 280,
+              "height": 70.65625
+            },
+            "progress": {
+              "x": 20,
+              "y": 463.484375,
+              "top": 463.484375,
+              "right": 300,
+              "bottom": 488.984375,
+              "left": 20,
+              "width": 280,
+              "height": 25.5
+            },
+            "actions": [
+              {
+                "text": "Conheça o que fazemos",
+                "rect": {
+                  "x": 20,
+                  "y": 511.984375,
+                  "top": 511.984375,
+                  "right": 108,
+                  "bottom": 555.984375,
+                  "left": 20,
+                  "width": 88,
+                  "height": 44
+                }
+              },
+              {
+                "text": "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)",
+                "rect": {
+                  "x": 120,
+                  "y": 509.984375,
+                  "top": 509.984375,
+                  "right": 300,
+                  "bottom": 557.984375,
+                  "left": 120,
+                  "width": 180,
+                  "height": 48
+                }
+              }
+            ],
+            "opacity": 1,
+            "copyOpacity": 1,
+            "photoTransform": "none",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "objectFit": "contain",
+            "width": 320,
+            "height": 568,
+            "scrollWidth": 320,
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/matrix-320x568-rest-2.png"
+          }
+        ],
+        "optionalRendererRequests": [],
+        "developmentLoaderTables": []
+      },
+      {
+        "scenario": "matrix-360x740",
+        "pass": true,
+        "mode": "mobile-story",
+        "rests": [
+          {
+            "active": "Fernando Riad",
+            "stage": {
+              "x": 0,
+              "y": 72,
+              "top": 72,
+              "right": 360,
+              "bottom": 740,
+              "left": 0,
+              "width": 360,
+              "height": 668
+            },
+            "header": {
+              "x": 0,
+              "y": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 72,
+              "left": 0,
+              "width": 360,
+              "height": 72
+            },
+            "photo": {
+              "x": 39.609375,
+              "y": 92,
+              "top": 92,
+              "right": 320.40625,
+              "bottom": 400.734375,
+              "left": 39.609375,
+              "width": 280.796875,
+              "height": 308.734375
+            },
+            "image": {
+              "x": 39.609375,
+              "y": 92,
+              "top": 92,
+              "right": 320.40625,
+              "bottom": 372.796875,
+              "left": 39.609375,
+              "width": 280.796875,
+              "height": 280.796875
+            },
+            "copy": {
+              "x": 20,
+              "y": 401.5,
+              "top": 401.5,
+              "right": 340,
+              "bottom": 603.5,
+              "left": 20,
+              "width": 320,
+              "height": 202
+            },
+            "name": {
+              "x": 20,
+              "y": 434.546875,
+              "top": 434.546875,
+              "right": 340,
+              "bottom": 521.578125,
+              "left": 20,
+              "width": 320,
+              "height": 87.03125
+            },
+            "progress": {
+              "x": 20,
+              "y": 619.5,
+              "top": 619.5,
+              "right": 340,
+              "bottom": 645,
+              "left": 20,
+              "width": 320,
+              "height": 25.5
+            },
+            "actions": [
+              {
+                "text": "Conheça o que fazemos",
+                "rect": {
+                  "x": 20,
+                  "y": 678,
+                  "top": 678,
+                  "right": 108,
+                  "bottom": 722,
+                  "left": 20,
+                  "width": 88,
+                  "height": 44
+                }
+              },
+              {
+                "text": "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)",
+                "rect": {
+                  "x": 120,
+                  "y": 676,
+                  "top": 676,
+                  "right": 340,
+                  "bottom": 724,
+                  "left": 120,
+                  "width": 220,
+                  "height": 48
+                }
+              }
+            ],
+            "opacity": 1,
+            "copyOpacity": 1,
+            "photoTransform": "none",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "objectFit": "contain",
+            "width": 360,
+            "height": 740,
+            "scrollWidth": 360,
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/matrix-360x740-rest-0.png"
+          },
+          {
+            "active": "Eduardo Gobatto",
+            "stage": {
+              "x": 0,
+              "y": 72,
+              "top": 72,
+              "right": 360,
+              "bottom": 740,
+              "left": 0,
+              "width": 360,
+              "height": 668
+            },
+            "header": {
+              "x": 0,
+              "y": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 72,
+              "left": 0,
+              "width": 360,
+              "height": 72
+            },
+            "photo": {
+              "x": 39.609375,
+              "y": 92,
+              "top": 92,
+              "right": 320.40625,
+              "bottom": 400.734375,
+              "left": 39.609375,
+              "width": 280.796875,
+              "height": 308.734375
+            },
+            "image": {
+              "x": 39.609375,
+              "y": 92,
+              "top": 92,
+              "right": 320.40625,
+              "bottom": 372.796875,
+              "left": 39.609375,
+              "width": 280.796875,
+              "height": 280.796875
+            },
+            "copy": {
+              "x": 20,
+              "y": 401.5,
+              "top": 401.5,
+              "right": 340,
+              "bottom": 603.5,
+              "left": 20,
+              "width": 320,
+              "height": 202
+            },
+            "name": {
+              "x": 20,
+              "y": 434.546875,
+              "top": 434.546875,
+              "right": 340,
+              "bottom": 521.578125,
+              "left": 20,
+              "width": 320,
+              "height": 87.03125
+            },
+            "progress": {
+              "x": 20,
+              "y": 619.5,
+              "top": 619.5,
+              "right": 340,
+              "bottom": 645,
+              "left": 20,
+              "width": 320,
+              "height": 25.5
+            },
+            "actions": [
+              {
+                "text": "Conheça o que fazemos",
+                "rect": {
+                  "x": 20,
+                  "y": 678,
+                  "top": 678,
+                  "right": 108,
+                  "bottom": 722,
+                  "left": 20,
+                  "width": 88,
+                  "height": 44
+                }
+              },
+              {
+                "text": "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)",
+                "rect": {
+                  "x": 120,
+                  "y": 676,
+                  "top": 676,
+                  "right": 340,
+                  "bottom": 724,
+                  "left": 120,
+                  "width": 220,
+                  "height": 48
+                }
+              }
+            ],
+            "opacity": 1,
+            "copyOpacity": 1,
+            "photoTransform": "none",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "objectFit": "contain",
+            "width": 360,
+            "height": 740,
+            "scrollWidth": 360,
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/matrix-360x740-rest-1.png"
+          },
+          {
+            "active": "Victor Rafael",
+            "stage": {
+              "x": 0,
+              "y": 72,
+              "top": 72,
+              "right": 360,
+              "bottom": 740,
+              "left": 0,
+              "width": 360,
+              "height": 668
+            },
+            "header": {
+              "x": 0,
+              "y": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 72,
+              "left": 0,
+              "width": 360,
+              "height": 72
+            },
+            "photo": {
+              "x": 39.609375,
+              "y": 92,
+              "top": 92,
+              "right": 320.40625,
+              "bottom": 400.734375,
+              "left": 39.609375,
+              "width": 280.796875,
+              "height": 308.734375
+            },
+            "image": {
+              "x": 39.609375,
+              "y": 92,
+              "top": 92,
+              "right": 320.40625,
+              "bottom": 372.796875,
+              "left": 39.609375,
+              "width": 280.796875,
+              "height": 280.796875
+            },
+            "copy": {
+              "x": 20,
+              "y": 401.5,
+              "top": 401.5,
+              "right": 340,
+              "bottom": 603.5,
+              "left": 20,
+              "width": 320,
+              "height": 202
+            },
+            "name": {
+              "x": 20,
+              "y": 434.546875,
+              "top": 434.546875,
+              "right": 340,
+              "bottom": 521.578125,
+              "left": 20,
+              "width": 320,
+              "height": 87.03125
+            },
+            "progress": {
+              "x": 20,
+              "y": 619.5,
+              "top": 619.5,
+              "right": 340,
+              "bottom": 645,
+              "left": 20,
+              "width": 320,
+              "height": 25.5
+            },
+            "actions": [
+              {
+                "text": "Conheça o que fazemos",
+                "rect": {
+                  "x": 20,
+                  "y": 678,
+                  "top": 678,
+                  "right": 108,
+                  "bottom": 722,
+                  "left": 20,
+                  "width": 88,
+                  "height": 44
+                }
+              },
+              {
+                "text": "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)",
+                "rect": {
+                  "x": 120,
+                  "y": 676,
+                  "top": 676,
+                  "right": 340,
+                  "bottom": 724,
+                  "left": 120,
+                  "width": 220,
+                  "height": 48
+                }
+              }
+            ],
+            "opacity": 1,
+            "copyOpacity": 1,
+            "photoTransform": "none",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "objectFit": "contain",
+            "width": 360,
+            "height": 740,
+            "scrollWidth": 360,
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/matrix-360x740-rest-2.png"
+          }
+        ],
+        "optionalRendererRequests": [],
+        "developmentLoaderTables": []
+      },
+      {
+        "scenario": "matrix-390x844",
+        "pass": true,
+        "mode": "mobile-story",
+        "rests": [
+          {
+            "active": "Fernando Riad",
+            "stage": {
+              "x": 0,
+              "y": 72,
+              "top": 72,
+              "right": 390,
+              "bottom": 843.984375,
+              "left": 0,
+              "width": 390,
+              "height": 771.984375
+            },
+            "header": {
+              "x": 0,
+              "y": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 72,
+              "left": 0,
+              "width": 390,
+              "height": 72
+            },
+            "photo": {
+              "x": 42.90625,
+              "y": 92,
+              "top": 92,
+              "right": 347.09375,
+              "bottom": 424.125,
+              "left": 42.90625,
+              "width": 304.1875,
+              "height": 332.125
+            },
+            "image": {
+              "x": 42.90625,
+              "y": 92,
+              "top": 92,
+              "right": 347.09375,
+              "bottom": 396.1875,
+              "left": 42.90625,
+              "width": 304.1875,
+              "height": 304.1875
+            },
+            "copy": {
+              "x": 20,
+              "y": 505.484375,
+              "top": 505.484375,
+              "right": 370,
+              "bottom": 707.484375,
+              "left": 20,
+              "width": 350,
+              "height": 202
+            },
+            "name": {
+              "x": 20,
+              "y": 538.53125,
+              "top": 538.53125,
+              "right": 370,
+              "bottom": 632.78125,
+              "left": 20,
+              "width": 350,
+              "height": 94.25
+            },
+            "progress": {
+              "x": 20,
+              "y": 723.484375,
+              "top": 723.484375,
+              "right": 370,
+              "bottom": 748.984375,
+              "left": 20,
+              "width": 350,
+              "height": 25.5
+            },
+            "actions": [
+              {
+                "text": "Conheça o que fazemos",
+                "rect": {
+                  "x": 20,
+                  "y": 781.984375,
+                  "top": 781.984375,
+                  "right": 108,
+                  "bottom": 825.984375,
+                  "left": 20,
+                  "width": 88,
+                  "height": 44
+                }
+              },
+              {
+                "text": "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)",
+                "rect": {
+                  "x": 120,
+                  "y": 779.984375,
+                  "top": 779.984375,
+                  "right": 370,
+                  "bottom": 827.984375,
+                  "left": 120,
+                  "width": 250,
+                  "height": 48
+                }
+              }
+            ],
+            "opacity": 1,
+            "copyOpacity": 1,
+            "photoTransform": "none",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "objectFit": "contain",
+            "width": 390,
+            "height": 844,
+            "scrollWidth": 390,
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/matrix-390x844-rest-0.png"
+          },
+          {
+            "active": "Eduardo Gobatto",
+            "stage": {
+              "x": 0,
+              "y": 72,
+              "top": 72,
+              "right": 390,
+              "bottom": 843.984375,
+              "left": 0,
+              "width": 390,
+              "height": 771.984375
+            },
+            "header": {
+              "x": 0,
+              "y": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 72,
+              "left": 0,
+              "width": 390,
+              "height": 72
+            },
+            "photo": {
+              "x": 42.90625,
+              "y": 92,
+              "top": 92,
+              "right": 347.09375,
+              "bottom": 424.125,
+              "left": 42.90625,
+              "width": 304.1875,
+              "height": 332.125
+            },
+            "image": {
+              "x": 42.90625,
+              "y": 92,
+              "top": 92,
+              "right": 347.09375,
+              "bottom": 396.1875,
+              "left": 42.90625,
+              "width": 304.1875,
+              "height": 304.1875
+            },
+            "copy": {
+              "x": 20,
+              "y": 505.484375,
+              "top": 505.484375,
+              "right": 370,
+              "bottom": 707.484375,
+              "left": 20,
+              "width": 350,
+              "height": 202
+            },
+            "name": {
+              "x": 20,
+              "y": 538.53125,
+              "top": 538.53125,
+              "right": 370,
+              "bottom": 632.78125,
+              "left": 20,
+              "width": 350,
+              "height": 94.25
+            },
+            "progress": {
+              "x": 20,
+              "y": 723.484375,
+              "top": 723.484375,
+              "right": 370,
+              "bottom": 748.984375,
+              "left": 20,
+              "width": 350,
+              "height": 25.5
+            },
+            "actions": [
+              {
+                "text": "Conheça o que fazemos",
+                "rect": {
+                  "x": 20,
+                  "y": 781.984375,
+                  "top": 781.984375,
+                  "right": 108,
+                  "bottom": 825.984375,
+                  "left": 20,
+                  "width": 88,
+                  "height": 44
+                }
+              },
+              {
+                "text": "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)",
+                "rect": {
+                  "x": 120,
+                  "y": 779.984375,
+                  "top": 779.984375,
+                  "right": 370,
+                  "bottom": 827.984375,
+                  "left": 120,
+                  "width": 250,
+                  "height": 48
+                }
+              }
+            ],
+            "opacity": 1,
+            "copyOpacity": 1,
+            "photoTransform": "none",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "objectFit": "contain",
+            "width": 390,
+            "height": 844,
+            "scrollWidth": 390,
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/matrix-390x844-rest-1.png"
+          },
+          {
+            "active": "Victor Rafael",
+            "stage": {
+              "x": 0,
+              "y": 72,
+              "top": 72,
+              "right": 390,
+              "bottom": 843.984375,
+              "left": 0,
+              "width": 390,
+              "height": 771.984375
+            },
+            "header": {
+              "x": 0,
+              "y": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 72,
+              "left": 0,
+              "width": 390,
+              "height": 72
+            },
+            "photo": {
+              "x": 42.90625,
+              "y": 92,
+              "top": 92,
+              "right": 347.09375,
+              "bottom": 424.125,
+              "left": 42.90625,
+              "width": 304.1875,
+              "height": 332.125
+            },
+            "image": {
+              "x": 42.90625,
+              "y": 92,
+              "top": 92,
+              "right": 347.09375,
+              "bottom": 396.1875,
+              "left": 42.90625,
+              "width": 304.1875,
+              "height": 304.1875
+            },
+            "copy": {
+              "x": 20,
+              "y": 505.484375,
+              "top": 505.484375,
+              "right": 370,
+              "bottom": 707.484375,
+              "left": 20,
+              "width": 350,
+              "height": 202
+            },
+            "name": {
+              "x": 20,
+              "y": 538.53125,
+              "top": 538.53125,
+              "right": 370,
+              "bottom": 632.78125,
+              "left": 20,
+              "width": 350,
+              "height": 94.25
+            },
+            "progress": {
+              "x": 20,
+              "y": 723.484375,
+              "top": 723.484375,
+              "right": 370,
+              "bottom": 748.984375,
+              "left": 20,
+              "width": 350,
+              "height": 25.5
+            },
+            "actions": [
+              {
+                "text": "Conheça o que fazemos",
+                "rect": {
+                  "x": 20,
+                  "y": 781.984375,
+                  "top": 781.984375,
+                  "right": 108,
+                  "bottom": 825.984375,
+                  "left": 20,
+                  "width": 88,
+                  "height": 44
+                }
+              },
+              {
+                "text": "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)",
+                "rect": {
+                  "x": 120,
+                  "y": 779.984375,
+                  "top": 779.984375,
+                  "right": 370,
+                  "bottom": 827.984375,
+                  "left": 120,
+                  "width": 250,
+                  "height": 48
+                }
+              }
+            ],
+            "opacity": 1,
+            "copyOpacity": 1,
+            "photoTransform": "none",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "objectFit": "contain",
+            "width": 390,
+            "height": 844,
+            "scrollWidth": 390,
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/matrix-390x844-rest-2.png"
+          }
+        ],
+        "optionalRendererRequests": [],
+        "developmentLoaderTables": []
+      },
+      {
+        "scenario": "matrix-430x932",
+        "pass": true,
+        "mode": "mobile-story",
+        "rests": [
+          {
+            "active": "Fernando Riad",
+            "stage": {
+              "x": 0,
+              "y": 72,
+              "top": 72,
+              "right": 430,
+              "bottom": 932,
+              "left": 0,
+              "width": 430,
+              "height": 860
+            },
+            "header": {
+              "x": 0,
+              "y": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 72,
+              "left": 0,
+              "width": 430,
+              "height": 72
+            },
+            "photo": {
+              "x": 47.3125,
+              "y": 92,
+              "top": 92,
+              "right": 382.703125,
+              "bottom": 455.328125,
+              "left": 47.3125,
+              "width": 335.390625,
+              "height": 363.328125
+            },
+            "image": {
+              "x": 47.3125,
+              "y": 92,
+              "top": 92,
+              "right": 382.703125,
+              "bottom": 427.390625,
+              "left": 47.3125,
+              "width": 335.390625,
+              "height": 335.390625
+            },
+            "copy": {
+              "x": 20,
+              "y": 593.5,
+              "top": 593.5,
+              "right": 410,
+              "bottom": 795.5,
+              "left": 20,
+              "width": 390,
+              "height": 202
+            },
+            "name": {
+              "x": 20,
+              "y": 626.546875,
+              "top": 626.546875,
+              "right": 410,
+              "bottom": 730.484375,
+              "left": 20,
+              "width": 390,
+              "height": 103.9375
+            },
+            "progress": {
+              "x": 20,
+              "y": 811.5,
+              "top": 811.5,
+              "right": 410,
+              "bottom": 837,
+              "left": 20,
+              "width": 390,
+              "height": 25.5
+            },
+            "actions": [
+              {
+                "text": "Conheça o que fazemos",
+                "rect": {
+                  "x": 20,
+                  "y": 870,
+                  "top": 870,
+                  "right": 108,
+                  "bottom": 914,
+                  "left": 20,
+                  "width": 88,
+                  "height": 44
+                }
+              },
+              {
+                "text": "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)",
+                "rect": {
+                  "x": 120,
+                  "y": 868,
+                  "top": 868,
+                  "right": 410,
+                  "bottom": 916,
+                  "left": 120,
+                  "width": 290,
+                  "height": 48
+                }
+              }
+            ],
+            "opacity": 1,
+            "copyOpacity": 1,
+            "photoTransform": "none",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "objectFit": "contain",
+            "width": 430,
+            "height": 932,
+            "scrollWidth": 430,
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/matrix-430x932-rest-0.png"
+          },
+          {
+            "active": "Eduardo Gobatto",
+            "stage": {
+              "x": 0,
+              "y": 72,
+              "top": 72,
+              "right": 430,
+              "bottom": 932,
+              "left": 0,
+              "width": 430,
+              "height": 860
+            },
+            "header": {
+              "x": 0,
+              "y": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 72,
+              "left": 0,
+              "width": 430,
+              "height": 72
+            },
+            "photo": {
+              "x": 47.3125,
+              "y": 92,
+              "top": 92,
+              "right": 382.703125,
+              "bottom": 455.328125,
+              "left": 47.3125,
+              "width": 335.390625,
+              "height": 363.328125
+            },
+            "image": {
+              "x": 47.3125,
+              "y": 92,
+              "top": 92,
+              "right": 382.703125,
+              "bottom": 427.390625,
+              "left": 47.3125,
+              "width": 335.390625,
+              "height": 335.390625
+            },
+            "copy": {
+              "x": 20,
+              "y": 593.5,
+              "top": 593.5,
+              "right": 410,
+              "bottom": 795.5,
+              "left": 20,
+              "width": 390,
+              "height": 202
+            },
+            "name": {
+              "x": 20,
+              "y": 626.546875,
+              "top": 626.546875,
+              "right": 410,
+              "bottom": 730.484375,
+              "left": 20,
+              "width": 390,
+              "height": 103.9375
+            },
+            "progress": {
+              "x": 20,
+              "y": 811.5,
+              "top": 811.5,
+              "right": 410,
+              "bottom": 837,
+              "left": 20,
+              "width": 390,
+              "height": 25.5
+            },
+            "actions": [
+              {
+                "text": "Conheça o que fazemos",
+                "rect": {
+                  "x": 20,
+                  "y": 870,
+                  "top": 870,
+                  "right": 108,
+                  "bottom": 914,
+                  "left": 20,
+                  "width": 88,
+                  "height": 44
+                }
+              },
+              {
+                "text": "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)",
+                "rect": {
+                  "x": 120,
+                  "y": 868,
+                  "top": 868,
+                  "right": 410,
+                  "bottom": 916,
+                  "left": 120,
+                  "width": 290,
+                  "height": 48
+                }
+              }
+            ],
+            "opacity": 1,
+            "copyOpacity": 1,
+            "photoTransform": "none",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "objectFit": "contain",
+            "width": 430,
+            "height": 932,
+            "scrollWidth": 430,
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/matrix-430x932-rest-1.png"
+          },
+          {
+            "active": "Victor Rafael",
+            "stage": {
+              "x": 0,
+              "y": 72,
+              "top": 72,
+              "right": 430,
+              "bottom": 932,
+              "left": 0,
+              "width": 430,
+              "height": 860
+            },
+            "header": {
+              "x": 0,
+              "y": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 72,
+              "left": 0,
+              "width": 430,
+              "height": 72
+            },
+            "photo": {
+              "x": 47.3125,
+              "y": 92,
+              "top": 92,
+              "right": 382.703125,
+              "bottom": 455.328125,
+              "left": 47.3125,
+              "width": 335.390625,
+              "height": 363.328125
+            },
+            "image": {
+              "x": 47.3125,
+              "y": 92,
+              "top": 92,
+              "right": 382.703125,
+              "bottom": 427.390625,
+              "left": 47.3125,
+              "width": 335.390625,
+              "height": 335.390625
+            },
+            "copy": {
+              "x": 20,
+              "y": 593.5,
+              "top": 593.5,
+              "right": 410,
+              "bottom": 795.5,
+              "left": 20,
+              "width": 390,
+              "height": 202
+            },
+            "name": {
+              "x": 20,
+              "y": 626.546875,
+              "top": 626.546875,
+              "right": 410,
+              "bottom": 730.484375,
+              "left": 20,
+              "width": 390,
+              "height": 103.9375
+            },
+            "progress": {
+              "x": 20,
+              "y": 811.5,
+              "top": 811.5,
+              "right": 410,
+              "bottom": 837,
+              "left": 20,
+              "width": 390,
+              "height": 25.5
+            },
+            "actions": [
+              {
+                "text": "Conheça o que fazemos",
+                "rect": {
+                  "x": 20,
+                  "y": 870,
+                  "top": 870,
+                  "right": 108,
+                  "bottom": 914,
+                  "left": 20,
+                  "width": 88,
+                  "height": 44
+                }
+              },
+              {
+                "text": "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)",
+                "rect": {
+                  "x": 120,
+                  "y": 868,
+                  "top": 868,
+                  "right": 410,
+                  "bottom": 916,
+                  "left": 120,
+                  "width": 290,
+                  "height": 48
+                }
+              }
+            ],
+            "opacity": 1,
+            "copyOpacity": 1,
+            "photoTransform": "none",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "objectFit": "contain",
+            "width": 430,
+            "height": 932,
+            "scrollWidth": 430,
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/matrix-430x932-rest-2.png"
+          }
+        ],
+        "optionalRendererRequests": [],
+        "developmentLoaderTables": []
+      },
+      {
+        "scenario": "matrix-768x1024",
+        "pass": true,
+        "mode": "mobile-story",
+        "rests": [
+          {
+            "active": "Fernando Riad",
+            "stage": {
+              "x": 0,
+              "y": 80,
+              "top": 80,
+              "right": 768,
+              "bottom": 1024,
+              "left": 0,
+              "width": 768,
+              "height": 944
+            },
+            "header": {
+              "x": 0,
+              "y": 0,
+              "top": 0,
+              "right": 768,
+              "bottom": 80,
+              "left": 0,
+              "width": 768,
+              "height": 80
+            },
+            "photo": {
+              "x": 204,
+              "y": 100,
+              "top": 100,
+              "right": 564,
+              "bottom": 487.9375,
+              "left": 204,
+              "width": 360,
+              "height": 387.9375
+            },
+            "image": {
+              "x": 204,
+              "y": 100,
+              "top": 100,
+              "right": 564,
+              "bottom": 460,
+              "left": 204,
+              "width": 360,
+              "height": 360
+            },
+            "copy": {
+              "x": 40,
+              "y": 647.5,
+              "top": 647.5,
+              "right": 728,
+              "bottom": 887.5,
+              "left": 40,
+              "width": 688,
+              "height": 240
+            },
+            "name": {
+              "x": 40,
+              "y": 670.234375,
+              "top": 670.234375,
+              "right": 728,
+              "bottom": 861.109375,
+              "left": 40,
+              "width": 688,
+              "height": 190.875
+            },
+            "progress": {
+              "x": 40,
+              "y": 903.5,
+              "top": 903.5,
+              "right": 728,
+              "bottom": 929,
+              "left": 40,
+              "width": 688,
+              "height": 25.5
+            },
+            "actions": [
+              {
+                "text": "Conheça o que fazemos",
+                "rect": {
+                  "x": 40,
+                  "y": 962,
+                  "top": 962,
+                  "right": 205.9375,
+                  "bottom": 1006,
+                  "left": 40,
+                  "width": 165.9375,
+                  "height": 44
+                }
+              },
+              {
+                "text": "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)",
+                "rect": {
+                  "x": 468,
+                  "y": 960,
+                  "top": 960,
+                  "right": 728,
+                  "bottom": 1008,
+                  "left": 468,
+                  "width": 260,
+                  "height": 48
+                }
+              }
+            ],
+            "opacity": 1,
+            "copyOpacity": 1,
+            "photoTransform": "none",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "objectFit": "contain",
+            "width": 768,
+            "height": 1024,
+            "scrollWidth": 768,
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/matrix-768x1024-rest-0.png"
+          },
+          {
+            "active": "Eduardo Gobatto",
+            "stage": {
+              "x": 0,
+              "y": 80,
+              "top": 80,
+              "right": 768,
+              "bottom": 1024,
+              "left": 0,
+              "width": 768,
+              "height": 944
+            },
+            "header": {
+              "x": 0,
+              "y": 0,
+              "top": 0,
+              "right": 768,
+              "bottom": 80,
+              "left": 0,
+              "width": 768,
+              "height": 80
+            },
+            "photo": {
+              "x": 204,
+              "y": 100,
+              "top": 100,
+              "right": 564,
+              "bottom": 487.9375,
+              "left": 204,
+              "width": 360,
+              "height": 387.9375
+            },
+            "image": {
+              "x": 204,
+              "y": 100,
+              "top": 100,
+              "right": 564,
+              "bottom": 460,
+              "left": 204,
+              "width": 360,
+              "height": 360
+            },
+            "copy": {
+              "x": 40,
+              "y": 647.5,
+              "top": 647.5,
+              "right": 728,
+              "bottom": 887.5,
+              "left": 40,
+              "width": 688,
+              "height": 240
+            },
+            "name": {
+              "x": 40,
+              "y": 670.234375,
+              "top": 670.234375,
+              "right": 728,
+              "bottom": 861.109375,
+              "left": 40,
+              "width": 688,
+              "height": 190.875
+            },
+            "progress": {
+              "x": 40,
+              "y": 903.5,
+              "top": 903.5,
+              "right": 728,
+              "bottom": 929,
+              "left": 40,
+              "width": 688,
+              "height": 25.5
+            },
+            "actions": [
+              {
+                "text": "Conheça o que fazemos",
+                "rect": {
+                  "x": 40,
+                  "y": 962,
+                  "top": 962,
+                  "right": 205.9375,
+                  "bottom": 1006,
+                  "left": 40,
+                  "width": 165.9375,
+                  "height": 44
+                }
+              },
+              {
+                "text": "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)",
+                "rect": {
+                  "x": 468,
+                  "y": 960,
+                  "top": 960,
+                  "right": 728,
+                  "bottom": 1008,
+                  "left": 468,
+                  "width": 260,
+                  "height": 48
+                }
+              }
+            ],
+            "opacity": 1,
+            "copyOpacity": 1,
+            "photoTransform": "none",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "objectFit": "contain",
+            "width": 768,
+            "height": 1024,
+            "scrollWidth": 768,
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/matrix-768x1024-rest-1.png"
+          },
+          {
+            "active": "Victor Rafael",
+            "stage": {
+              "x": 0,
+              "y": 80,
+              "top": 80,
+              "right": 768,
+              "bottom": 1024,
+              "left": 0,
+              "width": 768,
+              "height": 944
+            },
+            "header": {
+              "x": 0,
+              "y": 0,
+              "top": 0,
+              "right": 768,
+              "bottom": 80,
+              "left": 0,
+              "width": 768,
+              "height": 80
+            },
+            "photo": {
+              "x": 204,
+              "y": 100,
+              "top": 100,
+              "right": 564,
+              "bottom": 487.9375,
+              "left": 204,
+              "width": 360,
+              "height": 387.9375
+            },
+            "image": {
+              "x": 204,
+              "y": 100,
+              "top": 100,
+              "right": 564,
+              "bottom": 460,
+              "left": 204,
+              "width": 360,
+              "height": 360
+            },
+            "copy": {
+              "x": 40,
+              "y": 647.5,
+              "top": 647.5,
+              "right": 728,
+              "bottom": 887.5,
+              "left": 40,
+              "width": 688,
+              "height": 240
+            },
+            "name": {
+              "x": 40,
+              "y": 670.234375,
+              "top": 670.234375,
+              "right": 728,
+              "bottom": 861.109375,
+              "left": 40,
+              "width": 688,
+              "height": 190.875
+            },
+            "progress": {
+              "x": 40,
+              "y": 903.5,
+              "top": 903.5,
+              "right": 728,
+              "bottom": 929,
+              "left": 40,
+              "width": 688,
+              "height": 25.5
+            },
+            "actions": [
+              {
+                "text": "Conheça o que fazemos",
+                "rect": {
+                  "x": 40,
+                  "y": 962,
+                  "top": 962,
+                  "right": 205.9375,
+                  "bottom": 1006,
+                  "left": 40,
+                  "width": 165.9375,
+                  "height": 44
+                }
+              },
+              {
+                "text": "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)",
+                "rect": {
+                  "x": 468,
+                  "y": 960,
+                  "top": 960,
+                  "right": 728,
+                  "bottom": 1008,
+                  "left": 468,
+                  "width": 260,
+                  "height": 48
+                }
+              }
+            ],
+            "opacity": 1,
+            "copyOpacity": 1,
+            "photoTransform": "none",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0,
+            "objectFit": "contain",
+            "width": 768,
+            "height": 1024,
+            "scrollWidth": 768,
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/matrix-768x1024-rest-2.png"
+          }
+        ],
+        "optionalRendererRequests": [],
+        "developmentLoaderTables": []
+      },
+      {
+        "scenario": "matrix-844x390",
+        "pass": true,
+        "mode": "mobile-flow",
+        "rests": [],
+        "optionalRendererRequests": [],
+        "developmentLoaderTables": []
+      },
+      {
+        "scenario": "hero-skip-focused-during-opening-has-stable-visible-ancestors",
+        "pass": true,
+        "state": {
+          "focused": true,
+          "hit": true,
+          "href": "#trabalho",
+          "ancestors": [
+            {
+              "className": "hero-skip",
+              "opacity": "1",
+              "transform": "none",
+              "animations": 0
+            },
+            {
+              "className": "hero-description",
+              "opacity": "1",
+              "transform": "none",
+              "animations": 0
+            },
+            {
+              "className": "hero-intro",
+              "opacity": "1",
+              "transform": "none",
+              "animations": 0
+            },
+            {
+              "className": "hero-sticky section-shell",
+              "opacity": "1",
+              "transform": "none",
+              "animations": 0
+            }
+          ],
+          "openingCopyAnimations": 1
+        },
+        "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/hero-skip-focused-opening.png"
+      },
+      {
+        "scenario": "mobile-cinematic-stage-fast-scroll-reversal-and-reload",
+        "pass": true,
+        "poses": [
+          {
+            "active": "Fernando Riad",
+            "photo": "none"
+          },
+          {
+            "active": "Eduardo Gobatto",
+            "photo": "matrix(0.881327, -0.059897, 0.059897, 0.881327, -74.90313, 25.82604)"
+          },
+          {
+            "active": "Eduardo Gobatto",
+            "photo": "matrix(0.815508, -0.085713, 0.085713, 0.815508, -115.591248, 39.855)"
+          },
+          {
+            "active": "Victor Rafael",
+            "photo": "matrix(0.815508, -0.085713, 0.085713, 0.815508, -115.591248, 39.855)"
+          },
+          {
+            "active": "Victor Rafael",
+            "photo": "matrix(0.815508, -0.085713, 0.085713, 0.815508, -115.591248, 39.855)"
+          },
+          {
+            "active": "Eduardo Gobatto",
+            "photo": "matrix(0.815508, -0.085713, 0.085713, 0.815508, -115.591248, 39.855)"
+          },
+          {
+            "active": "Fernando Riad",
+            "photo": "none"
+          }
+        ],
+        "intermediateFrames": [
+          {
+            "progress": 0.23,
+            "visible": [
+              {
+                "photoOpacity": 0.84311,
+                "copyOpacity": 0.84311,
+                "photoTransform": "matrix(0.971629, -0.015965, 0.015965, 0.971629, -18.135077, 6.252839)"
+              },
+              {
+                "photoOpacity": 0.15689,
+                "copyOpacity": 0.15689,
+                "photoTransform": "matrix(0.844936, 0.074794, -0.074794, 0.844936, 97.456184, 33.602161)"
+              },
+              {
+                "photoOpacity": 0,
+                "copyOpacity": 0,
+                "photoTransform": "matrix(0.815508, 0.085713, -0.085713, 0.815508, 115.591248, 39.855)"
+              }
+            ],
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/portrait-handoff-0.23.png"
+          },
+          {
+            "progress": 0.28,
+            "visible": [
+              {
+                "photoOpacity": 0.499148,
+                "copyOpacity": 0.499148,
+                "photoTransform": "matrix(0.908595, -0.047699, 0.047699, 0.908595, -57.894142, 19.961468)"
+              },
+              {
+                "photoOpacity": 0.500852,
+                "copyOpacity": 0.500852,
+                "photoTransform": "matrix(0.90891, 0.047553, -0.047553, 0.90891, 57.697109, 19.893532)"
+              },
+              {
+                "photoOpacity": 0,
+                "copyOpacity": 0,
+                "photoTransform": "matrix(0.815508, 0.085713, -0.085713, 0.815508, 115.591248, 39.855)"
+              }
+            ],
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/portrait-handoff-0.28.png"
+          },
+          {
+            "progress": 0.33,
+            "visible": [
+              {
+                "photoOpacity": 0.155611,
+                "copyOpacity": 0.155611,
+                "photoTransform": "matrix(0.844697, -0.074887, 0.074887, 0.844697, -97.603958, 33.653114)"
+              },
+              {
+                "photoOpacity": 0.844389,
+                "copyOpacity": 0.844389,
+                "photoTransform": "matrix(0.971861, 0.015838, -0.015838, 0.971861, 17.987303, 6.201887)"
+              },
+              {
+                "photoOpacity": 0,
+                "copyOpacity": 0,
+                "photoTransform": "matrix(0.815508, 0.085713, -0.085713, 0.815508, 115.591248, 39.855)"
+              }
+            ],
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/portrait-handoff-0.33.png"
+          },
+          {
+            "progress": 0.67,
+            "visible": [
+              {
+                "photoOpacity": 0,
+                "copyOpacity": 0,
+                "photoTransform": "matrix(0.815508, -0.085713, 0.085713, 0.815508, -115.591248, 39.855)"
+              },
+              {
+                "photoOpacity": 0.844389,
+                "copyOpacity": 0.844389,
+                "photoTransform": "matrix(0.971861, -0.015838, 0.015838, 0.971861, -17.987303, 6.201887)"
+              },
+              {
+                "photoOpacity": 0.155611,
+                "copyOpacity": 0.155611,
+                "photoTransform": "matrix(0.844697, 0.074887, -0.074887, 0.844697, 97.603958, 33.653114)"
+              }
+            ],
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/portrait-handoff-0.67.png"
+          },
+          {
+            "progress": 0.72,
+            "visible": [
+              {
+                "photoOpacity": 0,
+                "copyOpacity": 0,
+                "photoTransform": "matrix(0.815508, -0.085713, 0.085713, 0.815508, -115.591248, 39.855)"
+              },
+              {
+                "photoOpacity": 0.500852,
+                "copyOpacity": 0.500852,
+                "photoTransform": "matrix(0.90891, -0.047553, 0.047553, 0.90891, -57.697109, 19.893532)"
+              },
+              {
+                "photoOpacity": 0.499148,
+                "copyOpacity": 0.499148,
+                "photoTransform": "matrix(0.908595, 0.047699, -0.047699, 0.908595, 57.894142, 19.961468)"
+              }
+            ],
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/portrait-handoff-0.72.png"
+          },
+          {
+            "progress": 0.77,
+            "visible": [
+              {
+                "photoOpacity": 0,
+                "copyOpacity": 0,
+                "photoTransform": "matrix(0.815508, -0.085713, 0.085713, 0.815508, -115.591248, 39.855)"
+              },
+              {
+                "photoOpacity": 0.15689,
+                "copyOpacity": 0.15689,
+                "photoTransform": "matrix(0.844936, -0.074794, 0.074794, 0.844936, -97.456184, 33.602161)"
+              },
+              {
+                "photoOpacity": 0.84311,
+                "copyOpacity": 0.84311,
+                "photoTransform": "matrix(0.971629, 0.015965, -0.015965, 0.971629, 18.135077, 6.252839)"
+              }
+            ],
+            "capture": "docs/mobile-motion-2026-10-21/setup/browser-2026-10-21T05-31-29-491Z/portrait-handoff-0.77.png"
+          }
+        ],
+        "beforeReload": 1224,
+        "afterReload": 1963,
+        "reloaded": "Eduardo Gobatto",
+        "nativeReloadRestorationExercised": false,
+        "limitation": "Bundled WebKit resets scroll on native reload, including with JS disabled; full HTML and deterministic same-session re-entry tested."
+      },
+      {
+        "scenario": "responsive-breakpoints-767-768-and-1023-1024-both-directions",
+        "pass": true,
+        "changes": [
+          {
+            "width": 767,
+            "scrollY": 1224,
+            "scrollWidth": 767,
+            "mode": "mobile-story",
+            "active": "Eduardo Gobatto",
+            "names": 3
+          },
+          {
+            "width": 768,
+            "scrollY": 1224,
+            "scrollWidth": 768,
+            "mode": "mobile-story",
+            "active": "Eduardo Gobatto",
+            "names": 3
+          },
+          {
+            "width": 767,
+            "scrollY": 1224,
+            "scrollWidth": 767,
+            "mode": "mobile-story",
+            "active": "Eduardo Gobatto",
+            "names": 3
+          },
+          {
+            "width": 768,
+            "scrollY": 1224,
+            "scrollWidth": 768,
+            "mode": "mobile-story",
+            "active": "Eduardo Gobatto",
+            "names": 3
+          },
+          {
+            "width": 1023,
+            "scrollY": 1224,
+            "scrollWidth": 1023,
+            "mode": "mobile-story",
+            "active": "Eduardo Gobatto",
+            "names": 3
+          },
+          {
+            "width": 1024,
+            "scrollY": 1240,
+            "scrollWidth": 1024,
+            "mode": "desktop",
+            "active": "Eduardo Gobatto",
+            "names": 3
+          },
+          {
+            "width": 1023,
+            "scrollY": 1461,
+            "scrollWidth": 1023,
+            "mode": "mobile-story",
+            "active": "Eduardo Gobatto",
+            "names": 3
+          },
+          {
+            "width": 1024,
+            "scrollY": 1240,
+            "scrollWidth": 1024,
+            "mode": "desktop",
+            "active": "Eduardo Gobatto",
+            "names": 3
+          },
+          {
+            "width": 1023,
+            "scrollY": 1461,
+            "scrollWidth": 1023,
+            "mode": "mobile-story",
+            "active": "Eduardo Gobatto",
+            "names": 3
+          }
+        ]
+      },
+      {
+        "scenario": "orientation-and-short-height-preserve-nearest-person",
+        "pass": true,
+        "changes": [
+          {
+            "viewport": {
+              "width": 844,
+              "height": 390
+            },
+            "mode": "mobile-flow",
+            "person": {
+              "name": "Eduardo Gobatto",
+              "visibleHeight": 297.890625,
+              "distance": 217.109375
+            }
+          },
+          {
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "mode": "mobile-story",
+            "person": {
+              "name": "Eduardo Gobatto"
+            }
+          },
+          {
+            "viewport": {
+              "width": 390,
+              "height": 559
+            },
+            "mode": "mobile-flow",
+            "person": {
+              "name": "Eduardo Gobatto",
+              "visibleHeight": 466.703125,
+              "distance": 156.8046875
+            }
+          },
+          {
+            "viewport": {
+              "width": 390,
+              "height": 560
+            },
+            "mode": "mobile-story",
+            "person": {
+              "name": "Eduardo Gobatto"
+            }
+          },
+          {
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "mode": "mobile-story",
+            "person": {
+              "name": "Eduardo Gobatto"
+            }
+          }
+        ]
+      },
+      {
+        "scenario": "live-reduced-motion-preserves-person-and-focus",
+        "pass": true,
+        "person": {
+          "name": "Eduardo Gobatto",
+          "visibleHeight": 688.015625,
+          "distance": 14.3046875
+        },
+        "state": {
+          "animations": 0,
+          "transformed": [],
+          "canvas": 0
+        },
+        "focusPreserved": true
+      },
+      {
+        "scenario": "initial-reduced-motion-full-static-html",
+        "pass": true,
+        "html": {
+          "names": [
+            "Fernando Riad",
+            "Eduardo Gobatto",
+            "Victor Rafael"
+          ],
+          "portraits": [
+            {
+              "src": "/team/fernando.jpg",
+              "alt": "Retrato de Fernando Riad"
+            },
+            {
+              "src": "/team/eduardo.jpg",
+              "alt": "Retrato de Eduardo Gobatto"
+            },
+            {
+              "src": "/team/victor.png",
+              "alt": "Retrato de Victor Rafael"
+            }
+          ],
+          "price": "R$ 1.500pelo seu site",
+          "contacts": [
+            "5566999356646",
+            "5566999356646",
+            "5566999356646",
+            "5566999356646",
+            "556684184488"
+          ]
+        },
+        "state": {
+          "animations": 0,
+          "transformed": [],
+          "canvas": 0
+        }
+      },
+      {
+        "scenario": "slow-portrait-keeps-readable-flow-until-all-three-decode",
+        "pass": true,
+        "pending": {
+          "decoded": [
+            "http://localhost:4321/team/fernando.jpg",
+            "http://localhost:4321/team/eduardo.jpg"
+          ],
+          "stage": "static",
+          "images": [
+            {
+              "src": "/team/fernando.jpg",
+              "naturalWidth": 460
+            },
+            {
+              "src": "/team/eduardo.jpg",
+              "naturalWidth": 460
+            },
+            {
+              "src": "/team/victor.png",
+              "naturalWidth": 0
+            }
+          ]
+        },
+        "decoded": [
+          "http://localhost:4321/team/fernando.jpg",
+          "http://localhost:4321/team/eduardo.jpg",
+          "http://localhost:4321/team/victor.png"
+        ]
+      },
+      {
+        "scenario": "failed-portrait-keeps-three-people-in-readable-flow",
+        "pass": true,
+        "html": {
+          "names": [
+            "Fernando Riad",
+            "Eduardo Gobatto",
+            "Victor Rafael"
+          ],
+          "portraits": [
+            {
+              "src": "/team/fernando.jpg",
+              "alt": "Retrato de Fernando Riad"
+            },
+            {
+              "src": "/team/eduardo.jpg",
+              "alt": "Retrato de Eduardo Gobatto"
+            },
+            {
+              "src": "/team/victor.png",
+              "alt": "Retrato de Victor Rafael"
+            }
+          ],
+          "price": "R$ 1.500pelo seu site",
+          "contacts": [
+            "5566999356646",
+            "5566999356646",
+            "5566999356646",
+            "5566999356646",
+            "556684184488"
+          ]
+        },
+        "cards": [
+          {
+            "top": 416.28125,
+            "bottom": 1103.296875,
+            "height": 687.015625,
+            "copyOpacity": "1",
+            "naturalWidth": 460,
+            "alt": "Retrato de Fernando Riad"
+          },
+          {
+            "top": 1103.296875,
+            "bottom": 1791.3125,
+            "height": 688.015625,
+            "copyOpacity": "1",
+            "naturalWidth": 460,
+            "alt": "Retrato de Eduardo Gobatto"
+          },
+          {
+            "top": 1791.3125,
+            "bottom": 2479.328125,
+            "height": 688.015625,
+            "copyOpacity": "1",
+            "naturalWidth": 0,
+            "alt": "Retrato de Victor Rafael"
+          }
+        ]
+      },
+      {
+        "scenario": "no-javascript-has-three-portraits-names-price-and-native-anchor",
+        "pass": true,
+        "html": {
+          "names": [
+            "Fernando Riad",
+            "Eduardo Gobatto",
+            "Victor Rafael"
+          ],
+          "portraits": [
+            {
+              "src": "/team/fernando.jpg",
+              "alt": "Retrato de Fernando Riad"
+            },
+            {
+              "src": "/team/eduardo.jpg",
+              "alt": "Retrato de Eduardo Gobatto"
+            },
+            {
+              "src": "/team/victor.png",
+              "alt": "Retrato de Victor Rafael"
+            }
+          ],
+          "price": "R$ 1.500pelo seu site",
+          "contacts": [
+            "5566999356646",
+            "5566999356646",
+            "5566999356646",
+            "5566999356646",
+            "556684184488"
+          ]
+        },
+        "anchorTop": 103.328125
+      },
+      {
+        "scenario": "process-track-progresses-and-reverses-with-scroll",
+        "pass": true,
+        "states": [
+          {
+            "progress": 0.09923409428610012,
+            "track": "matrix(1, 0, 0, 0.099234, 0, 0)",
+            "steps": [
+              {
+                "progress": 0.5739296874999994,
+                "transform": "matrix(1, 0, 0, 1, 0, 10.225687)",
+                "text": "01Conversa e escopoEntendemos seu negócio e registramos a proposta, o prazo e o que será entregue."
+              },
+              {
+                "progress": 0,
+                "transform": "matrix(1, 0, 0, 1, 0, 24)",
+                "text": "02Entrada e materiaisCom o acordo feito e a entrada paga, você envia as informações e fotos reais do negócio."
+              },
+              {
+                "progress": 0,
+                "transform": "matrix(1, 0, 0, 1, 0, 24)",
+                "text": "03Criação e revisãoOrganizamos os textos e montamos o site. Você reúne seus ajustes em uma rodada de alterações."
+              },
+              {
+                "progress": 0,
+                "transform": "matrix(1, 0, 0, 1, 0, 24)",
+                "text": "04Aprovação e publicaçãoVocê aprova, paga o saldo e publicamos o site nas suas contas de domínio e hospedagem."
+              }
+            ]
+          },
+          {
+            "progress": 0.4990719978387139,
+            "track": "matrix(1, 0, 0, 0.499072, 0, 0)",
+            "steps": [
+              {
+                "progress": 1,
+                "transform": "matrix(1, 0, 0, 1, 0, 0)",
+                "text": "01Conversa e escopoEntendemos seu negócio e registramos a proposta, o prazo e o que será entregue."
+              },
+              {
+                "progress": 1,
+                "transform": "matrix(1, 0, 0, 1, 0, 0)",
+                "text": "02Entrada e materiaisCom o acordo feito e a entrada paga, você envia as informações e fotos reais do negócio."
+              },
+              {
+                "progress": 0,
+                "transform": "matrix(1, 0, 0, 1, 0, 24)",
+                "text": "03Criação e revisãoOrganizamos os textos e montamos o site. Você reúne seus ajustes em uma rodada de alterações."
+              },
+              {
+                "progress": 0,
+                "transform": "matrix(1, 0, 0, 1, 0, 24)",
+                "text": "04Aprovação e publicaçãoVocê aprova, paga o saldo e publicamos o site nas suas contas de domínio e hospedagem."
+              }
+            ]
+          },
+          {
+            "progress": 0.8989099013913278,
+            "track": "matrix(1, 0, 0, 0.89891, 0, 0)",
+            "steps": [
+              {
+                "progress": 1,
+                "transform": "matrix(1, 0, 0, 1, 0, 0)",
+                "text": "01Conversa e escopoEntendemos seu negócio e registramos a proposta, o prazo e o que será entregue."
+              },
+              {
+                "progress": 1,
+                "transform": "matrix(1, 0, 0, 1, 0, 0)",
+                "text": "02Entrada e materiaisCom o acordo feito e a entrada paga, você envia as informações e fotos reais do negócio."
+              },
+              {
+                "progress": 1,
+                "transform": "matrix(1, 0, 0, 1, 0, 0)",
+                "text": "03Criação e revisãoOrganizamos os textos e montamos o site. Você reúne seus ajustes em uma rodada de alterações."
+              },
+              {
+                "progress": 0.5987343749999994,
+                "transform": "matrix(1, 0, 0, 1, 0, 9.630375)",
+                "text": "04Aprovação e publicaçãoVocê aprova, paga o saldo e publicamos o site nas suas contas de domínio e hospedagem."
+              }
+            ]
+          },
+          {
+            "progress": 0.4990719978387139,
+            "track": "matrix(1, 0, 0, 0.499072, 0, 0)",
+            "steps": [
+              {
+                "progress": 1,
+                "transform": "matrix(1, 0, 0, 1, 0, 0)",
+                "text": "01Conversa e escopoEntendemos seu negócio e registramos a proposta, o prazo e o que será entregue."
+              },
+              {
+                "progress": 1,
+                "transform": "matrix(1, 0, 0, 1, 0, 0)",
+                "text": "02Entrada e materiaisCom o acordo feito e a entrada paga, você envia as informações e fotos reais do negócio."
+              },
+              {
+                "progress": 0,
+                "transform": "matrix(1, 0, 0, 1, 0, 24)",
+                "text": "03Criação e revisãoOrganizamos os textos e montamos o site. Você reúne seus ajustes em uma rodada de alterações."
+              },
+              {
+                "progress": 0,
+                "transform": "matrix(1, 0, 0, 1, 0, 24)",
+                "text": "04Aprovação e publicaçãoVocê aprova, paga o saldo e publicamos o site nas suas contas de domínio e hospedagem."
+              }
+            ]
+          },
+          {
+            "progress": 0.09923409428610012,
+            "track": "matrix(1, 0, 0, 0.099234, 0, 0)",
+            "steps": [
+              {
+                "progress": 0.5739296874999994,
+                "transform": "matrix(1, 0, 0, 1, 0, 10.225687)",
+                "text": "01Conversa e escopoEntendemos seu negócio e registramos a proposta, o prazo e o que será entregue."
+              },
+              {
+                "progress": 0,
+                "transform": "matrix(1, 0, 0, 1, 0, 24)",
+                "text": "02Entrada e materiaisCom o acordo feito e a entrada paga, você envia as informações e fotos reais do negócio."
+              },
+              {
+                "progress": 0,
+                "transform": "matrix(1, 0, 0, 1, 0, 24)",
+                "text": "03Criação e revisãoOrganizamos os textos e montamos o site. Você reúne seus ajustes em uma rodada de alterações."
+              },
+              {
+                "progress": 0,
+                "transform": "matrix(1, 0, 0, 1, 0, 24)",
+                "text": "04Aprovação e publicaçãoVocê aprova, paga o saldo e publicamos o site nas suas contas de domínio e hospedagem."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "scenario": "focus-cancels-menu-and-contact-arrival-immediately",
+        "pass": true,
+        "menuState": {
+          "open": true,
+          "focused": "A gente",
+          "animations": 0,
+          "labels": [
+            {
+              "opacity": "1",
+              "transform": "none"
+            },
+            {
+              "opacity": "1",
+              "transform": "none"
+            },
+            {
+              "opacity": "1",
+              "transform": "none"
+            },
+            {
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        },
+        "contact": {
+          "focused": true,
+          "hit": true,
+          "href": "https://wa.me/5566999356646?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20o%20site%20de%20uma%20p%C3%A1gina%20da%20Codice%2C%20por%20R%24%201.500.",
+          "ancestors": [
+            {
+              "opacity": "1",
+              "transform": "none"
+            },
+            {
+              "opacity": "1",
+              "transform": "none"
+            },
+            {
+              "opacity": "1",
+              "transform": "none"
+            },
+            {
+              "opacity": "1",
+              "transform": "none"
+            }
+          ],
+          "animations": 0
+        },
+        "nativeTabTarget": "Apresentação↗",
+        "nativeLinkTabTraversalExercised": false,
+        "limitation": "Bundled mobile WebKit skips anchors on Tab; direct link focus and Escape tested."
+      },
+      {
+        "scenario": "live-reduced-motion-cancels-in-progress-chapter-and-menu",
+        "pass": true,
+        "runningBeforePreference": 1,
+        "state": {
+          "animations": 0,
+          "transformed": [],
+          "canvas": 0
+        }
+      }
+    ]
+  },
+  "pageErrors": [],
+  "pass": true,
+  "testFinishedAt": "2026-10-21T05:32:08.672Z",
+  "cleanupWarnings": [],
+  "finishedAt": "2026-10-21T05:32:10.756Z"
+}

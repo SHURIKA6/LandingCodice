@@ -1,0 +1,21 @@
+/* The opaque SSR screenshot remains beneath the layer until load and decode. */
+.project-stage .project-screen { position: relative; }
+.project-stage .project-capture-next {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateX(8%);
+  pointer-events: none;
+  transition: opacity 400ms cubic-bezier(.16, 1, .3, 1), transform 400ms cubic-bezier(.16, 1, .3, 1);
+}
+.project-stage .project-capture-next[data-visible=true] {
+  opacity: 1;
+  transform: translateX(0);
+}
+.project-stage[data-motion-mode=static] .project-capture-next {
+  transition: none;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-stage .project-capture-next { transition: none; transform: none; }
+}

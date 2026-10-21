@@ -1,0 +1,52 @@
+{
+  "buildId": "SOX68zeQP07OKL-8d3de1",
+  "serverPid": 47248,
+  "url": "http://localhost:4321/",
+  "geometryTests": 11,
+  "checks": [
+    {
+      "suite": "layout",
+      "pass": true,
+      "passed": 11,
+      "report": "docs/mobile-motion-2026-10-21/setup/2026-10-21T14-32-09-775Z-chromium-blue-sculpture-layout/result.json",
+      "cleanupWarnings": []
+    },
+    {
+      "suite": "people",
+      "pass": true,
+      "passed": 16,
+      "report": "docs/mobile-motion-2026-10-21/setup/2026-10-21T14-32-09-782Z-chromium-blue-sculpture-people/result.json",
+      "cleanupWarnings": []
+    },
+    {
+      "suite": "mobile",
+      "pass": true,
+      "passed": 18,
+      "report": "docs/mobile-motion-2026-10-21/setup/2026-10-21T14-32-09-768Z-chromium-blue-sculpture-mobile/result.json",
+      "cleanupWarnings": []
+    },
+    {
+      "suite": "mobile-webkit",
+      "pass": true,
+      "passed": 18,
+      "report": "docs/mobile-motion-2026-10-21/setup/2026-10-21T14-34-21-742Z-webkit-blue-sculpture-mobile/result.json",
+      "cleanupWarnings": []
+    },
+    {
+      "suite": "motion",
+      "pass": true,
+      "passed": 6,
+      "report": "docs/mobile-motion-2026-10-21/setup/2026-10-21T14-34-21-750Z-chromium-blue-sculpture-motion/result.json",
+      "cleanupWarnings": []
+    },
+    {
+      "suite": "tour",
+      "pass": true,
+      "passed": null,
+      "report": "docs/mobile-motion-2026-10-21/setup/2026-10-21T14-34-21-762Z-chromium-blue-sculpture-tour/result.json",
+      "cleanupWarnings": []
+    }
+  ],
+  "integrityPass": true,
+  "noCommitPushDeploy": true
+}
