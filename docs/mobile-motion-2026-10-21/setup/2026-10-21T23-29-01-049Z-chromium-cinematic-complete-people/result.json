@@ -1,0 +1,163 @@
+{
+  "startedAt": "2026-10-21T23:29:01.053Z",
+  "engine": "chromium",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-29-01-049Z-chromium-cinematic-complete-people",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-29-01-049Z-chromium-cinematic-complete-people\\video\\page@0fce2066f166cae93ddbd989328031f2.webm",
+      "bytes": 244105
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-29-01-049Z-chromium-cinematic-complete-people\\video\\page@1a63910b5f590f86d1bce0c04d31fea4.webm",
+      "bytes": 740248
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-29-01-049Z-chromium-cinematic-complete-people\\video\\page@245b5062d669aa48c130d616c78a2d5b.webm",
+      "bytes": 1935169
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-29-01-049Z-chromium-cinematic-complete-people\\video\\page@319ea84555d778a9c1862fd93cb0ac35.webm",
+      "bytes": 124690
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-29-01-049Z-chromium-cinematic-complete-people\\video\\page@81102f6dcd92db813e8192b3b795d48d.webm",
+      "bytes": 502999
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-29-01-049Z-chromium-cinematic-complete-people\\video\\page@889ca17a2514697d286f88f3070702fd.webm",
+      "bytes": 367738
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-29-01-049Z-chromium-cinematic-complete-people\\video\\page@8e929461163deb65c5c6328872a916eb.webm",
+      "bytes": 475907
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-29-01-049Z-chromium-cinematic-complete-people\\video\\page@910c3e8ed1366b335cd66a34f49cae54.webm",
+      "bytes": 227640
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-29-01-049Z-chromium-cinematic-complete-people\\video\\page@b366de4f50ab3d34a7117d67d986f276.webm",
+      "bytes": 127050
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-29-01-049Z-chromium-cinematic-complete-people\\video\\page@c2cf2f58d881e01f369463d0956e3d2e.webm",
+      "bytes": 522894
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-29-01-049Z-chromium-cinematic-complete-people\\video\\page@cf8b4368e5b3b9acc01b7d6bc208a9f0.webm",
+      "bytes": 494855
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-29-01-049Z-chromium-cinematic-complete-people\\video\\page@d2468e0eee6ec92c75076e38dcac3b83.webm",
+      "bytes": 359249
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-29-01-049Z-chromium-cinematic-complete-people\\video\\page@ec8da957d9cecaf643593d0dfedcadf8.webm",
+      "bytes": 460614
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-29-01-049Z-chromium-cinematic-complete-people\\video\\page@fa9342921ee892f6b522f1273cdf5491.webm",
+      "bytes": 1463733
+    }
+  ],
+  "browserVersion": "148.0.7778.96",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\scripts\\verify-people.browser.js",
+  "result": {
+    "passed": 16,
+    "results": [
+      {
+        "scenario": "layout-320",
+        "renderer": "html",
+        "pass": true
+      },
+      {
+        "scenario": "mobile-pinned-story",
+        "pass": true
+      },
+      {
+        "scenario": "layout-390",
+        "renderer": "html",
+        "pass": true
+      },
+      {
+        "scenario": "layout-768",
+        "renderer": "html",
+        "pass": true
+      },
+      {
+        "scenario": "layout-1024",
+        "renderer": "three",
+        "pass": true
+      },
+      {
+        "scenario": "layout-1440",
+        "renderer": "three",
+        "pass": true
+      },
+      {
+        "scenario": "layout-1920",
+        "renderer": "three",
+        "pass": true
+      },
+      {
+        "scenario": "reload-at-middle-portrait",
+        "pass": true
+      },
+      {
+        "scenario": "scroll-forward-reverse-catalogue-keyboard",
+        "stops": [
+          "Fernando Riad",
+          "Eduardo Gobatto",
+          "Eduardo Gobatto",
+          "Victor Rafael",
+          "Victor Rafael",
+          "Eduardo Gobatto",
+          "Fernando Riad"
+        ],
+        "pass": true
+      },
+      {
+        "scenario": "resize-live-reduced-motion-remount-first-frame",
+        "pass": true
+      },
+      {
+        "scenario": "optional-scene-chunk-failure",
+        "pass": true
+      },
+      {
+        "scenario": "webgl-unavailable",
+        "pass": true
+      },
+      {
+        "scenario": "texture-error",
+        "pass": true
+      },
+      {
+        "scenario": "webgl-context-loss",
+        "pass": true
+      },
+      {
+        "scenario": "no-javascript",
+        "pass": true
+      },
+      {
+        "scenario": "reduced-motion-initial",
+        "pass": true
+      }
+    ]
+  },
+  "pageErrors": [],
+  "pass": true,
+  "testFinishedAt": "2026-10-21T23:30:20.598Z",
+  "cleanupWarnings": [
+    "Error: context.close exceeded 6000 ms",
+    "Error: browser.close exceeded 8000 ms"
+  ],
+  "terminatedOwnedBrowserChildren": [],
+  "finishedAt": "2026-10-21T23:30:41.183Z"
+}

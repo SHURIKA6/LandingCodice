@@ -2,6 +2,12 @@
 
 <!-- impeccable:product-schema 1 -->
 
+## Coreografia da página inteira — execução de 21/10/2026
+
+Após novo pedido de bastante movimento, o usuário autorizou o plano com **“Implement the proposed plan.”** O [registro desta ampliação](docs/cinematic-motion-2026-10-21/README.md) descreve continuidade entre capítulos, escultura e capturas reversíveis, oferta/processo/fechamento coreografados e interações. A direção Pessoas em cena, conteúdo, oferta e contatos permanecem vigentes; a experiência autoral não amplia o pacote comercial. A [verificação própria](docs/cinematic-motion-2026-10-21/verification.md) começou em andamento e deve registrar somente resultados novos. As aprovações anteriores abaixo não são prova desta alteração.
+
+**Fechamento desta ampliação em 21/10:** implementação e QA local concluídos no relatório próprio, encerrando o estado inicial. Build/typecheck, geometria, regressões, cenários novos nos dois motores e revisão visual passaram. Aceite estético do usuário e aparelho físico continuam distintos; sem commit, push ou deploy.
+
 ## Escultura azul na abertura — execução de 21/10/2026
 
 O usuário confirmou a antiga escultura decorativa da Codice, formada por dois Cs entrelaçados, e autorizou a edição do esmalte verde para azul **`#2f4bff`**, preservando cromado, volume e transparência. Escolheu integrá-la à abertura da landing. É uma recuperação de identidade visual, sem novo produto, promessa de 3D interativo ou ampliação da oferta comercial. Pessoas em cena, retratos, trilho de 300svh, contatos, header e favicon permanecem no contrato vigente.

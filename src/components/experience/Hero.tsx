@@ -96,11 +96,23 @@ export function Hero({ href, cta }: { href: string; cta: string }) {
       document.documentElement.toggleAttribute('data-large-text', largeText);
       setStoryFits(!largeText && root.clientWidth > 0 && innerHeight >= 560);
     };
-    const observer = new ResizeObserver(measure);
+    // Text enlargement changes the observed name layout when flow is enabled.
+    // Measure outside observer delivery so WebKit can finish the current layout
+    // without reporting a resize loop. This schedules work only on resize.
+    let measureFrame = 0;
+    const scheduleMeasure = () => {
+      if (measureFrame) return;
+      measureFrame = requestAnimationFrame(() => { measureFrame = 0; measure(); });
+    };
+    const observer = new ResizeObserver(scheduleMeasure);
     root.querySelectorAll('.person-kicker, .person-name').forEach(node => observer.observe(node));
-    window.addEventListener('resize', measure, { passive: true });
+    window.addEventListener('resize', scheduleMeasure, { passive: true });
     measure();
-    return () => { observer.disconnect(); window.removeEventListener('resize', measure); document.documentElement.removeAttribute('data-large-text'); };
+    return () => {
+      observer.disconnect(); cancelAnimationFrame(measureFrame);
+      window.removeEventListener('resize', scheduleMeasure);
+      document.documentElement.removeAttribute('data-large-text');
+    };
   }, [mode]);
   useEffect(() => {
     const header = document.querySelector('.site-header');
@@ -179,7 +191,7 @@ export function Hero({ href, cta }: { href: string; cta: string }) {
       pointerX.set(((event.clientX - bounds.left) / bounds.width - .5) * 22); pointerY.set(((event.clientY - bounds.top) / bounds.height - .5) * 14);
     }} onPointerLeave={() => { pointerX.set(0); pointerY.set(0); }}>
       <div className="hero-intro">
-        <HeroSculpture mode={mode} scrollY={pageScrollY} />
+        <HeroSculpture mode={mode} scrollY={pageScrollY} pointerX={x} pointerY={y} />
         <motion.div className="hero-heading" style={mode.startsWith('mobile') ? { y: introTitleY } : undefined}><p className="eyebrow"><span className="status-dot" /> De Sinop. Perto da sua ideia.</p><h1 id="hero-title"><span className="title-line"><span>Tecnologia feita</span></span><span className="title-line"><span>por <em>gente.</em></span></span></h1></motion.div>
         <div className="hero-description"><motion.div className="hero-description-copy" style={mode.startsWith('mobile') ? { y: introCopyY } : undefined}><p>Somos Fernando, Eduardo e Victor.<br />Criamos sites para colocar o seu<br className="desktop-break" /> negócio em evidência.</p></motion.div><a className="hero-skip" href="#trabalho">Ver projetos <Arrow diagonal /></a></div>
       </div>

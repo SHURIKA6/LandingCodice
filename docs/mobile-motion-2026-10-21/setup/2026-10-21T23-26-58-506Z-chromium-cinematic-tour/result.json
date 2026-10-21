@@ -1,0 +1,276 @@
+{
+  "startedAt": "2026-10-21T23:26:58.508Z",
+  "engine": "chromium",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-26-58-506Z-chromium-cinematic-tour",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-26-58-506Z-chromium-cinematic-tour\\video\\page@625419251aab2834ec0c14224547f03e.webm",
+      "bytes": 4664320
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-26-58-506Z-chromium-cinematic-tour\\video\\page@93a0fc0687ab431c61935e54c2a48314.webm",
+      "bytes": 2706830
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-26-58-506Z-chromium-cinematic-tour\\video\\page@a713c01a472f1f67b4cf8e1fe2ce8de7.webm",
+      "bytes": 1030195
+    }
+  ],
+  "browserVersion": "148.0.7778.96",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\cinematic-motion-2026-10-21\\tour.browser.js",
+  "result": {
+    "passed": 30,
+    "results": [
+      {
+        "profile": "desktop",
+        "label": "opening",
+        "file": "tour-desktop-opening.png",
+        "y": 0,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "profile": "desktop",
+        "label": "sculpture-arc",
+        "file": "tour-desktop-sculpture-arc.png",
+        "y": 240,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "profile": "desktop",
+        "label": "eduardo",
+        "file": "tour-desktop-eduardo.png",
+        "y": 1040,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "profile": "desktop",
+        "label": "chapter-wipe",
+        "file": "tour-desktop-chapter-wipe.png",
+        "y": 2520,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "profile": "desktop",
+        "label": "work",
+        "file": "tour-desktop-work.png",
+        "y": 2980,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "profile": "desktop",
+        "label": "project",
+        "file": "tour-desktop-project.png",
+        "y": 3633,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "profile": "desktop",
+        "label": "project-reading",
+        "file": "tour-desktop-project-reading.png",
+        "y": 3933,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "profile": "desktop",
+        "label": "roger",
+        "file": "tour-desktop-roger.png",
+        "y": 4962,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "profile": "desktop",
+        "label": "offer-arrival",
+        "file": "tour-desktop-offer-arrival.png",
+        "y": 5299,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "profile": "desktop",
+        "label": "offer",
+        "file": "tour-desktop-offer.png",
+        "y": 6061,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "profile": "desktop",
+        "label": "process-arrival",
+        "file": "tour-desktop-process-arrival.png",
+        "y": 6736,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "profile": "desktop",
+        "label": "process",
+        "file": "tour-desktop-process.png",
+        "y": 7316,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "profile": "desktop",
+        "label": "contact-arrival",
+        "file": "tour-desktop-contact-arrival.png",
+        "y": 7227,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "profile": "desktop",
+        "label": "contact",
+        "file": "tour-desktop-contact.png",
+        "y": 7687,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "profile": "desktop",
+        "label": "footer",
+        "file": "tour-desktop-footer.png",
+        "y": 8149,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "profile": "mobile",
+        "label": "opening",
+        "file": "tour-mobile-opening.png",
+        "y": 0,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "profile": "mobile",
+        "label": "sculpture-arc",
+        "file": "tour-mobile-sculpture-arc.png",
+        "y": 240,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "profile": "mobile",
+        "label": "eduardo",
+        "file": "tour-mobile-eduardo.png",
+        "y": 1406,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "profile": "mobile",
+        "label": "chapter-wipe",
+        "file": "tour-mobile-chapter-wipe.png",
+        "y": 2658,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "profile": "mobile",
+        "label": "work",
+        "file": "tour-mobile-work.png",
+        "y": 3030,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "profile": "mobile",
+        "label": "project",
+        "file": "tour-mobile-project.png",
+        "y": 3371,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "profile": "mobile",
+        "label": "project-reading",
+        "file": "tour-mobile-project-reading.png",
+        "y": 3624,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "profile": "mobile",
+        "label": "roger",
+        "file": "tour-mobile-roger.png",
+        "y": 4823,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "profile": "mobile",
+        "label": "offer-arrival",
+        "file": "tour-mobile-offer-arrival.png",
+        "y": 5030,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "profile": "mobile",
+        "label": "offer",
+        "file": "tour-mobile-offer.png",
+        "y": 5614,
+        "width": 391,
+        "scrollWidth": 391
+      },
+      {
+        "profile": "mobile",
+        "label": "process-arrival",
+        "file": "tour-mobile-process-arrival.png",
+        "y": 6726,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "profile": "mobile",
+        "label": "process",
+        "file": "tour-mobile-process.png",
+        "y": 7383,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "profile": "mobile",
+        "label": "contact-arrival",
+        "file": "tour-mobile-contact-arrival.png",
+        "y": 7453,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "profile": "mobile",
+        "label": "contact",
+        "file": "tour-mobile-contact.png",
+        "y": 7828,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "profile": "mobile",
+        "label": "footer",
+        "file": "tour-mobile-footer.png",
+        "y": 8325,
+        "width": 390,
+        "scrollWidth": 390
+      }
+    ]
+  },
+  "pageErrors": [],
+  "pass": true,
+  "testFinishedAt": "2026-10-21T23:27:47.710Z",
+  "cleanupWarnings": [],
+  "finishedAt": "2026-10-21T23:27:50.640Z"
+}

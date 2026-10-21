@@ -13,13 +13,19 @@ export function Header({ contactHref }: { contactHref: string }) {
     const details = menu.current;
     if (!details) return;
     const animations = new Set<Animation>();
-    const cancel = () => { animations.forEach(animation => animation.cancel()); animations.clear(); };
+    let closeVersion = 0;
+    const cancel = () => {
+      closeVersion++;
+      animations.forEach(animation => animation.cancel()); animations.clear();
+      delete details.dataset.closing;
+    };
     const play = (target: HTMLElement, frames: Keyframe[], duration: number, delay = 0) => {
       const animation = target.animate(frames, { duration, delay, easing: 'cubic-bezier(.16,1,.3,1)', fill: 'backwards' });
       animations.add(animation);
       const finish = () => animations.delete(animation);
       animation.addEventListener('finish', finish, { once: true });
       animation.addEventListener('cancel', finish, { once: true });
+      return animation;
     };
     const open = () => {
       cancel();
@@ -30,8 +36,27 @@ export function Header({ contactHref }: { contactHref: string }) {
       // Only the label moves inside its mask. Every native link box is already
       // accessible, and touching or focusing the menu resolves the labels now.
       details.querySelectorAll<HTMLElement>('.menu-label').forEach((label, index) => {
-        play(label, [{ transform: 'translateY(95%)', opacity: .6 }, { transform: 'translateY(0)', opacity: 1 }], mode === 'desktop' ? 350 : 440, index * 45);
+        play(label, [{ transform: 'translate(20px, 95%)', opacity: .6 }, { transform: 'translate(0, 0)', opacity: 1 }], mode === 'desktop' ? 420 : 480, index * 45);
       });
+    };
+    const toggleClose = (event: MouseEvent) => {
+      if (!(event.target instanceof Element) || !event.target.closest('summary') || !details.open || mode === 'static' || !Element.prototype.animate) return;
+      event.preventDefault();
+      // A second click reverses a pending close; native navigation and Escape
+      // still close immediately. Only decorative paint waits for this exit.
+      if (details.dataset.closing) { cancel(); open(); return; }
+      cancel();
+      const version = closeVersion;
+      const surface = details.querySelector<HTMLElement>('.menu-panel-surface');
+      if (!surface || document.hidden) { details.open = false; return; }
+      details.dataset.closing = 'true';
+      const exit = play(surface, [{ clipPath: 'inset(0 0 0 0)' }, { clipPath: 'inset(0 0 100% 0)' }], 180);
+      details.querySelectorAll<HTMLElement>('.menu-label').forEach(label => {
+        play(label, [{ transform: 'translateY(0)', opacity: 1 }, { transform: 'translateY(-65%)', opacity: .4 }], 150);
+      });
+      exit.finished.then(() => {
+        if (version === closeVersion) { details.open = false; delete details.dataset.closing; }
+      }).catch(() => { /* Focus or a repeated click resolves the current pose. */ });
     };
     const close = (event: KeyboardEvent) => {
       if (event.key === 'Escape' && menu.current?.open) {
@@ -43,17 +68,30 @@ export function Header({ contactHref }: { contactHref: string }) {
     const outside = (event: PointerEvent) => {
       if (event.target instanceof Node && !details.contains(event.target)) { cancel(); details.open = false; }
     };
-    const visibility = () => { if (document.hidden) cancel(); };
+    const stabilize = (event: PointerEvent) => {
+      if (details.dataset.closing && event.target instanceof Element && event.target.closest('summary')) return;
+      cancel();
+    };
+    const visibility = () => {
+      if (!document.hidden) return;
+      const closing = Boolean(details.dataset.closing);
+      cancel();
+      if (closing) details.open = false;
+    };
     details.addEventListener('toggle', open);
-    details.addEventListener('pointerdown', cancel, { passive: true });
+    details.addEventListener('click', toggleClose);
+    details.addEventListener('pointerdown', stabilize, { passive: true });
     details.addEventListener('focusin', cancel);
     document.addEventListener('visibilitychange', visibility);
     document.addEventListener('keydown', close);
     document.addEventListener('pointerdown', outside);
     return () => {
+      const closing = Boolean(details.dataset.closing);
       cancel();
+      if (closing) details.open = false;
       details.removeEventListener('toggle', open);
-      details.removeEventListener('pointerdown', cancel);
+      details.removeEventListener('click', toggleClose);
+      details.removeEventListener('pointerdown', stabilize);
       details.removeEventListener('focusin', cancel);
       document.removeEventListener('visibilitychange', visibility);
       document.removeEventListener('keydown', close);

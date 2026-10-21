@@ -1,0 +1,644 @@
+{
+  "startedAt": "2026-10-21T23:21:59.655Z",
+  "engine": "chromium",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-59-648Z-chromium-cinematic-focused",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-59-648Z-chromium-cinematic-focused\\video\\page@392c31fc222b4dd944d2337a0342fd69.webm",
+      "bytes": 519508
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-59-648Z-chromium-cinematic-focused\\video\\page@562d293f801fc188a7efd13f81571214.webm",
+      "bytes": 205593
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-59-648Z-chromium-cinematic-focused\\video\\page@5a3f71fe78ef433a00e70c834b19e7da.webm",
+      "bytes": 237917
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-59-648Z-chromium-cinematic-focused\\video\\page@5d6efa8da557570edfdcca8066b52ed8.webm",
+      "bytes": 633861
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-59-648Z-chromium-cinematic-focused\\video\\page@6dcd7f3fd284c48d7636e8fe64879dae.webm",
+      "bytes": 475935
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-59-648Z-chromium-cinematic-focused\\video\\page@791c13992a3e81e287ac9d96c1f491ba.webm",
+      "bytes": 1041921
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-59-648Z-chromium-cinematic-focused\\video\\page@a526427e2dd410dcca70922aeea6e389.webm",
+      "bytes": 483002
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-59-648Z-chromium-cinematic-focused\\video\\page@a7d8d2a0b68e67e7c994a35f8f131f89.webm",
+      "bytes": 212858
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-59-648Z-chromium-cinematic-focused\\video\\page@be46df0eef2a6fc85f5d953921566468.webm",
+      "bytes": 261731
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-59-648Z-chromium-cinematic-focused\\video\\page@cda88781b2c14241da47bcba2f5e9f16.webm",
+      "bytes": 577991
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-59-648Z-chromium-cinematic-focused\\video\\page@cf731c69243dcc4071ae12290b81a5c9.webm",
+      "bytes": 453579
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-59-648Z-chromium-cinematic-focused\\video\\page@d07c02c1977560692099cd7ccc92c8af.webm",
+      "bytes": 606243
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-59-648Z-chromium-cinematic-focused\\video\\page@d29bf3234fb42b7d2db51f7480953c6e.webm",
+      "bytes": 473683
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-59-648Z-chromium-cinematic-focused\\video\\page@db46db51e8710e9cae0c98f11830f673.webm",
+      "bytes": 205353
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-59-648Z-chromium-cinematic-focused\\video\\page@f962cbe912b0c580033febf17e3e7639.webm",
+      "bytes": 587996
+    }
+  ],
+  "browserVersion": "148.0.7778.96",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\scripts\\verify-cinematic-motion.browser.js",
+  "result": {
+    "passed": 14,
+    "failed": 0,
+    "results": [
+      {
+        "scenario": "stylesheets-load-and-brand-is-rendered",
+        "pass": true,
+        "styles": [
+          {
+            "href": "/_next/static/chunks/27msa4syzcd0g.css",
+            "status": 200,
+            "type": "text/css; charset=UTF-8"
+          },
+          {
+            "href": "/_next/static/chunks/39ti588wpcq2v.css",
+            "status": 200,
+            "type": "text/css; charset=UTF-8"
+          }
+        ],
+        "background": "rgb(247, 249, 252)",
+        "font": "bodyFont, \"bodyFont Fallback\", sans-serif"
+      },
+      {
+        "scenario": "sculpture-arc-is-multiaxis-and-reversible-desktop",
+        "pass": true,
+        "initial": {
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "angle": 0
+        },
+        "forward": {
+          "x": -12,
+          "y": -8,
+          "scale": 1.06000008385094,
+          "angle": 17.99999772953795
+        },
+        "late": {
+          "x": -24,
+          "y": -28,
+          "scale": 0.9400002519414556,
+          "angle": -11.99999739834604
+        },
+        "reversed": {
+          "x": -12,
+          "y": -8,
+          "scale": 1.06000008385094,
+          "angle": 17.99999772953795
+        }
+      },
+      {
+        "scenario": "sculpture-arc-is-multiaxis-and-reversible-mobile",
+        "pass": true,
+        "initial": {
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "angle": 0
+        },
+        "forward": {
+          "x": -12,
+          "y": -8,
+          "scale": 1.06000008385094,
+          "angle": 17.99999772953795
+        },
+        "late": {
+          "x": -24,
+          "y": -28,
+          "scale": 0.9400002519414556,
+          "angle": -11.99999739834604
+        },
+        "reversed": {
+          "x": -12,
+          "y": -8,
+          "scale": 1.06000008385094,
+          "angle": 17.99999772953795
+        }
+      },
+      {
+        "scenario": "roger-native-mask-is-preserved-during-reading",
+        "pass": true,
+        "before": {
+          "x": 0,
+          "y": -24.9606,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "after": {
+          "x": 0,
+          "y": -39.9067,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "ratio": 1.2509025270758123,
+        "covered": true,
+        "linksBefore": {
+          "x": 56,
+          "y": 5656.375,
+          "width": 531.0625,
+          "height": 44
+        },
+        "linksAfter": {
+          "x": 56,
+          "y": 5656.375,
+          "width": 531.0625,
+          "height": 44
+        }
+      },
+      {
+        "scenario": "chapter-fields-and-countermoving-type-follow-scroll-desktop",
+        "pass": true,
+        "entry": {
+          "field": {
+            "x": -388.8,
+            "y": 0,
+            "scale": 1,
+            "angle": 0
+          },
+          "title": {
+            "x": 54,
+            "y": 21,
+            "scale": 1,
+            "angle": 0
+          }
+        },
+        "settled": {
+          "field": {
+            "x": -1555.2,
+            "y": 0,
+            "scale": 1,
+            "angle": 0
+          },
+          "title": {
+            "x": 0,
+            "y": 0,
+            "scale": 1,
+            "angle": 0
+          }
+        },
+        "reversed": {
+          "field": {
+            "x": -388.8,
+            "y": 0,
+            "scale": 1,
+            "angle": 0
+          },
+          "title": {
+            "x": 54,
+            "y": 21,
+            "scale": 1,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "scenario": "chapter-fields-and-countermoving-type-follow-scroll-mobile",
+        "pass": true,
+        "entry": {
+          "field": {
+            "x": -105.3,
+            "y": 0,
+            "scale": 1,
+            "angle": 0
+          },
+          "title": {
+            "x": 30,
+            "y": 15,
+            "scale": 1,
+            "angle": 0
+          }
+        },
+        "settled": {
+          "field": {
+            "x": -421.2,
+            "y": 0,
+            "scale": 1,
+            "angle": 0
+          },
+          "title": {
+            "x": 0,
+            "y": 0,
+            "scale": 1,
+            "angle": 0
+          }
+        },
+        "reversed": {
+          "field": {
+            "x": -105.3,
+            "y": 0,
+            "scale": 1,
+            "angle": 0
+          },
+          "title": {
+            "x": 30,
+            "y": 15,
+            "scale": 1,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "scenario": "screenshots-pan-inside-mask-and-controls-stay-still-desktop",
+        "pass": true,
+        "before": {
+          "x": 0,
+          "y": -36.675,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "after": {
+          "x": 0,
+          "y": -52.0747,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "reversed": {
+          "x": 0,
+          "y": -36.675,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "coverage": {
+          "top": true,
+          "bottom": true,
+          "left": true,
+          "right": true
+        },
+        "controlsBefore": {
+          "x": 56,
+          "y": 4609.234375,
+          "width": 1328,
+          "height": 88
+        },
+        "controlsAfter": {
+          "x": 56,
+          "y": 4609.234375,
+          "width": 1328,
+          "height": 88
+        }
+      },
+      {
+        "scenario": "screenshots-pan-inside-mask-and-controls-stay-still-mobile",
+        "pass": true,
+        "before": {
+          "x": 0,
+          "y": -11.6502,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "after": {
+          "x": 0,
+          "y": -16.5243,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "reversed": {
+          "x": 0,
+          "y": -11.6502,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "coverage": {
+          "top": true,
+          "bottom": true,
+          "left": true,
+          "right": true
+        },
+        "controlsBefore": {
+          "x": 20,
+          "y": 3974.03125,
+          "width": 350,
+          "height": 212.28125
+        },
+        "controlsAfter": {
+          "x": 20,
+          "y": 3974.03125,
+          "width": 350,
+          "height": 212.28125
+        }
+      },
+      {
+        "scenario": "desktop-process-connects-four-steps-and-reverses",
+        "pass": true,
+        "before": {
+          "axis": "horizontal",
+          "progress": 0.2,
+          "steps": [
+            0.801,
+            0,
+            0,
+            0
+          ]
+        },
+        "after": {
+          "axis": "horizontal",
+          "progress": 0.8,
+          "steps": [
+            1,
+            1,
+            1,
+            0.201
+          ]
+        },
+        "reversed": {
+          "axis": "horizontal",
+          "progress": 0.2,
+          "steps": [
+            0.801,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "scenario": "footer-letters-assemble-and-return-desktop",
+        "pass": true,
+        "before": [
+          {
+            "y": 255.59,
+            "angle": 5.153998968700937
+          },
+          {
+            "y": -242.286,
+            "angle": -5.3999990494314964
+          },
+          {
+            "y": 280.881,
+            "angle": 5.663997699643575
+          },
+          {
+            "y": -267.322,
+            "angle": -5.9579779820022205
+          },
+          {
+            "y": 297.544,
+            "angle": 5.999972975483472
+          },
+          {
+            "y": -269.206,
+            "angle": -5.999972975483472
+          }
+        ],
+        "settled": [
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          }
+        ],
+        "reversed": [
+          {
+            "y": 255.59,
+            "angle": 5.153998968700937
+          },
+          {
+            "y": -242.286,
+            "angle": -5.3999990494314964
+          },
+          {
+            "y": 280.881,
+            "angle": 5.663997699643575
+          },
+          {
+            "y": -267.322,
+            "angle": -5.9579779820022205
+          },
+          {
+            "y": 297.544,
+            "angle": 5.999972975483472
+          },
+          {
+            "y": -269.206,
+            "angle": -5.999972975483472
+          }
+        ]
+      },
+      {
+        "scenario": "footer-letters-assemble-and-return-mobile",
+        "pass": true,
+        "before": [
+          {
+            "y": 57.1593,
+            "angle": 4.085999686224792
+          },
+          {
+            "y": -54.1457,
+            "angle": -4.277997660767973
+          },
+          {
+            "y": 62.8668,
+            "angle": 4.493998048757475
+          },
+          {
+            "y": -59.8412,
+            "angle": -4.72799833741595
+          },
+          {
+            "y": 69.7495,
+            "angle": 4.985998461197871
+          },
+          {
+            "y": -66.7518,
+            "angle": -5.2739955810173225
+          }
+        ],
+        "settled": [
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          }
+        ],
+        "reversed": [
+          {
+            "y": 57.1593,
+            "angle": 4.085999686224792
+          },
+          {
+            "y": -54.1457,
+            "angle": -4.277997660767973
+          },
+          {
+            "y": 62.8668,
+            "angle": 4.493998048757475
+          },
+          {
+            "y": -59.8412,
+            "angle": -4.72799833741595
+          },
+          {
+            "y": 69.7495,
+            "angle": 4.985998461197871
+          },
+          {
+            "y": -66.7518,
+            "angle": -5.2739955810173225
+          }
+        ]
+      },
+      {
+        "scenario": "menu-exit-can-be-reversed-and-escape-keeps-focus",
+        "pass": true,
+        "closeReversedByRealClick": true,
+        "escapeClosedImmediately": true,
+        "summaryFocusRestored": true,
+        "finalCloseCompleted": true
+      },
+      {
+        "scenario": "live-reduced-motion-clears-all-new-spatial-layers",
+        "pass": true,
+        "transforms": [
+          {
+            "className": "hero-sculpture-parallax",
+            "transform": "none"
+          },
+          {
+            "className": "hero-sculpture-pointer",
+            "transform": "none"
+          },
+          {
+            "className": "scroll-frame-surface",
+            "transform": "none"
+          },
+          {
+            "className": "project-media-pan",
+            "transform": "none"
+          },
+          {
+            "className": "scroll-frame-surface",
+            "transform": "none"
+          },
+          {
+            "className": "project-media-pan",
+            "transform": "none"
+          }
+        ],
+        "animations": 0,
+        "canvas": 0,
+        "engine": "native",
+        "width": 1440,
+        "viewport": 1440
+      },
+      {
+        "scenario": "large-font-fallback-neutralizes-new-masks-and-spatial-layers",
+        "pass": true,
+        "method": "double the measured person-kicker font to exercise existing large-text fallback; not physical browser zoom",
+        "chapterEnabled": [
+          "false",
+          "false",
+          "false"
+        ],
+        "transforms": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "headingOverflow": [
+          "visible",
+          "visible",
+          "visible",
+          "visible",
+          "visible",
+          "visible"
+        ],
+        "fieldsVisible": false,
+        "width": 390,
+        "viewport": 390
+      }
+    ]
+  },
+  "pageErrors": [],
+  "pass": true,
+  "testFinishedAt": "2026-10-21T23:22:52.939Z",
+  "cleanupWarnings": [],
+  "finishedAt": "2026-10-21T23:22:58.538Z"
+}

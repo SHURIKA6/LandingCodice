@@ -138,6 +138,15 @@ async (page) => {
         assert(await p.locator('.people-stage').evaluate(node => getComputedStyle(node).position) === 'sticky', 'Portrait stage is not sticky');
         for (const [index, progress] of [.08, .5, .92].entries()) {
           await at(p, progress);
+          // Scroll sampling, Motion's paint and React's active marker can land
+          // on different frames in a busy browser. Wait for the complete reading
+          // pose, then keep all of the existing geometry assertions below.
+          await p.waitForFunction(expected => {
+            const card = document.querySelector('.person-card[data-active="true"]');
+            return card?.querySelector('.person-name')?.getAttribute('aria-label') === expected
+              && Number(getComputedStyle(card.querySelector('.person-portrait')).opacity) > .99
+              && Number(getComputedStyle(card.querySelector('.person-copy')).opacity) > .99;
+          }, names[index]);
           const state = await rest(p);
           state.capture = `${evidenceDir}/matrix-${viewport.width}x${viewport.height}-rest-${index}.png`;
           await p.screenshot({ path: state.capture });

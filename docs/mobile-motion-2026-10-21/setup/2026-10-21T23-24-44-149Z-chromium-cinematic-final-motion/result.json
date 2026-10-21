@@ -1,0 +1,107 @@
+{
+  "startedAt": "2026-10-21T23:24:44.167Z",
+  "engine": "chromium",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-44-149Z-chromium-cinematic-final-motion",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-44-149Z-chromium-cinematic-final-motion\\video\\page@1d8efd9331455f2b090ce2e6bd79714d.webm",
+      "bytes": 414816
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-44-149Z-chromium-cinematic-final-motion\\video\\page@226a5a1eeef8bff0abce3937c22d6720.webm",
+      "bytes": 760491
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-44-149Z-chromium-cinematic-final-motion\\video\\page@4a8242d8ab17eb309464145f1997bb49.webm",
+      "bytes": 325087
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-44-149Z-chromium-cinematic-final-motion\\video\\page@7195a76eaa753cc353bc72aefc36adbd.webm",
+      "bytes": 839850
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-44-149Z-chromium-cinematic-final-motion\\video\\page@8f8e56ed335df3f5a994dd6c574da952.webm",
+      "bytes": 911999
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-44-149Z-chromium-cinematic-final-motion\\video\\page@e9663f2b9d62a6c5b2b85307787d6be0.webm",
+      "bytes": 758793
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-44-149Z-chromium-cinematic-final-motion\\video\\page@ebb4e2661032ec37997558288258d081.webm",
+      "bytes": 490689
+    }
+  ],
+  "browserVersion": "148.0.7778.96",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\scripts\\verify-motion.browser.js",
+  "result": {
+    "passed": 6,
+    "results": [
+      {
+        "scenario": "scroll-frame-reversible-and-chapter-arrival",
+        "pass": true,
+        "before": {
+          "scale": 0.8600000909511812,
+          "y": 84
+        },
+        "settled": {
+          "scale": 1,
+          "y": 0
+        },
+        "reversed": {
+          "scale": 0.8673301782932553,
+          "y": 79.6021
+        },
+        "contactRadiusOnArrival": 56
+      },
+      {
+        "scenario": "chapter-animation-cancelled-by-live-reduced-motion",
+        "pass": true,
+        "animations": 0,
+        "engine": "native",
+        "radius": "0px",
+        "frames": [
+          "none",
+          "none"
+        ],
+        "canvas": 0
+      },
+      {
+        "scenario": "slow-catalogue-keeps-old-photo-and-last-selection",
+        "pass": true,
+        "oldPhotoDuringDownload": true,
+        "latestChoicePreserved": true,
+        "intermediateOpacityObserved": true
+      },
+      {
+        "scenario": "catalogue-error-retry-and-rapid-toggle",
+        "pass": true,
+        "requests": 2,
+        "rapidRoundTrips": 3
+      },
+      {
+        "scenario": "keyboard-focus-cancels-entrance-and-menu-remains-native",
+        "pass": true,
+        "contactFocusVisibleDuringArrival": true,
+        "menuImmediateKeyboardAccess": true
+      },
+      {
+        "scenario": "mobile-touch-menu-anchor-catalogue-and-moving-media",
+        "pass": true,
+        "width": 390,
+        "touch": true,
+        "controlsOutsideMovingMedia": true
+      }
+    ]
+  },
+  "pageErrors": [],
+  "pass": true,
+  "testFinishedAt": "2026-10-21T23:25:17.894Z",
+  "cleanupWarnings": [],
+  "finishedAt": "2026-10-21T23:25:27.641Z"
+}

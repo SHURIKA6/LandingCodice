@@ -1,5 +1,11 @@
 # Verificação — Pessoas em cena
 
+## Coreografia da página inteira — execução de 21/10/2026
+
+O novo pedido de movimento foi autorizado com **“Implement the proposed plan.”** O [registro](../cinematic-motion-2026-10-21/README.md) e a [verificação desta execução](../cinematic-motion-2026-10-21/verification.md), inicialmente em andamento, guardam evidência nova. Os resultados anteriores abaixo permanecem históricos e não aprovam automaticamente a ampliação.
+
+**Fechamento em 21/10:** QA desta ampliação concluído, encerrando o estado inicial, com build/typecheck, 11 geometrias, smoke 16/16, motion 6/6, mobile 18/18 em Chromium/WebKit, coreografia 15/15 em cada motor e revisão de código/30 capturas. Correções, avisos dos runners, preservação e limites ficam no relatório próprio. Sem commit, push ou deploy.
+
 Data local: **20/10/2026, America/Cuiaba**. Execução técnica local; sem commit, push ou deploy. Branch: `feat/pessoas-em-cena`.
 
 ## Escultura azul posterior — 21/10/2026

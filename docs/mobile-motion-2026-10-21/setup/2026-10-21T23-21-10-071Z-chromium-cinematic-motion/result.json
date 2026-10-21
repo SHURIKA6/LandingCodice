@@ -1,0 +1,111 @@
+{
+  "startedAt": "2026-10-21T23:21:10.072Z",
+  "engine": "chromium",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-10-071Z-chromium-cinematic-motion",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-10-071Z-chromium-cinematic-motion\\video\\page@0e39cd5054f8d7f859d91cc423ed0aaf.webm",
+      "bytes": 490413
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-10-071Z-chromium-cinematic-motion\\video\\page@2f2f48d826887ae3a2e01427c9a4fd61.webm",
+      "bytes": 471255
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-10-071Z-chromium-cinematic-motion\\video\\page@5a8b1099a7deeeab51e4b9d570dabb9e.webm",
+      "bytes": 1053343
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-10-071Z-chromium-cinematic-motion\\video\\page@643c64fd7cce2cb12b43c51964e67edf.webm",
+      "bytes": 879861
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-10-071Z-chromium-cinematic-motion\\video\\page@6bc1fb62f9bb67e1a9f15ac2d29f6ddd.webm",
+      "bytes": 794086
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-10-071Z-chromium-cinematic-motion\\video\\page@cf4254196b8fc51df99580f65e57a8e9.webm",
+      "bytes": 525483
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-21-10-071Z-chromium-cinematic-motion\\video\\page@d4e574d4f450357ed204be2a1bd0bbec.webm",
+      "bytes": 735478
+    }
+  ],
+  "browserVersion": "148.0.7778.96",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\scripts\\verify-motion.browser.js",
+  "result": {
+    "passed": 6,
+    "results": [
+      {
+        "scenario": "scroll-frame-reversible-and-chapter-arrival",
+        "pass": true,
+        "before": {
+          "scale": 0.8600000909511812,
+          "y": 84
+        },
+        "settled": {
+          "scale": 1,
+          "y": 0
+        },
+        "reversed": {
+          "scale": 0.8673301782932553,
+          "y": 79.6021
+        },
+        "contactRadiusOnArrival": 64
+      },
+      {
+        "scenario": "chapter-animation-cancelled-by-live-reduced-motion",
+        "pass": true,
+        "animations": 0,
+        "engine": "native",
+        "radius": "0px",
+        "frames": [
+          "none",
+          "none"
+        ],
+        "canvas": 0
+      },
+      {
+        "scenario": "slow-catalogue-keeps-old-photo-and-last-selection",
+        "pass": true,
+        "oldPhotoDuringDownload": true,
+        "latestChoicePreserved": true,
+        "intermediateOpacityObserved": true
+      },
+      {
+        "scenario": "catalogue-error-retry-and-rapid-toggle",
+        "pass": true,
+        "requests": 2,
+        "rapidRoundTrips": 3
+      },
+      {
+        "scenario": "keyboard-focus-cancels-entrance-and-menu-remains-native",
+        "pass": true,
+        "contactFocusVisibleDuringArrival": true,
+        "menuImmediateKeyboardAccess": true
+      },
+      {
+        "scenario": "mobile-touch-menu-anchor-catalogue-and-moving-media",
+        "pass": true,
+        "width": 390,
+        "touch": true,
+        "controlsOutsideMovingMedia": true
+      }
+    ]
+  },
+  "pageErrors": [],
+  "pass": true,
+  "testFinishedAt": "2026-10-21T23:21:45.564Z",
+  "cleanupWarnings": [
+    "Error: context.close exceeded 6000 ms",
+    "Error: browser.close exceeded 8000 ms",
+    "Error: Command failed: powershell.exe -NoProfile -NonInteractive -Command $qaRootId = 66200\n$qaCache = 'C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\'\n$qaProcesses = @(Get-CimInstance Win32_Process)\n$qaOwned = [System.Collections.Generic.HashSet[int]]::new()\n[void]$qaOwned.Add($qaRootId)\ndo { $qaChanged = $false; foreach ($qaProcess in $qaProcesses) { if ($qaOwned.Contains([int]$qaProcess.ParentProcessId) -and $qaOwned.Add([int]$qaProcess.ProcessId)) { $qaChanged = $true } } } while ($qaChanged)\nforeach ($qaProcess in $qaProcesses) { if ($qaProcess.ProcessId -ne $qaRootId -and $qaOwned.Contains([int]$qaProcess.ProcessId) -and $qaProcess.ExecutablePath -and $qaProcess.ExecutablePath.StartsWith($qaCache, [System.StringComparison]::OrdinalIgnoreCase)) { Stop-Process -Id $qaProcess.ProcessId -Force -ErrorAction SilentlyContinue; Write-Output $qaProcess.ProcessId } }\n"
+  ],
+  "finishedAt": "2026-10-21T23:22:09.709Z"
+}

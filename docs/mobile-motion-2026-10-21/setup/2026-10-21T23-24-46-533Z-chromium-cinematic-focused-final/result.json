@@ -1,0 +1,712 @@
+{
+  "startedAt": "2026-10-21T23:24:46.541Z",
+  "engine": "chromium",
+  "packageDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\Corretor-web\\node_modules\\playwright",
+  "playwrightVersion": "1.60.0",
+  "url": "http://localhost:4321/",
+  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final",
+  "videos": [
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final\\video\\page@142af2b46952ed044cd791d769c8cb51.webm",
+      "bytes": 1343106
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final\\video\\page@3d051f64fed0b9ca50d2fadc834f4d27.webm",
+      "bytes": 316647
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final\\video\\page@62987b7cbe9deca0bdcec39dae206e8a.webm",
+      "bytes": 212591
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final\\video\\page@6c29712f9311cf9c49aff925c1ef2932.webm",
+      "bytes": 188594
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final\\video\\page@7c2ce0d9b587e5ca385be52443482656.webm",
+      "bytes": 577555
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final\\video\\page@892ecc1d302705c1e68ed42da608527d.webm",
+      "bytes": 580407
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final\\video\\page@89645fc4a94743fc189c29ac2aedb719.webm",
+      "bytes": 496379
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final\\video\\page@90a8e3aeba4179ff363a010292d0bf12.webm",
+      "bytes": 755760
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final\\video\\page@aeb9fdd4978a8079d6180d522d1742aa.webm",
+      "bytes": 675316
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final\\video\\page@c805d2322e44f4bb87d86d537bb4964a.webm",
+      "bytes": 234082
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final\\video\\page@c88aa40b8b25edf1cb75206bb8075c1a.webm",
+      "bytes": 240776
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final\\video\\page@c9d7ece019dc764e5085ef36ef132658.webm",
+      "bytes": 289993
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final\\video\\page@ca8a3da32e0da05be5b099b3cad34d28.webm",
+      "bytes": 633401
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final\\video\\page@d43a652cb31229d5539632dd41a94812.webm",
+      "bytes": 492570
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final\\video\\page@edb41686efd92402b251bf953dd34021.webm",
+      "bytes": 600352
+    },
+    {
+      "path": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T23-24-46-533Z-chromium-cinematic-focused-final\\video\\page@f5b57197fa9ea6d6786a2a8e1f53403b.webm",
+      "bytes": 441751
+    }
+  ],
+  "browserVersion": "148.0.7778.96",
+  "executablePath": "C:\\Users\\ferna\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
+  "status": 200,
+  "scenario": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\scripts\\verify-cinematic-motion.browser.js",
+  "result": {
+    "passed": 15,
+    "failed": 0,
+    "results": [
+      {
+        "scenario": "stylesheets-load-and-brand-is-rendered",
+        "pass": true,
+        "styles": [
+          {
+            "href": "/_next/static/chunks/27msa4syzcd0g.css",
+            "status": 200,
+            "type": "text/css; charset=UTF-8"
+          },
+          {
+            "href": "/_next/static/chunks/0rgzmicgburx-.css",
+            "status": 200,
+            "type": "text/css; charset=UTF-8"
+          }
+        ],
+        "background": "rgb(247, 249, 252)",
+        "font": "bodyFont, \"bodyFont Fallback\", sans-serif"
+      },
+      {
+        "scenario": "sculpture-arc-is-multiaxis-and-reversible-desktop",
+        "pass": true,
+        "initial": {
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "angle": 0
+        },
+        "forward": {
+          "x": -12,
+          "y": -8,
+          "scale": 1.06000008385094,
+          "angle": 17.99999772953795
+        },
+        "late": {
+          "x": -24,
+          "y": -28,
+          "scale": 0.9400002519414556,
+          "angle": -11.99999739834604
+        },
+        "reversed": {
+          "x": -12,
+          "y": -8,
+          "scale": 1.06000008385094,
+          "angle": 17.99999772953795
+        }
+      },
+      {
+        "scenario": "sculpture-arc-is-multiaxis-and-reversible-mobile",
+        "pass": true,
+        "initial": {
+          "x": 0,
+          "y": 0,
+          "scale": 1,
+          "angle": 0
+        },
+        "forward": {
+          "x": -12,
+          "y": -8,
+          "scale": 1.06000008385094,
+          "angle": 17.99999772953795
+        },
+        "late": {
+          "x": -24,
+          "y": -28,
+          "scale": 0.9400002519414556,
+          "angle": -11.99999739834604
+        },
+        "reversed": {
+          "x": -12,
+          "y": -8,
+          "scale": 1.06000008385094,
+          "angle": 17.99999772953795
+        }
+      },
+      {
+        "scenario": "roger-native-mask-is-preserved-during-reading",
+        "pass": true,
+        "before": {
+          "x": 0,
+          "y": -24.9606,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "after": {
+          "x": 0,
+          "y": -39.9067,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "ratio": 1.2509025270758123,
+        "covered": true,
+        "endCoverage": {
+          "ratio": 1.2509025270758123,
+          "covered": true
+        },
+        "linksBefore": {
+          "x": 56,
+          "y": 5656.375,
+          "width": 531.0625,
+          "height": 44
+        },
+        "linksAfter": {
+          "x": 56,
+          "y": 5656.375,
+          "width": 531.0625,
+          "height": 44
+        }
+      },
+      {
+        "scenario": "chapter-fields-and-countermoving-type-follow-scroll-desktop",
+        "pass": true,
+        "entry": {
+          "field": {
+            "x": -388.8,
+            "y": 0,
+            "scale": 1,
+            "angle": 0
+          },
+          "title": {
+            "x": 54,
+            "y": 21,
+            "scale": 1,
+            "angle": 0
+          }
+        },
+        "settled": {
+          "field": {
+            "x": -1555.2,
+            "y": 0,
+            "scale": 1,
+            "angle": 0
+          },
+          "title": {
+            "x": 0,
+            "y": 0,
+            "scale": 1,
+            "angle": 0
+          }
+        },
+        "reversed": {
+          "field": {
+            "x": -388.8,
+            "y": 0,
+            "scale": 1,
+            "angle": 0
+          },
+          "title": {
+            "x": 54,
+            "y": 21,
+            "scale": 1,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "scenario": "chapter-fields-and-countermoving-type-follow-scroll-mobile",
+        "pass": true,
+        "entry": {
+          "field": {
+            "x": -105.3,
+            "y": 0,
+            "scale": 1,
+            "angle": 0
+          },
+          "title": {
+            "x": 30,
+            "y": 15,
+            "scale": 1,
+            "angle": 0
+          }
+        },
+        "settled": {
+          "field": {
+            "x": -421.2,
+            "y": 0,
+            "scale": 1,
+            "angle": 0
+          },
+          "title": {
+            "x": 0,
+            "y": 0,
+            "scale": 1,
+            "angle": 0
+          }
+        },
+        "reversed": {
+          "field": {
+            "x": -105.3,
+            "y": 0,
+            "scale": 1,
+            "angle": 0
+          },
+          "title": {
+            "x": 30,
+            "y": 15,
+            "scale": 1,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "scenario": "screenshots-pan-inside-mask-and-controls-stay-still-desktop",
+        "pass": true,
+        "before": {
+          "x": 0,
+          "y": -36.675,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "after": {
+          "x": 0,
+          "y": -52.0747,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "end": {
+          "x": 0,
+          "y": -72.966,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "reversed": {
+          "x": 0,
+          "y": -36.675,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "coverage": {
+          "top": true,
+          "bottom": true,
+          "left": true,
+          "right": true
+        },
+        "endCoverage": {
+          "top": true,
+          "bottom": true,
+          "left": true,
+          "right": true
+        },
+        "controlsBefore": {
+          "x": 56,
+          "y": 4609.234375,
+          "width": 1328,
+          "height": 88
+        },
+        "controlsAfter": {
+          "x": 56,
+          "y": 4609.234375,
+          "width": 1328,
+          "height": 88
+        }
+      },
+      {
+        "scenario": "screenshots-pan-inside-mask-and-controls-stay-still-mobile",
+        "pass": true,
+        "before": {
+          "x": 0,
+          "y": -11.6502,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "after": {
+          "x": 0,
+          "y": -16.5243,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "end": {
+          "x": 0,
+          "y": -23.1617,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "reversed": {
+          "x": 0,
+          "y": -11.6502,
+          "scale": 1.1,
+          "angle": 0
+        },
+        "coverage": {
+          "top": true,
+          "bottom": true,
+          "left": true,
+          "right": true
+        },
+        "endCoverage": {
+          "top": true,
+          "bottom": true,
+          "left": true,
+          "right": true
+        },
+        "controlsBefore": {
+          "x": 20,
+          "y": 3974.03125,
+          "width": 350,
+          "height": 212.28125
+        },
+        "controlsAfter": {
+          "x": 20,
+          "y": 3974.03125,
+          "width": 350,
+          "height": 212.28125
+        }
+      },
+      {
+        "scenario": "desktop-process-connects-four-steps-and-reverses",
+        "pass": true,
+        "before": {
+          "axis": "horizontal",
+          "progress": 0.2,
+          "steps": [
+            0.801,
+            0,
+            0,
+            0
+          ]
+        },
+        "after": {
+          "axis": "horizontal",
+          "progress": 0.8,
+          "steps": [
+            1,
+            1,
+            1,
+            0.201
+          ]
+        },
+        "reversed": {
+          "axis": "horizontal",
+          "progress": 0.2,
+          "steps": [
+            0.801,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "scenario": "footer-letters-assemble-and-return-desktop",
+        "pass": true,
+        "before": [
+          {
+            "y": 255.59,
+            "angle": 5.153998968700937
+          },
+          {
+            "y": -242.286,
+            "angle": -5.3999990494314964
+          },
+          {
+            "y": 280.881,
+            "angle": 5.663997699643575
+          },
+          {
+            "y": -267.322,
+            "angle": -5.9579779820022205
+          },
+          {
+            "y": 297.544,
+            "angle": 5.999972975483472
+          },
+          {
+            "y": -269.206,
+            "angle": -5.999972975483472
+          }
+        ],
+        "settled": [
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          }
+        ],
+        "reversed": [
+          {
+            "y": 255.59,
+            "angle": 5.153998968700937
+          },
+          {
+            "y": -242.286,
+            "angle": -5.3999990494314964
+          },
+          {
+            "y": 280.881,
+            "angle": 5.663997699643575
+          },
+          {
+            "y": -267.322,
+            "angle": -5.9579779820022205
+          },
+          {
+            "y": 297.544,
+            "angle": 5.999972975483472
+          },
+          {
+            "y": -269.206,
+            "angle": -5.999972975483472
+          }
+        ]
+      },
+      {
+        "scenario": "footer-letters-assemble-and-return-mobile",
+        "pass": true,
+        "before": [
+          {
+            "y": 57.1593,
+            "angle": 4.085999686224792
+          },
+          {
+            "y": -54.1457,
+            "angle": -4.277997660767973
+          },
+          {
+            "y": 62.8668,
+            "angle": 4.493998048757475
+          },
+          {
+            "y": -59.8412,
+            "angle": -4.72799833741595
+          },
+          {
+            "y": 69.7495,
+            "angle": 4.985998461197871
+          },
+          {
+            "y": -66.7518,
+            "angle": -5.2739955810173225
+          }
+        ],
+        "settled": [
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          },
+          {
+            "y": 0,
+            "angle": 0
+          }
+        ],
+        "reversed": [
+          {
+            "y": 57.1593,
+            "angle": 4.085999686224792
+          },
+          {
+            "y": -54.1457,
+            "angle": -4.277997660767973
+          },
+          {
+            "y": 62.8668,
+            "angle": 4.493998048757475
+          },
+          {
+            "y": -59.8412,
+            "angle": -4.72799833741595
+          },
+          {
+            "y": 69.7495,
+            "angle": 4.985998461197871
+          },
+          {
+            "y": -66.7518,
+            "angle": -5.2739955810173225
+          }
+        ]
+      },
+      {
+        "scenario": "menu-exit-can-be-reversed-and-escape-keeps-focus",
+        "pass": true,
+        "closeReversedByRealClick": true,
+        "escapeClosedImmediately": true,
+        "summaryFocusRestored": true,
+        "finalCloseCompleted": true
+      },
+      {
+        "scenario": "live-reduced-motion-clears-all-new-spatial-layers",
+        "pass": true,
+        "transforms": [
+          {
+            "className": "hero-sculpture-parallax",
+            "transform": "none"
+          },
+          {
+            "className": "hero-sculpture-pointer",
+            "transform": "none"
+          },
+          {
+            "className": "scroll-frame-surface",
+            "transform": "none"
+          },
+          {
+            "className": "project-media-pan",
+            "transform": "none"
+          },
+          {
+            "className": "scroll-frame-surface",
+            "transform": "none"
+          },
+          {
+            "className": "project-media-pan",
+            "transform": "none"
+          }
+        ],
+        "animations": 0,
+        "canvas": 0,
+        "engine": "native",
+        "width": 1440,
+        "viewport": 1440
+      },
+      {
+        "scenario": "contact-keyboard-focus-is-immediate-and-animation-free",
+        "pass": true,
+        "active": true,
+        "hit": true,
+        "animations": 0,
+        "ancestors": [
+          {
+            "className": "founder-contact",
+            "opacity": "1",
+            "transform": "none"
+          },
+          {
+            "className": "founder",
+            "opacity": "1",
+            "transform": "none"
+          },
+          {
+            "className": "founders",
+            "opacity": "1",
+            "transform": "none"
+          },
+          {
+            "className": "section-shell",
+            "opacity": "1",
+            "transform": "none"
+          },
+          {
+            "className": "contact-section motion-chapter",
+            "opacity": "1",
+            "transform": "none"
+          }
+        ]
+      },
+      {
+        "scenario": "large-font-fallback-neutralizes-new-masks-and-spatial-layers",
+        "pass": true,
+        "method": "double the measured person-kicker font to exercise existing large-text fallback; not physical browser zoom",
+        "chapterEnabled": [
+          "false",
+          "false",
+          "false"
+        ],
+        "transforms": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "headingOverflow": [
+          "visible",
+          "visible",
+          "visible",
+          "visible",
+          "visible",
+          "visible"
+        ],
+        "fieldsVisible": false,
+        "width": 390,
+        "viewport": 390
+      }
+    ]
+  },
+  "pageErrors": [],
+  "pass": true,
+  "testFinishedAt": "2026-10-21T23:25:52.023Z",
+  "cleanupWarnings": [
+    "Error: context.close exceeded 6000 ms"
+  ],
+  "finishedAt": "2026-10-21T23:26:01.899Z"
+}

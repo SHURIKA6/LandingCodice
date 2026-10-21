@@ -1,5 +1,17 @@
 # Codice — landing e estudo visual
 
+## Versionamento autorizado — 21/10/2026
+
+Após o fechamento do QA da coreografia da página inteira, o usuário pediu **“Commit e push”**. A entrega e suas evidências são versionadas em `main`, com destino a `origin/main` no repositório existente. Os registros de “sem commit, push ou deploy” abaixo descrevem o fechamento local anterior a essa solicitação. Este registro não equivale a homologação de deploy remoto.
+
+## Coreografia da página inteira — execução de 21/10/2026
+
+O usuário autorizou ampliar o movimento cinematográfico em toda a landing com **“Implement the proposed plan.”** A direção Pessoas em cena, conteúdo, fotografias, contatos, oferta e palco de 300svh continuam vigentes. A ampliação trabalha escultura, passagens de capítulos, percurso interno das capturas reais, oferta, processo, fechamento e interações, com controle pela rolagem e pausas de leitura. Sem dependências novas ou publicação.
+
+[Registro da execução](docs/cinematic-motion-2026-10-21/README.md) · [Verificação atual](docs/cinematic-motion-2026-10-21/verification.md). A verificação começou em andamento; os resultados das versões preservadas abaixo não aprovam automaticamente esta alteração.
+
+**QA local concluído em 21/10:** build/typecheck, 11 geometrias, smoke 16/16, motion 6/6, mobile 18/18 em Chromium/WebKit e cenários novos 15/15 em cada motor; revisão de código e 30 capturas. [Vídeo mobile](docs/cinematic-motion-2026-10-21/mobile-tour.mp4) · [Vídeo desktop](docs/cinematic-motion-2026-10-21/desktop-tour.mp4). Produção local em `http://localhost:4321/`, somente nesta máquina. Alterações locais em `main`, sem commit, push ou deploy. Para encerrar: `npm run dev -- stop`.
+
 ## Escultura azul na abertura — execução de 21/10/2026
 
 O usuário escolheu recuperar a escultura anterior dos dois Cs entrelaçados, trocar o verde pelo azul **`#2f4bff`** e recolocá-la na abertura. A nova edição conserva cromado, volume e transparência; os originais permanecem preservados. A peça acompanha título e descrição em três colunas no desktop e antecede o título no celular, com entrada finita e parallax limitado. Os retratos e o palco de 300svh continuam na sequência; header, favicon, oferta e contatos mantêm o contrato vigente.

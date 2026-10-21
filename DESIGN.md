@@ -23,6 +23,14 @@ typography:
 
 # Design System: Codice — Pessoas em cena
 
+## Coreografia da página inteira — execução de 21/10/2026
+
+O plano autorizado com **“Implement the proposed plan.”** mantém a paleta/fontes e os retratos como assinatura; amplia a continuidade entre cenas com campos decorativos direcionais, títulos em contraponto, capturas com percurso interno, processo progressivo e palavra final recomposta pela rolagem. A escultura azul ganha arco de deslocamento/escala/rotação plana e resposta ao ponteiro em camada independente. Ações mantêm caixas estáveis. Menu tem saída curta reversível por novo acionamento, sem atrasar navegação/Escape. Não há novo palco fixo, biblioteca ou loop ambiente.
+
+Usar os modos e fallbacks existentes, manter 300svh, reflow com texto ampliado, cancelamento ao ocultar a aba e renderização sob demanda. [Registro](docs/cinematic-motion-2026-10-21/README.md) e [verificação desta execução](docs/cinematic-motion-2026-10-21/verification.md), inicialmente em andamento, substituem qualquer inferência de QA a partir dos registros históricos abaixo.
+
+**Fechamento desta ampliação em 21/10:** código e 30 capturas revisados; build/typecheck, 11 geometrias, smoke 16/16, motion 6/6, mobile 18/18 e coreografia 15/15 em cada motor passaram. Foco estabiliza também transições CSS das setas; o fallback de fonte ampliada passou sem erros de página após agendar a medição do hero fora da entrega de ResizeObserver. Vídeos/limites no relatório próprio. Sem commit, push ou deploy.
+
 ## Escultura azul na abertura — execução de 21/10/2026
 
 O usuário escolheu recuperar a escultura anterior dos dois Cs entrelaçados e recolocá-la na abertura, com o esmalte em azul de base **`#2f4bff`** e a faixa cromada preservada. A edição é um raster transparente, com novos PNG/WebP e proveniência em `public/brand/codice-sculpture-blue.json`; não substituir os originais nem simular novo modelo 3D.

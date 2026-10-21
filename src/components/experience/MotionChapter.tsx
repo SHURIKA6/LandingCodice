@@ -5,12 +5,13 @@ import type { ReactNode } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useMotionMode } from './useMotionMode';
 import './mobile-chapters.css';
+import './chapter-choreography.css';
 
 const ease = 'cubic-bezier(.16,1,.3,1)';
 const control = 'a, button, summary, input, select, textarea, [tabindex]';
 const clamp = (value: number) => Math.max(0, Math.min(1, value));
 
-/** Server-rendered children stay visible; choreography is an optional layer. */
+/** The section stays in document flow; only its lettering and painted field move. */
 export function MotionChapter({ children, className, id, labelledBy }: {
   children: ReactNode;
   className: string;
@@ -18,7 +19,6 @@ export function MotionChapter({ children, className, id, labelledBy }: {
   labelledBy: string;
 }) {
   const section = useRef<HTMLElement>(null);
-  const surface = useRef<HTMLDivElement>(null);
   const revealed = useRef(new WeakSet<HTMLElement>());
   const mode = useMotionMode();
   const { scrollYProgress, scrollY } = useScroll({ target: section, offset: ['start end', 'start 20%'] });
@@ -26,172 +26,178 @@ export function MotionChapter({ children, className, id, labelledBy }: {
 
   useEffect(() => {
     const root = section.current;
-    if (!root || mode === 'static' || !('IntersectionObserver' in window) || !Element.prototype.animate) return;
+    if (!root || mode === 'static' || !('IntersectionObserver' in window)) return;
     const mobile = mode !== 'desktop';
     const animations = new Map<Animation, HTMLElement>();
     const restores: (() => void)[] = [];
-    const headingLines = new Map<HTMLElement, HTMLElement[]>();
+    const written = new Map<HTMLElement, Map<string, string>>();
+    const largeText = () => document.documentElement.hasAttribute('data-large-text');
+    const write = (target: HTMLElement, property: string, value: number) => {
+      const next = String(Math.round(value * 1000) / 1000);
+      let properties = written.get(target);
+      if (!properties) { properties = new Map(); written.set(target, properties); }
+      if (properties.get(property) === next) return;
+      properties.set(property, next); target.style.setProperty(property, next);
+    };
+    const cancel = () => { animations.forEach((_, animation) => animation.cancel()); animations.clear(); };
     const play = (target: HTMLElement, frames: Keyframe[], duration: number, delay = 0) => {
-      // The target box and every ancestor of a control remain in the stable layer.
-      if (document.hidden || root.contains(document.activeElement) || target.matches(control) || target.querySelector(control)) return;
+      if (!Element.prototype.animate || document.hidden || largeText() || root.contains(document.activeElement)
+        || target.matches(control) || target.querySelector(control)) return;
       const previous = target.style.willChange;
       target.style.willChange = 'transform, opacity';
       const animation = target.animate(frames, { duration, easing: ease, delay, fill: 'backwards' });
       animations.set(animation, target);
-      const finish = () => {
-        target.style.willChange = previous;
-        animations.delete(animation);
-      };
+      const finish = () => { target.style.willChange = previous; animations.delete(animation); };
       animation.addEventListener('finish', finish, { once: true });
       animation.addEventListener('cancel', finish, { once: true });
     };
 
-    if (mobile) root.querySelectorAll<HTMLElement>('[data-reveal="heading"] h2').forEach(heading => {
+    // Preserve the original nodes, authored line breaks and inline emphasis.
+    root.querySelectorAll<HTMLElement>('[data-reveal="heading"] h2').forEach(heading => {
       const original = Array.from(heading.childNodes);
       if (!original.some(node => node instanceof HTMLBRElement)) return;
       const fragment = document.createDocumentFragment();
-      const lines: HTMLElement[] = [];
       let line: HTMLSpanElement;
       const nextLine = () => {
-        const mask = document.createElement('span');
-        mask.className = 'chapter-title-line';
-        line = document.createElement('span');
-        mask.append(line);
-        fragment.append(mask);
-        lines.push(line);
+        const mask = document.createElement('span'); mask.className = 'chapter-title-line';
+        line = document.createElement('span'); mask.append(line); fragment.append(mask);
       };
       nextLine();
-      for (const node of original) {
+      original.forEach(node => {
         if (node instanceof HTMLBRElement) nextLine();
         else if (!(node instanceof SVGElement)) line!.append(node);
-      }
-      // Keep the decorative contact arrow a direct child for its authored layout.
+      });
       original.filter(node => node instanceof SVGElement).forEach(node => fragment.append(node));
       heading.replaceChildren(fragment);
-      headingLines.set(heading, lines);
       restores.push(() => heading.replaceChildren(...original));
     });
 
-    // Only decorative, aria-hidden lettering is split. The server text and arrow
-    // are restored before a responsive mode change or unmount.
-    const word = mobile ? root.querySelector<HTMLElement>('.footer-word[aria-hidden="true"]') : null;
+    const word = root.querySelector<HTMLElement>('.footer-word[aria-hidden="true"]');
     let letters: HTMLElement[] = [];
     if (word) {
       const text = Array.from(word.childNodes).find(node => node.nodeType === Node.TEXT_NODE && node.textContent?.trim());
       if (text) {
-        const wrapper = document.createElement('span');
-        wrapper.className = 'footer-letters';
+        const wrapper = document.createElement('span'); wrapper.className = 'footer-letters';
         letters = Array.from(text.textContent || '').map(letter => {
-          const span = document.createElement('span');
-          span.className = 'footer-letter';
-          span.textContent = letter;
-          wrapper.append(span);
-          return span;
+          const span = document.createElement('span'); span.className = 'footer-letter'; span.textContent = letter;
+          wrapper.append(span); return span;
         });
-        text.replaceWith(wrapper);
-        restores.push(() => wrapper.replaceWith(text));
+        text.replaceWith(wrapper); restores.push(() => wrapper.replaceWith(text));
       }
     }
 
+    // A stable outer track reserves natural size. Scroll and finite entrance
+    // use different surfaces, so they never overwrite each other's transform.
+    const price = root.querySelector<HTMLElement>('.package-price');
+    let priceTrack: HTMLElement | null = null;
+    if (price) {
+      priceTrack = document.createElement('div'); priceTrack.className = 'price-motion-track';
+      const priceSurface = document.createElement('div'); priceSurface.className = 'price-motion-surface';
+      price.replaceWith(priceTrack); priceTrack.append(priceSurface); priceSurface.append(price);
+      const track = priceTrack; restores.push(() => track.replaceWith(price));
+    }
+    const offer = root.querySelector<HTMLElement>('.package-grid');
+    const inclusions = root.querySelector<HTMLElement>('.package-details > ul');
+    const inclusionItems = inclusions ? Array.from(inclusions.querySelectorAll<HTMLElement>(':scope > li')) : [];
+    const process = root.querySelector<HTMLOListElement>('.process ol');
+    const steps = process ? Array.from(process.querySelectorAll<HTMLElement>(':scope > li')) : [];
+    process?.setAttribute('data-process-motion', 'true');
+    process?.setAttribute('data-process-axis', mobile ? 'vertical' : 'horizontal');
+
     const observer = new IntersectionObserver(entries => {
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
-        const target = entry.target as HTMLElement;
-        observer.unobserve(target);
-        if (revealed.current.has(target)) continue;
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const target = entry.target as HTMLElement; observer.unobserve(target);
+        if (revealed.current.has(target)) return;
         revealed.current.add(target);
-        if (document.hidden || target.contains(document.activeElement)) continue;
         const kind = target.dataset.reveal;
-        const delay = Math.min(240, Math.max(0, Number(target.dataset.delay || 0)));
-        if (target === surface.current) {
-          play(target, [{ transform: 'translateY(64px)', borderTopLeftRadius: '64px', borderTopRightRadius: '64px' },
-            { transform: 'translateY(0)', borderTopLeftRadius: '0px', borderTopRightRadius: '0px' }], 800);
-        } else if (kind === 'heading') {
-          const heading = target.querySelector<HTMLElement>('h2, h3') || target;
-          const lines = headingLines.get(heading) || [heading];
-          const initial = mobile && id === 'contato' ? 'translateX(-48px)' : `translateY(${mobile && id === 'pacote' ? 48 : 64}px)`;
-          lines.forEach((line, index) => play(line, [{ transform: initial, clipPath: 'inset(0 0 85% 0)' },
-            { transform: 'translate(0, 0)', clipPath: 'inset(-8% 0 -8% 0)' }], 850, mobile ? index * 90 : 0));
-          if (mobile) {
-            const eyebrow = target.querySelector<HTMLElement>('.eyebrow');
-            const copy = target.querySelector<HTMLElement>('p:last-child:not(.eyebrow)');
-            if (eyebrow) play(eyebrow, [{ transform: 'translateX(-32px)', opacity: .55 }, { transform: 'translateX(0)', opacity: 1 }], 600);
-            if (copy) play(copy, [{ transform: 'translateY(32px)', opacity: .55 }, { transform: 'translateY(0)', opacity: 1 }], 700, 120);
-          }
-        } else if (kind === 'word' && letters.length) {
-          letters.forEach((letter, index) => play(letter, [
-            { transform: `translateY(${index % 2 ? '110%' : '-95%'}) rotate(${index % 2 ? 5 : -5}deg)`, clipPath: 'inset(0 0 100% 0)' },
-            { transform: 'translateY(0) rotate(0)', clipPath: 'inset(-10% 0 -10% 0)' },
-          ], 850, index * (300 / Math.max(1, letters.length - 1))));
-          const arrow = word?.querySelector<HTMLElement>(':scope > span:not(.footer-letters)');
-          if (arrow) play(arrow, [{ transform: 'translate(20px, 28px) rotate(-35deg)', opacity: .4 }, { transform: 'translate(0, 0) rotate(0)', opacity: 1 }], 700, 180);
-        } else if (kind === 'word') {
-          play(target, [{ transform: 'translateY(45%)', clipPath: 'inset(0 0 100% 0)' },
-            { transform: 'translateY(0)', clipPath: 'inset(0 0 -5% 0)' }], 1000);
+        if (kind === 'heading') {
+          const eyebrow = target.querySelector<HTMLElement>('.eyebrow');
+          const copy = target.querySelector<HTMLElement>('p:last-child:not(.eyebrow)');
+          if (eyebrow) play(eyebrow, [{ transform: 'translateX(-24px)', opacity: .6 }, { transform: 'translateX(0)', opacity: 1 }], 600);
+          if (copy) play(copy, [{ transform: 'translateY(28px)', opacity: .6 }, { transform: 'translateY(0)', opacity: 1 }], 700, 100);
         } else if (kind === 'price') {
-          // The complete price is one typographic unit; no number counter.
           play(target, [{ transform: 'translateX(-48px)', opacity: .55 }, { transform: 'translateX(0)', opacity: 1 }], 750);
         } else if (kind === 'inclusion') {
-          play(target, [{ transform: 'translateX(36px)', opacity: .6 }, { transform: 'translateX(0)', opacity: 1 }], 650, delay);
-        } else if (kind !== 'process' || !mobile) {
-          play(target, [{ transform: `translateY(${mobile ? 48 : 42}px)`, opacity: .45 },
-            { transform: 'translateY(0)', opacity: 1 }], mobile ? 700 : 850, delay);
+          const delay = Math.min(240, Math.max(0, Number(target.dataset.delay || 0)));
+          play(target, [{ transform: 'translateX(28px)', opacity: .65 }, { transform: 'translateX(0)', opacity: 1 }], 650, delay);
+        } else if (kind !== 'process' && kind !== 'word') {
+          play(target, [{ transform: `translateY(${mobile ? 40 : 32}px)`, opacity: .6 }, { transform: 'translateY(0)', opacity: 1 }], 750);
         }
-      }
+      });
     }, { threshold: .05, rootMargin: '0px 0px -3% 0px' });
     root.querySelectorAll<HTMLElement>('[data-reveal]').forEach(target => {
-      // A visible link never waits for its parent to finish arriving.
-      if (!target.matches(control) && !target.querySelector(control) && !(mobile && target.dataset.reveal === 'process')) observer.observe(target);
+      if (!target.matches(control) && !target.querySelector(control)) observer.observe(target);
     });
-    if (mobile && surface.current) observer.observe(surface.current);
 
-    // A local filete and numbers follow the same scroll position in either
-    // direction. Text stays readable even before the step is reached.
-    const process = mobile ? root.querySelector<HTMLOListElement>('.process ol') : null;
-    const steps = process ? Array.from(process.querySelectorAll<HTMLElement>(':scope > li')) : [];
-    let processVisible = false;
-    const updateProcess = () => {
-      if (!process || !processVisible || document.hidden) return;
-      const bounds = process.getBoundingClientRect();
-      const readingLine = window.innerHeight * .72;
-      process.style.setProperty('--process-progress', String(clamp((readingLine - bounds.top) / Math.max(1, bounds.height))));
-      for (const step of steps) {
-        const stepBounds = step.getBoundingClientRect();
-        const progress = clamp((readingLine - stepBounds.top) / Math.max(80, stepBounds.height * .8));
-        step.style.setProperty('--step-progress', String(progress));
+    const visible = new Set<HTMLElement>();
+    const targets = [priceTrack, offer, inclusions, process, word].filter((node): node is HTMLElement => !!node);
+    const updateEntry = () => {
+      if (!document.hidden && !largeText()) write(root, '--chapter-entry', clamp(scrollYProgress.get()));
+    };
+    const update = () => {
+      if (document.hidden || largeText()) return;
+      const viewport = window.innerHeight;
+      // Read every relevant rect before performing any style write.
+      const bounds = new Map(Array.from(visible, target => [target, target.getBoundingClientRect()] as const));
+      const stepBounds = process && visible.has(process) ? steps.map(step => step.getBoundingClientRect()) : [];
+      const inclusionTops = inclusions && visible.has(inclusions) ? inclusionItems.map(item => item.offsetTop) : [];
+      if (priceTrack && bounds.has(priceTrack)) write(priceTrack, '--price-progress', clamp((viewport * .88 - bounds.get(priceTrack)!.top) / (viewport * .38)));
+      if (offer && bounds.has(offer)) write(offer, '--offer-progress', clamp((viewport * .92 - bounds.get(offer)!.top) / (viewport * .4)));
+      if (inclusions && bounds.has(inclusions)) inclusionItems.forEach((item, index) => {
+        write(item, '--inclusion-progress', clamp((viewport * .88 - bounds.get(inclusions)!.top - inclusionTops[index]) / (viewport * .3)));
+      });
+      if (process && bounds.has(process)) {
+        const rect = bounds.get(process)!;
+        const progress = clamp((viewport * .72 - rect.top) / Math.max(1, mobile ? rect.height : Math.max(rect.height, viewport * .4)));
+        write(process, '--process-progress', progress);
+        steps.forEach((step, index) => write(step, '--step-progress', mobile
+          ? clamp((viewport * .72 - stepBounds[index].top) / Math.max(80, stepBounds[index].height * .8))
+          : clamp(progress * steps.length - index)));
+      }
+      if (word && bounds.has(word)) {
+        const rect = bounds.get(word)!;
+        const progress = clamp((viewport * .95 - rect.top) / Math.max(80, Math.min(viewport * .4, rect.height * .75)));
+        letters.forEach((letter, index) => write(letter, '--letter-progress', clamp((progress - index * .045) / (1 - index * .045))));
+        write(word, '--word-progress', progress);
       }
     };
-    const processObserver = process ? new IntersectionObserver(entries => {
-      processVisible = entries[0].isIntersecting;
-      process.dataset.processMotion = 'true';
-      updateProcess();
-    }, { rootMargin: '20% 0px' }) : null;
-    if (process) processObserver?.observe(process);
-    const stopScroll = process ? scrollY.on('change', updateProcess) : () => {};
-    const cancel = () => { animations.forEach((_, animation) => animation.cancel()); animations.clear(); };
-    const visibility = () => { if (document.hidden) cancel(); else updateProcess(); };
-    const stabilize = () => cancel();
+    const localObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) visible.add(entry.target as HTMLElement); else visible.delete(entry.target as HTMLElement);
+      }); update();
+    }, { rootMargin: '120px 0px' });
+    targets.forEach(target => localObserver.observe(target));
+    const resizeObserver = new ResizeObserver(() => { updateEntry(); update(); });
+    targets.forEach(target => resizeObserver.observe(target));
+    const stopEntry = scrollYProgress.on('change', updateEntry);
+    const stopScroll = scrollY.on('change', update);
+    const visibility = () => { if (document.hidden) cancel(); else { updateEntry(); update(); } };
+    const textObserver = new MutationObserver(() => {
+      root.dataset.choreography = String(!largeText());
+      if (largeText()) cancel(); else { updateEntry(); update(); }
+    });
+    textObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-large-text'] });
+    root.dataset.choreography = String(!largeText()); updateEntry();
     document.addEventListener('visibilitychange', visibility);
-    root.addEventListener('focusin', stabilize);
-    root.addEventListener('pointerdown', stabilize, { passive: true });
-    window.addEventListener('resize', updateProcess, { passive: true });
+    root.addEventListener('focusin', cancel); root.addEventListener('pointerdown', cancel, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
     return () => {
-      observer.disconnect(); processObserver?.disconnect(); stopScroll(); cancel();
+      observer.disconnect(); localObserver.disconnect(); resizeObserver.disconnect(); textObserver.disconnect();
+      stopEntry(); stopScroll(); cancel();
       document.removeEventListener('visibilitychange', visibility);
-      root.removeEventListener('focusin', stabilize);
-      root.removeEventListener('pointerdown', stabilize);
-      window.removeEventListener('resize', updateProcess);
-      process?.removeAttribute('data-process-motion');
-      process?.style.removeProperty('--process-progress');
-      steps.forEach(step => step.style.removeProperty('--step-progress'));
-      restores.forEach(restore => restore());
+      root.removeEventListener('focusin', cancel); root.removeEventListener('pointerdown', cancel);
+      window.removeEventListener('resize', update); delete root.dataset.choreography;
+      process?.removeAttribute('data-process-motion'); process?.removeAttribute('data-process-axis');
+      written.forEach((properties, target) => properties.forEach((_, property) => target.style.removeProperty(property)));
+      restores.reverse().forEach(restore => restore());
     };
-  }, [id, mode, scrollY]);
+  }, [mode, scrollY, scrollYProgress]);
 
   return <motion.section ref={section} id={id} aria-labelledby={labelledBy}
     className={`${className} motion-chapter`} data-motion={mode !== 'static'} data-motion-mode={mode}
     style={mode === 'static' ? undefined : { borderTopLeftRadius: radius, borderTopRightRadius: radius }}>
-    <div className="chapter-surface-clip" aria-hidden="true"><div ref={surface} className="chapter-surface" /></div>
+    <div className="chapter-surface-clip" aria-hidden="true"><div className="chapter-surface" /></div>
     {children}
   </motion.section>;
 }

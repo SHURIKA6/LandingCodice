@@ -14,7 +14,7 @@
   aspect-ratio: 1;
   pointer-events: none;
 }
-.hero-sculpture-parallax, .hero-sculpture-entry { width: 100%; height: 100%; }
+.hero-sculpture-parallax, .hero-sculpture-pointer, .hero-sculpture-entry { width: 100%; height: 100%; }
 .hero-sculpture-entry img { width: 100%; height: 100%; object-fit: contain; }
 .people-hero[data-introduced=true] .hero-sculpture-entry {
   animation: sculpture-arrive 850ms cubic-bezier(.16, 1, .3, 1) backwards;
@@ -43,6 +43,8 @@ html[data-large-text] .people-hero .hero-intro {
   grid-template-areas: 'sculpture' 'heading' 'description';
 }
 html[data-large-text] .people-hero .hero-sculpture { width: 112px; }
+html[data-large-text] .hero-sculpture-parallax,
+html[data-large-text] .hero-sculpture-pointer { transform: none !important; }
 @media (prefers-reduced-motion: reduce) {
-  .hero-sculpture-parallax, .people-hero .hero-sculpture-entry { animation: none; transform: none !important; }
+  .hero-sculpture-parallax, .hero-sculpture-pointer, .people-hero .hero-sculpture-entry { animation: none; transform: none !important; }
 }

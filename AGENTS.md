@@ -4,6 +4,14 @@ O usuário aprovou a direção **Pessoas em cena** e autorizou explicitamente os
 
 Antes de alterar a experiência, consultar [PRODUCT.md](PRODUCT.md), [DESIGN.md](DESIGN.md), o [briefing atual](docs/pessoas-em-cena-2026-10-20/README.md) e a [verificação atual](docs/pessoas-em-cena-2026-10-20/verification.md). A entrega de 20/10 foi implementada e verificada localmente; esses resultados são uma baseline dessa versão, não evidência automática para alterações futuras.
 
+### Coreografia da página inteira — execução autorizada em 21/10/2026
+
+**Versionamento posterior ao QA:** o pedido **“Commit e push”** de 21/10 autorizou registrar e enviar esta entrega em `main` para `origin/main`. Os registros abaixo de ausência de commit/push pertencem ao fechamento local anterior. Preservar também as evidências de QA no versionamento, conforme o padrão existente do repositório; push não comprova homologação de deploy remoto.
+
+O usuário pediu mais movimento com frontend-design, Impeccable e UI/UX Pro Max e autorizou o plano com **“Implement the proposed plan.”** A ampliação acrescenta trajetória da escultura, passagens de capítulos, movimento interno das capturas, processo e fechamento ligados ao scroll, além de interações/menu. Preservar Pessoas em cena, fotografias, dados comerciais, 300svh e modos de fallback. Não acrescentar palcos fixos ou loops ambiente. Código e QA desta alteração têm [registro próprio](docs/cinematic-motion-2026-10-21/README.md) e [verificação própria](docs/cinematic-motion-2026-10-21/verification.md), inicialmente em andamento; resultados anteriores são baseline histórica. Atualizar o estado somente a partir dos checks novos.
+
+**Fechamento desta ampliação em 21/10:** QA local concluído no relatório próprio, com build/typecheck, 11 geometrias, smoke 16/16, motion 6/6, mobile 18/18 e coreografia 15/15 em cada motor. Revisão de código e 30 capturas concluída. Preservar também o cancelamento de fechamento pendente ao ocultar/trocar modo e a medição de texto do hero agendada fora da entrega de ResizeObserver. A suíte mobile aguarda pessoa/foto/nome legíveis antes de conferir geometria, sem depender somente de 140 ms fixos. As novas evidências não homologam aparelho físico ou publicações. Checkout `main`, alterações locais sem commit, push ou deploy.
+
 ### Escultura azul na abertura — execução autorizada em 21/10/2026
 
 O usuário confirmou a escultura antiga dos dois Cs entrelaçados, pediu esmalte azul **`#2f4bff`** mantendo cromado e transparência, escolheu recolocá-la na abertura e autorizou o plano com **“Implement the proposed plan.”** A edição nativa por ImageGen criou variantes novas em `public/brand/codice-sculpture-blue.png` e `.webp`, com [manifesto](public/brand/codice-sculpture-blue.json); preservar também os originais verde/cromado e sua proveniência. A peça é decorativa e raster, sem novo modelo Three ou dependência.
