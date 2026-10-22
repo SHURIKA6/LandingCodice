@@ -2,12 +2,11 @@
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import type { ComponentType } from 'react';
-import { motion, useInView, useMotionValue, useMotionValueEvent, useScroll, useSpring, useTransform } from 'framer-motion';
+import { motion, useInView, useMotionValue, useMotionValueEvent, useScroll, useSpring } from 'framer-motion';
 import type { MotionValue } from 'framer-motion';
 import { teamMembers } from '../../data/team';
 import { Arrow } from './Arrow';
 import { PersonCard } from './PersonCard';
-import { HeroSculpture } from './HeroSculpture';
 import { getMobileStoryFrame } from './mobilePortraitMotion';
 import { useMotionMode } from './useMotionMode';
 import type { MotionMode } from './useMotionMode';
@@ -47,11 +46,9 @@ export function Hero({ href, cta }: { href: string; cta: string }) {
   const y = useSpring(pointerY, { stiffness: 90, damping: 24, restDelta: .05 });
   const inView = useInView(hero);
   const enhanced = mode === 'desktop';
-  const { scrollYProgress: desktopProgress, scrollY: pageScrollY } = useScroll({ target: hero, offset: ['start start', 'end end'] });
+  const { scrollYProgress: desktopProgress } = useScroll({ target: hero, offset: ['start start', 'end end'] });
   const { scrollYProgress: mobileProgress } = useScroll({ target: story, offset: [headerHeight === 80 ? 'start 80px' : 'start 72px', 'end end'] });
   const progress = mode === 'mobile-story' ? mobileProgress : desktopProgress;
-  const introTitleY = useTransform(pageScrollY, [0, 500], [0, -48]);
-  const introCopyY = useTransform(pageScrollY, [0, 500], [0, -24]);
   const updateActive = useCallback((index: number) => {
     // Motion samples scroll on the next frame, after the native scroll listener.
     // Keep the reading anchor in sync with the person that actually settled.
@@ -183,18 +180,13 @@ export function Hero({ href, cta }: { href: string; cta: string }) {
     return () => { current = false; };
   }, [enhanced, sceneError]);
 
-  return <section ref={hero} className="people-hero" id="inicio" aria-labelledby="hero-title"
+  return <section ref={hero} className="people-hero" id="a-gente" aria-label="A gente"
     data-mode={enhanced ? 'scroll' : mode} data-motion-mode={mode} data-renderer={enhanced && ready ? 'three' : 'html'} data-introduced={introduced && mode !== 'static'}>
     <div className="hero-sticky section-shell" onPointerMove={event => {
       if (!enhanced || event.pointerType !== 'mouse') return;
       const bounds = event.currentTarget.getBoundingClientRect();
       pointerX.set(((event.clientX - bounds.left) / bounds.width - .5) * 22); pointerY.set(((event.clientY - bounds.top) / bounds.height - .5) * 14);
     }} onPointerLeave={() => { pointerX.set(0); pointerY.set(0); }}>
-      <div className="hero-intro">
-        <HeroSculpture mode={mode} scrollY={pageScrollY} pointerX={x} pointerY={y} />
-        <motion.div className="hero-heading" style={mode.startsWith('mobile') ? { y: introTitleY } : undefined}><p className="eyebrow"><span className="status-dot" /> De Sinop. Perto da sua ideia.</p><h1 id="hero-title"><span className="title-line"><span>Tecnologia feita</span></span><span className="title-line"><span>por <em>gente.</em></span></span></h1></motion.div>
-        <div className="hero-description"><motion.div className="hero-description-copy" style={mode.startsWith('mobile') ? { y: introCopyY } : undefined}><p>Somos Fernando, Eduardo e Victor.<br />Criamos sites para colocar o seu<br className="desktop-break" /> negócio em evidência.</p></motion.div><a className="hero-skip" href="#trabalho">Ver projetos <Arrow diagonal /></a></div>
-      </div>
       <div ref={story} className="people-story"><div className="people-stage">
         <div className="people-viewport"><div className="people-list">
           {teamMembers.map((member, index) => <PersonCard key={member.id} member={member} index={index} active={active === index} mode={mode} progress={mobileProgress} onReady={portraitReady} onError={portraitError} />)}

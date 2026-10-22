@@ -1,7 +1,0 @@
-{
-  "executions": 1,
-  "targets": ["src/app/globals.css", "src/app/page.tsx", "src/app/layout.tsx", "src/components/experience/Header.tsx", "src/components/experience/Hero.tsx", "src/components/experience/ProjectStage.tsx", "src/components/experience/SmoothExperience.tsx"],
-  "observedFindings": "design-system-font-size advisories in globals.css against the previously recorded type ramp; the new design document was being updated from the current CSS",
-  "outputWasTruncated": true,
-  "limitation": "This is not a zero-findings verdict. The independent visual reviewer must assess the actual rendered typography and current source. The detector was not rerun."
-}

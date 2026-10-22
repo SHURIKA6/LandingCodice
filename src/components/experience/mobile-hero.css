@@ -50,8 +50,8 @@
 
 /* Enlarged text uses the complete flowing layout instead of a clipped stage. */
 html[data-large-text] :is(h1,h2,h3,h4,p,a,.button){overflow-wrap:anywhere}
-html[data-large-text] :is(.hero-intro,.roger-case,.package-grid,.case-details,.section-heading,.founders){grid-template-columns:minmax(0,1fr)}
-html[data-large-text] :is(.section-shell,.hero-intro,.hero-description,.case-heading,.roger-copy,.package-grid,.package-summary,.package-details,.founder,.colophon)>*{min-width:0;max-width:100%}
+html[data-large-text] :is(.roger-case,.package-grid,.case-details,.section-heading,.founders){grid-template-columns:minmax(0,1fr)}
+html[data-large-text] :is(.section-shell,.case-heading,.roger-copy,.package-grid,.package-summary,.package-details,.founder,.colophon)>*{min-width:0;max-width:100%}
 html[data-large-text] .site-header{width:100svw;height:auto;min-height:80px;padding-block:12px;gap:12px}
 html[data-large-text] .header-actions{min-width:0;flex:1;justify-content:flex-end;gap:12px}
 html[data-large-text] .header-cta{min-width:0;gap:8px;line-height:1.2}

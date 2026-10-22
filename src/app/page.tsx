@@ -4,6 +4,7 @@ import { siteContent, whatsappUrl } from '../data/site';
 import { teamMembers } from '../data/team';
 import { Header } from '../components/experience/Header';
 import { Hero } from '../components/experience/Hero';
+import { Opening } from '../components/experience/Opening';
 import { ProjectStage } from '../components/experience/ProjectStage';
 import { Arrow } from '../components/experience/Arrow';
 import { MotionChapter } from '../components/experience/MotionChapter';
@@ -21,6 +22,7 @@ export default function Home() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization).replace(/</g, '\\u003c') }} />
     <Header contactHref={offer.href} />
     <main id="conteudo" tabIndex={-1}>
+      <Opening />
       <Hero href={offer.href} cta={offer.cta} />
       <MotionChapter className="work-section" id="trabalho" labelledBy="work-title"><div className="section-shell">
         <div className="section-heading" data-reveal="heading"><p className="eyebrow">Projetos selecionados <Arrow diagonal /></p><h2 id="work-title">Ideias que saíram<br />da <em>conversa.</em></h2><p>Cada negócio tem seu jeito.<br />O trabalho é fazer isso aparecer.</p></div>

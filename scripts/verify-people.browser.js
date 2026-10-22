@@ -17,7 +17,9 @@ async (page) => {
     return { context, current, errors };
   };
   const hydrated = p => p.waitForFunction(() => !!document.documentElement.dataset.scrollEngine);
-  const three = p => p.waitForFunction(() => document.querySelector('.people-hero').dataset.renderer === 'three');
+  // The people stage now sits below the opening, and its scene only renders while visible.
+  const toPeople = p => p.evaluate(() => { const hero = document.querySelector('.people-hero'); scrollTo({ top: hero.getBoundingClientRect().top + scrollY, behavior: 'instant' }); });
+  const three = async p => { await toPeople(p); await p.waitForFunction(() => document.querySelector('.people-hero').dataset.renderer === 'three'); };
   const staticHTML = p => p.locator('.people-hero[data-mode="static"]').waitFor({ state: 'attached' });
 
   for (const width of [320, 390, 768, 1024, 1440, 1920]) {
@@ -68,9 +70,9 @@ async (page) => {
         stops.push(await p.locator('.person-card[data-active=true] .person-name').getAttribute('aria-label'));
       }
       assert(stops.join('|') === 'Fernando Riad|Eduardo Gobatto|Eduardo Gobatto|Victor Rafael|Victor Rafael|Eduardo Gobatto|Fernando Riad', `scroll sequence: ${stops}`);
-      await p.evaluate(() => { const hero = document.querySelector('.people-hero'); scrollTo({ top: (hero.offsetHeight - innerHeight) * 0.5, behavior: 'instant' }); });
+      await p.evaluate(() => { const hero = document.querySelector('.people-hero'); scrollTo({ top: hero.getBoundingClientRect().top + scrollY + (hero.offsetHeight - innerHeight) * 0.5, behavior: 'instant' }); });
       await p.waitForFunction(() => document.querySelector('.person-card[data-active=true] .person-name').getAttribute('aria-label') === 'Eduardo Gobatto');
-      await p.reload(); await three(p);
+      await p.reload(); await p.waitForFunction(() => document.querySelector('.people-hero').dataset.renderer === 'three'); // the browser restores the middle portrait
       await p.waitForFunction(() => document.querySelector('.person-card[data-active=true] .person-name').getAttribute('aria-label') === 'Eduardo Gobatto');
       results.push({ scenario: 'reload-at-middle-portrait', pass: true });
       await p.getByRole('button', { name: 'Catálogo e filtros' }).click();
@@ -78,6 +80,8 @@ async (page) => {
       assert((await p.locator('.project-capture[aria-hidden="false"]').getAttribute('src')).includes('catalog'), 'catalogue control failed');
       await p.getByRole('button', { name: 'Apresentação', exact: true }).click();
       assert((await p.locator('.project-capture[aria-hidden="false"]').getAttribute('src')).includes('poster'), 'presentation control failed');
+      // From 1025 px the header carries inline links and the menu button is hidden by design.
+      await p.setViewportSize({ width: 1000, height: 900 });
       const menu = p.locator('.nav-menu summary');
       await menu.focus(); await p.keyboard.press('Enter');
       assert(await p.locator('.nav-menu').getAttribute('open') !== null, 'keyboard menu did not open');
@@ -86,12 +90,13 @@ async (page) => {
       assert(await p.locator('.nav-menu').getAttribute('open') === null, 'Escape did not close menu');
       await p.locator('.button-primary').first().focus();
       assert(await p.locator('.button-primary').first().evaluate(node => getComputedStyle(node).outlineColor === getComputedStyle(document.body).color), 'primary focus outline lost contrast against the light page');
+      await p.setViewportSize({ width: 1440, height: 1000 });
       assert(errors.length === 0, `interaction runtime errors: ${errors}`);
       results.push({ scenario: 'scroll-forward-reverse-catalogue-keyboard', stops, pass: true });
 
       await p.setViewportSize({ width: 390, height: 844 }); await p.waitForFunction(() => document.querySelector('.people-hero').dataset.motionMode === 'mobile-story');
       await p.setViewportSize({ width: 1440, height: 1000 });
-      await p.evaluate(() => scrollTo({ top: 0, behavior: 'instant' })); await three(p);
+      await three(p);
       await p.emulateMedia({ reducedMotion: 'reduce' }); await staticHTML(p);
       await p.evaluate(() => {
         window.__originalRAF = window.requestAnimationFrame;
@@ -174,7 +179,7 @@ async (page) => {
       await staticHTML(p);
       assert(await p.locator('canvas').count() === 0, 'fallback unexpectedly initialized WebGL');
       for (const name of ['Fernando Riad', 'Eduardo Gobatto', 'Victor Rafael']) assert(await p.getByRole('heading', { name, exact: true, level: 2 }).isVisible(), `fallback lost ${name}`);
-      await p.getByRole('link', { name: 'Ver projetos', exact: true }).click();
+      await p.getByRole('link', { name: 'Explorar projetos' }).click();
       // With page JavaScript disabled, use a native anchor and direct inspection;
       // page.waitForFunction's RAF poller is not available in that document.
       await p.waitForTimeout(800);

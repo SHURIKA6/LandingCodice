@@ -1,9 +1,0 @@
-{
-  "engine": "chromium",
-  "pass": true,
-  "passed": 18,
-  "failed": 0,
-  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T14-32-09-768Z-chromium-blue-sculpture-mobile",
-  "videos": 19,
-  "cleanupWarnings": []
-}

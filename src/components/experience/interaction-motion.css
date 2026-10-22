@@ -19,7 +19,6 @@
 .nav-menu nav a svg,
 .motion-chapter .text-link svg,
 .button > svg,
-.hero-skip > svg,
 .founder-contact > svg,
 .colophon > a > svg,
 .view-buttons button > span {
@@ -28,7 +27,6 @@
 .site-header .header-cta:is(:hover, :focus-visible) svg,
 .motion-chapter .text-link:is(:hover, :focus-visible) svg,
 .button:is(:hover, :focus-visible) > svg,
-.hero-skip:is(:hover, :focus-visible) > svg,
 .founder-contact:is(:hover, :focus-visible) > svg,
 .view-buttons button:is(:hover, :focus-visible) > span {
   transform: translate(4px, -4px);
@@ -64,14 +62,12 @@
   .nav-menu nav a svg,
   .motion-chapter .text-link svg,
   .button > svg,
-  .hero-skip > svg,
   .founder-contact > svg,
   .colophon > a > svg,
   .view-buttons button > span { transition: none; }
   .site-header .header-cta:is(:hover, :focus-visible) svg,
   .motion-chapter .text-link:is(:hover, :focus-visible) svg,
   .button:is(:hover, :focus-visible) > svg,
-  .hero-skip:is(:hover, :focus-visible) > svg,
   .founder-contact:is(:hover, :focus-visible) > svg,
   .colophon > a:is(:hover, :focus-visible) > svg,
   .view-buttons button:is(:hover, :focus-visible) > span,

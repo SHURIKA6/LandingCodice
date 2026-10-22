@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useLayoutEffect, useRef } from 'react';
 import { Arrow } from './Arrow';
 import { useMotionMode } from './useMotionMode';
 import './interaction-motion.css';
@@ -9,6 +9,19 @@ import './mobile-chapters.css';
 export function Header({ contactHref }: { contactHref: string }) {
   const menu = useRef<HTMLDetailsElement>(null);
   const mode = useMotionMode();
+  // The header floats over the opening only at the very top of the page. As soon as the page moves,
+  // content would pass beneath a transparent bar, so it turns solid. Solid is the CSS default, so
+  // without script the bar is never see-through over text. Layout effect: no flash after hydration.
+  useLayoutEffect(() => {
+    if (!document.getElementById('inicio')) return;
+    const root = document.documentElement;
+    let frame = 0;
+    const update = () => { frame = 0; root.dataset.heroOver = String(scrollY < 24); };
+    const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
+    update();
+    addEventListener('scroll', schedule, { passive: true });
+    return () => { removeEventListener('scroll', schedule); cancelAnimationFrame(frame); delete root.dataset.heroOver; };
+  }, []);
   useEffect(() => {
     const details = menu.current;
     if (!details) return;
@@ -99,10 +112,10 @@ export function Header({ contactHref }: { contactHref: string }) {
     };
   }, [mode]);
   return <header className="site-header" data-motion-mode={mode}><a className="brand-type" href="#inicio" aria-label="Codice — início">codice<span className="brand-dot" aria-hidden="true" /></a>
-    <a className="header-location" href="#trabalho">Pessoas. Ideias. Trabalho.</a>
+    <nav className="header-nav" aria-label="Seções da página"><a href="#a-gente">A gente</a><a href="#trabalho">Os projetos</a><a href="#pacote">Seu site</a></nav>
     <div className="header-actions"><a className="header-cta" href={contactHref} target="_blank" rel="noopener noreferrer">Vamos conversar <Arrow diagonal /><span className="sr-only"> pelo WhatsApp de Fernando (abre em outra aba)</span></a>
       <details ref={menu} className="nav-menu"><summary aria-label="Menu de navegação"><span className="menu-strokes" aria-hidden="true"><i /><i /></span></summary>
-        <nav aria-label="Navegação principal" onClick={event => { if ((event.target as HTMLElement).closest('a') && menu.current) menu.current.open = false; }}><span className="menu-panel-surface" aria-hidden="true" /><a href="#inicio"><span className="menu-label-clip"><span className="menu-label">A gente</span></span><Arrow /></a><a href="#trabalho"><span className="menu-label-clip"><span className="menu-label">Os projetos</span></span><Arrow /></a><a href="#pacote"><span className="menu-label-clip"><span className="menu-label">Seu site</span></span><Arrow /></a><a href="#contato"><span className="menu-label-clip"><span className="menu-label">Vamos conversar</span></span><Arrow /></a><p>Sites para negócios de<br />Sinop e região.</p></nav>
+        <nav aria-label="Navegação principal" onClick={event => { if ((event.target as HTMLElement).closest('a') && menu.current) menu.current.open = false; }}><span className="menu-panel-surface" aria-hidden="true" /><a href="#a-gente"><span className="menu-label-clip"><span className="menu-label">A gente</span></span><Arrow /></a><a href="#trabalho"><span className="menu-label-clip"><span className="menu-label">Os projetos</span></span><Arrow /></a><a href="#pacote"><span className="menu-label-clip"><span className="menu-label">Seu site</span></span><Arrow /></a><a href="#contato"><span className="menu-label-clip"><span className="menu-label">Vamos conversar</span></span><Arrow /></a><p>Sites para negócios de<br />Sinop e região.</p></nav>
       </details>
     </div>
   </header>;

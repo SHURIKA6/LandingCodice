@@ -77,6 +77,8 @@ async (page) => {
         // Establish the currently displayed pixels before testing a replacement.
         // The presentation is lazy-loaded when its media first enters the view.
         await p.locator('.project-browser').scrollIntoViewIfNeeded();
+        // decode() rejects while a lazy image has not started loading, so wait for its pixels first.
+        await p.waitForFunction(() => { const image = document.querySelector('.project-capture-base'); return image?.complete && image.naturalWidth > 0; });
         await p.locator('.project-capture-base').evaluate(image => image.decode());
         await p.getByRole('button', { name: 'Catálogo e filtros' }).click();
         await p.waitForFunction(() => document.querySelector('.project-screen').getAttribute('aria-busy') === 'true');
@@ -135,7 +137,8 @@ async (page) => {
       await p.keyboard.press('Escape');
       assert(await menu.evaluate(node => node === document.activeElement), 'Escape focus lost');
       return { contactFocusVisibleDuringArrival: true, menuImmediateKeyboardAccess: true };
-    });
+      // From 1025 px the header shows inline links instead of the menu button, so this runs just below it.
+    }, { viewport: { width: 1000, height: 900 } });
 
     await run('mobile-touch-menu-anchor-catalogue-and-moving-media', async p => {
       await p.locator('.nav-menu summary').tap();
