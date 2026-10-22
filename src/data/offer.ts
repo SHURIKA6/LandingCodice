@@ -3,10 +3,8 @@ import { siteContent, whatsappUrl } from './site';
 /** One commercial source for the production landing and the preserved studies. */
 export const siteOffer = {
   headline: 'Um site profissional para apresentar seus serviços e facilitar o contato com seus clientes.',
-  price: 'R$ 1.500',
-  payment: 'R$ 750 para iniciar, após acordo de escopo por escrito; R$ 750 após aprovação, antes da publicação',
   cta: 'Conversar sobre meu site',
-  href: whatsappUrl(siteContent.founders[0].whatsappNumber, 'Olá! Quero conversar sobre o site de uma página da Codice, por R$ 1.500.'),
+  href: whatsappUrl(siteContent.founders[0].whatsappNumber, 'Olá! Quero conversar sobre o site de uma página da Codice.'),
   inclusions: [
     'Uma página com até seis seções',
     'Adaptada ao celular e ao computador',

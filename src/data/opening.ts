@@ -46,7 +46,7 @@ export type OpeningContact = {
 export const openingContent = {
   status: 'Sinop · MT',
   eyebrow: 'De Sinop. Perto da sua ideia.',
-  headline: ['Pessoas.', 'Ideias.', 'Trabalho'],
+  headline: ['Tecnologia', 'feita por', 'gente.'],
   people: { label: 'Sócios' },
   system: { eyebrow: '01 / Sistema em produção', title: ['Corretor', '/ MT'], text: 'Por fora, apresenta. Por dentro, organiza.' },
   edition: { title: ['Sinop', '/ 26'], note: 'Arquitetura autoral' },
@@ -58,7 +58,7 @@ export const openingContent = {
     image: { src: corretor.image.src, alt: corretor.image.alt, width: 1440, height: 900 },
   },
   story: {
-    title: 'Tecnologia feita por gente',
+    title: 'Pessoas. Ideias. Trabalho',
     text: 'Somos Fernando, Eduardo e Victor. Criamos sites e sistemas para colocar seu negócio em evidência.',
     link: 'Conhecer a gente',
     href: '#a-gente',

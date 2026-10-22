@@ -3,6 +3,7 @@ export interface TeamMember {
   readonly name: string;
   readonly firstName: string;
   readonly lastName: string;
+  readonly signature: string;
   readonly portrait: {
     readonly src: string;
     readonly alt: string;
@@ -17,6 +18,7 @@ export const teamMembers = [
     name: 'Fernando Riad',
     firstName: 'Fernando',
     lastName: 'Riad',
+    signature: 'Engenharia & Produto',
     portrait: {
       src: '/team/fernando.jpg',
       alt: 'Retrato de Fernando Riad',
@@ -29,6 +31,7 @@ export const teamMembers = [
     name: 'Eduardo Gobatto',
     firstName: 'Eduardo',
     lastName: 'Gobatto',
+    signature: 'Arquitetura & Sistemas',
     portrait: {
       src: '/team/eduardo.jpg',
       alt: 'Retrato de Eduardo Gobatto',
@@ -41,6 +44,7 @@ export const teamMembers = [
     name: 'Victor Rafael',
     firstName: 'Victor',
     lastName: 'Rafael',
+    signature: 'Design & Experiência',
     portrait: {
       src: '/team/victor.png',
       alt: 'Retrato de Victor Rafael',

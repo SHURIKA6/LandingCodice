@@ -121,7 +121,7 @@ export const siteContent = {
         'Um catálogo de imóveis com filtros de busca e uma área de gestão para organizar o trabalho imobiliário.',
       features: ['Catálogo de imóveis', 'Filtros de busca', 'Área de gestão'],
       image: {
-        src: '/images/corretor-public.webp',
+        src: '/media/corretor-poster.webp',
         alt: 'Página pública do Corretor, com catálogo de imóveis e filtros de busca.',
       },
       href: 'https://corretor-web-test.vercel.app/',
@@ -136,7 +136,7 @@ export const siteContent = {
         'Um site para apresentar os serviços de estética automotiva, reunir informações de atendimento e facilitar o contato com o negócio.',
       features: ['Serviços e galeria', 'Contato', 'Localização'],
       image: {
-        src: '/images/roger-services.webp',
+        src: '/media/roger-shot.png',
         alt: 'Página de serviços do site Roger Estética Automotiva.',
       },
       href: 'https://roger-estetica-automotiva.vercel.app/',

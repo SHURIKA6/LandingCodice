@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useCallback, useContext, useMemo, useState, useSyncExternalStore } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, useSyncExternalStore } from 'react';
 import type { CSSProperties, ReactNode } from 'react';
 import { openingContent, openingPeople } from '../../data/opening';
 import { Arrow } from './Arrow';
@@ -27,14 +27,24 @@ const noSubscription = () => () => {};
 const useHydrated = () => useSyncExternalStore(noSubscription, () => true, () => false);
 
 /**
- * One selection shared by the dots, the glass circle and the story avatars. There is no
- * auto-advance: the page already moves enough, and a rotating control would need its own pause.
+ * One selection shared by the dots, the glass circle and the story avatars. The selection
+ * advances on its own after a short interval, but yields to reduced motion and stops being
+ * announced as a manual control until hydration.
  */
 export function OpeningPeopleProvider({ children }: { children: ReactNode }) {
   const [active, setActive] = useState(0);
   const hydrated = useHydrated();
   const select = useCallback((index: number) => setActive(cycleIndex(index, 0, count)), []);
   const next = useCallback(() => setActive(current => cycleIndex(current, 1, count)), []);
+  useEffect(() => {
+    if (!hydrated) return;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reducedMotion) return;
+    const intervalId = window.setInterval(() => {
+      setActive(current => cycleIndex(current, 1, count));
+    }, 4500);
+    return () => window.clearInterval(intervalId);
+  }, [hydrated]);
   const value = useMemo<PeopleState>(() => ({ active, hydrated, select, next }), [active, hydrated, select, next]);
   return <PeopleContext value={value}>{children}</PeopleContext>;
 }
