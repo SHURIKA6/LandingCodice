@@ -281,6 +281,7 @@
   .opening-contacts li:nth-child(2) { animation: opening-rise .3s var(--o-ease) 1.86s backwards; }
   .opening-contacts li:nth-child(3) { animation: opening-rise .3s var(--o-ease) 1.92s backwards; }
   .opening-pause { animation: opening-fade .3s var(--o-ease) 1.9s backwards; }
-  /* A visitor who starts using the page does not wait for the sequence. */
-  .opening:focus-within, .opening:focus-within * { animation: none !important; }
+  /* A visitor who starts using the page does not wait for the sequence. The attribute is
+     permanent: toggling it back with :focus-within would restart every entrance animation. */
+  .opening[data-interacted="true"], .opening[data-interacted="true"] * { animation: none !important; }
 }

@@ -13,6 +13,10 @@ export function OpeningAnchor() {
   useEffect(() => {
     const section = document.getElementById('inicio');
     if (!section) return;
+    // Once the visitor uses a control in the opening, the entrance sequence is over for good.
+    // Tying this to :focus-within would replay every entrance animation when focus leaves.
+    const settle = () => { section.dataset.interacted = 'true'; };
+    section.addEventListener('focusin', settle);
     let height = section.offsetHeight;
     let last = scrollY;
     const remember = () => { last = scrollY; };
@@ -26,7 +30,7 @@ export function OpeningAnchor() {
     });
     addEventListener('scroll', remember, { passive: true });
     observer.observe(section);
-    return () => { observer.disconnect(); removeEventListener('scroll', remember); };
+    return () => { section.removeEventListener('focusin', settle); observer.disconnect(); removeEventListener('scroll', remember); };
   }, []);
   return null;
 }
