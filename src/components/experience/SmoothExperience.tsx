@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Lenis from 'lenis';
 import { MotionConfig } from 'framer-motion';
+import { shouldCancelWhenHidden } from './motionVisibility';
 import 'lenis/dist/lenis.css';
 
 export function SmoothExperience({ children }: { children: React.ReactNode }) {
@@ -34,8 +35,10 @@ export function SmoothExperience({ children }: { children: React.ReactNode }) {
         stop();
         // CSS entrances and transitions also need a real cancellation path.
         // Their authored end states remain visible after the effect is removed.
+        // Scroll-driven animations are left attached; cancelling them would leave
+        // the section stuck at the last rendered position.
         document.getAnimations().forEach(animation => {
-          if (animation.effect?.getTiming().iterations !== Infinity) animation.cancel();
+          if (shouldCancelWhenHidden(animation, document.timeline)) animation.cancel();
         });
       }
       else start();

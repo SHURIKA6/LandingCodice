@@ -5,9 +5,16 @@ Resultados reais desta entrega. Não herdam aprovações dos blocos anteriores; 
 ## Comandos executados
 
 - `npm run typecheck` — **PASS** (tsc --noEmit, sem erros)
-- `npm run build` — **PASS** (Next.js 16.4.2, Turbopack; compilação em 3,8s; TypeScript em 7,9s; 4 páginas estáticas geradas em 2,6s)
+- `npm run build` — **PASS** (Next.js 16.4.2, Turbopack; compilação em 947ms; TypeScript em 2,1s; 13 páginas estáticas geradas)
+- `node --experimental-strip-types --test scripts/motion-visibility.test.mjs` — **PASS** (4 testes, 0 falhas)
 - `node --experimental-strip-types --test scripts/portrait-motion.test.mjs scripts/mobile-portrait-motion.test.mjs` — **PASS** (14 testes, 0 falhas)
 - `node --experimental-strip-types --test scripts/styles.test.mjs scripts/opening-state.test.mjs` — **PASS** (9 testes, 0 falhas)
+
+## Correção — travamento ao trocar de aba (#servico)
+
+- **Causa:** `SmoothExperience` cancelava todas as animações finitas em `visibilitychange` → `hidden`. O Framer Motion 14.4 acelera `useScroll`/`useTransform` para `ViewTimeline` (`iterations: 1`), que não eram recriadas após o cancelamento; os painéis revertiam para estilos inline iniciais e ficavam presos no primeiro repositório.
+- **Solução mínima:** adicionado `src/components/experience/motionVisibility.ts` com `shouldCancelWhenHidden(animation, documentTimeline)` — só cancela animações da linha do tempo do documento (`document.timeline`). `src/components/experience/SmoothExperience.tsx` passou a usar esse filtro. `MotionChapter` e `Header` gerenciam apenas suas próprias animações (sem varredura global) e não foram alterados.
+- **QA no navegador (Chromium):** em 50% da seção, simulado `hidden` → `visible` com as 4 animações `ViewTimeline` preservadas; ao rolar para 70% e voltar para 30% os painéis trocaram corretamente (painel 3 a 70%, painel 1 a 30%). A prova de entrada CSS (`DocumentTimeline`) continuou sendo cancelada ao ocultar a aba; as animações aceleradas (`ViewTimeline`) permaneceram ativas e a rolagem seguiu controlando a transição. `data-motion-paused` aplicado/retirado normalmente e Lenis restaurado.
 
 ## Inspeção de renderização (SSR)
 
