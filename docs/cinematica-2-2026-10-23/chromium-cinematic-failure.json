@@ -1,0 +1,6 @@
+{
+  "engine": "chromium",
+  "suite": "cinematic",
+  "failed": true,
+  "message": "{\"completed\":[{\"scenario\":\"opening-background-travels-beneath-the-stable-scrim\",\"pass\":true,\"start\":\"matrix(1.1, 0, 0, 1.1, 0, 0)\",\"during\":\"matrix(1.1, 0, 0, 1.1, 0, 16.8)\",\"scrim\":\"none\",\"reversible\":true},{\"scenario\":\"portrait-pointer-renders-on-demand-and-resets-on-blur\",\"pass\":true,\"pointerDraws\":456,\"afterReset\":464,\"noIdleRenderLoop\":true},{\"scenario\":\"four-desktop-stops-counter-and-reverse\",\"pass\":true,\"names\":[\"Fernando Riad\",\"Eduardo Gobatto\",\"Victor Rafael\",\"Jose Vitor\",\"Victor Rafael\",\"Eduardo Gobatto\",\"Fernando Riad\"],\"stops\":4,\"counterReverses\":true},{\"scenario\":\"project-tilt-and-controls-stay-independent\",\"pass\":true,\"tilted\":\"matrix3d(0.999974, -2.50356e-05, -0.00726993, 0, 0, 0.999994, -0.0034437, 0, 0.00726998, 0.00344361, 0.999968, 0, 0, 0, 0, 1)\",\"controlsStable\":true,\"pointerLeaveReturnsToRest\":true},{\"scenario\":\"chapter-seam-skew-copy-and-final-reading-state\",\"pass\":true,\"entering\":{\"progress\":\"0.375\",\"title\":\"matrix(1, 0, -0.0436609, 1, 45, 17.5)\",\"skew\":-0.0436609,\"seam\":\"matrix(1, 0, 0, 1, -525.6, 0)\",\"drift\":\"matrix(1, 0, 0, 1, 0, 10)\"},\"settled\":{\"x\":0,\"y\":0,\"skew\":0}}],\"error\":\"keyboard focus left the header label moving\"}"
+}

@@ -72,6 +72,13 @@ export function MotionChapter({ children, className, id, labelledBy }: {
       restores.push(() => heading.replaceChildren(...original));
     });
 
+    root.querySelectorAll<HTMLElement>('[data-reveal="heading"] > p:last-child:not(.eyebrow)').forEach(copy => {
+      const original = Array.from(copy.childNodes);
+      const drift = document.createElement('span'); drift.className = 'chapter-copy-drift';
+      drift.append(...original); copy.append(drift);
+      restores.push(() => copy.replaceChildren(...original));
+    });
+
     const word = root.querySelector<HTMLElement>('.footer-word[aria-hidden="true"]');
     let letters: HTMLElement[] = [];
     if (word) {
@@ -80,11 +87,40 @@ export function MotionChapter({ children, className, id, labelledBy }: {
         const wrapper = document.createElement('span'); wrapper.className = 'footer-letters';
         letters = Array.from(text.textContent || '').map(letter => {
           const span = document.createElement('span'); span.className = 'footer-letter'; span.textContent = letter;
+          const ink = document.createElement('span'); ink.className = 'footer-letter-ink'; ink.textContent = letter;
+          span.replaceChildren(ink);
           wrapper.append(span); return span;
         });
         text.replaceWith(wrapper); restores.push(() => wrapper.replaceWith(text));
       }
     }
+
+    let pointerFrame = 0;
+    let pointerPosition = 0;
+    const resetWordPointer = () => {
+      cancelAnimationFrame(pointerFrame); pointerFrame = 0;
+      letters.forEach(letter => { write(letter, '--letter-lift', 0); write(letter, '--letter-tilt', 0); });
+    };
+    const updateWordPointer = () => {
+      pointerFrame = 0;
+      if (!word || document.hidden || largeText() || root.contains(document.activeElement)) return;
+      const bounds = letters.map(letter => letter.getBoundingClientRect());
+      bounds.forEach((rect, index) => {
+        const distance = pointerPosition - (rect.left + rect.width / 2);
+        const reach = Math.max(100, rect.width * 1.6);
+        const influence = Math.max(0, 1 - Math.abs(distance) / reach);
+        write(letters[index], '--letter-lift', influence * 18);
+        write(letters[index], '--letter-tilt', distance / reach * influence * 3);
+      });
+    };
+    const moveWordPointer = (event: PointerEvent) => {
+      if (mobile || event.pointerType !== 'mouse' || Number(word?.style.getPropertyValue('--word-progress')) < .98) return;
+      pointerPosition = event.clientX;
+      if (!pointerFrame) pointerFrame = requestAnimationFrame(updateWordPointer);
+    };
+    word?.addEventListener('pointermove', moveWordPointer);
+    word?.addEventListener('pointerleave', resetWordPointer);
+    window.addEventListener('blur', resetWordPointer);
 
     const offer = root.querySelector<HTMLElement>('.package-grid');
     const inclusions = root.querySelector<HTMLElement>('.package-details > ul');
@@ -145,6 +181,7 @@ export function MotionChapter({ children, className, id, labelledBy }: {
       if (word && bounds.has(word)) {
         const rect = bounds.get(word)!;
         const progress = clamp((viewport * .95 - rect.top) / Math.max(80, Math.min(viewport * .4, rect.height * .75)));
+        if (progress < .98) resetWordPointer();
         letters.forEach((letter, index) => write(letter, '--letter-progress', clamp((progress - index * .045) / (1 - index * .045))));
         write(word, '--word-progress', progress);
       }
@@ -159,21 +196,25 @@ export function MotionChapter({ children, className, id, labelledBy }: {
     targets.forEach(target => resizeObserver.observe(target));
     const stopEntry = scrollYProgress.on('change', updateEntry);
     const stopScroll = scrollY.on('change', update);
-    const visibility = () => { if (document.hidden) cancel(); else { updateEntry(); update(); } };
+    const stabilize = () => { cancel(); resetWordPointer(); };
+    const visibility = () => { if (document.hidden) stabilize(); else { updateEntry(); update(); } };
     const textObserver = new MutationObserver(() => {
       root.dataset.choreography = String(!largeText());
-      if (largeText()) cancel(); else { updateEntry(); update(); }
+      if (largeText()) stabilize(); else { updateEntry(); update(); }
     });
     textObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-large-text'] });
     root.dataset.choreography = String(!largeText()); updateEntry();
     document.addEventListener('visibilitychange', visibility);
-    root.addEventListener('focusin', cancel); root.addEventListener('pointerdown', cancel, { passive: true });
+    root.addEventListener('focusin', stabilize); root.addEventListener('pointerdown', stabilize, { passive: true });
     window.addEventListener('resize', update, { passive: true });
     return () => {
       observer.disconnect(); localObserver.disconnect(); resizeObserver.disconnect(); textObserver.disconnect();
-      stopEntry(); stopScroll(); cancel();
+      stopEntry(); stopScroll(); stabilize();
+      word?.removeEventListener('pointermove', moveWordPointer);
+      word?.removeEventListener('pointerleave', resetWordPointer);
+      window.removeEventListener('blur', resetWordPointer);
       document.removeEventListener('visibilitychange', visibility);
-      root.removeEventListener('focusin', cancel); root.removeEventListener('pointerdown', cancel);
+      root.removeEventListener('focusin', stabilize); root.removeEventListener('pointerdown', stabilize);
       window.removeEventListener('resize', update); delete root.dataset.choreography;
       process?.removeAttribute('data-process-motion'); process?.removeAttribute('data-process-axis');
       written.forEach((properties, target) => properties.forEach((_, property) => target.style.removeProperty(property)));
@@ -184,7 +225,7 @@ export function MotionChapter({ children, className, id, labelledBy }: {
   return <motion.section ref={section} id={id} aria-labelledby={labelledBy}
     className={`${className} motion-chapter`} data-motion={mode !== 'static'} data-motion-mode={mode}
     style={mode === 'static' ? undefined : { borderTopLeftRadius: radius, borderTopRightRadius: radius }}>
-    <div className="chapter-surface-clip" aria-hidden="true"><div className="chapter-surface" /></div>
+    <div className="chapter-surface-clip" aria-hidden="true"><div className="chapter-seam" /><div className="chapter-surface" /></div>
     {children}
   </motion.section>;
 }

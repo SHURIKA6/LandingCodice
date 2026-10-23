@@ -1,0 +1,200 @@
+{
+  "engine": "chromium",
+  "browserVersion": "149.0.7827.55",
+  "suite": "cinematic",
+  "passed": 17,
+  "results": [
+    {
+      "scenario": "opening-background-travels-beneath-the-stable-scrim",
+      "pass": true,
+      "start": "matrix(1.1, 0, 0, 1.1, 0, 0)",
+      "during": "matrix(1.1, 0, 0, 1.1, 0, 16.8)",
+      "scrim": "none",
+      "reversible": true
+    },
+    {
+      "scenario": "portrait-pointer-renders-on-demand-and-resets-on-blur",
+      "pass": true,
+      "pointerDraws": 744,
+      "afterReset": 752,
+      "noIdleRenderLoop": true
+    },
+    {
+      "scenario": "four-desktop-stops-counter-and-reverse",
+      "pass": true,
+      "names": [
+        "Fernando Riad",
+        "Eduardo Gobatto",
+        "Victor Rafael",
+        "Jose Vitor",
+        "Victor Rafael",
+        "Eduardo Gobatto",
+        "Fernando Riad"
+      ],
+      "stops": 4,
+      "counterReverses": true
+    },
+    {
+      "scenario": "project-tilt-and-controls-stay-independent",
+      "pass": true,
+      "tilted": "matrix3d(0.99998, -1.91408e-05, -0.00635671, 0, 0, 0.999995, -0.0030111, 0, 0.00635674, 0.00301104, 0.999975, 0, 0, 0, 0, 1)",
+      "controlsStable": true,
+      "pointerLeaveReturnsToRest": true
+    },
+    {
+      "scenario": "chapter-seam-skew-copy-and-final-reading-state",
+      "pass": true,
+      "entering": {
+        "progress": "0.375",
+        "title": "matrix(1, 0, -0.0436609, 1, 45, 17.5)",
+        "skew": -0.0436609,
+        "seam": "matrix(1, 0, 0, 1, -525.6, 0)",
+        "drift": "matrix(1, 0, 0, 1, 0, 10)"
+      },
+      "settled": {
+        "x": 0,
+        "y": 0,
+        "skew": 0
+      }
+    },
+    {
+      "scenario": "header-label-roll-keeps-one-accessible-name",
+      "pass": true,
+      "accessibleName": "A gente",
+      "hitAreaStable": true,
+      "keyboardImmediate": true
+    },
+    {
+      "scenario": "primary-sweep-and-founder-feedback-keep-actions-still",
+      "pass": true,
+      "buttonStable": true,
+      "contactStable": true,
+      "visibleFocus": true
+    },
+    {
+      "scenario": "footer-letters-follow-mouse-without-cropping-the-last-glyph",
+      "pass": true,
+      "lifts": [
+        0,
+        0,
+        10.422,
+        18,
+        10.125,
+        0
+      ],
+      "right": 998.5625,
+      "maskRight": 1029.6875,
+      "width": 1440
+    },
+    {
+      "scenario": "mobile-readable-stops-and-counter-560",
+      "pass": true,
+      "height": 560,
+      "names": [
+        "Fernando Riad",
+        "Eduardo Gobatto",
+        "Victor Rafael",
+        "Jose Vitor",
+        "Victor Rafael",
+        "Eduardo Gobatto",
+        "Fernando Riad"
+      ],
+      "storyScreens": 3
+    },
+    {
+      "scenario": "mobile-readable-stops-and-counter-667",
+      "pass": true,
+      "height": 667,
+      "names": [
+        "Fernando Riad",
+        "Eduardo Gobatto",
+        "Victor Rafael",
+        "Jose Vitor",
+        "Victor Rafael",
+        "Eduardo Gobatto",
+        "Fernando Riad"
+      ],
+      "storyScreens": 3
+    },
+    {
+      "scenario": "mobile-readable-stops-and-counter-844",
+      "pass": true,
+      "height": 844,
+      "names": [
+        "Fernando Riad",
+        "Eduardo Gobatto",
+        "Victor Rafael",
+        "Jose Vitor",
+        "Victor Rafael",
+        "Eduardo Gobatto",
+        "Fernando Riad"
+      ],
+      "storyScreens": 3
+    },
+    {
+      "scenario": "landscape-stays-in-flow-without-tilt-or-three",
+      "pass": true,
+      "mode": "mobile-flow",
+      "tilt": false,
+      "canvas": false
+    },
+    {
+      "scenario": "live-reduced-motion-removes-new-spatial-effects",
+      "pass": true,
+      "effects": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ],
+      "chapters": 0,
+      "canvas": 0,
+      "people": 4,
+      "running": 0
+    },
+    {
+      "scenario": "text-enlargement-stabilizes-new-effects-390",
+      "pass": true,
+      "mode": "mobile-flow",
+      "canvas": 0,
+      "backdrop": "none",
+      "tilt": "none"
+    },
+    {
+      "scenario": "text-enlargement-stabilizes-new-effects-1440",
+      "pass": true,
+      "mode": "static",
+      "canvas": 0,
+      "backdrop": "none",
+      "tilt": "none"
+    },
+    {
+      "scenario": "no-js-retains-complete-html-and-native-menu",
+      "pass": true,
+      "people": 4,
+      "nativeMenu": true,
+      "staticBackdrop": true,
+      "catalogue": true
+    },
+    {
+      "scenario": "hidden-tab-resets-without-replaying-the-opening",
+      "pass": true,
+      "hidden": {
+        "paused": true,
+        "engine": "native",
+        "lift": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "openingDidNotReplay": true,
+      "visibilitySimulated": true
+    }
+  ]
+}

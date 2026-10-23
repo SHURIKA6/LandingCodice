@@ -1,0 +1,74 @@
+/* Native details owns visibility; motion stays inside its stable link boxes. */
+:root {
+  --motion-ease: cubic-bezier(.16, 1, .3, 1);
+}
+.nav-menu[open] nav {
+  animation: interaction-menu-open 320ms cubic-bezier(.16, 1, .3, 1) backwards;
+}
+.nav-menu[open] nav a {
+  animation: interaction-menu-item 300ms cubic-bezier(.16, 1, .3, 1) backwards;
+}
+.nav-menu[open] nav a:nth-child(2) { animation-delay: 35ms; }
+.nav-menu[open] nav a:nth-child(3) { animation-delay: 70ms; }
+.nav-menu[open] nav a:nth-child(4) { animation-delay: 105ms; }
+.nav-menu[open] nav:focus-within,
+.nav-menu[open] nav a:focus-visible { animation: none; }
+
+.site-header .header-cta svg,
+.nav-menu nav a svg,
+.motion-chapter .text-link svg,
+.button > svg,
+.founder-contact > svg,
+.colophon > a > svg,
+.view-buttons button > span {
+  transition: transform 260ms var(--motion-ease);
+}
+.site-header .header-cta:is(:hover, :focus-visible) svg,
+.motion-chapter .text-link:is(:hover, :focus-visible) svg,
+.button:is(:hover, :focus-visible) > svg,
+.founder-contact:is(:hover, :focus-visible) > svg,
+.view-buttons button:is(:hover, :focus-visible) > span {
+  transform: translate(4px, -4px);
+}
+.nav-menu nav a:is(:hover, :focus-visible) svg { transform: translateX(4px); }
+.colophon > a:is(:hover, :focus-visible) > svg { transform: translateY(-4px); }
+.text-link { transition: text-decoration-color 180ms, text-underline-offset 180ms; }
+.text-link:is(:hover, :focus-visible) { text-underline-offset: 8px; }
+/* Focus resolves supporting feedback immediately, including CSS transitions
+   created after the chapter's focusin handler has cancelled its WAAPI work. */
+.motion-chapter:focus-within :is(.button, .text-link, .founder-contact),
+.motion-chapter:focus-within :is(.button, .text-link, .founder-contact) > svg {
+  transition: none;
+}
+.motion-chapter:focus-within :is(.button, .text-link, .founder-contact) > svg { transform: none; }
+.site-header .nav-menu[data-closing=true] .menu-strokes i:is(:first-child, :last-child) { transform: none; }
+.nav-menu summary:active { background: var(--mist); }
+.view-buttons button { transition: color 150ms, border-color 150ms; }
+.view-buttons button[data-loading=true] { cursor: progress; }
+
+@keyframes interaction-menu-open {
+  from { clip-path: inset(0 0 100% 0); opacity: .4; }
+  to { clip-path: inset(0 0 0 0); opacity: 1; }
+}
+@keyframes interaction-menu-item {
+  from { transform: translateX(12px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-menu[open] nav,
+  .nav-menu[open] nav a { animation: none; }
+  .site-header .header-cta svg,
+  .nav-menu nav a svg,
+  .motion-chapter .text-link svg,
+  .button > svg,
+  .founder-contact > svg,
+  .colophon > a > svg,
+  .view-buttons button > span { transition: none; }
+  .site-header .header-cta:is(:hover, :focus-visible) svg,
+  .motion-chapter .text-link:is(:hover, :focus-visible) svg,
+  .button:is(:hover, :focus-visible) > svg,
+  .founder-contact:is(:hover, :focus-visible) > svg,
+  .colophon > a:is(:hover, :focus-visible) > svg,
+  .view-buttons button:is(:hover, :focus-visible) > span,
+  .nav-menu nav a:is(:hover, :focus-visible) svg { transform: none; }
+}

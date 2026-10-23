@@ -1,0 +1,15 @@
+{
+  "expression": "() => document.querySelector('.person-card[data-active=true] .person-name').getAttribute('aria-label') === 'Victor Rafael'",
+  "stack": "page.waitForFunction: Timeout 30000ms exceeded.\n    at current.waitForFunction (C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\cinematica-2-2026-10-23\\run-browser-qa.mjs:26:26)\n    at eval (<anonymous>:88:15)\n    at async file:///C:/Users/ferna/OneDrive/%C3%81rea%20de%20Trabalho/LandingCodice/docs/cinematica-2-2026-10-23/run-browser-qa.mjs:48:19",
+  "state": {
+    "scroll": 1000,
+    "viewport": [
+      1440,
+      1000
+    ],
+    "hero": "<section class=\"people-hero\" id=\"a-gente\" aria-label=\"A gente\" data-mode=\"scroll\" data-motion-mode=\"desktop\" data-renderer=\"three\" data-introduced=\"true\"><div class=\"hero-sticky section-shell\"><div class=\"people-story\"><div class=\"people-stage\"><div ",
+    "active": "Fernando Riad",
+    "engine": "lenis",
+    "text": "Ir para o conteúdo\ncodice\nA GENTE\nA GENTE\nOS PROJETOS\nOS PROJETOS\nSEU SITE\nSEU SITE\nVamos conversar\npelo WhatsApp de Fernando (abre em outra aba)\n\nSINOP · MT\n\nDE SINOP. PERTO DA SUA IDEIA.\n\nTecnologia\nfeita por\ngente.\nVamos conversar no WhatsApp\n(abr"
+  }
+}

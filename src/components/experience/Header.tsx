@@ -112,7 +112,9 @@ export function Header({ contactHref }: { contactHref: string }) {
     };
   }, [mode]);
   return <header className="site-header" data-motion-mode={mode}><a className="brand-type" href="#inicio" aria-label="Codice — início">codice<span className="brand-dot" aria-hidden="true" /></a>
-    <nav className="header-nav" aria-label="Seções da página"><a href="#a-gente">A gente</a><a href="#trabalho">Os projetos</a><a href="#pacote">Seu site</a></nav>
+    <nav className="header-nav" aria-label="Seções da página">{[
+      { href: '#a-gente', label: 'A gente' }, { href: '#trabalho', label: 'Os projetos' }, { href: '#pacote', label: 'Seu site' },
+    ].map(link => <a key={link.href} href={link.href}><span className="header-label-mask"><span className="header-label-roll"><span>{link.label}</span><span aria-hidden="true">{link.label}</span></span></span></a>)}</nav>
     <div className="header-actions"><a className="header-cta" href={contactHref} target="_blank" rel="noopener noreferrer">Vamos conversar <Arrow diagonal /><span className="sr-only"> pelo WhatsApp de Fernando (abre em outra aba)</span></a>
       <details ref={menu} className="nav-menu"><summary aria-label="Menu de navegação"><span className="menu-strokes" aria-hidden="true"><i /><i /></span></summary>
         <nav aria-label="Navegação principal" onClick={event => { if ((event.target as HTMLElement).closest('a') && menu.current) menu.current.open = false; }}><span className="menu-panel-surface" aria-hidden="true" /><a href="#a-gente"><span className="menu-label-clip"><span className="menu-label">A gente</span></span><Arrow /></a><a href="#trabalho"><span className="menu-label-clip"><span className="menu-label">Os projetos</span></span><Arrow /></a><a href="#pacote"><span className="menu-label-clip"><span className="menu-label">Seu site</span></span><Arrow /></a><a href="#contato"><span className="menu-label-clip"><span className="menu-label">Vamos conversar</span></span><Arrow /></a><p>Sites para negócios de<br />Sinop e região.</p></nav>

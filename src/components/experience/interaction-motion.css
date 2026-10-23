@@ -46,6 +46,48 @@
 .view-buttons button { transition: color 150ms, border-color 150ms; }
 .view-buttons button[data-loading=true] { cursor: progress; }
 
+/* Only the lettering and painted surfaces move; link hit areas never chase a pointer. */
+.header-label-mask { display: block; height: 1.5em; overflow: clip; }
+.header-label-roll { display: block; height: 1.5em; transition: transform 320ms var(--motion-ease); }
+.header-label-roll > span { display: block; height: 1.5em; line-height: 1.5; }
+.button-primary { position: relative; isolation: isolate; overflow: hidden; }
+.button-primary::before {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: var(--blue-hover, #203bd8); transform: translateX(-102%);
+  transition: transform 380ms var(--motion-ease);
+}
+.button-primary:focus-visible::before { transform: none; transition: none; }
+.founder { position: relative; isolation: isolate; }
+.founder::before {
+  content: ''; position: absolute; inset: -12px -16px; z-index: -1; pointer-events: none;
+  background: rgb(20 32 51 / .06); box-shadow: 0 12px 28px rgb(20 32 51 / .1);
+  opacity: 0; transform: translateY(5px); transition: opacity 220ms, transform 280ms var(--motion-ease);
+}
+.founder::after {
+  content: ''; position: absolute; inset: -1px 0 auto; height: 1px; pointer-events: none;
+  background: var(--blue-text, #e0e7ff); transform-origin: left; transform: scaleX(0);
+  transition: transform 380ms var(--motion-ease);
+}
+.founder:focus-within::before { opacity: 1; transform: none; transition: none; }
+.founder:focus-within::after { transform: scaleX(1); transition: none; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .site-header[data-motion-mode=desktop] .header-nav a:hover:not(:focus) .header-label-roll { transform: translateY(-100%); }
+  .button-primary:hover { background: var(--blue); }
+  .button-primary:hover::before { transform: none; }
+  .founder:hover::before { opacity: 1; transform: none; }
+  .founder:hover::after { transform: scaleX(1); }
+}
+.site-header .header-nav a:focus .header-label-roll { transform: none; transition: none; }
+html[data-large-text] .header-label-roll { transform: none !important; transition: none; }
+html[data-large-text] .header-label-mask { height: auto; overflow: visible; }
+html[data-large-text] .header-label-roll, html[data-large-text] .header-label-roll > span { height: auto; }
+html[data-large-text] .header-label-roll > span[aria-hidden] { display: none; }
+html[data-large-text] :is(.button-primary, .founder)::before,
+html[data-large-text] .founder::after { display: none; }
+/* Hidden-tab resets may write after the global cancellation handler. Do not
+   let those writes create a fresh CSS transition while the tab is asleep. */
+html[data-motion-paused] *, html[data-motion-paused] *::before, html[data-motion-paused] *::after { transition: none !important; }
+
 @keyframes interaction-menu-open {
   from { clip-path: inset(0 0 100% 0); opacity: .4; }
   to { clip-path: inset(0 0 0 0); opacity: 1; }
@@ -57,6 +99,8 @@
 @media (prefers-reduced-motion: reduce) {
   .nav-menu[open] nav,
   .nav-menu[open] nav a { animation: none; }
+  .header-label-roll { transform: none !important; transition: none; }
+  .button-primary::before, .founder::before, .founder::after { display: none; }
   .site-header .header-cta svg,
   .nav-menu nav a svg,
   .motion-chapter .text-link svg,

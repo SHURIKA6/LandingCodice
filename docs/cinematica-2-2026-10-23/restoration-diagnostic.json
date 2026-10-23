@@ -1,0 +1,34 @@
+[
+  {
+    "disableAnchoring": false,
+    "before": {
+      "y": 2040,
+      "restoration": "auto",
+      "anchoringSupported": true
+    },
+    "after": {
+      "y": 2040,
+      "calls": [
+        {
+          "event": "scroll",
+          "y": 2040,
+          "at": 525
+        }
+      ],
+      "name": "Victor Rafael"
+    }
+  },
+  {
+    "disableAnchoring": true,
+    "before": {
+      "y": 2040,
+      "restoration": "auto",
+      "anchoringSupported": true
+    },
+    "after": {
+      "y": 0,
+      "calls": [],
+      "name": "Fernando Riad"
+    }
+  }
+]

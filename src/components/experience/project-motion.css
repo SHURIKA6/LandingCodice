@@ -13,6 +13,14 @@
   transform: translate3d(0, var(--project-pan-y, 0%), 0) scale(1.1);
 }
 .scroll-frame[data-frame-visible=true][data-scroll-motion=true] .project-media-pan { will-change: transform; }
+.scroll-frame { perspective: 1200px; }
+.scroll-frame-tilt { transform-origin: center; }
+.scroll-frame[data-kind=project][data-scroll-motion=true] .project-media-pan {
+  transform: translate3d(0, var(--project-pan-y, 0%), 0) scale(1.16);
+}
+/* The bar catches up with the frame; its layout and caption never shift. */
+.scroll-frame[data-scroll-motion=true] .browser-bar { transform: translateY(calc(var(--browser-bar-y, 0) * 1px)); }
+.scroll-frame:focus-within :is(.scroll-frame-tilt, .scroll-frame-surface, .project-media-pan, .browser-bar) { transform: none !important; }
 .project-stage .project-capture-next {
   position: absolute;
   inset: 0;
@@ -30,6 +38,8 @@
   transform: none;
 }
 html[data-large-text] .scroll-frame .scroll-frame-surface,
+html[data-large-text] .scroll-frame .scroll-frame-tilt,
+html[data-large-text] .scroll-frame .browser-bar,
 html[data-large-text] .scroll-frame .project-media-pan,
 html[data-large-text] .project-stage .project-capture-next {
   transform: none !important;
@@ -39,5 +49,7 @@ html[data-large-text] .project-stage .project-capture-next {
 @media (prefers-reduced-motion: reduce) {
   .project-stage .project-capture-next { transition: none; transform: none; }
   .scroll-frame .scroll-frame-surface,
+  .scroll-frame .scroll-frame-tilt,
+  .scroll-frame .browser-bar,
   .scroll-frame .project-media-pan { transform: none !important; will-change: auto !important; }
 }

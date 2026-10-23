@@ -23,6 +23,14 @@ typography:
 
 # Design System: Codice — Pessoas em cena
 
+## Cinemática 2 — execução autorizada em 23/10/2026
+
+Ampliação completa autorizada com **“go”**, intensidade cinematográfica. O momento principal continua sendo os retratos reais: planos paralelos com mais profundidade e giro comum, câmera em dolly, ponteiro graduado por profundidade e quatro paradas de leitura. Capítulos recebem lâmina de costura e skew que se resolve; projetos usam tilt independente do scroll; header, botões, contatos e wordmark recebem feedback sem deslocar caixas de ação. Plate e vídeo da abertura movem-se juntos sob o scrim estável. Não acrescentar loops, bibliotecas ou palcos fixos.
+
+Paleta, tipografia, imagens, 300svh e conteúdo atual permanecem. Texto ampliado também retorna a cena desktop ao HTML; preferência reduzida ao vivo e resets em aba oculta desativam os efeitos, sem rearmar a entrada da abertura. A lâmina fica nos 32 px da costura, sem atravessar a leitura. O hover dos contatos escurece a superfície para conservar contraste.
+
+[Registro](docs/cinematica-2-2026-10-23/README.md) e [QA próprio](docs/cinematica-2-2026-10-23/verification.md): build/typecheck, 23 testes Node e 39 cenários Chromium aprovados; WebKit parcial, com pendências explícitas de hover, teclado e restauração. Capturas interrompidas a pedido do usuário, antes do refinamento final da lâmina; a última revisão usa medições/interações sem imagens. Não herdar aprovações históricas.
+
 ## Coreografia da página inteira — execução de 21/10/2026
 
 O plano autorizado com **“Implement the proposed plan.”** mantém a paleta/fontes e os retratos como assinatura; amplia a continuidade entre cenas com campos decorativos direcionais, títulos em contraponto, capturas com percurso interno, processo progressivo e palavra final recomposta pela rolagem. A escultura azul ganha arco de deslocamento/escala/rotação plana e resposta ao ponteiro em camada independente. Ações mantêm caixas estáveis. Menu tem saída curta reversível por novo acionamento, sem atrasar navegação/Escape. Não há novo palco fixo, biblioteca ou loop ambiente.

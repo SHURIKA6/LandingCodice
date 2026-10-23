@@ -17,17 +17,31 @@ section.motion-chapter[data-choreography=true] > .chapter-surface-clip {
   transform: translate3d(calc(var(--chapter-entry, 1) * 108%), 0, 0);
 }
 .contact-section[data-choreography=true] .chapter-surface { background: var(--blue-hover, #203bd8); }
+.motion-chapter[data-choreography=true] .chapter-seam {
+  position: absolute; inset: 0 0 auto; height: 32px; background: var(--blue);
+  clip-path: polygon(0 0, 100% 0, 86% 100%, 0 100%);
+  transform: translate3d(calc(7% - var(--chapter-entry, 1) * 116%), 0, 0);
+  opacity: calc(1 - var(--chapter-entry, 1));
+  filter: drop-shadow(10px 12px 16px rgb(20 32 51 / .08));
+}
+.package-section[data-choreography=true] .chapter-seam {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 14% 100%);
+  transform: translate3d(calc(-7% + var(--chapter-entry, 1) * 116%), 0, 0);
+}
+.contact-section[data-choreography=true] .chapter-seam { background: var(--paper); opacity: calc((1 - var(--chapter-entry, 1)) * .16); }
 .chapter-title-line { display: block; overflow: clip; padding-block: .12em; margin-block: -.12em; }
 .chapter-title-line > span { display: block; }
 .motion-chapter[data-choreography=true] .chapter-title-line > span {
-  transform: translate3d(calc((1 - var(--chapter-entry, 1)) * 72px), calc((1 - var(--chapter-entry, 1)) * 28px), 0);
+  transform: translate3d(calc((1 - var(--chapter-entry, 1)) * 72px), calc((1 - var(--chapter-entry, 1)) * 28px), 0) skewX(calc((1 - var(--chapter-entry, 1)) * -4deg));
 }
 .motion-chapter[data-choreography=true] .chapter-title-line:nth-child(even) > span {
-  transform: translate3d(calc((1 - var(--chapter-entry, 1)) * -48px), calc((1 - var(--chapter-entry, 1)) * 28px), 0);
+  transform: translate3d(calc((1 - var(--chapter-entry, 1)) * -48px), calc((1 - var(--chapter-entry, 1)) * 28px), 0) skewX(calc((1 - var(--chapter-entry, 1)) * 3deg));
 }
 .package-section[data-choreography=true] .chapter-title-line > span {
-  transform: translate3d(calc((1 - var(--chapter-entry, 1)) * -64px), calc((1 - var(--chapter-entry, 1)) * 24px), 0);
+  transform: translate3d(calc((1 - var(--chapter-entry, 1)) * -64px), calc((1 - var(--chapter-entry, 1)) * 24px), 0) skewX(calc((1 - var(--chapter-entry, 1)) * 3deg));
 }
+.chapter-copy-drift { display: block; }
+.motion-chapter[data-choreography=true] .chapter-copy-drift { transform: translate3d(0, calc((1 - var(--chapter-entry, 1)) * 16px), 0); }
 .motion-chapter[data-choreography=true] .package-grid { position: relative; border-top-color: transparent; }
 .motion-chapter[data-choreography=true] .package-grid::before {
   content: ''; position: absolute; inset: 0 0 auto; height: 1px; background: var(--blue);
@@ -65,6 +79,7 @@ section.motion-chapter[data-choreography=true] > .chapter-surface-clip {
   gap: 0; overflow: clip; padding-block: .12em; padding-inline: .09em;
 }
 .footer-letter { display: inline-block; }
+.footer-letter-ink { display: inline-block; transform: translateY(calc(var(--letter-lift, 0) * -1px)) rotate(calc(var(--letter-tilt, 0) * 1deg)); transition: transform 220ms var(--motion-ease); }
 .motion-chapter[data-choreography=true] .footer-letter {
   transform: translate3d(0, calc((1 - var(--letter-progress, 1)) * 105%), 0) rotate(calc((1 - var(--letter-progress, 1)) * 6deg));
 }
@@ -75,25 +90,25 @@ section.motion-chapter[data-choreography=true] > .chapter-surface-clip {
   transform: translate3d(calc((1 - var(--word-progress, 1)) * 20px), calc((1 - var(--word-progress, 1)) * 24px), 0) rotate(calc((1 - var(--word-progress, 1)) * -35deg));
 }
 /* A focused action stabilizes all its chapter's supporting choreography. */
-.motion-chapter[data-choreography=true]:focus-within :is(.chapter-title-line > span, .package-index, .footer-letter, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none; }
+.motion-chapter[data-choreography=true]:focus-within :is(.chapter-title-line > span, .chapter-copy-drift, .package-index, .footer-letter, .footer-letter-ink, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none; transition: none; }
 @media (max-width: 1023px) {
   .motion-chapter[data-choreography=true] .chapter-title-line > span {
-    transform: translate3d(calc((1 - var(--chapter-entry, 1)) * 40px), calc((1 - var(--chapter-entry, 1)) * 20px), 0);
+    transform: translate3d(calc((1 - var(--chapter-entry, 1)) * 40px), calc((1 - var(--chapter-entry, 1)) * 20px), 0) skewX(calc((1 - var(--chapter-entry, 1)) * -2deg));
   }
   .motion-chapter[data-choreography=true] .chapter-title-line:nth-child(even) > span,
   .package-section[data-choreography=true] .chapter-title-line > span {
-    transform: translate3d(calc((1 - var(--chapter-entry, 1)) * -32px), calc((1 - var(--chapter-entry, 1)) * 20px), 0);
+    transform: translate3d(calc((1 - var(--chapter-entry, 1)) * -32px), calc((1 - var(--chapter-entry, 1)) * 20px), 0) skewX(calc((1 - var(--chapter-entry, 1)) * 2deg));
   }
 }
 html[data-large-text] .motion-chapter { border-radius: 0 !important; }
 html[data-large-text] .chapter-title-line { overflow: visible; }
 html[data-large-text] .motion-chapter .footer-word > .footer-letters { overflow: visible; }
-html[data-large-text] .motion-chapter :is(.chapter-title-line > span, .package-index, .chapter-surface, .footer-letter, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none !important; }
+html[data-large-text] .motion-chapter :is(.chapter-title-line > span, .chapter-copy-drift, .package-index, .chapter-surface, .footer-letter, .footer-letter-ink, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none !important; transition: none; }
 html[data-large-text] .chapter-surface-clip { display: none !important; }
 @media (prefers-reduced-motion: reduce) {
   .chapter-title-line { overflow: visible; }
   .chapter-surface-clip { display: none !important; }
-  .motion-chapter :is(.chapter-title-line > span, .package-index, .chapter-surface, .footer-letter, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none !important; }
+  .motion-chapter :is(.chapter-title-line > span, .chapter-copy-drift, .package-index, .chapter-surface, .footer-letter, .footer-letter-ink, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none !important; transition: none; }
 }
 
 /*

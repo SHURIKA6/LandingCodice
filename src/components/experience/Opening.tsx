@@ -6,6 +6,7 @@ import { OpeningAnchor } from './OpeningAnchor';
 import { OpeningCircle, OpeningDots, OpeningPeopleProvider, OpeningStoryAvatars } from './OpeningPeople';
 import { OpeningMediaProvider, OpeningPauseButton, OpeningVideo } from './OpeningMedia';
 import { OpeningSculpture } from './OpeningSculpture';
+import { OpeningBackdrop } from './OpeningBackdrop';
 import './opening.css';
 
 /**
@@ -22,9 +23,11 @@ export function Opening() {
     <OpeningAnchor />
     <OpeningMediaProvider>
       <div className="opening-media" aria-hidden="true">
+        <OpeningBackdrop>
         <img className="opening-plate" src={HERO_PLATE_URL} width={heroPlate.width} height={heroPlate.height}
           alt="" decoding="async" fetchPriority="high" />
         <OpeningVideo />
+        </OpeningBackdrop>
         <div className="opening-scrim" />
       </div>
       <OpeningPeopleProvider>

@@ -18,7 +18,6 @@
 .people-hero[data-mode=mobile-story] .person-signature{margin-top:14px;font-size:12px}
 .people-hero[data-mode=mobile-story] .portrait-progress{width:100%;max-width:none;margin-block:16px}
 .people-hero[data-mode=mobile-story] .portrait-progress-track{position:relative}
-.people-hero[data-mode=mobile-story] .portrait-progress-track::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent calc(33.333% - 2px),var(--paper) calc(33.333% - 2px),var(--paper) calc(33.333% + 2px),transparent calc(33.333% + 2px),transparent calc(66.667% - 2px),var(--paper) calc(66.667% - 2px),var(--paper) calc(66.667% + 2px),transparent calc(66.667% + 2px))}
 .people-hero[data-mode=mobile-story] .portrait-progress-names{font-size:10px}
 .people-hero[data-mode=mobile-story] .hero-bottom{flex-direction:row;align-items:center;gap:12px;padding-block:14px 0;animation:none}
 .people-hero[data-mode=mobile-story] .hero-project-link{font-size:11px;gap:8px;max-width:12ch;line-height:1.3;min-width:88px}
@@ -64,3 +63,23 @@ html[data-large-text] .package-summary>.button{width:100%;gap:12px;text-align:le
 html[data-large-text] .footer-word{font-size:12vw;min-width:0}
 html[data-large-text] .footer-word>span:not(.footer-letters){font-size:12px}
 @media(max-width:767px){html[data-large-text] .site-header{min-height:72px}}
+
+/* One stop per real person; the counter rolls inside a single stable line. */
+.portrait-progress-rail { position: relative; padding-block: 4px; }
+.portrait-progress-stops { position: absolute; inset: 0; display: flex; justify-content: space-between; align-items: center; }
+.portrait-progress-stops > span { width: 7px; height: 7px; border: 1px solid var(--line); background: var(--paper); border-radius: 50%; transition: background 200ms, border-color 200ms, scale 300ms var(--motion-ease); }
+.portrait-progress-stops > span[data-reached=true] { background: var(--blue); border-color: var(--blue); }
+.portrait-progress-stops > span[data-active=true] { scale: 1.3; }
+.portrait-progress-caption { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 6px; }
+.portrait-progress-caption .portrait-progress-names { flex: 1; margin-top: 0; gap: 8px; }
+.portrait-counter { display: inline-flex; white-space: pre; flex-shrink: 0; font-size: 10px; line-height: 1; font-variant-numeric: tabular-nums; color: var(--quiet); }
+.portrait-counter-mask { height: 1em; overflow: clip; }
+.portrait-counter-roll { display: flex; flex-direction: column; height: 1em; transition: transform 400ms var(--motion-ease); color: var(--blue); font-weight: 600; }
+.portrait-counter-roll > span { display: block; flex: 0 0 1em; }
+.hero-project-arrow { display: inline-flex; flex-shrink: 0; }
+.hero-project-link:focus-visible .hero-project-arrow { transform: none !important; }
+html[data-large-text] :is(.portrait-counter-roll, .hero-project-arrow) { transform: none !important; transition: none; }
+@media(prefers-reduced-motion:reduce) {
+  .hero-project-arrow { transform: none !important; }
+  .portrait-counter-roll, .portrait-progress-stops > span { transition: none; }
+}
