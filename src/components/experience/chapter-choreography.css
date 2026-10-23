@@ -38,14 +38,10 @@ section.motion-chapter[data-choreography=true] > .chapter-surface-clip {
   content: ''; position: absolute; inset: 0 0 auto; height: 1px; background: var(--blue);
   transform-origin: left; transform: scaleX(var(--offer-progress, 1)); pointer-events: none;
 }
-.motion-chapter[data-choreography=true] .package-details > ul { position: relative; }
-.motion-chapter[data-choreography=true] .package-details > ul > li { position: relative; border-bottom-color: transparent; }
-.motion-chapter[data-choreography=true] .package-details > ul > li::after {
-  content: ''; position: absolute; inset: auto 0 0; height: 1px; background: var(--line);
-  transform-origin: left; transform: scaleX(var(--inclusion-progress, 1)); pointer-events: none;
-}
-.motion-chapter[data-choreography=true] .package-details > ul > li > span {
-  transform: rotate(calc((1 - var(--inclusion-progress, 1)) * -45deg));
+/* The numbering settles into place on the same scroll progress the rows used to follow. */
+.motion-chapter[data-choreography=true] .package-details > ul > li > .package-index {
+  opacity: calc(.25 + var(--inclusion-progress, 1) * .75);
+  transform: translateY(calc((1 - var(--inclusion-progress, 1)) * 16px));
 }
 .motion-chapter[data-choreography=true] .process ol[data-process-axis=horizontal] {
   position: relative; grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -81,7 +77,7 @@ section.motion-chapter[data-choreography=true] > .chapter-surface-clip {
   transform: translate3d(calc((1 - var(--word-progress, 1)) * 20px), calc((1 - var(--word-progress, 1)) * 24px), 0) rotate(calc((1 - var(--word-progress, 1)) * -35deg));
 }
 /* A focused action stabilizes all its chapter's supporting choreography. */
-.motion-chapter[data-choreography=true]:focus-within :is(.chapter-title-line > span, .price-motion-surface, .footer-letter, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none; }
+.motion-chapter[data-choreography=true]:focus-within :is(.chapter-title-line > span, .package-index, .price-motion-surface, .footer-letter, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none; }
 @media (max-width: 1023px) {
   .motion-chapter[data-choreography=true] .chapter-title-line > span {
     transform: translate3d(calc((1 - var(--chapter-entry, 1)) * 40px), calc((1 - var(--chapter-entry, 1)) * 20px), 0);
@@ -97,10 +93,10 @@ section.motion-chapter[data-choreography=true] > .chapter-surface-clip {
 html[data-large-text] .motion-chapter { border-radius: 0 !important; }
 html[data-large-text] .chapter-title-line { overflow: visible; }
 html[data-large-text] .motion-chapter .footer-word > .footer-letters { overflow: visible; }
-html[data-large-text] .motion-chapter :is(.chapter-title-line > span, .price-motion-surface, .chapter-surface, .footer-letter, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none !important; }
+html[data-large-text] .motion-chapter :is(.chapter-title-line > span, .package-index, .price-motion-surface, .chapter-surface, .footer-letter, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none !important; }
 html[data-large-text] .chapter-surface-clip { display: none !important; }
 @media (prefers-reduced-motion: reduce) {
   .chapter-title-line { overflow: visible; }
   .chapter-surface-clip { display: none !important; }
-  .motion-chapter :is(.chapter-title-line > span, .price-motion-surface, .chapter-surface, .footer-letter, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none !important; }
+  .motion-chapter :is(.chapter-title-line > span, .package-index, .price-motion-surface, .chapter-surface, .footer-letter, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none !important; }
 }

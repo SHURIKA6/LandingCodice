@@ -184,7 +184,9 @@ async (page) => {
       // page.waitForFunction's RAF poller is not available in that document.
       await p.waitForTimeout(800);
       assert(await p.locator('#trabalho').evaluate(node => node.getBoundingClientRect().top) < 160, 'native anchor offset obscures the projects');
-      assert(await p.locator('#pacote').textContent().then(text => text.includes('R$ 1.500')), 'offer missing in fallback');
+      const packageText = await p.locator('#pacote').textContent();
+      assert(packageText.includes('O que vai com o seu site'), 'offer inclusions missing in fallback');
+      assert(packageText.includes('Uma rodada consolidada de alterações'), 'offer details missing in fallback');
       results.push({ scenario: options.javaScriptEnabled === false ? 'no-javascript' : 'reduced-motion-initial', pass: true });
     } finally { await context.close(); }
   }
