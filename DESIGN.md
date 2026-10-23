@@ -29,7 +29,7 @@ Ampliação completa autorizada com **“go”**, intensidade cinematográfica. 
 
 Paleta, tipografia, imagens, 300svh e conteúdo atual permanecem. Texto ampliado também retorna a cena desktop ao HTML; preferência reduzida ao vivo e resets em aba oculta desativam os efeitos, sem rearmar a entrada da abertura. A lâmina fica nos 32 px da costura, sem atravessar a leitura. O hover dos contatos escurece a superfície para conservar contraste.
 
-[Registro](docs/cinematica-2-2026-10-23/README.md) e [QA próprio](docs/cinematica-2-2026-10-23/verification.md): build/typecheck, 23 testes Node e 39 cenários Chromium aprovados; WebKit parcial, com pendências explícitas de hover, teclado e restauração. Capturas interrompidas a pedido do usuário, antes do refinamento final da lâmina; a última revisão usa medições/interações sem imagens. Não herdar aprovações históricas.
+WebKit permanece com pendências de hover, teclado e restauração. Os artefatos de QA desta entrega foram removidos a pedido do usuário; não herdar aprovações históricas.
 
 ## Coreografia da página inteira — execução de 21/10/2026
 

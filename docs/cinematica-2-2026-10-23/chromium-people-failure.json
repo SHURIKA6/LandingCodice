@@ -1,6 +1,0 @@
-{
-  "engine": "chromium",
-  "suite": "people",
-  "failed": true,
-  "message": "{\"completed\":[{\"scenario\":\"layout-320\",\"renderer\":\"html\",\"pass\":true},{\"scenario\":\"mobile-pinned-story\",\"pass\":true},{\"scenario\":\"layout-390\",\"renderer\":\"html\",\"pass\":true},{\"scenario\":\"layout-768\",\"renderer\":\"html\",\"pass\":true},{\"scenario\":\"layout-1024\",\"renderer\":\"three\",\"pass\":true},{\"scenario\":\"layout-1440\",\"renderer\":\"three\",\"pass\":true},{\"scenario\":\"layout-1920\",\"renderer\":\"three\",\"pass\":true},{\"scenario\":\"reload-at-middle-portrait\",\"pass\":true},{\"scenario\":\"scroll-forward-reverse-catalogue-keyboard\",\"stops\":[\"Fernando Riad\",\"Eduardo Gobatto\",\"Victor Rafael\",\"Jose Vitor\",\"Victor Rafael\",\"Eduardo Gobatto\",\"Fernando Riad\"],\"pass\":true}],\"error\":\"page.waitForFunction: Timeout 30000ms exceeded.\"}"
-}
