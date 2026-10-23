@@ -100,3 +100,22 @@ html[data-large-text] .chapter-surface-clip { display: none !important; }
   .chapter-surface-clip { display: none !important; }
   .motion-chapter :is(.chapter-title-line > span, .package-index, .price-motion-surface, .chapter-surface, .footer-letter, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none !important; }
 }
+
+/*
+ * The wordmark tracks the width it finally occupies, not a viewport guess, so a
+ * font that renders with other metrics can never push the last glyph past the
+ * shell. Divisors mirror the authored viewport clamps measured in Bricolage
+ * (letters ≈ 2.72em): base ≈ 24% of the viewport, mobile ≈ 25vw, enlarged text
+ * ≈ 12vw — within ~1% of the previous render, with ~40% metric headroom.
+ */
+.motion-chapter .footer-word { container-type: inline-size; }
+@supports (container-type: inline-size) {
+  .motion-chapter .footer-word > .footer-letters {
+    flex-shrink: 0;
+    font-size: min(calc(100cqw / 3.84), 370px);
+  }
+  @media (max-width: 767px) {
+    .motion-chapter .footer-word > .footer-letters { font-size: min(calc(100cqw / 3.6), 370px); }
+  }
+  html[data-large-text] .motion-chapter .footer-word > .footer-letters { font-size: calc(100cqw / 7.7); }
+}
