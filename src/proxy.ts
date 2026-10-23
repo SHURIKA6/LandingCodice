@@ -26,7 +26,7 @@ export function proxy(request: NextRequest) {
     return new NextResponse(homeMarkdown(), { status: 200, headers: MARKDOWN_HEADERS });
   }
 
-  const known = ['/about', '/contact', '/privacy', '/docs'];
+  const known = ['/about', '/contact', '/privacy', '/docs', '/developers'];
   if (known.includes(pathname.replace(/\/$/, '') || '/')) {
     return new NextResponse(pageMarkdown(pathname), { status: 200, headers: MARKDOWN_HEADERS });
   }

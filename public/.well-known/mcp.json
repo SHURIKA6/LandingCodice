@@ -1,0 +1,13 @@
+{
+  "name": "Codice",
+  "version": "0.1.0",
+  "description": "Web studio in Sinop, Mato Grosso, Brazil. Professional one-page websites for local businesses.",
+  "protocol": "mcp",
+  "transport": "streamable-http",
+  "endpoint": "https://landing-codice.vercel.app/.well-known/mcp",
+  "documentation": "https://landing-codice.vercel.app/docs",
+  "openapi": "https://landing-codice.vercel.app/openapi.json",
+  "tools": [
+    { "name": "get_codice_contact", "description": "Return public contact information for the Codice web studio in Sinop, Mato Grosso, Brazil." }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Codice public API",
+    "version": "1.0.0",
+    "description": "Codice is a web studio in Sinop, Mato Grosso, Brazil, building professional one-page websites. This read-only public API exposes service health and public team contacts for agents and integrations. No authentication required."
+  },
+  "externalDocs": {
+    "description": "Documentation for agents and developers",
+    "url": "https://landing-codice.vercel.app/docs"
+  },
+  "servers": [
+    { "url": "https://landing-codice.vercel.app" },
+    { "url": "http://localhost:4321" }
+  ],
+  "security": [],
+  "tags": [
+    { "name": "system" },
+    { "name": "contacts" }
+  ],
+  "paths": {
+    "/api": {
+      "get": {
+        "operationId": "get_api_index",
+        "summary": "API index",
+        "description": "Returns the API name, description and version, the documentation and OpenAPI specification paths, and the list of available endpoints with their supported methods.",
+        "tags": ["system"],
+        "responses": {
+          "200": {
+            "description": "The index of the public API.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ApiIndex" }
+              }
+            }
+          },
+          "405": {
+            "description": "The endpoint accepts GET only.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ErrorResponse" },
+                "examples": {
+                  "method_not_allowed": {
+                    "summary": "A non-GET request to /api",
+                    "value": {
+                      "type": "https://landing-codice.vercel.app/docs#errors",
+                      "title": "This endpoint accepts GET only.",
+                      "status": 405,
+                      "code": "method_not_allowed",
+                      "message": "This endpoint accepts GET only.",
+                      "detail": "This endpoint accepts GET only.",
+                      "resolution": "Retry the request with one of the allowed methods: GET."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/health": {
+      "get": {
+        "operationId": "get_api_health",
+        "summary": "Health status",
+        "description": "Reports whether the service is healthy, with the service name, server version and current server time as an ISO 8601 UTC timestamp.",
+        "tags": ["system"],
+        "responses": {
+          "200": {
+            "description": "The service is healthy.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HealthResponse" }
+              }
+            }
+          },
+          "405": {
+            "description": "The endpoint accepts GET only.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ErrorResponse" },
+                "examples": {
+                  "method_not_allowed": {
+                    "summary": "A non-GET request to /api/health",
+                    "value": {
+                      "type": "https://landing-codice.vercel.app/docs#errors",
+                      "title": "This endpoint accepts GET only.",
+                      "status": 405,
+                      "code": "method_not_allowed",
+                      "message": "This endpoint accepts GET only.",
+                      "detail": "This endpoint accepts GET only.",
+                      "resolution": "Retry the request with one of the allowed methods: GET."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/contacts": {
+      "get": {
+        "operationId": "get_api_contacts",
+        "summary": "Public team contacts",
+        "description": "Returns public team contact information: display phone number, WhatsApp conversation link and, when available, the GitHub profile URL of each team member.",
+        "tags": ["contacts"],
+        "parameters": [
+          {
+            "name": "format",
+            "in": "query",
+            "required": false,
+            "description": "Response format. Any value other than \"json\" returns a 400 error.",
+            "schema": { "type": "string", "enum": ["json"], "default": "json" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Public team contact information.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ContactsResponse" }
+              }
+            }
+          },
+          "400": {
+            "description": "The format query parameter was sent with a value other than \"json\".",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ErrorResponse" },
+                "examples": {
+                  "unsupported_format": {
+                    "summary": "A request to /api/contacts?format=xml",
+                    "value": {
+                      "type": "https://landing-codice.vercel.app/docs#errors",
+                      "title": "Query parameter format must be \"json\", received \"xml\".",
+                      "status": 400,
+                      "code": "unsupported_format",
+                      "message": "Query parameter format must be \"json\", received \"xml\".",
+                      "detail": "Query parameter format must be \"json\", received \"xml\".",
+                      "resolution": "Omit the format parameter or send format=json."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "The endpoint accepts GET only.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ErrorResponse" },
+                "examples": {
+                  "method_not_allowed": {
+                    "summary": "A non-GET request to /api/contacts",
+                    "value": {
+                      "type": "https://landing-codice.vercel.app/docs#errors",
+                      "title": "This endpoint accepts GET only.",
+                      "status": 405,
+                      "code": "method_not_allowed",
+                      "message": "This endpoint accepts GET only.",
+                      "detail": "This endpoint accepts GET only.",
+                      "resolution": "Retry the request with one of the allowed methods: GET."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApiIndex": {
+        "type": "object",
+        "description": "Index of the public API and its available endpoints.",
+        "required": ["name", "description", "version", "documentation", "openapi", "endpoints"],
+        "properties": {
+          "name": { "type": "string", "description": "Studio name behind this API." },
+          "description": { "type": "string", "description": "Short summary of what this API is." },
+          "version": { "type": "string", "description": "Semantic version of the API." },
+          "documentation": { "type": "string", "description": "Site path with documentation for agents and developers." },
+          "openapi": { "type": "string", "description": "Site path to this OpenAPI specification." },
+          "endpoints": {
+            "type": "array",
+            "description": "Endpoints available under /api, each with its supported methods.",
+            "items": {
+              "type": "object",
+              "required": ["path", "methods", "description"],
+              "properties": {
+                "path": { "type": "string", "description": "Endpoint path, starting with /api." },
+                "methods": {
+                  "type": "array",
+                  "description": "HTTP methods the endpoint accepts.",
+                  "items": { "type": "string" }
+                },
+                "description": { "type": "string", "description": "What the endpoint returns." }
+              }
+            }
+          }
+        }
+      },
+      "HealthResponse": {
+        "type": "object",
+        "description": "Health status of the service.",
+        "required": ["status", "service", "version", "time"],
+        "properties": {
+          "status": { "type": "string", "enum": ["ok"], "description": "Fixed to \"ok\" while the service is healthy." },
+          "service": { "type": "string", "description": "Name of the service being checked." },
+          "version": { "type": "string", "description": "Server application version." },
+          "time": { "type": "string", "format": "date-time", "description": "ISO 8601 UTC timestamp of the response." }
+        }
+      },
+      "ContactsResponse": {
+        "type": "object",
+        "description": "Public contact information of the studio team.",
+        "required": ["studio", "location", "contacts"],
+        "properties": {
+          "studio": { "type": "string", "description": "Studio name." },
+          "location": { "type": "string", "description": "City, state and country where the studio operates." },
+          "contacts": {
+            "type": "array",
+            "description": "Public contacts of each team member.",
+            "items": { "$ref": "#/components/schemas/ContactItem" }
+          }
+        }
+      },
+      "ContactItem": {
+        "type": "object",
+        "description": "Public contact details of one team member.",
+        "required": ["name", "phone", "whatsapp"],
+        "properties": {
+          "name": { "type": "string", "description": "Full name of the team member." },
+          "phone": { "type": "string", "description": "WhatsApp phone number in international display format." },
+          "whatsapp": { "type": "string", "description": "HTTPS WhatsApp link that starts a conversation with this phone number." },
+          "github": { "type": "string", "description": "GitHub profile URL. Present only when the team member has one." }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "description": "Machine-readable error returned by every API failure.",
+        "required": ["type", "title", "status", "code", "message", "detail", "resolution"],
+        "properties": {
+          "type": { "type": "string", "description": "URI that documents the error contract." },
+          "title": { "type": "string", "description": "Short summary of the error." },
+          "status": { "type": "integer", "description": "HTTP status code of the response." },
+          "code": { "type": "string", "description": "Stable, machine-readable error code." },
+          "message": { "type": "string", "description": "Human-readable description of what went wrong." },
+          "detail": { "type": "string", "description": "Additional context about the failure." },
+          "resolution": { "type": "string", "description": "Action a client can take to fix the request." }
+        }
+      }
+    }
+  }
+}

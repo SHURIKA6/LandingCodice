@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Privacidade — Codice',
   description: 'Política de privacidade da Codice: como tratamos dados de contato e informações enviadas pelos visitantes.',
+  alternates: { canonical: '/privacy' },
 };
 
 export default function PrivacyPage() {

@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Contato — Codice',
   description: 'Fale com a Codice pelo WhatsApp. Contatos diretos de Fernando, Eduardo, Victor e Jose Vitor.',
+  alternates: { canonical: '/contact' },
 };
 
 export default function ContactPage() {

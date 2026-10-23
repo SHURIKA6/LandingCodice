@@ -71,7 +71,7 @@ export default function Home() {
         <div className="founders">{landing.founders.map(founder => <article className="founder" key={founder.id}><p className="eyebrow">Contato direto</p><h3>{founder.name}</h3><a className="founder-contact" href={whatsappUrl(founder.whatsappNumber, 'Olá! Quero conversar sobre o site de uma página da Codice.')} target="_blank" rel="noopener noreferrer"><span>Falar com {founder.name.split(' ')[0]}<small>{founder.phoneLabel}</small></span><Arrow diagonal /><span className="sr-only"> pelo WhatsApp (abre em outra aba)</span></a>{founder.githubHref && <a className="text-link founder-github" href={founder.githubHref} target="_blank" rel="noopener noreferrer">Trabalhos no GitHub <Arrow diagonal /><span className="sr-only"> (abre em outra aba)</span></a>}</article>)}</div>
         <p className="other-work">Precisa de um sistema ou de uma automação? A gente também pode conversar, com orçamento separado.</p>
         <div className="footer-word" data-reveal="word" aria-hidden="true">codice<span>↗</span></div>
-        <footer className="colophon"><a href="#inicio">De volta ao início <Arrow /></a><p>Sinop, Mato Grosso</p><small>© {new Date().getFullYear()} Codice</small></footer>
+        <footer className="colophon"><a href="#inicio">De volta ao início <Arrow /></a><a href="/docs">Documentação e API <Arrow /></a><p>Sinop, Mato Grosso</p><small>© {new Date().getFullYear()} Codice</small></footer>
       </div></MotionChapter>
     </main>
   </>;

@@ -62,3 +62,17 @@ test('MCP handler lists tools and returns contact data', async () => {
   const callBody = await callResponse.json();
   assert.match(callBody.result.content[0].text, /Fernando Riad/);
 });
+
+test('home markdown advertises the OpenAPI, API and developer surfaces', () => {
+  const markdown = homeMarkdown();
+  assert.match(markdown, /openapi\.json/);
+  assert.match(markdown, /\/api\b/);
+  assert.match(markdown, /\/developers/);
+});
+
+test('markdown for /docs and /developers lists the machine-readable resources', () => {
+  assert.match(pageMarkdown('/docs'), /openapi\.json/);
+  assert.match(pageMarkdown('/docs'), /\.well-known\/mcp/);
+  assert.match(pageMarkdown('/developers'), /openapi\.json/);
+  assert.match(pageMarkdown('/developers'), /api\/health/);
+});

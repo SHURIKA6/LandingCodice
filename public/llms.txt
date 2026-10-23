@@ -19,6 +19,7 @@ Use Codice when a local business needs a professional one-page website to presen
 - Contact: https://landing-codice.vercel.app/contact
 - Privacy: https://landing-codice.vercel.app/privacy
 - Documentation: https://landing-codice.vercel.app/docs
+- Developers: https://landing-codice.vercel.app/developers
 
 ## Machine-readable resources
 
@@ -26,6 +27,9 @@ Use Codice when a local business needs a professional one-page website to presen
 - Sitemap: https://landing-codice.vercel.app/sitemap.xml
 - Robots: https://landing-codice.vercel.app/robots.txt
 - MCP server: https://landing-codice.vercel.app/.well-known/mcp
+- OpenAPI: https://landing-codice.vercel.app/openapi.json
+- API: https://landing-codice.vercel.app/api
+- MCP manifest: https://landing-codice.vercel.app/.well-known/mcp.json
 
 ## Projects
 

@@ -6,7 +6,7 @@ export function wantsMarkdown(accept: string | null): boolean {
 }
 
 export function homeMarkdown(): string {
-  return `# Codice — Sites profissionais em Sinop
+  return `# Codice — Estúdio de web design em Sinop
 
 Codice is a web studio in Sinop, Mato Grosso, Brazil, that builds professional one-page websites for local businesses.
 Fernando Riad, Eduardo Gobatto, Victor Rafael and Jose Vitor help businesses present their services, show their work
@@ -42,6 +42,9 @@ separately.
 - Sitemap: ${siteUrl}/sitemap.xml
 - Agent guide: ${siteUrl}/llms.txt
 - MCP server: ${siteUrl}/.well-known/mcp
+- OpenAPI specification: ${siteUrl}/openapi.json
+- API index: ${siteUrl}/api
+- Developers: ${siteUrl}/developers
 
 ## Projects
 
@@ -67,6 +70,19 @@ export function pageMarkdown(pathname: string): string {
   if (clean === '/about') return `# About Codice\n\nCodice is a web studio in Sinop, Mato Grosso, Brazil. Team: Fernando Riad, Eduardo Gobatto, Victor Rafael and Jose Vitor.\n\nHomepage: ${siteUrl}/\n`;
   if (clean === '/contact') return `# Contact Codice\n\nWhatsApp Fernando: https://wa.me/5566999356646\nWhatsApp Eduardo: https://wa.me/556684184488\nLocation: Sinop, Mato Grosso, Brazil.\n`;
   if (clean === '/privacy') return `# Privacy — Codice\n\nCodice collects only information you send voluntarily when contacting the team and uses it only for service and proposals.\n`;
-  if (clean === '/docs') return `# Documentation — Codice\n\nResources: ${siteUrl}/llms.txt, ${siteUrl}/sitemap.xml, ${siteUrl}/.well-known/mcp.\n`;
+  if (clean === '/docs') return `# Documentation — Codice\n\nResources: ${siteUrl}/llms.txt, ${siteUrl}/sitemap.xml, ${siteUrl}/.well-known/mcp, ${siteUrl}/openapi.json, ${siteUrl}/api, ${siteUrl}/developers.\n`;
+  if (clean === '/developers') {
+    return `# Developers — Codice
+
+Public, read-only API without authentication.
+
+- Documentation: ${siteUrl}/docs
+- OpenAPI specification: ${siteUrl}/openapi.json
+- API index: ${siteUrl}/api
+- API health: ${siteUrl}/api/health
+- Public contacts: ${siteUrl}/api/contacts
+- MCP server: ${siteUrl}/.well-known/mcp
+`;
+  }
   return notFoundMarkdown(pathname);
 }

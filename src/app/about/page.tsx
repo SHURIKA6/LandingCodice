@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Sobre a Codice — estúdio de sites em Sinop',
   description: 'Codice é um estúdio em Sinop, Mato Grosso, que cria sites profissionais de uma página para negócios locais.',
+  alternates: { canonical: '/about' },
 };
 
 export default function AboutPage() {
