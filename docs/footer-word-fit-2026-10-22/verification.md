@@ -90,4 +90,20 @@ Recortes 3× do "e" em `captures/e-before-slice.png` (corte reto vertical no boj
 - `https://landing-codice-dun.vercel.app/` servindo o build novo, comprovado no DOM: `.footer-word` com `container-type: inline-size`, wrapper com `flex-shrink: 0`.
 - Bateria de larguras **no deploy** (320, 390, 768, 1024, 1110, 1280, 1366, 1440, 1536, 1600, 1920, 2560 × 850): 12/12 sem vazamento (`letters.right ≤ clientWidth`), sem fatiamento (`scrollWidth ≤ clientWidth`) e sem overflow horizontal do documento.
 - Captura da rodapé no deploy em 1910×983: `captures/deploy-1910.png`.
-- Permanece em aberto: aceite visual do usuário no aparelho real. A correção de máscara do "e" (segunda rodada) entra em commit próprio; a validação de ink no deploy é registrada abaixo após o rebuild.
+- Permanece em aberto: aceite visual do usuário no aparelho real.
+
+## Validação da correção do "e" no deploy (segunda rodada, 22/10)
+
+- Commit `1c56cfb` enviado a `origin/main` (`git push` → `6dd8f3e..1c56cfb main -> main`).
+- Após o rebuild da Vercel, medição no deploy em 1910×983: `padding-inline: 33,3px`, `margin-inline: -33,3px`, `inkSlicePx: -14,5` (ink 14,5 px dentro da máscara). Seta em x=1183, sem overflow horizontal do documento (`scrollWidth - clientWidth = 0`).
+- Em 390×844 no deploy: `padding-inline: 8,75px`, `inkSlicePx: -3`, `docOverflow: 0`.
+- Conferência por pixel no PNG renderizado (banda do wordmark, brilho > 200 = ink):
+
+| Arquivo | Coluna mais à direita com ink | Leitura |
+| --- | --- | --- |
+| `captures/deploy-1910.png` (antes) | x = 1162 | borda do conteúdo do wrapper (1163,3) — "e" fatiado |
+| Captura pós-correção no deploy | x = 1180 | ink natural do glifo (1182,1, menos antialias) — "e" inteiro |
+| `captures/after-fix-1910.png` (local) | x = 1181 | igual ao deploy |
+
+- Recorte 3× do "e" no deploy corrigido: `captures/deploy-e-complete-1910.png`.
+- Permanece em aberto: aceite visual do usuário no aparelho real (e possível cache de navegador — um recarregamento forçado pode ser necessário).
