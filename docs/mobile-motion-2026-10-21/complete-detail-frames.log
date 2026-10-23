@@ -1,9 +1,0 @@
-{
-  "engine": "chromium",
-  "pass": true,
-  "outputDir": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\LandingCodice\\docs\\mobile-motion-2026-10-21\\setup\\2026-10-21T12-55-26-955Z-chromium-complete-detail-frames",
-  "videos": 1,
-  "cleanupWarnings": [
-    "Error: browser.close exceeded 8000 ms"
-  ]
-}

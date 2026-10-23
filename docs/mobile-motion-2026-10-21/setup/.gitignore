@@ -1,4 +1,0 @@
-# Re-creatable browser recordings and screenshots
-*.webm
-/20??-??-??T*/*.png
-/browser-*/
