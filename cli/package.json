@@ -1,0 +1,12 @@
+{
+  "name": "@codice/cli",
+  "version": "0.1.0",
+  "description": "Official CLI for the Codice public API.",
+  "type": "module",
+  "bin": {
+    "codice": "./bin/codice.mjs"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

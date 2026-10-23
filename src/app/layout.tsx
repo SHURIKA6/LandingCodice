@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
   title: landing.title,
   description: landing.description,
+  keywords: ['Codice', 'Codice web design', 'estúdio de web design', 'sites profissionais', 'site de uma página', 'Sinop', 'Mato Grosso'],
   icons: { icon: '/brand-people.svg' },
   robots: { index: true, follow: true },
   openGraph: { type: 'website', locale: 'pt_BR', siteName: 'Codice', title: landing.title, description: landing.description, url: siteUrl, images: [{ url: '/media/roger-shot.png', width: 1440, height: 1100, alt: 'Captura da interface do projeto Roger Estética Automotiva.' }] },

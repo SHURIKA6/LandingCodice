@@ -37,8 +37,18 @@ export default function Home() {
       addressCountry: 'BR',
     },
   };
+  const website = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Codice',
+    alternateName: 'Codice Web Design',
+    url: siteUrl,
+    description: landing.description,
+    inLanguage: 'pt-BR',
+  };
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization).replace(/</g, '\\u003c') }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(website).replace(/</g, '\\u003c') }} />
     <Header contactHref={offer.href} />
     <main id="conteudo" tabIndex={-1}>
       <Opening />

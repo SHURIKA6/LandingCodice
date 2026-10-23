@@ -29,7 +29,15 @@ Use Codice when a local business needs a professional one-page website to presen
 - MCP server: https://landing-codice.vercel.app/.well-known/mcp
 - OpenAPI: https://landing-codice.vercel.app/openapi.json
 - API: https://landing-codice.vercel.app/api
+- Versioned API: https://landing-codice.vercel.app/api/v1
 - MCP manifest: https://landing-codice.vercel.app/.well-known/mcp.json
+
+## API versioning and limits
+
+- `/api` is the alias of the current version; `/api/v1` is the stable path.
+- Deprecation is signaled with `Deprecation` and `Sunset` headers before removal.
+- Rate limits return `RateLimit-Limit`, `RateLimit-Remaining`, `RateLimit-Reset` and `Retry-After` on 429.
+- CLI: an official CLI is in development; see https://landing-codice.vercel.app/developers.
 
 ## Projects
 

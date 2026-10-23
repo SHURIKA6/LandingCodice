@@ -1,5 +1,6 @@
 import { siteContent } from '../../../data/site';
 import { apiJson, jsonError, methodNotAllowed } from '../../../lib/api-errors';
+import { checkRateLimit } from '../../../lib/rate-limit';
 
 function contactsPayload() {
   return {
@@ -14,21 +15,32 @@ function contactsPayload() {
   };
 }
 
-export async function GET(request: Request): Promise<Response> {
-  const format = new URL(request.url).searchParams.get('format');
+export function GET(request?: Request): Response {
+  const resolvedRequest = request ?? new Request('http://localhost:4321/api/contacts');
+  const rateLimit = checkRateLimit(resolvedRequest);
+  if (!rateLimit.allowed) {
+    return jsonError(429, 'rate_limit_exceeded', 'Too many requests.', 'Retry after the number of seconds in the Retry-After header.', rateLimit.headers);
+  }
+  const format = new URL(resolvedRequest.url).searchParams.get('format');
   if (format !== null && format !== 'json') {
     return jsonError(
       400,
       'unsupported_format',
       `Query parameter format must be "json", received "${format}".`,
       'Omit the format parameter or send format=json.',
+      rateLimit.headers,
     );
   }
-  return apiJson(contactsPayload());
+  return apiJson(contactsPayload(), 200, rateLimit.headers);
 }
 
-function methodNotAllowedResponse(): Response {
-  return methodNotAllowed(['GET']);
+function methodNotAllowedResponse(request?: Request): Response {
+  const resolvedRequest = request ?? new Request('http://localhost:4321/api/contacts');
+  const rateLimit = checkRateLimit(resolvedRequest);
+  if (!rateLimit.allowed) {
+    return jsonError(429, 'rate_limit_exceeded', 'Too many requests.', 'Retry after the number of seconds in the Retry-After header.', rateLimit.headers);
+  }
+  return methodNotAllowed(['GET'], rateLimit.headers);
 }
 
 export const POST = methodNotAllowedResponse;

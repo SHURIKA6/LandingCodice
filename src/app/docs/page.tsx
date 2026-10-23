@@ -1,18 +1,25 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Documentação e recursos para desenvolvedores — Codice',
-  description: 'Recursos técnicos da Codice: informações de contato, manifest MCP, sitemap e guia para agentes.',
+  title: 'Codice Docs — Documentação e recursos para desenvolvedores',
+  description: 'Recursos técnicos da Codice: API versionada, manifest MCP, sitemap, OpenAPI e guia para agentes.',
+  keywords: ['Codice', 'Codice docs', 'API', 'OpenAPI', 'MCP', 'developers'],
   alternates: { canonical: '/docs' },
 };
 
 export default function DocsPage() {
   return (
     <main id="conteudo" className="section-shell">
-      <h1>Documentação e recursos para desenvolvedores</h1>
+      <h1>Documentação e recursos para desenvolvedores da Codice</h1>
       <p>
         A Codice é um estúdio de sites profissionais em Sinop. Esta página reúne os recursos técnicos e os
         documentos legíveis por agentes e desenvolvedores.
+      </p>
+      <p>
+        Versionamento da API: <code>/api</code> é o alias da versão atual e <code>/api/v1</code> é o caminho
+        estável. Descontinuações são sinalizadas com os cabeçalhos <code>Deprecation</code> e <code>Sunset</code>,
+        com prazo documentado antes da remoção. Limites de uso retornam cabeçalhos <code>RateLimit-*</code> e
+        <code>Retry-After</code> em respostas 429.
       </p>
       <ul>
         <li><a href="/llms.txt">llms.txt — guia para agentes e modelos de linguagem</a></li>

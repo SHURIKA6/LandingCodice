@@ -1,18 +1,25 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'API e recursos para desenvolvedores — Codice',
-  description: 'API pública da Codice: endpoints, especificação OpenAPI, manifest MCP e recursos para agentes.',
+  title: 'Codice Developers — API, OpenAPI e recursos para desenvolvedores',
+  description: 'API pública da Codice: endpoints versionados, especificação OpenAPI, manifest MCP, CLI e recursos para agentes.',
+  keywords: ['Codice', 'Codice developers', 'Codice API', 'OpenAPI', 'MCP server', 'CLI'],
   alternates: { canonical: '/developers' },
 };
 
 export default function DevelopersPage() {
   return (
     <main id="conteudo" className="section-shell">
-      <h1>API e recursos para desenvolvedores</h1>
+      <h1>API e recursos para desenvolvedores da Codice</h1>
       <p>
         Os recursos abaixo são públicos e legíveis por máquina, criados para que agentes e integrações acessem
         informações do estúdio sem registro e sem autenticação.
+      </p>
+      <p>
+        A API é versionada: use <code>/api/v1</code> para um caminho estável; <code>/api</code> é o alias da
+        versão atual. Descontinuações são anunciadas com <code>Deprecation</code> e <code>Sunset</code>. Todos os
+        endpoints retornam <code>RateLimit-Limit</code>, <code>RateLimit-Remaining</code>,
+        <code>RateLimit-Reset</code> e, em 429, <code>Retry-After</code>.
       </p>
       <ul>
         <li><a href="/docs">docs — documentação e recursos técnicos</a></li>

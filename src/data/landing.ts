@@ -1,8 +1,8 @@
 import { siteContent } from './site';
 
 export const landing = {
-  title: 'Codice — Estúdio de web design em Sinop',
-  description: 'Web design em Sinop/MT. Sites profissionais de uma página que apresentam seus serviços e facilitam o contato com seus clientes. Conheça Fernando, Eduardo, Victor e Jose Vitor, da Codice.',
+  title: 'Codice Web Design — Estúdio de sites profissionais em Sinop, MT',
+  description: 'Codice é um estúdio de web design em Sinop, Mato Grosso. Criamos sites profissionais de uma página que apresentam seus serviços e facilitam o contato com seus clientes. Conheça Fernando, Eduardo, Victor e Jose Vitor, da Codice.',
   founders: siteContent.founders,
   project: siteContent.projects.find(project => project.id === 'corretor')!,
   process: [

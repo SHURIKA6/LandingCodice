@@ -273,3 +273,39 @@ test('llms.txt advertises the machine-readable developer surfaces', () => {
   assert.match(agentGuide, /\.well-known\/mcp\.json/);
   assert.match(agentGuide, /\/developers/);
 });
+
+test('openapi exposes stable versioned API paths', () => {
+  for (const expectedPath of ['/api/v1', '/api/v1/health', '/api/v1/contacts']) {
+    assert.ok(expectedPath in openApiSpec.paths, `missing versioned path ${expectedPath}`);
+  }
+});
+
+test('every GET operation declares a typed format parameter', () => {
+  for (const { apiPath, method, operation } of openApiOperations) {
+    if (method !== 'GET') continue;
+    const formatParam = (operation.parameters || []).find((parameter) => parameter.name === 'format');
+    assert.ok(formatParam, `${method} ${apiPath} missing format parameter`);
+    assert.equal(formatParam.schema?.type, 'string');
+  }
+});
+
+test('API responses include RFC rate-limit headers', async () => {
+  const response = getApiIndex(requestAt('/api'));
+  assert.ok(response.headers.get('ratelimit-limit'), 'RateLimit-Limit header');
+  assert.ok(response.headers.get('ratelimit-remaining'), 'RateLimit-Remaining header');
+  assert.ok(response.headers.get('ratelimit-reset'), 'RateLimit-Reset header');
+});
+
+test('rate limiter rejects requests above the configured limit', async () => {
+  const { checkRateLimit } = await import('../src/lib/rate-limit.ts');
+  const request = new Request('http://localhost:4321/api', { headers: { 'x-forwarded-for': '198.51.100.77' } });
+  let result;
+  for (let index = 0; index < 5; index += 1) {
+    result = checkRateLimit(request, 2);
+  }
+  assert.equal(result.allowed, false);
+  assert.ok(result.headers['Retry-After']);
+  assert.equal(result.headers['RateLimit-Remaining'], '0');
+});
+
+
