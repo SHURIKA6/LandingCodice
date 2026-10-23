@@ -48,3 +48,11 @@ Em `captures/`: `before-desktop-1440.png` / `after-desktop-1440.png`, `before-mo
 - A causa exata do corte visto pelo usuário no seu navegador/aparelho segue sem reprodução determinística no headless local; a mudança elimina a classe de falha por construção (tamanho derivado do contêiner + impossibilidade de encolhimento sob `clip`).
 - Estado sem JavaScript e navegadores sem `@supports (container-type)` continuam nos clamps anteriores byte-idênticos.
 - Homologação exige aceite visual do usuário no aparelho real (desktop e celular). Sem commit, push ou deploy nesta etapa.
+
+## Validação do deploy (complemento de 22/10, após "commit e push")
+
+- Commit `8bac3bc` enviado a `origin/main`.
+- `https://landing-codice-dun.vercel.app/` servindo o build novo, comprovado no DOM: `.footer-word` com `container-type: inline-size`, wrapper com `flex-shrink: 0`.
+- Bateria de larguras **no deploy** (320, 390, 768, 1024, 1110, 1280, 1366, 1440, 1536, 1600, 1920, 2560 × 850): 12/12 sem vazamento (`letters.right ≤ clientWidth`), sem fatiamento (`scrollWidth ≤ clientWidth`) e sem overflow horizontal do documento.
+- Captura da rodapé no deploy em 1910×983: `captures/deploy-1910.png`.
+- Permanece em aberto: reproduzir o contexto exato do primeiro print do usuário (provável zoom/recorte da captura, ou navegador/aparelho fora do headless); pedir recorte sem zoom + Ctrl+0 antes de nova captura.
