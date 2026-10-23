@@ -62,9 +62,12 @@ section.motion-chapter[data-choreography=true] > .chapter-surface-clip {
 .motion-chapter[data-choreography=true] .process ol[data-process-axis=horizontal] :is(h4, li > p) {
   transform: translateY(calc((1 - var(--step-progress, 1)) * 16px));
 }
+/* The trailing glyph ink outgrows the negative letter-spacing box; inline
+   padding widens the clip mask just enough while the negative margin keeps
+   the arrow and the first glyph exactly where they were. */
 .motion-chapter .footer-word > .footer-letters {
-  display: inline-flex; font: inherit; letter-spacing: inherit; margin: -.12em 0;
-  gap: 0; overflow: clip; padding-block: .12em;
+  display: inline-flex; font: inherit; letter-spacing: inherit; margin-block: -.12em; margin-inline: -.09em;
+  gap: 0; overflow: clip; padding-block: .12em; padding-inline: .09em;
 }
 .footer-letter { display: inline-block; }
 .motion-chapter[data-choreography=true] .footer-letter {

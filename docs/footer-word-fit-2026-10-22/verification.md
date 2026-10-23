@@ -31,6 +31,8 @@ Largura das letras em px antes → depois (o "antes" é o render vigente até a 
 
 `sliceRisk` medido por `letters.scrollWidth > clientWidth` = **falso** em todas as larguras. `documentElement.scrollWidth ≤ clientWidth` (sem overflow horizontal) em todas as larguras pós-mudança — inclusive 1110 px, onde o render anterior havia mostrado transitoriamente `scrollWidth` 1125 > 1110.
 
+**Ressalva desta métrica (ver seção do ink do "e" abaixo):** `scrollWidth`/`clientWidth` medem overflow de *layout*, não de *ink*. A tabela acima atesta que a palavra cabe no shell, mas não que o glifo esteja inteiro dentro da máscara de `clip` do wrapper — motivo pelo qual o corte do "e" passou por ela.
+
 ## Testes de adversidade (setados via inline, revertidos na mesma avaliação)
 
 - `data-large-text` (ativo + medição): wrapper em 1328/7,7 = 172,5 px → letras 470 px ≤ 1328, sem fatiamento. Equivalente ao `12vw` anterior (172,8 px → 471,5 px).
@@ -43,11 +45,44 @@ Largura das letras em px antes → depois (o "antes" é o render vigente até a 
 
 Em `captures/`: `before-desktop-1440.png` / `after-desktop-1440.png`, `before-mobile-390.png` / `after-mobile-390.png`, `before-1110.png`. Comparação visual: composição idêntica antes/depois em desktop e mobile (faixa do wordmark, seta `↗` na mesma posição, coluna de contatos e colophon inalterados).
 
+## Corte do ink do "e" — causa confirmada e corrigida (segunda rodada, 22/10)
+
+Medição no Chromium headless local (viewport 1910×983, scroll até o rodapé), com `canvas.measureText('e').actualBoundingBoxRight` comparado à borda do wrapper:
+
+| Grandeza | Valor |
+| --- | --- |
+| `font-size` das letras | 370 px |
+| `letter-spacing` | −31,45 px (−0,085em) |
+| Avanço do "e" (`measureText.width`) | 215 px |
+| Ink direito do "e" (origem do glifo) | 202,3 px (side bearing direito ≈ 12,7 px) |
+| Largura do último `.footer-letter` | 183,5 px (= avanço − espaçamento) |
+| Borda direita do wrapper (antes) | 1163,3 px |
+| Ink direito absoluto do "e" | 1182,1 px |
+| **Ink fora da máscara (antes)** | **18,8 px cortados** |
+
+Causa: o `overflow: clip` do `.footer-letters` recortava no conteúdo, e o `letter-spacing` negativo deixava a caixa do último span 31,45 px mais estreita que o glifo. O corte máximo possível é o próprio `letter-spacing` (quando o side bearing é 0), então serve de folga exata.
+
+Correção: `padding-inline: .09em` + `margin-inline: -.09em` no wrapper, nos dois arquivos (`chapter-choreography.css` e o override de `mobile-chapters.css`). O padding alarga a máscara; a margem negativa mantém primeiro glifo e seta no mesmo x. `padding-block`/`margin-block` intactos — a máscara vertical da entrada das letras não muda.
+
+Medição após a correção (mesmo viewport):
+
+| Grandeza | Antes | Depois |
+| --- | --- | --- |
+| `inkSlicePx` | +18,8 (cortado) | **−14,5** (ink 14,5 px dentro da máscara) |
+| `padding-inline` do wrapper | 0 px | 33,3 px |
+| x da seta | 1183 | 1183 (inalterado) |
+| x do primeiro glifo | 155 | 155 (inalterado) |
+
+Checagens reexecutadas depois da correção: `npm run typecheck` sem erros; `npm run build` passou (Next.js 16.4.2 / Turbopack, 4 rotas estáticas); `portrait-motion` 6/6; `mobile-portrait-motion` 5/5; `opening-state` 6/6.
+
+Recortes 3× do "e" em `captures/e-before-slice.png` (corte reto vertical no bojo/terminal) e `captures/e-after-complete.png` (curva e terminal completos). Captura integral pós-correção: `captures/after-fix-1910.png`.
+
 ## Limites
 
-- A causa exata do corte visto pelo usuário no seu navegador/aparelho segue sem reprodução determinística no headless local; a mudança elimina a classe de falha por construção (tamanho derivado do contêiner + impossibilidade de encolhimento sob `clip`).
+- O corte do ink do "e" está reproduzido e corrigido numericamente em 1910 px (de +18,8 px para −14,5 px) e em 390 px (de corte para **−3 px**, isto é, ink 3 px dentro da máscara; `padding-inline` 8,75 px contra `letter-spacing` 8,29 px). A folga positiva é pequena no mobile porque a caixa do glifo é pequena, mas o padding em `em` acompanha o `letter-spacing` — a folga de 3 px é suficiente e não há colisão.
+- O corte de ink também pode atingir o último glifo de linhas de título (`.chapter-title-line`, `letter-spacing` negativo) quando o texto encosta na borda direita do bloco; não foi medido nem alterado nesta entrega.
 - Estado sem JavaScript e navegadores sem `@supports (container-type)` continuam nos clamps anteriores byte-idênticos.
-- Homologação exige aceite visual do usuário no aparelho real (desktop e celular). Sem commit, push ou deploy nesta etapa.
+- Homologação exige aceite visual do usuário no aparelho real (desktop e celular).
 
 ## Validação do deploy (complemento de 22/10, após "commit e push")
 
@@ -55,4 +90,4 @@ Em `captures/`: `before-desktop-1440.png` / `after-desktop-1440.png`, `before-mo
 - `https://landing-codice-dun.vercel.app/` servindo o build novo, comprovado no DOM: `.footer-word` com `container-type: inline-size`, wrapper com `flex-shrink: 0`.
 - Bateria de larguras **no deploy** (320, 390, 768, 1024, 1110, 1280, 1366, 1440, 1536, 1600, 1920, 2560 × 850): 12/12 sem vazamento (`letters.right ≤ clientWidth`), sem fatiamento (`scrollWidth ≤ clientWidth`) e sem overflow horizontal do documento.
 - Captura da rodapé no deploy em 1910×983: `captures/deploy-1910.png`.
-- Permanece em aberto: reproduzir o contexto exato do primeiro print do usuário (provável zoom/recorte da captura, ou navegador/aparelho fora do headless); pedir recorte sem zoom + Ctrl+0 antes de nova captura.
+- Permanece em aberto: aceite visual do usuário no aparelho real. A correção de máscara do "e" (segunda rodada) entra em commit próprio; a validação de ink no deploy é registrada abaixo após o rebuild.

@@ -25,7 +25,7 @@
   .chapter-title-line { display: block; overflow: clip; padding-block: .1em; margin-block: -.1em; }
   .chapter-title-line > span { display: block; }
   .motion-chapter .footer-word > .footer-letters {
-    display: inline-flex; font: inherit; letter-spacing: inherit; margin: -.1em 0; gap: 0; overflow: clip; padding-block: .1em;
+    display: inline-flex; font: inherit; letter-spacing: inherit; margin-block: -.1em; margin-inline: -.09em; gap: 0; overflow: clip; padding-block: .1em; padding-inline: .09em;
   }
   .footer-letter { display: inline-block; }
   .process ol[data-process-motion=true] { position: relative; grid-template-columns: 1fr; padding-left: 20px; }
