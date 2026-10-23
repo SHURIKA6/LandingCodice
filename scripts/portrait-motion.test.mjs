@@ -4,6 +4,7 @@ import { teamMembers } from '../src/data/team.ts';
 import {
   clampPortraitProgress,
   getPortraitMotion,
+  getPortraitPointerTravel,
   getSquareTextureCrop,
 } from '../src/components/experience/portraitMotion.ts';
 
@@ -116,4 +117,33 @@ test('square crops preserve image proportions instead of squeezing a face into a
   assert.equal(portrait.repeat[0] * 600, portrait.repeat[1] * 900);
   assert.equal(landscape.repeat[0] * 900, landscape.repeat[1] * 600);
   assert.deepEqual(getSquareTextureCrop(0, Number.NaN), { repeat: [1, 1], offset: [0, 0] });
+});
+
+test('the dolly opens the handoff and returns to a readable stop without a camera jump', () => {
+  for (let index = 0; index < count - 1; index++) {
+    const start = getPortraitMotion(stops[index]);
+    const end = getPortraitMotion(stops[index + 1]);
+    const handoff = getPortraitMotion((index + .5) / (count - 1));
+    assert.ok(handoff.camera.z > Math.max(start.camera.z, end.camera.z) + .2);
+    assert.ok(handoff.panels.every(panel => panel.rotationY > .3 && panel.rotationY < .35));
+    assert.ok(end.panels[index].z <= -2.2, 'the outgoing photograph needs a real depth journey');
+    assert.ok(start.panels[index + 1].y < 0 && end.panels[index].y > 0, 'incoming and outgoing photographs travel in opposite vertical directions');
+  }
+  for (let step = 0; step < 1000; step++) {
+    const current = getPortraitMotion(step / 1000).camera;
+    const next = getPortraitMotion((step + 1) / 1000).camera;
+    assert.ok(current.z >= 4.9 && current.z <= 5.3);
+    for (const axis of ['x', 'y', 'z']) assert.ok(Math.abs(current[axis] - next[axis]) < .01);
+  }
+});
+
+test('pointer travel stays bounded and gives foreground photographs more weight', () => {
+  assert.equal(getPortraitPointerTravel(0), 26);
+  let previous = 26;
+  for (let depth = 0; depth <= 10; depth += .1) {
+    const travel = getPortraitPointerTravel(depth);
+    assert.ok(travel >= 8 && travel <= previous);
+    previous = travel;
+  }
+  for (const depth of [-1, NaN, Infinity]) assert.equal(getPortraitPointerTravel(depth), 26);
 });

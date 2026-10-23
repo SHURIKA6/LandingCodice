@@ -1,0 +1,63 @@
+{
+  "engine": "chromium",
+  "browserVersion": "149.0.7827.55",
+  "suite": "motion",
+  "passed": 6,
+  "results": [
+    {
+      "scenario": "scroll-frame-reversible-and-chapter-arrival",
+      "pass": true,
+      "before": {
+        "scale": 0.8600000909511812,
+        "y": 84
+      },
+      "settled": {
+        "scale": 1,
+        "y": 0
+      },
+      "reversed": {
+        "scale": 0.8673301782932553,
+        "y": 79.6021
+      },
+      "contactRadiusOnArrival": 64
+    },
+    {
+      "scenario": "chapter-animation-cancelled-by-live-reduced-motion",
+      "pass": true,
+      "animations": 0,
+      "engine": "native",
+      "radius": "0px",
+      "frames": [
+        "none",
+        "none"
+      ],
+      "canvas": 0
+    },
+    {
+      "scenario": "slow-catalogue-keeps-old-photo-and-last-selection",
+      "pass": true,
+      "oldPhotoDuringDownload": true,
+      "latestChoicePreserved": true,
+      "intermediateOpacityObserved": true
+    },
+    {
+      "scenario": "catalogue-error-retry-and-rapid-toggle",
+      "pass": true,
+      "requests": 2,
+      "rapidRoundTrips": 3
+    },
+    {
+      "scenario": "keyboard-focus-cancels-entrance-and-menu-remains-native",
+      "pass": true,
+      "contactFocusVisibleDuringArrival": true,
+      "menuImmediateKeyboardAccess": true
+    },
+    {
+      "scenario": "mobile-touch-menu-anchor-catalogue-and-moving-media",
+      "pass": true,
+      "width": 390,
+      "touch": true,
+      "controlsOutsideMovingMedia": true
+    }
+  ]
+}

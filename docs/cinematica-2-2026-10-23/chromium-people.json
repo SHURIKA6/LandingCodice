@@ -1,0 +1,87 @@
+{
+  "engine": "chromium",
+  "browserVersion": "149.0.7827.55",
+  "suite": "people",
+  "passed": 16,
+  "results": [
+    {
+      "scenario": "layout-320",
+      "renderer": "html",
+      "pass": true
+    },
+    {
+      "scenario": "mobile-pinned-story",
+      "pass": true
+    },
+    {
+      "scenario": "layout-390",
+      "renderer": "html",
+      "pass": true
+    },
+    {
+      "scenario": "layout-768",
+      "renderer": "html",
+      "pass": true
+    },
+    {
+      "scenario": "layout-1024",
+      "renderer": "three",
+      "pass": true
+    },
+    {
+      "scenario": "layout-1440",
+      "renderer": "three",
+      "pass": true
+    },
+    {
+      "scenario": "layout-1920",
+      "renderer": "three",
+      "pass": true
+    },
+    {
+      "scenario": "reload-at-middle-portrait",
+      "pass": true
+    },
+    {
+      "scenario": "scroll-forward-reverse-catalogue-keyboard",
+      "stops": [
+        "Fernando Riad",
+        "Eduardo Gobatto",
+        "Victor Rafael",
+        "Jose Vitor",
+        "Victor Rafael",
+        "Eduardo Gobatto",
+        "Fernando Riad"
+      ],
+      "pass": true
+    },
+    {
+      "scenario": "resize-live-reduced-motion-remount-first-frame",
+      "pass": true
+    },
+    {
+      "scenario": "optional-scene-chunk-failure",
+      "pass": true
+    },
+    {
+      "scenario": "webgl-unavailable",
+      "pass": true
+    },
+    {
+      "scenario": "texture-error",
+      "pass": true
+    },
+    {
+      "scenario": "webgl-context-loss",
+      "pass": true
+    },
+    {
+      "scenario": "no-javascript",
+      "pass": true
+    },
+    {
+      "scenario": "reduced-motion-initial",
+      "pass": true
+    }
+  ]
+}

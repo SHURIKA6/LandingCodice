@@ -19,7 +19,18 @@ async (page) => {
   const hydrated = p => p.waitForFunction(() => !!document.documentElement.dataset.scrollEngine);
   // The people stage now sits below the opening, and its scene only renders while visible.
   const toPeople = p => p.evaluate(() => { const hero = document.querySelector('.people-hero'); scrollTo({ top: hero.getBoundingClientRect().top + scrollY, behavior: 'instant' }); });
-  const three = async p => { await toPeople(p); await p.waitForFunction(() => document.querySelector('.people-hero').dataset.renderer === 'three'); };
+   // Native resize/history restoration and the responsive reading anchor finish
+   // before a test issues another scroll; otherwise the two commands compete.
+   const settleLayout = p => p.evaluate(async () => {
+     await document.fonts.ready;
+     await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+   });
+   const three = async p => {
+     await p.waitForFunction(() => document.querySelector('.people-hero').dataset.motionMode === 'desktop');
+     await settleLayout(p);
+     await toPeople(p);
+     await p.waitForFunction(() => document.querySelector('.people-hero').dataset.renderer === 'three');
+   };
   const staticHTML = p => p.locator('.people-hero[data-mode="static"]').waitFor({ state: 'attached' });
 
   for (const width of [320, 390, 768, 1024, 1440, 1920]) {
@@ -71,8 +82,9 @@ async (page) => {
       }
       assert(stops.join('|') === 'Fernando Riad|Eduardo Gobatto|Victor Rafael|Jose Vitor|Victor Rafael|Eduardo Gobatto|Fernando Riad', `scroll sequence: ${stops}`);
       await p.evaluate(() => { const hero = document.querySelector('.people-hero'); scrollTo({ top: hero.getBoundingClientRect().top + scrollY + (hero.offsetHeight - innerHeight) * 0.5, behavior: 'instant' }); });
-      await p.waitForFunction(() => document.querySelector('.person-card[data-active=true] .person-name').getAttribute('aria-label') === 'Victor Rafael');
-      await p.reload(); await p.waitForFunction(() => document.querySelector('.people-hero').dataset.renderer === 'three'); // the browser restores the middle portrait
+       await p.waitForFunction(() => document.querySelector('.person-card[data-active=true] .person-name').getAttribute('aria-label') === 'Victor Rafael');
+       await settleLayout(p);
+       await p.reload(); await p.waitForFunction(() => document.querySelector('.people-hero').dataset.renderer === 'three'); // the browser restores the middle portrait
       await p.waitForFunction(() => document.querySelector('.person-card[data-active=true] .person-name').getAttribute('aria-label') === 'Victor Rafael');
       results.push({ scenario: 'reload-at-middle-portrait', pass: true });
       await p.getByRole('button', { name: 'Catálogo e filtros' }).click();

@@ -1,0 +1,230 @@
+﻿[
+    {
+        "path":  ".\\public\\brand-next.svg",
+        "sha256":  "ce4932dbfa98054a96b5b94f4eb23ab13bc4160b901a580b8cd31c034294262a"
+    },
+    {
+        "path":  ".\\public\\brand-people.svg",
+        "sha256":  "e15546423c2e1bbaf0641ecba7daf3db60f12636d68b5df34e5be0ebe20a3a22"
+    },
+    {
+        "path":  ".\\public\\brand.svg",
+        "sha256":  "8ba41f32662ae41f11480e105f6238c2ff452120827ba2754ec5ed3c6203a3e9"
+    },
+    {
+        "path":  ".\\public\\codice.svg",
+        "sha256":  "b59b51b677794ce431aa2bec91afda5e558bb1418b62f5998c03d0c935343037"
+    },
+    {
+        "path":  ".\\public\\favicon.ico",
+        "sha256":  "09d2ac08d8cca9b6e1f90221f345a8c4dd0371c64a0dc52b6f96fc589b1e3d67"
+    },
+    {
+        "path":  ".\\public\\favicon.svg",
+        "sha256":  "2d7a310283d6f9cc753210d83224cd6db6348cb82a5536348884e5831d46203f"
+    },
+    {
+        "path":  ".\\public\\brand\\codice-sculpture-blue.json",
+        "sha256":  "7a881948389ccc19cefff235470a25e085fd125ea225b92350b18f85e6a7e383"
+    },
+    {
+        "path":  ".\\public\\brand\\codice-sculpture-blue.png",
+        "sha256":  "4d3f2b2ac352c296423ed12f189afc350beb15fe0cafce2b206656fb54478a10"
+    },
+    {
+        "path":  ".\\public\\brand\\codice-sculpture-blue.webp",
+        "sha256":  "4196c8c39c158e7e0d30a667d57ead6da383214ad94d01d7527218c2bbf3624f"
+    },
+    {
+        "path":  ".\\public\\brand\\codice-sculpture-blue.webp.json",
+        "sha256":  "cc95155271c346cec22e7fca52bdbbc459656f6ae861926cffb4af298071bd38"
+    },
+    {
+        "path":  ".\\public\\brand\\codice-sculpture.json",
+        "sha256":  "374c9c58151ac88cad915d1f9146df8f24f7254ad6674bf50df1039cd34d53aa"
+    },
+    {
+        "path":  ".\\public\\brand\\codice-sculpture.png",
+        "sha256":  "fb4ca660cfbdb3b3a2e4201babbd527369862649a102ae3cb93a1804562c5db6"
+    },
+    {
+        "path":  ".\\public\\brand\\codice-sculpture.webp",
+        "sha256":  "9aba0489c77140e267f509631d2d504d9cf4b5511e79503a1765a843e5e475d6"
+    },
+    {
+        "path":  ".\\public\\brand\\codice-sculpture.webp.json",
+        "sha256":  "39e4eb53dea240200df5387d09fa54c9442aac503f3765ea813056244632cf72"
+    },
+    {
+        "path":  ".\\public\\estudo\\index.html",
+        "sha256":  "b96553f69ad3628790dd3db93e4afe4bb2aa5914ffadade625d679917470fec1"
+    },
+    {
+        "path":  ".\\public\\estudo\\assets\\Arrow.BNaByegu.css",
+        "sha256":  "45be042b133923977df3a468d5b72ee887fe31b67e3412618213247ddcb20e70"
+    },
+    {
+        "path":  ".\\public\\estudo\\assets\\fluxo.astro_astro_type_script_index_0_lang.RKiG4cke.js",
+        "sha256":  "d701b36c96146997ccaea86e0f708c1085cada0aa8683b1fb5d2f8742eae6458"
+    },
+    {
+        "path":  ".\\public\\estudo\\assets\\fluxo.BHkBJBb7.css",
+        "sha256":  "296a8fe952f3cc95231e8347e0a8ff83975e96be48bcc5114f7dc6d7dd3d2748"
+    },
+    {
+        "path":  ".\\public\\estudo\\assets\\forma.astro_astro_type_script_index_0_lang.CeDRVmWo.js",
+        "sha256":  "3378db223c01ac4f327967c6b26d1ea9411f9151025afdcd8aebba0735015cf2"
+    },
+    {
+        "path":  ".\\public\\estudo\\assets\\forma.Cp_HhVd0.css",
+        "sha256":  "bd09ff2dab5152a632ea7d2623fbaeb8f68e0e09b3f734c348fd1717615f7fe0"
+    },
+    {
+        "path":  ".\\public\\estudo\\assets\\index.zbyMoetK.css",
+        "sha256":  "695fe828cfb72d4812e9eefaf90e8e5ae8d94b08bf0f36578fa862ed8c70d4d0"
+    },
+    {
+        "path":  ".\\public\\estudo\\assets\\ritmo.astro_astro_type_script_index_0_lang.D7wNi3HE.js",
+        "sha256":  "e2701c6150700acddba68857499aa76d753ddf9966d38517b9c9fb1e12ff4193"
+    },
+    {
+        "path":  ".\\public\\estudo\\assets\\ritmo.B21SEl1A.css",
+        "sha256":  "4f554369591eab52dc685c649061952e9698ae960321d65b29ed9bd58b64cdef"
+    },
+    {
+        "path":  ".\\public\\estudo\\assets\\study.JK6JueAX.js",
+        "sha256":  "1a61fca78743bdfe88112bbbd57fea0afb123788e7aa139b702c44db1ab16e31"
+    },
+    {
+        "path":  ".\\public\\estudo\\fluxo\\index.html",
+        "sha256":  "37cdc069e3b1a4d6763f9194d2310871c4caa9a7d14fff1afec49b4ed743f581"
+    },
+    {
+        "path":  ".\\public\\estudo\\forma\\index.html",
+        "sha256":  "86e37d5283bd6faf6287f13915f71131e2005b6bb98c510aa3de7a4c7bfb9352"
+    },
+    {
+        "path":  ".\\public\\estudo\\ritmo\\index.html",
+        "sha256":  "392c069864a3fb278dbf9dba2b2453e33a3aa8bc4d833e2c1532affc44d44c6e"
+    },
+    {
+        "path":  ".\\public\\fonts\\cormorant-garamond-latin-400-italic.woff2",
+        "sha256":  "e48e58027030df56869b795ca6f19b7012158275f7ad7cde1900b4a0b68d02e2"
+    },
+    {
+        "path":  ".\\public\\fonts\\cormorant-garamond-latin-wght-normal.woff2",
+        "sha256":  "d80df8ff5aecd299a61549f9e29ab1ed0b9b05f4ea71d50fe978e07d5240b235"
+    },
+    {
+        "path":  ".\\public\\fonts\\OFL-Cormorant-Garamond.txt",
+        "sha256":  "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+    },
+    {
+        "path":  ".\\public\\fonts\\OFL-Source-Sans-3.txt",
+        "sha256":  "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+        "path":  ".\\public\\fonts\\source-sans-3-latin-wght-normal.woff2",
+        "sha256":  "19143dca075972bc84e3fd9eab7416dd40cc565dccb2435a044bdfabe060c7d5"
+    },
+    {
+        "path":  ".\\public\\fonts\\study\\archivo-black-latin.woff2",
+        "sha256":  "25f33e61cf995abd6be62931cf03bf427286259177b43618cc410ee0157cfd30"
+    },
+    {
+        "path":  ".\\public\\fonts\\study\\bricolage-grotesque-latin.woff2",
+        "sha256":  "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c"
+    },
+    {
+        "path":  ".\\public\\fonts\\study\\manrope-latin.woff2",
+        "sha256":  "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+    },
+    {
+        "path":  ".\\public\\fonts\\study\\OFL-Archivo-Black.txt",
+        "sha256":  "3173acd82f8c6159b5b1037b539fcbd4edff68e65c2ea8b9412b5a5ca97b08ff"
+    },
+    {
+        "path":  ".\\public\\fonts\\study\\OFL-Bricolage-Grotesque.txt",
+        "sha256":  "4b5a7d8f37f5602621c8a8d7358a6a2e71317e6c231c661e15aef0275d3e07ba"
+    },
+    {
+        "path":  ".\\public\\fonts\\study\\OFL-Manrope.txt",
+        "sha256":  "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b"
+    },
+    {
+        "path":  ".\\public\\media\\corretor-catalog.webp",
+        "sha256":  "9e1bf10fceca39bea3ce96cc29cf1c32fefb9f0834c62ccd7bfc309b3c9bca02"
+    },
+    {
+        "path":  ".\\public\\media\\corretor-catalog.webp.json",
+        "sha256":  "57de616a1d2665b5ddcd603cdbc3e26be3a35f1ec47d561f0bc61599e4cee6be"
+    },
+    {
+        "path":  ".\\public\\media\\corretor-poster.webp",
+        "sha256":  "ed94d39fee4fe45e33342c4de3a0e1f16f6b112c97b94b70765a19b2c3e8790b"
+    },
+    {
+        "path":  ".\\public\\media\\corretor-poster.webp.json",
+        "sha256":  "8cd984a733fdf1ba1195ba5babb35bec804bcfdf1875fc10db7de34fb22a73fc"
+    },
+    {
+        "path":  ".\\public\\media\\roger-shot.png",
+        "sha256":  "0605dce478c13d164898ed3964b636a7919320777597ce30286013c757bf8974"
+    },
+    {
+        "path":  ".\\public\\study\\mark.svg",
+        "sha256":  "ab222539df801f101a150b5b52846cfd175680edcbbec9f79d059240892125c7"
+    },
+    {
+        "path":  ".\\public\\team\\eduardo.jpg",
+        "sha256":  "84e3fbd2301240c668f1fcfe6d6cafb303de2547fbff8b7618d8ca4fcf2bbb03"
+    },
+    {
+        "path":  ".\\public\\team\\fernando.jpg",
+        "sha256":  "2f6009e80cec8768c340907245ada145ae6f4f98fb5fe2ce1bf3c0684a006408"
+    },
+    {
+        "path":  ".\\public\\team\\jose-vitor.jpg",
+        "sha256":  "c2bb4d812d134ec033997564a6db6e56c30a4fdacf6d4150f65f616be161d789"
+    },
+    {
+        "path":  ".\\public\\team\\manifest.json",
+        "sha256":  "00116cb4c182b4ad6274e03d40ad4908d91b841d2caf3d2aecf9e84599559691"
+    },
+    {
+        "path":  ".\\public\\team\\victor.png",
+        "sha256":  "1f1f7cc04f1697b83cd47a66fc6bfbd2dd83e54d5a13dcd4d9cca544344c7a31"
+    },
+    {
+        "path":  ".\\src\\data\\landing.ts",
+        "sha256":  "7cb580fdddde1fdbad16e4a932610e4de81f0b19b9888203e0290c7591adfddd"
+    },
+    {
+        "path":  ".\\src\\data\\offer.ts",
+        "sha256":  "413665e089e46d0479ecd2a56746af5b9e836d32567422c1ecf095e0920355be"
+    },
+    {
+        "path":  ".\\src\\data\\opening.ts",
+        "sha256":  "6529ae9305a662c2aa30fd18e71b1fcb06c10886969ac8d5758fb906c29e7449"
+    },
+    {
+        "path":  ".\\src\\data\\site.ts",
+        "sha256":  "7884244d9d58e258d434a93d6068b66ea9114f364d0c053b70a0ac7f768d9cd6"
+    },
+    {
+        "path":  ".\\src\\data\\team.ts",
+        "sha256":  "e127b8bf33dacd4f299ba6ce168648dc59dba78893aff9bc4a05a9688e58272b"
+    },
+    {
+        "path":  ".\\package.json",
+        "sha256":  "95623eb5228509d9bed2990cd0eff8c12e9b8b394c406ce821f396231e2163e4"
+    },
+    {
+        "path":  ".\\package-lock.json",
+        "sha256":  "7700da4d9e6907c625829e2e2da1f42386d8f843d61505fe47981969fe5166ac"
+    },
+    {
+        "path":  ".\\tsconfig.json",
+        "sha256":  "a7f7ce8733b26ca62389d3c5fcf9d471d362765622de8192c9d0c2682c22ffa3"
+    }
+]

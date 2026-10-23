@@ -2,6 +2,12 @@
 
 <!-- impeccable:product-schema 1 -->
 
+## Cinemática 2 — execução autorizada em 23/10/2026
+
+O usuário escolheu a ampliação completa com intensidade cinematográfica e autorizou com **“go”**. [Registro](docs/cinematica-2-2026-10-23/README.md): apresentação das pessoas com câmera/profundidade mais expressivas, indicador de quatro paradas, projetos com tilt, passagens e feedback de interação. Preserva as quatro pessoas e todo o conteúdo comercial já presente no checkout; não restaura nem amplia a oferta dos registros históricos abaixo. Nenhum loop ambiente, dependência ou palco fixo novo.
+
+[Verificação própria](docs/cinematica-2-2026-10-23/verification.md): código concluído, build/typecheck, 23 testes Node e 39 cenários Chromium aprovados. WebKit teve aprovações parciais e falhas de hover, teclado e reload; não está homologado. Capturas interrompidas a pedido do usuário; nenhuma nova após essa orientação. Sem commit, push ou deploy.
+
 ## Coreografia da página inteira — execução de 21/10/2026
 
 Após novo pedido de bastante movimento, o usuário autorizou o plano com **“Implement the proposed plan.”** O [registro desta ampliação](docs/cinematic-motion-2026-10-21/README.md) descreve continuidade entre capítulos, escultura e capturas reversíveis, oferta/processo/fechamento coreografados e interações. A direção Pessoas em cena, conteúdo, oferta e contatos permanecem vigentes; a experiência autoral não amplia o pacote comercial. A [verificação própria](docs/cinematic-motion-2026-10-21/verification.md) começou em andamento e deve registrar somente resultados novos. As aprovações anteriores abaixo não são prova desta alteração.

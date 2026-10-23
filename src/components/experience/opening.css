@@ -34,6 +34,12 @@
 }
 .opening-video { opacity: 0; transition: opacity 700ms ease; }
 .opening-video[data-ready="true"] { opacity: 1; }
+.opening-backdrop { position: absolute; inset: 0; }
+.opening-backdrop[data-motion=true] { will-change: transform; }
+html[data-large-text] .opening-backdrop { transform: none !important; will-change: auto; }
+@media (prefers-reduced-motion: reduce) {
+  .opening-backdrop { transform: none !important; will-change: auto; }
+}
 .opening-scrim {
   position: absolute; inset: 0;
   background:

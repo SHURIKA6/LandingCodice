@@ -1,0 +1,66 @@
+﻿[
+    {
+        "path":  "src/app/globals.css",
+        "sha256":  "3a66b1d9343a0350c410f46581be82919a2e40e72a6ab96d97a68734de40af1c"
+    },
+    {
+        "path":  "src/components/experience/chapter-choreography.css",
+        "sha256":  "67e2cebcbec820b0be1e58f177ebe74428045718be97fea5bf1e18a8c3470176"
+    },
+    {
+        "path":  "src/components/experience/Header.tsx",
+        "sha256":  "a057eac131802109863558427a8951280933adf20510d31a7a2f40daa5fb0599"
+    },
+    {
+        "path":  "src/components/experience/Hero.tsx",
+        "sha256":  "fcc6e030a101f2654acf1464f118a66cae2bb77025cf3f803c3f845412bbd5b7"
+    },
+    {
+        "path":  "src/components/experience/interaction-motion.css",
+        "sha256":  "42c5488ba738199b5103109a1cc4a00daf2a60abaecdb21a43ae92fcb2694af3"
+    },
+    {
+        "path":  "src/components/experience/mobile-hero.css",
+        "sha256":  "fa304b3d17819be89fc145595f135a0085e6a46bdba1d3c412dfab416bb7d128"
+    },
+    {
+        "path":  "src/components/experience/MotionChapter.tsx",
+        "sha256":  "aae0a60baf88747bf7008ef5ef52d54db295f883079c4239bdc397ec2cd43af9"
+    },
+    {
+        "path":  "src/components/experience/opening.css",
+        "sha256":  "1e470a2e248a4b968873f112fb8b336dd8416ced67b9ebbd34e85526f50f93b4"
+    },
+    {
+        "path":  "src/components/experience/Opening.tsx",
+        "sha256":  "94dfb5bc43a1d78c72c733bd479531511a6045eeae3419e0efbd3e049ffffc25"
+    },
+    {
+        "path":  "src/components/experience/portraitMotion.ts",
+        "sha256":  "2edfff9042b1d1d9a01e82442b852260ee4171219144819430718e8e0cc7f7b1"
+    },
+    {
+        "path":  "src/components/experience/PortraitScene.tsx",
+        "sha256":  "6c4816b12fae40d8bddf878efd1e91a2d0784277c5e5b6d155066562da0c4e52"
+    },
+    {
+        "path":  "src/components/experience/project-motion.css",
+        "sha256":  "98a16d29a79b04180c7ff2c43dd3f1a9cc0f0ba27f1c1d5bc10b6bbd69baa651"
+    },
+    {
+        "path":  "src/components/experience/ScrollFrame.tsx",
+        "sha256":  "76834d473ddc1596af25d43499f7184a9905e2d73957bbe0144fef5089bf850a"
+    },
+    {
+        "path":  "src/components/experience/SmoothExperience.tsx",
+        "sha256":  "178e48eb7f08e2a8362e6da7bb729740f7a50b2b91567725ef68a24a32a237fc"
+    },
+    {
+        "path":  "scripts/portrait-motion.test.mjs",
+        "sha256":  "7bf2c2fa156224e5f5aa2eb9efcbe4712274621a96406610fec9a9f396bf9dd4"
+    },
+    {
+        "path":  "scripts/verify-people.browser.js",
+        "sha256":  "82afb85e31de98a1f847c3624eec2ae6c1575200c17cee2519a1c4fb2a7cbf62"
+    }
+]

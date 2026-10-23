@@ -3,16 +3,18 @@
 import { useEffect, useRef } from "react";
 import type { MotionValue } from "framer-motion";
 import * as THREE from "three";
-import { clampPortraitProgress, getPortraitMotion, getSquareTextureCrop } from "./portraitMotion";
+import { clampPortraitProgress, getPortraitMotion, getPortraitPointerTravel, getSquareTextureCrop } from "./portraitMotion";
 
 export type PortraitSceneProps = {
   portraits: readonly string[];
   progress: MotionValue<number>;
+  pointerX: MotionValue<number>;
+  pointerY: MotionValue<number>;
   onReady: () => void;
   onError: () => void;
 };
 
-export default function PortraitScene({ portraits, progress, onReady, onError }: PortraitSceneProps) {
+export default function PortraitScene({ portraits, progress, pointerX, pointerY, onReady, onError }: PortraitSceneProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const callbacks = useRef({ onReady, onError });
 
@@ -40,6 +42,8 @@ export default function PortraitScene({ portraits, progress, onReady, onError }:
     let resizeObserver: ResizeObserver | undefined;
     let intersectionObserver: IntersectionObserver | undefined;
     let unsubscribeProgress: (() => void) | undefined;
+    let unsubscribePointerX: (() => void) | undefined;
+    let unsubscribePointerY: (() => void) | undefined;
     const initialRect = canvas.getBoundingClientRect();
     let inView = initialRect.bottom > 0 && initialRect.top < window.innerHeight
       && initialRect.right > 0 && initialRect.left < window.innerWidth;
@@ -63,6 +67,8 @@ export default function PortraitScene({ portraits, progress, onReady, onError }:
       released = true;
       cancelFrame();
       unsubscribeProgress?.();
+      unsubscribePointerX?.();
+      unsubscribePointerY?.();
       resizeObserver?.disconnect();
       intersectionObserver?.disconnect();
       document.removeEventListener("visibilitychange", handleVisibilityChange);
@@ -131,9 +137,16 @@ export default function PortraitScene({ portraits, progress, onReady, onError }:
         }
 
         const motion = getPortraitMotion(targetProgress);
+        const viewHeight = 2 * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * motion.camera.z;
+        const worldPerPixel = viewHeight / displayHeight;
         motion.panels.forEach((pose, index) => {
           const panel = panels[index];
-          panel.position.set(pose.x, pose.y, pose.z);
+          const travel = getPortraitPointerTravel(-pose.z);
+          panel.position.set(
+            pose.x + pointerX.get() * travel * worldPerPixel,
+            pose.y - pointerY.get() * travel * .6 * worldPerPixel,
+            pose.z,
+          );
           panel.rotation.set(0, pose.rotationY, pose.rotationZ);
           panel.scale.set(...pose.scale);
         });
@@ -222,6 +235,8 @@ export default function PortraitScene({ portraits, progress, onReady, onError }:
         targetProgress = clampPortraitProgress(value);
         requestRender();
       });
+      unsubscribePointerX = pointerX.on("change", requestRender);
+      unsubscribePointerY = pointerY.on("change", requestRender);
       resizeObserver = new ResizeObserver(handleResize);
       resizeObserver.observe(canvas);
       intersectionObserver = new IntersectionObserver((entries) => {
@@ -240,7 +255,7 @@ export default function PortraitScene({ portraits, progress, onReady, onError }:
       disposed = true;
       releaseResources();
     };
-  }, [portraits, progress]);
+  }, [portraits, progress, pointerX, pointerY]);
 
   return <canvas className="portrait-canvas" aria-hidden="true" ref={canvasRef} />;
 }

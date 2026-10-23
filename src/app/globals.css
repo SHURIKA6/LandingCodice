@@ -275,6 +275,6 @@ html[data-hero-over="true"] .nav-menu summary{border-color:rgb(20 32 51 / .5);ba
   .people-hero[data-mode=scroll] .portrait-progress{margin-bottom:12px}
 }
 @media(max-width:767px){.person-name>span{overflow:visible;padding:0;margin:0}.person-name>span>span{display:inline}}
-@keyframes name-arrive{from{transform:translateY(110%)}to{transform:translateY(0)}}
+@keyframes name-arrive{from{transform:translate3d(12px,110%,0) skewY(3deg)}to{transform:translate3d(0,0,0) skewY(0)}}
 @keyframes copy-arrive{from{opacity:.2;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.motion-chapter{border-radius:0!important}.person-copy,.scene-parallax{transform:none!important}}

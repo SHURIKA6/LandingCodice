@@ -1,0 +1,43 @@
+/* The opaque SSR screenshot remains beneath the layer until load and decode. */
+.project-stage .project-screen { position: relative; }
+.project-screen > .project-media-pan { position: relative; width: 100%; height: 100%; }
+.roger-media > .project-media-crop { aspect-ratio: 1.25; overflow: hidden; }
+.roger-media > .project-media-crop > .project-media-pan { width: 100%; height: 100%; }
+.roger-media .project-media-pan > img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+@media (max-width: 767px) {
+  .roger-media > .project-media-crop { aspect-ratio: 1.18; }
+}
+/* The mask keeps its exact layout size; only pixels inside it follow reading. */
+.scroll-frame[data-scroll-motion=true] .project-media-pan {
+  transform-origin: center top;
+  transform: translate3d(0, var(--project-pan-y, 0%), 0) scale(1.1);
+}
+.scroll-frame[data-frame-visible=true][data-scroll-motion=true] .project-media-pan { will-change: transform; }
+.project-stage .project-capture-next {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateX(8%);
+  pointer-events: none;
+  transition: opacity 400ms cubic-bezier(.16, 1, .3, 1), transform 400ms cubic-bezier(.16, 1, .3, 1);
+}
+.project-stage .project-capture-next[data-visible=true] {
+  opacity: 1;
+  transform: translateX(0);
+}
+.project-stage[data-motion-mode=static] .project-capture-next {
+  transition: none;
+  transform: none;
+}
+html[data-large-text] .scroll-frame .scroll-frame-surface,
+html[data-large-text] .scroll-frame .project-media-pan,
+html[data-large-text] .project-stage .project-capture-next {
+  transform: none !important;
+  will-change: auto !important;
+  transition: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-stage .project-capture-next { transition: none; transform: none; }
+  .scroll-frame .scroll-frame-surface,
+  .scroll-frame .project-media-pan { transform: none !important; will-change: auto !important; }
+}

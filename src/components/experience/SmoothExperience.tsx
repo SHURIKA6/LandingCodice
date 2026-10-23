@@ -29,6 +29,7 @@ export function SmoothExperience({ children }: { children: React.ReactNode }) {
       frame = requestAnimationFrame(raf);
     };
     const visibility = () => {
+      document.documentElement.toggleAttribute('data-motion-paused', document.hidden);
       if (document.hidden) {
         stop();
         // CSS entrances and transitions also need a real cancellation path.
@@ -40,9 +41,10 @@ export function SmoothExperience({ children }: { children: React.ReactNode }) {
       else start();
     };
     start();
+    document.documentElement.toggleAttribute('data-motion-paused', document.hidden);
     preference.addEventListener('change', start);
     document.addEventListener('visibilitychange', visibility);
-    return () => { stop(); preference.removeEventListener('change', start); document.removeEventListener('visibilitychange', visibility); };
+    return () => { stop(); preference.removeEventListener('change', start); document.removeEventListener('visibilitychange', visibility); document.documentElement.removeAttribute('data-motion-paused'); };
   }, []);
   return <MotionConfig reducedMotion="user">{children}</MotionConfig>;
 }
