@@ -1,0 +1,35 @@
+{
+  "bundles": [
+    {
+      "file": ".next/static/chunks/0iwfx7s-csthr.css",
+      "bytes": 34115,
+      "utilities": [
+        ".visible",
+        ".sr-only",
+        ".static",
+        ".sticky",
+        ".hidden",
+        ".inline",
+        ".transform",
+        ".resize",
+        ".border",
+        ".ring",
+        ".blur"
+      ]
+    },
+    {
+      "file": ".next/static/chunks/2bco_hqi188xh.css",
+      "bytes": 34654,
+      "utilities": []
+    }
+  ],
+  "totalCssBytes": 68769,
+  "baselineCssBytes": 73152,
+  "savedBytes": 4383,
+  "savedPercent": 5.99,
+  "protectedFilesChecked": 55,
+  "protectedChanges": [],
+  "archivedSnapshotsVerified": 2,
+  "foundersUnchanged": true,
+  "foundersCount": 4
+}

@@ -18,7 +18,7 @@ export const teamMembers = [
     name: 'Fernando Riad',
     firstName: 'Fernando',
     lastName: 'Riad',
-    signature: 'Engenharia & Produto',
+    signature: 'Arquitetura e Design',
     portrait: {
       src: '/team/fernando.jpg',
       alt: 'Retrato de Fernando Riad',
@@ -31,7 +31,7 @@ export const teamMembers = [
     name: 'Eduardo Gobatto',
     firstName: 'Eduardo',
     lastName: 'Gobatto',
-    signature: 'Arquitetura & Sistemas',
+    signature: 'Engenharia e Produto',
     portrait: {
       src: '/team/eduardo.jpg',
       alt: 'Retrato de Eduardo Gobatto',
@@ -44,12 +44,25 @@ export const teamMembers = [
     name: 'Victor Rafael',
     firstName: 'Victor',
     lastName: 'Rafael',
-    signature: 'Design & Experiência',
+    signature: 'Experiencia e Sistemas',
     portrait: {
       src: '/team/victor.png',
       alt: 'Retrato de Victor Rafael',
       width: 640,
       height: 641,
+    },
+  },
+  {
+    id: 'jose-vitor',
+    name: 'Jose Vitor',
+    firstName: 'Jose',
+    lastName: 'Vitor',
+    signature: 'Infra e Redes',
+    portrait: {
+      src: '/team/jose-vitor.jpg',
+      alt: 'Retrato de Jose Vitor',
+      width: 1122,
+      height: 1402,
     },
   },
 ] as const satisfies readonly TeamMember[];

@@ -1,3 +1,5 @@
+import { teamMembers } from '../../data/team.ts';
+
 export type MobilePose = {
   xPercent: number;
   yPercent: number;
@@ -9,19 +11,38 @@ export type MobilePose = {
   zIndex: number;
 };
 
-export type MobileStoryFrame = { activeIndex: 0 | 1 | 2; panels: readonly MobilePose[] };
+export type MobileStoryFrame = { activeIndex: number; panels: readonly MobilePose[] };
 
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
 const smooth = (value: number) => { const t = clamp(value, 0, 1); return t * t * (3 - 2 * t); };
 
-/** Holds for reading, two reversible handoffs, no frame-dependent state. */
+/** Segment layout: one readable hold per person, one reversible handoff between each pair. */
+const HANDOFF_LENGTH = 0.18;
+
+function holdLength(): number {
+  return (1 - (teamMembers.length - 1) * HANDOFF_LENGTH) / teamMembers.length;
+}
+
+function cursorAt(progress: number): number {
+  const hold = holdLength();
+  const people = teamMembers.length;
+  for (let index = 0; index < people - 1; index += 1) {
+    const holdEnd = index * (hold + HANDOFF_LENGTH) + hold;
+    if (progress <= holdEnd) return index;
+    const handoffEnd = holdEnd + HANDOFF_LENGTH;
+    if (progress < handoffEnd) return index + smooth((progress - holdEnd) / HANDOFF_LENGTH);
+  }
+  return people - 1;
+}
+
+/** Holds for reading, reversible handoffs, no frame-dependent state. */
 export function getMobileStoryFrame(progress: number): MobileStoryFrame {
   const p = Number.isNaN(progress) ? 0 : clamp(progress, 0, 1);
-  const cursor = p <= .18 ? 0 : p < .38 ? smooth((p - .18) / .2)
-    : p <= .62 ? 1 : p < .82 ? 1 + smooth((p - .62) / .2) : 2;
+  const cursor = cursorAt(p);
+  const people = teamMembers.length;
   return {
-    activeIndex: (cursor < .5 ? 0 : cursor < 1.5 ? 1 : 2),
-    panels: [0, 1, 2].map(index => {
+    activeIndex: Math.round(cursor),
+    panels: Array.from({ length: people }, (_, index) => {
       const distance = index - cursor;
       const depth = Math.abs(distance);
       return {
@@ -36,4 +57,20 @@ export function getMobileStoryFrame(progress: number): MobileStoryFrame {
       };
     }),
   };
+}
+
+/** Progress values that sit inside each readable hold: one stop per person. */
+export function mobileStoryStops(): readonly number[] {
+  const hold = holdLength();
+  const people = teamMembers.length;
+  return Array.from({ length: people }, (_, index) => index * (hold + HANDOFF_LENGTH) + hold / 2);
+}
+
+/** Hold ends and handoff ends: where pose continuity between segments matters most. */
+export function mobileStoryBoundaries(): readonly number[] {
+  const hold = holdLength();
+  return Array.from({ length: teamMembers.length - 1 }, (_, index) => {
+    const holdEnd = index * (hold + HANDOFF_LENGTH) + hold;
+    return [holdEnd, holdEnd + HANDOFF_LENGTH];
+  }).flat();
 }

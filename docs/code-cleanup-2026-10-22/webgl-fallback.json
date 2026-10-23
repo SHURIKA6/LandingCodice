@@ -1,0 +1,13 @@
+﻿{
+    "mode":  "static",
+    "offer":  true,
+    "overflow":  false,
+    "persons":  [
+                    "Fernando Riad",
+                    "Eduardo Gobatto",
+                    "Victor Rafael",
+                    "Jose Vitor"
+                ],
+    "renderer":  "html",
+    "webglUnavailable":  true
+}

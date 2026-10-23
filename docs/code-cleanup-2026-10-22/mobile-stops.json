@@ -1,0 +1,48 @@
+﻿{
+    "mode":  "mobile-story",
+    "overflow":  false,
+    "renderer":  "html",
+    "results":  [
+                    {
+                        "index":  0,
+                        "name":  "Fernando Riad",
+                        "readable":  true
+                    },
+                    {
+                        "index":  1,
+                        "name":  "Eduardo Gobatto",
+                        "readable":  true
+                    },
+                    {
+                        "index":  2,
+                        "name":  "Victor Rafael",
+                        "readable":  true
+                    },
+                    {
+                        "index":  3,
+                        "name":  "Jose Vitor",
+                        "readable":  true
+                    },
+                    {
+                        "index":  2,
+                        "name":  "Victor Rafael",
+                        "readable":  true
+                    },
+                    {
+                        "index":  1,
+                        "name":  "Eduardo Gobatto",
+                        "readable":  true
+                    },
+                    {
+                        "index":  0,
+                        "name":  "Fernando Riad",
+                        "readable":  true
+                    }
+                ],
+    "storyHeight":  2532,
+    "touchPoints":  0,
+    "viewport":  [
+                     390,
+                     844
+                 ]
+}

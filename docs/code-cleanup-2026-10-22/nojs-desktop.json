@@ -1,0 +1,14 @@
+﻿{
+    "hydrated":  false,
+    "mode":  "static",
+    "noscript":  true,
+    "overflow":  false,
+    "packageVisibleText":  true,
+    "persons":  4,
+    "renderer":  "html",
+    "video":  false,
+    "viewport":  [
+                     1440,
+                     1000
+                 ]
+}

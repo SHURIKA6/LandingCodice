@@ -73,6 +73,25 @@
       "sha256": "1f1f7cc04f1697b83cd47a66fc6bfbd2dd83e54d5a13dcd4d9cca544344c7a31",
       "originalBytesPreserved": true,
       "transformations": []
+    },
+    {
+      "id": "jose-vitor",
+      "name": "Jose Vitor",
+      "file": "jose-vitor.jpg",
+      "sourceType": "user-attachment",
+      "source": "WhatsApp Image 2026-10-22 at 22.01.43.jpeg",
+      "publicPath": "/team/jose-vitor.jpg",
+      "acquiredOn": "2026-10-22",
+      "retrievedAtUtc": "2026-10-23T01:10:00+00:00",
+      "authorization": "User-supplied attachment",
+      "mimeType": "image/jpeg",
+      "format": "JPEG",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 77060,
+      "sha256": "c2bb4d812d134ec033997564a6db6e56c30a4fdacf6d4150f65f616be161d789",
+      "originalBytesPreserved": true,
+      "transformations": []
     }
   ]
 }

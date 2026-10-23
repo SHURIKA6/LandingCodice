@@ -1,0 +1,224 @@
+﻿{
+    "geometry":  {
+                     "#a-gente":  {
+                                      "height":  2493,
+                                      "width":  1440,
+                                      "x":  0,
+                                      "y":  1000
+                                  },
+                     "#contato":  {
+                                      "height":  1685.19,
+                                      "width":  1440,
+                                      "x":  0,
+                                      "y":  7817.95
+                                  },
+                     "#inicio":  {
+                                     "height":  1000,
+                                     "width":  1440,
+                                     "x":  0,
+                                     "y":  0
+                                 },
+                     "#pacote":  {
+                                     "height":  1555.5,
+                                     "width":  1440,
+                                     "x":  0,
+                                     "y":  6262.45
+                                 },
+                     "#trabalho":  {
+                                       "height":  2769.45,
+                                       "width":  1440,
+                                       "x":  0,
+                                       "y":  3493
+                                   },
+                     ".case-details":  {
+                                           "height":  255.88,
+                                           "width":  1328,
+                                           "x":  56,
+                                           "y":  5164.73
+                                       },
+                     ".case-heading":  {
+                                           "height":  159.08,
+                                           "width":  1328,
+                                           "x":  56,
+                                           "y":  3886.16
+                                       },
+                     ".footer-word":  {
+                                          "height":  283.38,
+                                          "width":  1328,
+                                          "x":  56,
+                                          "y":  9076.77
+                                      },
+                     ".founders":  {
+                                       "height":  553.78,
+                                       "width":  1328,
+                                       "x":  56,
+                                       "y":  8349.8
+                                   },
+                     ".package-conditions":  {
+                                                 "height":  282.94,
+                                                 "width":  614,
+                                                 "x":  770,
+                                                 "y":  6809.64
+                                             },
+                     ".package-details":  {
+                                              "height":  675.13,
+                                              "width":  614,
+                                              "x":  770,
+                                              "y":  6417.45
+                                          },
+                     ".package-grid":  {
+                                           "height":  720.13,
+                                           "width":  1328,
+                                           "x":  56,
+                                           "y":  6372.45
+                                       },
+                     ".package-heading":  {
+                                              "height":  256.41,
+                                              "width":  614,
+                                              "x":  56,
+                                              "y":  6417.45
+                                          },
+                     ".roger-copy":  {
+                                         "height":  555.7,
+                                         "width":  531.06,
+                                         "x":  56,
+                                         "y":  5548.17
+                                     }
+                 },
+    "imageFailures":  [
+
+                      ],
+    "links":  [
+                  {
+                      "href":  "#conteudo",
+                      "text":  "Ir para o conteúdo"
+                  },
+                  {
+                      "href":  "#inicio",
+                      "text":  "codice"
+                  },
+                  {
+                      "href":  "#a-gente",
+                      "text":  "A gente"
+                  },
+                  {
+                      "href":  "#trabalho",
+                      "text":  "Os projetos"
+                  },
+                  {
+                      "href":  "#pacote",
+                      "text":  "Seu site"
+                  },
+                  {
+                      "href":  "https://wa.me/5566999356646?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20o%20site%20de%20uma%20p%C3%A1gina%20da%20Codice.",
+                      "text":  "Vamos conversar pelo WhatsApp de Fernando (abre em outra aba)"
+                  },
+                  {
+                      "href":  "#a-gente",
+                      "text":  "A gente"
+                  },
+                  {
+                      "href":  "#trabalho",
+                      "text":  "Os projetos"
+                  },
+                  {
+                      "href":  "#pacote",
+                      "text":  "Seu site"
+                  },
+                  {
+                      "href":  "#contato",
+                      "text":  "Vamos conversar"
+                  },
+                  {
+                      "href":  "https://wa.me/5566999356646?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Codice%20e%20quero%20conversar%20sobre%20meu%20site.",
+                      "text":  "Vamos conversar no WhatsApp (abre em outra aba)"
+                  },
+                  {
+                      "href":  "#trabalho",
+                      "text":  "Explorar projetos"
+                  },
+                  {
+                      "href":  "#a-gente",
+                      "text":  "Conhecer a gente"
+                  },
+                  {
+                      "href":  "https://wa.me/5566999356646?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Codice%20e%20quero%20conversar%20sobre%20meu%20site.",
+                      "text":  "WhatsApp de Fernando Riad (abre em outra aba)"
+                  },
+                  {
+                      "href":  "https://wa.me/556684184488?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Codice%20e%20quero%20conversar%20sobre%20meu%20site.",
+                      "text":  "WhatsApp de Eduardo Gobatto (abre em outra aba)"
+                  },
+                  {
+                      "href":  "https://github.com/Edu4rdo-Gobatto",
+                      "text":  "GitHub de Eduardo Gobatto (abre em outra aba)"
+                  },
+                  {
+                      "href":  "#trabalho",
+                      "text":  "Conheça o que fazemos"
+                  },
+                  {
+                      "href":  "https://wa.me/5566999356646?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20o%20site%20de%20uma%20p%C3%A1gina%20da%20Codice.",
+                      "text":  "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)"
+                  },
+                  {
+                      "href":  "https://corretor-web-test.vercel.app/",
+                      "text":  "Ver demonstração (abre em outra aba)"
+                  },
+                  {
+                      "href":  "https://github.com/Edu4rdo-Gobatto/Corretor-web",
+                      "text":  "Explorar o código no GitHub (abre em outra aba)"
+                  },
+                  {
+                      "href":  "https://roger-estetica-automotiva.vercel.app/",
+                      "text":  "Visitar demonstração (abre em outra aba)"
+                  },
+                  {
+                      "href":  "https://github.com/SHURIKA6/roger-estetica-automotiva",
+                      "text":  "Explorar o código no GitHub (abre em outra aba)"
+                  },
+                  {
+                      "href":  "https://wa.me/5566999356646?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20o%20site%20de%20uma%20p%C3%A1gina%20da%20Codice.",
+                      "text":  "Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba)"
+                  },
+                  {
+                      "href":  "https://wa.me/5566999356646?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20o%20site%20de%20uma%20p%C3%A1gina%20da%20Codice.",
+                      "text":  "Falar com Fernando+55 (66) 99935-6646 pelo WhatsApp (abre em outra aba)"
+                  },
+                  {
+                      "href":  "https://github.com/SHURIKA6",
+                      "text":  "Trabalhos no GitHub (abre em outra aba)"
+                  },
+                  {
+                      "href":  "https://wa.me/556684184488?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20o%20site%20de%20uma%20p%C3%A1gina%20da%20Codice.",
+                      "text":  "Falar com Eduardo+55 (66) 8418-4488 pelo WhatsApp (abre em outra aba)"
+                  },
+                  {
+                      "href":  "https://github.com/Edu4rdo-Gobatto",
+                      "text":  "Trabalhos no GitHub (abre em outra aba)"
+                  },
+                  {
+                      "href":  "https://wa.me/556699598519?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20o%20site%20de%20uma%20p%C3%A1gina%20da%20Codice.",
+                      "text":  "Falar com Victor+55 (66) 9959-8519 pelo WhatsApp (abre em outra aba)"
+                  },
+                  {
+                      "href":  "https://wa.me/556681063600?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20o%20site%20de%20uma%20p%C3%A1gina%20da%20Codice.",
+                      "text":  "Falar com Jose+55 (66) 8106-3600 pelo WhatsApp (abre em outra aba)"
+                  },
+                  {
+                      "href":  "https://github.com/JoseVitor-net",
+                      "text":  "Trabalhos no GitHub (abre em outra aba)"
+                  },
+                  {
+                      "href":  "#inicio",
+                      "text":  "De volta ao início"
+                  }
+              ],
+    "overflow":  false,
+    "reducedMotion":  true,
+    "text":  "SINOP · MT DE SINOP. PERTO DA SUA IDEIA. Tecnologia feita por gente. Vamos conversar no WhatsApp (abre em outra aba) 01 / SISTEMA EM PRODUÇÃO Corretor / MT Por fora, apresenta. Por dentro, organiza. ARQUITETURA AUTORAL Sinop / 26 01 / 04 Fernando Riad Arquitetura e Design Fernando Riad, Arquitetura e Design, 1 de 4 PROJETO 01 Explorar projetos PESSOAS. IDEIAS. TRABALHO Somos Fernando, Eduardo, Victor e Jose. Criamos sites e sistemas para colocar seu negócio em evidência. Conhecer a gente CONTATO DIRETO WhatsApp de Fernando Riad (abre em outra aba) WhatsApp de Eduardo Gobatto (abre em outra aba) GitHub de Eduardo Gobatto (abre em outra aba) Prazer, 01 / 04 Fernando Riad. Arquitetura e Design CODICE / FERNANDO Prazer, 02 / 04 Eduardo Gobatto. Engenharia e Produto CODICE / EDUARDO Prazer, 03 / 04 Victor Rafael. Experiencia e Sistemas CODICE / VICTOR Prazer, 04 / 04 Jose Vitor. Infra e Redes CODICE / JOSE Conheça o que fazemos Role para conhecer a gente ↓ Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba) PROJETOS SELECIONADOS Ideias que saíram da conversa. Cada negócio tem seu jeito. O trabalho é fazer isso aparecer. Corretor. Site e sistema imobiliário Projeto desenvolvido Corretor / apresentação e catálogo Captura real · 17/10/2026 Apresentação ↗ Catálogo e filtros ↗ Uma apresentação própria para reunir imóveis, informações e fotos. Ver demonstração (abre em outra aba) Explorar o código no GitHub (abre em outra aba) Por fora, apresenta. Por dentro, organiza. Um catálogo de imóveis com filtros de busca e uma área de gestão para organizar o trabalho imobiliário. Catálogo de imóveis Filtros de busca Área de gestão O sistema tem escopo próprio. O pacote é para um site de apresentação de uma página. PRESENÇA DIGITAL / NEGÓCIO LOCAL Roger Estética Automotiva. Projeto demonstrativo de portfólio Serviços, informações de atendimento e contato reunidos em uma presença própria para o negócio. Criado para uma proposta que não foi contratada. Uma demonstração do nosso trabalho, sem alegações de resultados comerciais. Serviços e galeria Contato e localização Visitar demonstração (abre em outra aba) Explorar o código no GitHub (abre em outra aba) Roger / projeto demonstrativo Captura da interface · projeto demonstrativo SEU PRÓXIMO PASSO Seu negócio tem o que mostrar. Um site profissional para apresentar seus serviços e facilitar o contato com seus clientes. Site de uma página / até seis seções Escopo e valores combinados na proposta, de acordo com o que seu negócio precisa. Conversar sobre meu site pelo WhatsApp de Fernando (abre em outra aba) O que vai com o seu site 01 Uma página com até seis seções 02 Adaptada ao celular e ao computador 03 Textos organizados a partir de um briefing 04 Fotos e informações reais fornecidas e aprovadas por você 05 WhatsApp, localização e metadados básicos 06 Uma rodada consolidada de alterações 07 Configuração e publicação do site Os combinados Domínio e eventual hospedagem são pagos à parte, diretamente por você, em suas próprias contas. Escopo e condições registrados por escrito antes do início. Prazo combinado na proposta, conforme materiais e agenda. Correções de defeitos encontrados na entrega não consomem a rodada de alterações. Mudanças posteriores, novas páginas, lojas e sistemas têm orçamento separado. COMO ACONTECE Da primeira conversa ao site no ar. 01 Conversa e escopo Entendemos seu negócio e registramos a proposta, o prazo e o que será entregue. 02 Entrada e materiais Com o acordo feito e a entrada paga, você envia as informações e fotos reais do negócio. 03 Criação e revisão Organizamos os textos e montamos o site. Você reúne seus ajustes em uma rodada de alterações. 04 Aprovação e publicação Você aprova, paga o saldo e publicamos o site nas suas contas de domínio e hospedagem. A experiência visual da Codice é autoral. O pacote usa uma estrutura reaproveitável, com apresentação personalizada e escopo combinado na proposta. A PRÓXIMA CONVERSA PODE SER A SUA Vamos fazer acontecer? Somos Fernando, Eduardo, Victor e Jose Vitor, da Codice, em Sinop. Conte o que o seu negócio precisa. CONTATO DIRETO Fernando Riad Falar com Fernando +55 (66) 99935-6646 pelo WhatsApp (abre em outra aba) Trabalhos no GitHub (abre em outra aba) CONTATO DIRETO Eduardo Gobatto Falar com Eduardo +55 (66) 8418-4488 pelo WhatsApp (abre em outra aba) Trabalhos no GitHub (abre em outra aba) CONTATO DIRETO Victor Rafael Falar com Victor +55 (66) 9959-8519 pelo WhatsApp (abre em outra aba) CONTATO DIRETO Jose Vitor Falar com Jose +55 (66) 8106-3600 pelo WhatsApp (abre em outra aba) Trabalhos no GitHub (abre em outra aba) Precisa de um sistema ou de uma automação? A gente também pode conversar, com orçamento separado. codice ↗ De volta ao início Sinop, Mato Grosso © 2026 Codice",
+    "viewport":  {
+                     "height":  1000,
+                     "width":  1440
+                 }
+}

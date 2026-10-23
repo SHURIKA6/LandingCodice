@@ -174,12 +174,10 @@
   .opening-status, .opening-lede, .opening-cta, .opening-aside { grid-column: 1 / -1; }
   .opening-title { font-size: clamp(88px, min(15.6vw, 18svh), 168px); }
   .opening-lede { min-height: calc(100svh - var(--o-header) - 200px); }
-  .opening-cta { }
   .opening-button { width: auto; min-width: 360px; }
   .opening-story { grid-column: 1 / -1; max-width: 560px; }
   .opening-cluster { grid-column: 1 / -1; margin-top: 0; grid-auto-rows: minmax(248px, auto); }
   .tile-title { font-size: clamp(36px, 5.2vw, 48px); }
-  .opening-aside { }
 }
 
 /* ---------- Canvas: a fixed 1546 x 937 stage, from 1100 x 700 up ---------- */

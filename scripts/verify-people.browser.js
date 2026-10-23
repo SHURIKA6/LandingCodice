@@ -43,8 +43,8 @@ async (page) => {
         contacts: [...document.querySelectorAll('a[href^="https://wa.me/"]')].map(node => new URL(node.href).pathname.slice(1)),
       }));
       assert(layout.scrollWidth <= layout.width + 1, `horizontal overflow at ${width}: ${JSON.stringify(layout)}`);
-      assert(layout.names.join('|') === 'Fernando Riad|Eduardo Gobatto|Victor Rafael', 'team identity or order changed');
-      assert(layout.contacts.every(number => ['5566999356646', '556684184488'].includes(number)), 'unknown commercial contact');
+      assert(layout.names.join('|') === 'Fernando Riad|Eduardo Gobatto|Victor Rafael|Jose Vitor', 'team identity or order changed');
+      assert(layout.contacts.every(number => ['5566999356646', '556684184488', '556699598519', '556681063600'].includes(number)), 'unknown commercial contact');
       assert(errors.length === 0, `runtime errors at ${width}: ${errors}`);
       results.push({ scenario: `layout-${width}`, renderer: layout.renderer, pass: true });
     } finally { await context.close(); }
@@ -61,7 +61,7 @@ async (page) => {
       optionalChunk = scripts.find(source => !initial.includes(source) && source.includes('/_next/static/chunks/'));
       assert(optionalChunk, 'optional scene chunk was not split from initial hydration');
       const stops = [];
-      for (const progress of [0, 0.25, 0.5, 0.75, 1, 0.5, 0]) {
+      for (const progress of [0, .33, .67, 1, .67, .33, 0]) {
         await p.evaluate(value => {
           const hero = document.querySelector('.people-hero');
           scrollTo({ top: hero.getBoundingClientRect().top + scrollY + (hero.offsetHeight - innerHeight) * value, behavior: 'instant' });
@@ -69,11 +69,11 @@ async (page) => {
         await p.waitForTimeout(300);
         stops.push(await p.locator('.person-card[data-active=true] .person-name').getAttribute('aria-label'));
       }
-      assert(stops.join('|') === 'Fernando Riad|Eduardo Gobatto|Eduardo Gobatto|Victor Rafael|Victor Rafael|Eduardo Gobatto|Fernando Riad', `scroll sequence: ${stops}`);
+      assert(stops.join('|') === 'Fernando Riad|Eduardo Gobatto|Victor Rafael|Jose Vitor|Victor Rafael|Eduardo Gobatto|Fernando Riad', `scroll sequence: ${stops}`);
       await p.evaluate(() => { const hero = document.querySelector('.people-hero'); scrollTo({ top: hero.getBoundingClientRect().top + scrollY + (hero.offsetHeight - innerHeight) * 0.5, behavior: 'instant' }); });
-      await p.waitForFunction(() => document.querySelector('.person-card[data-active=true] .person-name').getAttribute('aria-label') === 'Eduardo Gobatto');
+      await p.waitForFunction(() => document.querySelector('.person-card[data-active=true] .person-name').getAttribute('aria-label') === 'Victor Rafael');
       await p.reload(); await p.waitForFunction(() => document.querySelector('.people-hero').dataset.renderer === 'three'); // the browser restores the middle portrait
-      await p.waitForFunction(() => document.querySelector('.person-card[data-active=true] .person-name').getAttribute('aria-label') === 'Eduardo Gobatto');
+      await p.waitForFunction(() => document.querySelector('.person-card[data-active=true] .person-name').getAttribute('aria-label') === 'Victor Rafael');
       results.push({ scenario: 'reload-at-middle-portrait', pass: true });
       await p.getByRole('button', { name: 'Catálogo e filtros' }).click();
       await p.waitForFunction(() => document.querySelector('.project-capture-next')?.getAttribute('aria-hidden') === 'false');
@@ -148,7 +148,7 @@ async (page) => {
       await hydrated(p); await staticHTML(p);
       await p.waitForTimeout(300);
       assert(await p.locator('canvas').count() === 0, `${failure} left the failed renderer mounted`);
-      assert(await p.locator('.person-card').count() === 3, `${failure} lost a person`);
+      assert(await p.locator('.person-card').count() === 4, `${failure} lost a person`);
       await p.getByRole('button', { name: 'Catálogo e filtros' }).click();
       await p.waitForFunction(() => document.querySelector('.project-capture-next')?.getAttribute('aria-hidden') === 'false');
       assert((await p.locator('.project-capture[aria-hidden="false"]').getAttribute('src')).includes('catalog'), `${failure} blocked interaction`);
@@ -178,7 +178,7 @@ async (page) => {
       if (options.javaScriptEnabled !== false) await hydrated(p);
       await staticHTML(p);
       assert(await p.locator('canvas').count() === 0, 'fallback unexpectedly initialized WebGL');
-      for (const name of ['Fernando Riad', 'Eduardo Gobatto', 'Victor Rafael']) assert(await p.getByRole('heading', { name, exact: true, level: 2 }).isVisible(), `fallback lost ${name}`);
+      for (const name of ['Fernando Riad', 'Eduardo Gobatto', 'Victor Rafael', 'Jose Vitor']) assert(await p.getByRole('heading', { name, exact: true, level: 2 }).isVisible(), `fallback lost ${name}`);
       await p.getByRole('link', { name: 'Explorar projetos' }).click();
       // With page JavaScript disabled, use a native anchor and direct inspection;
       // page.waitForFunction's RAF poller is not available in that document.

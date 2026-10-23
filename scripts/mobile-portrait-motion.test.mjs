@@ -1,12 +1,18 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { getMobileStoryFrame } from '../src/components/experience/mobilePortraitMotion.ts';
+import { teamMembers } from '../src/data/team.ts';
+import { getMobileStoryFrame, mobileStoryBoundaries, mobileStoryStops } from '../src/components/experience/mobilePortraitMotion.ts';
 
-test('mobile story has three readable photographic stops', () => {
-  for (const [progress, index] of [[.08, 0], [.5, 1], [.92, 2]]) {
+const count = teamMembers.length;
+const stops = mobileStoryStops();
+const poseKeys = ['xPercent', 'yPercent', 'scale', 'rotation', 'opacity', 'nameYPercent', 'nameOpacity'];
+
+test('the mobile story has one readable photographic stop per person', () => {
+  assert.equal(stops.length, count);
+  for (const [progress, index] of stops.map((progress, index) => [progress, index])) {
     const frame = getMobileStoryFrame(progress);
     assert.equal(frame.activeIndex, index);
-    assert.equal(frame.panels.length, 3);
+    assert.equal(frame.panels.length, count);
     const pose = frame.panels[index];
     assert.equal(pose.xPercent, 0);
     assert.equal(pose.yPercent, 0);
@@ -19,11 +25,16 @@ test('mobile story has three readable photographic stops', () => {
 });
 
 test('invalid and overscrolled progress keep a valid person visible', () => {
-  for (const [progress, index] of [[-.3, 0], [NaN, 0], [-Infinity, 0], [1.4, 2], [Infinity, 2]]) {
+  for (const progress of [-.3, NaN, -Infinity]) {
     const frame = getMobileStoryFrame(progress);
-    assert.equal(frame.activeIndex, index);
-    assert.equal(frame.panels[index].opacity, 1);
+    assert.equal(frame.activeIndex, 0);
+    assert.equal(frame.panels[0].opacity, 1);
     assert.ok(frame.panels.flatMap(Object.values).every(Number.isFinite));
+  }
+  for (const progress of [1.4, Infinity]) {
+    const frame = getMobileStoryFrame(progress);
+    assert.equal(frame.activeIndex, count - 1);
+    assert.equal(frame.panels[count - 1].opacity, 1);
   }
 });
 
@@ -41,25 +52,31 @@ test('handoffs never blank the stage or distort photograph proportions', () => {
   }
 });
 
-test('poses stay continuous at all reading and handoff boundaries', () => {
-  for (const progress of [.18, .28, .38, .62, .72, .82]) {
-    const before = getMobileStoryFrame(progress - .000001);
-    const after = getMobileStoryFrame(progress + .000001);
-    for (let index = 0; index < 3; index++) {
-      for (const key of ['xPercent', 'yPercent', 'scale', 'rotation', 'opacity', 'nameYPercent', 'nameOpacity']) {
-        assert.ok(Math.abs(before.panels[index][key] - after.panels[index][key]) < .01, `${key} jumps at ${progress}`);
+test('poses stay continuous at every reading and handoff boundary', () => {
+  for (const boundary of mobileStoryBoundaries()) {
+    const before = getMobileStoryFrame(boundary - 1e-6);
+    const after = getMobileStoryFrame(boundary + 1e-6);
+    for (let index = 0; index < count; index++) {
+      for (const key of poseKeys) {
+        assert.ok(Math.abs(before.panels[index][key] - after.panels[index][key]) < .01,
+          `${key} jumps at ${boundary}`);
       }
     }
   }
+  const reached = new Set();
+  for (let step = 0; step <= 1200; step++) reached.add(getMobileStoryFrame(step / 1200).activeIndex);
+  assert.deepEqual([...reached].sort((a, b) => a - b), Array.from({ length: count }, (_, index) => index));
 });
 
-test('scroll reversal restores the scene rather than accumulating offsets', () => {
-  const original = getMobileStoryFrame(.31);
-  getMobileStoryFrame(.95);
+test('the selection advances person by person and reverses cleanly', () => {
+  const original = getMobileStoryFrame(stops[Math.min(1, stops.length - 1)]);
+  getMobileStoryFrame(.99);
   getMobileStoryFrame(.02);
-  assert.deepEqual(getMobileStoryFrame(.31), original);
-  assert.equal(getMobileStoryFrame(.27).activeIndex, 0);
-  assert.equal(getMobileStoryFrame(.29).activeIndex, 1);
-  assert.equal(getMobileStoryFrame(.71).activeIndex, 1);
-  assert.equal(getMobileStoryFrame(.73).activeIndex, 2);
+  assert.deepEqual(getMobileStoryFrame(stops[Math.min(1, stops.length - 1)]), original);
+  for (let progress = 0; progress < 1; progress += 1e-4) {
+    const previous = getMobileStoryFrame(progress);
+    const current = getMobileStoryFrame(progress + 5e-4);
+    assert.ok(current.activeIndex >= previous.activeIndex && current.activeIndex <= previous.activeIndex + 1,
+      `active index jumped at ${progress}`);
+  }
 });

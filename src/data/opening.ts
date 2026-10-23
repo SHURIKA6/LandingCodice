@@ -19,9 +19,10 @@ export const heroVideo = { width: 1152, height: 720 } as const;
  * names and portraits, and nothing else on the page attributes a role to a person.
  */
 const roles = {
-  fernando: 'Engenharia & Produto',
-  eduardo: 'Arquitetura & Sistemas',
-  victor: 'Design & Experiência',
+  fernando: 'Arquitetura e Design',
+  eduardo: 'Engenharia e Produto',
+  victor: 'Experiencia e Sistemas',
+  'jose-vitor': 'Infra e Redes',
 } as const;
 
 export const openingPeople = teamMembers.map(member => ({
@@ -59,7 +60,7 @@ export const openingContent = {
   },
   story: {
     title: 'Pessoas. Ideias. Trabalho',
-    text: 'Somos Fernando, Eduardo e Victor. Criamos sites e sistemas para colocar seu negócio em evidência.',
+    text: 'Somos Fernando, Eduardo, Victor e Jose. Criamos sites e sistemas para colocar seu negócio em evidência.',
     link: 'Conhecer a gente',
     href: '#a-gente',
   },
@@ -68,6 +69,7 @@ export const openingContent = {
   contacts: [
     { id: 'whatsapp-fernando', kind: 'whatsapp', name: 'WhatsApp de Fernando Riad', href: whatsappUrl(fernando.whatsappNumber, conversation) },
     { id: 'whatsapp-eduardo', kind: 'whatsapp', name: 'WhatsApp de Eduardo Gobatto', href: whatsappUrl(eduardo.whatsappNumber, conversation) },
-    { id: 'github-eduardo', kind: 'github', name: 'GitHub de Eduardo Gobatto', href: eduardo.githubHref },
+    // The GitHub entry exists for every founder that has a public profile.
+    ...(eduardo.githubHref ? [{ id: 'github-eduardo', kind: 'github' as const, name: 'GitHub de Eduardo Gobatto', href: eduardo.githubHref }] : []),
   ] satisfies readonly OpeningContact[],
 } as const;

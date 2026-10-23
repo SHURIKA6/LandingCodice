@@ -1,10 +1,14 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { teamMembers } from '../src/data/team.ts';
 import {
   clampPortraitProgress,
   getPortraitMotion,
   getSquareTextureCrop,
 } from '../src/components/experience/portraitMotion.ts';
+
+const count = teamMembers.length;
+const stops = Array.from({ length: count }, (_, index) => index / (count - 1));
 
 test('invalid or overscrolled progress still selects an existing portrait', () => {
   for (const [input, expected] of [
@@ -21,10 +25,10 @@ test('invalid or overscrolled progress still selects an existing portrait', () =
   }
 });
 
-test('each of the three readable stops brings its own photo to the front and center', () => {
-  for (const [progress, expectedIndex] of [[0, 0], [0.5, 1], [1, 2]]) {
+test('each readable stop brings its own photo to the front and center', () => {
+  for (const [progress, expectedIndex] of stops.map((progress, index) => [progress, index])) {
     const scene = getPortraitMotion(progress);
-    assert.equal(scene.panels.length, 3);
+    assert.equal(scene.panels.length, count);
     assert.equal(scene.activeIndex, expectedIndex);
     const focused = scene.panels[expectedIndex];
     assert.equal(focused.x, 0);
@@ -36,24 +40,33 @@ test('each of the three readable stops brings its own photo to the front and cen
   }
 });
 
+test('the active photograph is the closest to the camera at every scroll position', () => {
+  for (let step = 0; step <= 100; step += 1) {
+    const scene = getPortraitMotion(step / 100);
+    const active = scene.panels[scene.activeIndex];
+    assert.ok(scene.panels.every(panel => panel.z <= active.z), `an inactive photo overtook the active one at ${step}`);
+  }
+});
+
 test('scrolling back restores the same scene and switches names at the nearest stop', () => {
   const original = getPortraitMotion(0.32);
   getPortraitMotion(0.9);
   getPortraitMotion(0.04);
   assert.deepEqual(getPortraitMotion(0.32), original);
-  assert.equal(getPortraitMotion(0.249).activeIndex, 0);
-  assert.equal(getPortraitMotion(0.25).activeIndex, 1);
-  assert.equal(getPortraitMotion(0.749).activeIndex, 1);
-  assert.equal(getPortraitMotion(0.75).activeIndex, 2);
+  for (let index = 0; index < count - 1; index += 1) {
+    const switchProgress = (index + 0.5) / (count - 1);
+    assert.equal(getPortraitMotion(switchProgress - 0.001).activeIndex, index);
+    assert.equal(getPortraitMotion(switchProgress + 0.001).activeIndex, index + 1);
+  }
 });
 
-test('portrait handoffs move through depth continuously without stretching their square planes', () => {
-  const before = getPortraitMotion(0);
-  const midway = getPortraitMotion(0.25);
-  const after = getPortraitMotion(0.5);
-  assert.ok(midway.panels[0].z < before.panels[0].z);
-  assert.ok(midway.panels[1].z > before.panels[1].z);
-  assert.ok(after.panels[1].z > midway.panels[1].z);
+test('handoffs move through depth continuously without stretching their square planes', () => {
+  for (let index = 0; index < count - 1; index += 1) {
+    const before = getPortraitMotion(stops[index]);
+    const after = getPortraitMotion(stops[index + 1]);
+    assert.ok(after.panels[index].z < before.panels[index].z, 'the outgoing photo recedes in depth');
+    assert.ok(after.panels[index + 1].z > before.panels[index + 1].z, 'the incoming photo advances in depth');
+  }
 
   for (let step = 0; step <= 100; step += 1) {
     const scene = getPortraitMotion(step / 100);
@@ -70,7 +83,9 @@ test('portrait handoffs move through depth continuously without stretching their
 });
 
 test('handoff surfaces stay parallel so neighboring photographs cannot slice through one another', () => {
-  for (const progress of [0.27, 0.73, 0.01, 0.125, 0.25, 0.49, 0.51, 0.75, 0.875, 0.99]) {
+  const samples = [];
+  for (let step = 0; step <= 20; step += 1) samples.push(step / 20);
+  for (const progress of samples) {
     const { panels } = getPortraitMotion(progress);
     // For the scene's XYZ Euler rotation with x=0, local +Z becomes this normal.
     const reference = [Math.sin(panels[0].rotationY), 0, Math.cos(panels[0].rotationY)];
@@ -82,7 +97,7 @@ test('handoff surfaces stay parallel so neighboring photographs cannot slice thr
     }
   }
 
-  for (const progress of [0, 0.5, 1]) {
+  for (const progress of stops) {
     for (const panel of getPortraitMotion(progress).panels) {
       assert.equal(panel.rotationY, 0);
       assert.equal(panel.rotationZ, 0);

@@ -1,0 +1,28 @@
+[
+  {
+    "size": "desktop",
+    "viewport": {
+      "height": 1000,
+      "width": 1440
+    },
+    "sameText": true,
+    "sameLinks": true,
+    "geometryBoxesChecked": 14,
+    "geometryChanges": [],
+    "overflow": false,
+    "imageFailures": []
+  },
+  {
+    "size": "mobile",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "sameText": true,
+    "sameLinks": true,
+    "geometryBoxesChecked": 14,
+    "geometryChanges": [],
+    "overflow": false,
+    "imageFailures": []
+  }
+]

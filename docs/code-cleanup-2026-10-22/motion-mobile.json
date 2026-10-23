@@ -1,0 +1,14 @@
+﻿{
+    "coarsePointer":  false,
+    "menuOpen":  true,
+    "mode":  "mobile-story",
+    "overflow":  false,
+    "portraitsReady":  true,
+    "renderer":  "html",
+    "storyHeight":  2532,
+    "touchPoints":  0,
+    "viewport":  [
+                     390,
+                     844
+                 ]
+}

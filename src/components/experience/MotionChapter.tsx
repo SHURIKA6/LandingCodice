@@ -86,16 +86,6 @@ export function MotionChapter({ children, className, id, labelledBy }: {
       }
     }
 
-    // A stable outer track reserves natural size. Scroll and finite entrance
-    // use different surfaces, so they never overwrite each other's transform.
-    const price = root.querySelector<HTMLElement>('.package-price');
-    let priceTrack: HTMLElement | null = null;
-    if (price) {
-      priceTrack = document.createElement('div'); priceTrack.className = 'price-motion-track';
-      const priceSurface = document.createElement('div'); priceSurface.className = 'price-motion-surface';
-      price.replaceWith(priceTrack); priceTrack.append(priceSurface); priceSurface.append(price);
-      const track = priceTrack; restores.push(() => track.replaceWith(price));
-    }
     const offer = root.querySelector<HTMLElement>('.package-grid');
     const inclusions = root.querySelector<HTMLElement>('.package-details > ul');
     const inclusionItems = inclusions ? Array.from(inclusions.querySelectorAll<HTMLElement>(':scope > li')) : [];
@@ -116,8 +106,6 @@ export function MotionChapter({ children, className, id, labelledBy }: {
           const copy = target.querySelector<HTMLElement>('p:last-child:not(.eyebrow)');
           if (eyebrow) play(eyebrow, [{ transform: 'translateX(-24px)', opacity: .6 }, { transform: 'translateX(0)', opacity: 1 }], 600);
           if (copy) play(copy, [{ transform: 'translateY(28px)', opacity: .6 }, { transform: 'translateY(0)', opacity: 1 }], 700, 100);
-        } else if (kind === 'price') {
-          play(target, [{ transform: 'translateX(-48px)', opacity: .55 }, { transform: 'translateX(0)', opacity: 1 }], 750);
         } else if (kind === 'inclusion') {
           const delay = Math.min(240, Math.max(0, Number(target.dataset.delay || 0)));
           play(target, [{ transform: 'translateX(28px)', opacity: .65 }, { transform: 'translateX(0)', opacity: 1 }], 650, delay);
@@ -131,7 +119,7 @@ export function MotionChapter({ children, className, id, labelledBy }: {
     });
 
     const visible = new Set<HTMLElement>();
-    const targets = [priceTrack, offer, inclusions, process, word].filter((node): node is HTMLElement => !!node);
+    const targets = [offer, inclusions, process, word].filter((node): node is HTMLElement => !!node);
     const updateEntry = () => {
       if (!document.hidden && !largeText()) write(root, '--chapter-entry', clamp(scrollYProgress.get()));
     };
@@ -142,7 +130,6 @@ export function MotionChapter({ children, className, id, labelledBy }: {
       const bounds = new Map(Array.from(visible, target => [target, target.getBoundingClientRect()] as const));
       const stepBounds = process && visible.has(process) ? steps.map(step => step.getBoundingClientRect()) : [];
       const inclusionTops = inclusions && visible.has(inclusions) ? inclusionItems.map(item => item.offsetTop) : [];
-      if (priceTrack && bounds.has(priceTrack)) write(priceTrack, '--price-progress', clamp((viewport * .88 - bounds.get(priceTrack)!.top) / (viewport * .38)));
       if (offer && bounds.has(offer)) write(offer, '--offer-progress', clamp((viewport * .92 - bounds.get(offer)!.top) / (viewport * .4)));
       if (inclusions && bounds.has(inclusions)) inclusionItems.forEach((item, index) => {
         write(item, '--inclusion-progress', clamp((viewport * .88 - bounds.get(inclusions)!.top - inclusionTops[index]) / (viewport * .3)));

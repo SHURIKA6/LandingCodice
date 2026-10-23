@@ -1,0 +1,11 @@
+﻿{
+    "choreography":  false,
+    "inclusionOpacity":  "1",
+    "inclusionTransform":  "none",
+    "mode":  "static",
+    "overflow":  false,
+    "persons":  4,
+    "reduced":  true,
+    "renderer":  "html",
+    "titleWrappers":  0
+}

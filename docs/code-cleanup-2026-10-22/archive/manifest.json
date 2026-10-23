@@ -1,0 +1,17 @@
+{
+  "purpose": "Exact local pre-cleanup sources, including pre-existing user edits; not runtime modules.",
+  "snapshots": [
+    {
+      "source": "src/data/site.ts",
+      "archive": "docs/code-cleanup-2026-10-22/archive/site.ts",
+      "bytes": 6935,
+      "sha256": "1ac03e01d3cb560e4353d489abb3c542e73cd612126df8ced3760e697e29ad28"
+    },
+    {
+      "source": "src/data/landing.ts",
+      "archive": "docs/code-cleanup-2026-10-22/archive/landing.ts",
+      "bytes": 1210,
+      "sha256": "a25863e8d370cfa257b417a311ce2ddcdf1594e0ef363eeb9bb9cf342a7f32c6"
+    }
+  ]
+}

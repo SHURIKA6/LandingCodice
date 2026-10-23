@@ -162,7 +162,7 @@ export default function PortraitScene({ portraits, progress, onReady, onError }:
     }
 
     try {
-      if (portraits.length !== 3) {
+      if (portraits.length < 1) {
         fail();
         return () => { disposed = true; releaseResources(); };
       }

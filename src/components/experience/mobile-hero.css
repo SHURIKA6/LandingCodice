@@ -60,9 +60,7 @@ html[data-large-text] .nav-menu nav{position:fixed;top:var(--site-header-height,
 html[data-large-text] .people-hero{padding-top:var(--site-header-height,80px)}
 html[data-large-text] section[id]{scroll-margin-top:calc(var(--site-header-height,80px) + 14px)}
 html[data-large-text] .package-summary{position:static}
-html[data-large-text] .package-price{font-size:clamp(44px,11vw,78px);white-space:normal}
 html[data-large-text] .package-summary>.button{width:100%;gap:12px;text-align:left}
-html[data-large-text] .package-conditions summary>span{flex-shrink:0;margin-inline:8px}
 html[data-large-text] .footer-word{font-size:12vw;min-width:0}
 html[data-large-text] .footer-word>span:not(.footer-letters){font-size:12px}
 @media(max-width:767px){html[data-large-text] .site-header{min-height:72px}}

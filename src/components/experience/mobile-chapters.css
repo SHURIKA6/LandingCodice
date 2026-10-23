@@ -7,12 +7,12 @@
 .menu-label-clip { overflow: clip; padding-block: .12em; margin-block: -.12em; }
 .menu-label { display: block; }
 .site-header :is(.header-cta, .nav-menu summary, .nav-menu nav a),
-.motion-chapter :is(.button, .founder-contact, .text-link, .package-conditions summary) {
+.motion-chapter :is(.button, .founder-contact, .text-link) {
   transition: scale 120ms cubic-bezier(.16, 1, .3, 1), background 200ms, color 200ms;
 }
 @media (prefers-reduced-motion: no-preference) {
   .site-header :is(.header-cta, .nav-menu summary, .nav-menu nav a):active,
-  .motion-chapter :is(.button, .founder-contact, .text-link, .package-conditions summary):active { scale: .97; }
+  .motion-chapter :is(.button, .founder-contact, .text-link):active { scale: .97; }
 }
 @media (max-width: 1023px) and (prefers-reduced-motion: no-preference) {
   section.motion-chapter:is([data-motion-mode=mobile-story], [data-motion-mode=mobile-flow]) { isolation: isolate; background: var(--paper); }
@@ -42,6 +42,6 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .site-header :is(.header-cta, .nav-menu summary, .nav-menu nav a, .menu-strokes i),
-  .motion-chapter :is(.button, .founder-contact, .text-link, .package-conditions summary) { transition: none; scale: 1; }
+  .motion-chapter :is(.button, .founder-contact, .text-link) { transition: none; scale: 1; }
   .menu-label, .menu-panel-surface, .footer-letter, .process :is(h4, li > p, .process-number) { animation: none !important; transform: none !important; }
 }

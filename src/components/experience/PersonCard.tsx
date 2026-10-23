@@ -1,9 +1,10 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import type { MotionValue } from 'framer-motion';
 import type { TeamMember } from '../../data/team';
+import { teamMembers } from '../../data/team';
 import type { MotionMode } from './useMotionMode';
 import { getMobileStoryFrame } from './mobilePortraitMotion';
 
@@ -13,7 +14,6 @@ export function PersonCard({ member, index, active, mode, progress, onReady, onE
 }) {
   const ref = useRef<HTMLElement>(null);
   const image = useRef<HTMLImageElement>(null);
-  const entered = useInView(ref, { once: true, amount: .12 });
   const { scrollYProgress: local } = useScroll({ target: ref, offset: ['start end', 'end start'] });
   const pose = useTransform(progress, value => getMobileStoryFrame(value).panels[index]);
   const x = useTransform(pose, value => `${value.xPercent}%`);
@@ -36,9 +36,9 @@ export function PersonCard({ member, index, active, mode, progress, onReady, onE
   }, [index, onReady]);
   const story = mode === 'mobile-story';
   const flow = mode === 'mobile-flow';
-  return <motion.article ref={ref} className="person-card" data-active={active} data-entered={entered} aria-labelledby={`person-${member.id}`} style={story ? { zIndex } : undefined}>
+  return <motion.article ref={ref} className="person-card" data-active={active} aria-labelledby={`person-${member.id}`} style={story ? { zIndex } : undefined}>
     <div className="person-copy-mask"><motion.div className="person-copy" style={story ? { y: nameY, opacity: nameOpacity } : flow ? { y: flowNameY } : undefined}>
-      <p className="person-kicker">Prazer, <span aria-hidden="true">{String(index + 1).padStart(2, '0')} / 03</span></p>
+      <p className="person-kicker">Prazer, <span aria-hidden="true">{String(index + 1).padStart(2, '0')} / {String(teamMembers.length).padStart(2, '0')}</span></p>
       <h2 className="person-name" id={`person-${member.id}`} aria-label={member.name}><span><span>{member.firstName}</span></span>{' '}<span><span>{member.lastName}<i aria-hidden="true">.</i></span></span></h2>
       <p className="person-signature">{member.signature}</p>
     </motion.div></div>

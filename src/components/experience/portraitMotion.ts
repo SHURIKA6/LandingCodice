@@ -1,3 +1,5 @@
+import { teamMembers } from '../../data/team.ts';
+
 export type PortraitPanelMotion = {
   x: number;
   y: number;
@@ -11,14 +13,14 @@ export function clampPortraitProgress(progress: number): number {
   return Number.isNaN(progress) ? 0 : Math.min(1, Math.max(0, progress));
 }
 
-/** Three reversible photographic stops, with no accumulated animation state. */
+/** Reversible photographic stops for every team member, with no accumulated animation state. */
 export function getPortraitMotion(progress: number): {
   activeIndex: number;
   camera: { x: number; y: number; z: number };
   panels: readonly PortraitPanelMotion[];
 } {
   const normalized = clampPortraitProgress(progress);
-  const cursor = normalized * 2;
+  const cursor = normalized * (teamMembers.length - 1);
   const handoff = cursor % 1;
   const turn = 4 * handoff * (1 - handoff);
 
@@ -29,7 +31,7 @@ export function getPortraitMotion(progress: number): {
       y: Math.sin(normalized * Math.PI) * 0.035,
       z: 5,
     },
-    panels: [0, 1, 2].map((index) => {
+    panels: teamMembers.map((_, index) => {
       const distance = index - cursor;
       const depth = Math.abs(distance);
 

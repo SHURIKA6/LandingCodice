@@ -7,7 +7,7 @@ import type { MotionValue } from 'framer-motion';
 import { teamMembers } from '../../data/team';
 import { Arrow } from './Arrow';
 import { PersonCard } from './PersonCard';
-import { getMobileStoryFrame } from './mobilePortraitMotion';
+import { mobileStoryStops, getMobileStoryFrame } from './mobilePortraitMotion';
 import { useMotionMode } from './useMotionMode';
 import type { MotionMode } from './useMotionMode';
 import type { PortraitSceneProps } from './PortraitScene';
@@ -74,7 +74,7 @@ export function Hero({ href, cta }: { href: string; cta: string }) {
   }, [rememberAnchor]);
   const portraitError = useCallback(() => { rememberAnchor(); setPhotoFailed(true); }, [rememberAnchor]);
   useMotionValueEvent(desktopProgress, 'change', value => {
-    if (mode === 'desktop') updateActive(Math.round(Math.max(0, Math.min(1, value)) * 2));
+    if (mode === 'desktop') updateActive(Math.round(Math.max(0, Math.min(1, value)) * (teamMembers.length - 1)));
   });
   useMotionValueEvent(mobileProgress, 'change', value => {
     if (mode === 'mobile-story') updateActive(getMobileStoryFrame(value).activeIndex);
@@ -141,7 +141,7 @@ export function Hero({ href, cta }: { href: string; cta: string }) {
       const start = root.getBoundingClientRect().top + scrollY - inset;
       const range = root.offsetHeight - (innerHeight - inset);
       const value = Math.max(0, Math.min(1, (scrollY - start) / Math.max(1, range)));
-      updateActive(mode === 'desktop' ? Math.round(value * 2) : getMobileStoryFrame(value).activeIndex);
+      updateActive(mode === 'desktop' ? Math.round(value * (teamMembers.length - 1)) : getMobileStoryFrame(value).activeIndex);
     };
     if (firstEnhancement || prior === mode || !anchor.current.inside || !story.current) {
       const frame = requestAnimationFrame(syncActive);
@@ -155,7 +155,7 @@ export function Hero({ href, cta }: { href: string; cta: string }) {
       const range = root.offsetHeight - (innerHeight - (mode === 'mobile-story' ? headerHeight : 0));
       const card = root.querySelectorAll<HTMLElement>('.person-card')[saved.index];
       const top = mode === 'mobile-story' || mode === 'desktop'
-        ? start + range * (mode === 'desktop' ? saved.index / 2 : [0.08, .5, .92][saved.index])
+        ? start + range * (mode === 'desktop' ? saved.index / (teamMembers.length - 1) : mobileStoryStops()[saved.index])
         : card ? card.getBoundingClientRect().top + scrollY - headerHeight - 20 : scrollY;
       if (Number.isFinite(top)) scrollTo({ top, behavior: 'instant' });
       syncActive();

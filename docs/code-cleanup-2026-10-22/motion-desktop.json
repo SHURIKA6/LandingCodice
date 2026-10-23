@@ -1,0 +1,8 @@
+﻿{
+    "canvas":  true,
+    "height":  3080,
+    "mode":  "scroll",
+    "overflow":  false,
+    "persons":  4,
+    "renderer":  "three"
+}

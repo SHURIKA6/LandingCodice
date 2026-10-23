@@ -1,0 +1,15 @@
+﻿{
+    "hydrated":  false,
+    "mode":  "static",
+    "nativeLinks":  true,
+    "nativeMenuOpen":  true,
+    "noscriptCatalogue":  true,
+    "offer":  true,
+    "overflow":  false,
+    "persons":  4,
+    "renderer":  "html",
+    "viewport":  [
+                     390,
+                     844
+                 ]
+}

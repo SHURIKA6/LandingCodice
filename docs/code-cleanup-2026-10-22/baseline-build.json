@@ -1,0 +1,41 @@
+{
+  "bundles": [
+    {
+      "file": ".next/static/chunks/2-dtnl_m2d8f7.css",
+      "bytes": 37705,
+      "utilities": [
+        ".visible",
+        ".sr-only",
+        ".fixed",
+        ".static",
+        ".sticky",
+        ".container",
+        ".flex",
+        ".hidden",
+        ".inline",
+        ".flex-shrink",
+        ".transform",
+        ".resize",
+        ".gap-24",
+        ".gap-48",
+        ".gap-64",
+        ".rounded",
+        ".border",
+        ".underline",
+        ".shadow",
+        ".ring",
+        ".outline",
+        ".blur",
+        ".filter",
+        ".backdrop-filter",
+        ".transition"
+      ]
+    },
+    {
+      "file": ".next/static/chunks/2bam2v4-kii5l.css",
+      "bytes": 35447,
+      "utilities": []
+    }
+  ],
+  "totalCssBytes": 73152
+}

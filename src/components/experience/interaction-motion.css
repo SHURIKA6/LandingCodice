@@ -1,7 +1,6 @@
 /* Native details owns visibility; motion stays inside its stable link boxes. */
 :root {
   --motion-ease: cubic-bezier(.16, 1, .3, 1);
-  --motion-feedback: 150ms;
 }
 .nav-menu[open] nav {
   animation: interaction-menu-open 320ms cubic-bezier(.16, 1, .3, 1) backwards;

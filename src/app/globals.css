@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import 'tailwindcss' source('../');
 
 :root{--paper:#f7f9fc;--ink:#142033;--blue:#2f4bff;--mist:#dce5f3;--quiet:#526079;--line:#c5cfdf;--display:var(--font-display),sans-serif;--body:var(--font-body),sans-serif}
 *{box-sizing:border-box}
@@ -213,8 +213,6 @@ html[data-hero-over="true"] .nav-menu summary{border-color:rgb(20 32 51 / .5);ba
   .contact-heading h2>svg{right:24px;width:90px;height:90px}
 }
 @media(max-width:1023px){
-  .people-hero[data-mobile-motion=true] .person-portrait{transition:transform .65s cubic-bezier(.16,1,.3,1)}
-  .people-hero[data-mobile-motion=true] .person-card[data-entered=false] .person-portrait{transform:translateY(18px)}
   .site-header{padding-inline:28px}
   .person-card{min-height:640px;gap:40px}.person-name{font-size:clamp(65px,9vw,95px)}.person-portrait{width:100%;max-width:400px}
   .person-portrait::before{inset:10px -10px -10px 10px}
@@ -275,10 +273,6 @@ html[data-hero-over="true"] .nav-menu summary{border-color:rgb(20 32 51 / .5);ba
   .people-hero[data-mode=scroll] .person-portrait{width:min(100%,calc(100svh - 440px),360px)}
   .people-hero[data-mode=scroll] .scene-container{width:min(39.5%,calc(100svh - 440px),360px);margin-top:0}
   .people-hero[data-mode=scroll] .portrait-progress{margin-bottom:12px}
-}
-@media(max-width:1023px){
-  .people-hero[data-mobile-motion=true] .person-portrait{transition:transform .85s cubic-bezier(.16,1,.3,1)}
-  .people-hero[data-mobile-motion=true] .person-card[data-entered=false] .person-portrait{transform:translateY(36px) scale(.965)}
 }
 @media(max-width:767px){.person-name>span{overflow:visible;padding:0;margin:0}.person-name>span>span{display:inline}}
 @keyframes name-arrive{from{transform:translateY(110%)}to{transform:translateY(0)}}

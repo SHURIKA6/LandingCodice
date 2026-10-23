@@ -28,11 +28,6 @@ section.motion-chapter[data-choreography=true] > .chapter-surface-clip {
 .package-section[data-choreography=true] .chapter-title-line > span {
   transform: translate3d(calc((1 - var(--chapter-entry, 1)) * -64px), calc((1 - var(--chapter-entry, 1)) * 24px), 0);
 }
-.price-motion-track { display: flow-root; }
-.price-motion-surface { transform-origin: left center; }
-.motion-chapter[data-choreography=true] .price-motion-surface {
-  transform: translate3d(0, calc((1 - var(--price-progress, 1)) * 24px), 0) scale(calc(.94 + var(--price-progress, 1) * .06));
-}
 .motion-chapter[data-choreography=true] .package-grid { position: relative; border-top-color: transparent; }
 .motion-chapter[data-choreography=true] .package-grid::before {
   content: ''; position: absolute; inset: 0 0 auto; height: 1px; background: var(--blue);
@@ -80,7 +75,7 @@ section.motion-chapter[data-choreography=true] > .chapter-surface-clip {
   transform: translate3d(calc((1 - var(--word-progress, 1)) * 20px), calc((1 - var(--word-progress, 1)) * 24px), 0) rotate(calc((1 - var(--word-progress, 1)) * -35deg));
 }
 /* A focused action stabilizes all its chapter's supporting choreography. */
-.motion-chapter[data-choreography=true]:focus-within :is(.chapter-title-line > span, .package-index, .price-motion-surface, .footer-letter, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none; }
+.motion-chapter[data-choreography=true]:focus-within :is(.chapter-title-line > span, .package-index, .footer-letter, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none; }
 @media (max-width: 1023px) {
   .motion-chapter[data-choreography=true] .chapter-title-line > span {
     transform: translate3d(calc((1 - var(--chapter-entry, 1)) * 40px), calc((1 - var(--chapter-entry, 1)) * 20px), 0);
@@ -89,19 +84,16 @@ section.motion-chapter[data-choreography=true] > .chapter-surface-clip {
   .package-section[data-choreography=true] .chapter-title-line > span {
     transform: translate3d(calc((1 - var(--chapter-entry, 1)) * -32px), calc((1 - var(--chapter-entry, 1)) * 20px), 0);
   }
-  .motion-chapter[data-choreography=true] .price-motion-surface {
-    transform: translate3d(0, calc((1 - var(--price-progress, 1)) * 18px), 0) scale(calc(.96 + var(--price-progress, 1) * .04));
-  }
 }
 html[data-large-text] .motion-chapter { border-radius: 0 !important; }
 html[data-large-text] .chapter-title-line { overflow: visible; }
 html[data-large-text] .motion-chapter .footer-word > .footer-letters { overflow: visible; }
-html[data-large-text] .motion-chapter :is(.chapter-title-line > span, .package-index, .price-motion-surface, .chapter-surface, .footer-letter, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none !important; }
+html[data-large-text] .motion-chapter :is(.chapter-title-line > span, .package-index, .chapter-surface, .footer-letter, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none !important; }
 html[data-large-text] .chapter-surface-clip { display: none !important; }
 @media (prefers-reduced-motion: reduce) {
   .chapter-title-line { overflow: visible; }
   .chapter-surface-clip { display: none !important; }
-  .motion-chapter :is(.chapter-title-line > span, .package-index, .price-motion-surface, .chapter-surface, .footer-letter, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none !important; }
+  .motion-chapter :is(.chapter-title-line > span, .package-index, .chapter-surface, .footer-letter, .footer-word > span, .process-number, .process h4, .process li > p) { transform: none !important; }
 }
 
 /*
