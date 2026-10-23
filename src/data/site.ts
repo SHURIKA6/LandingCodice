@@ -82,7 +82,7 @@ export const siteContent = {
         src: '/media/corretor-poster.webp',
         alt: 'Página pública do Corretor, com catálogo de imóveis e filtros de busca.',
       },
-      href: 'https://corretor-web-test.vercel.app/',
+      href: 'https://corretor-web-eta.vercel.app/',
       repositoryHref: 'https://github.com/Edu4rdo-Gobatto/Corretor-web',
     },
     {
