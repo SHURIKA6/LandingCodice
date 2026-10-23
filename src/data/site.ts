@@ -52,6 +52,7 @@ const founders: readonly Founder[] = [
   {
     id: 'victor',
     name: 'Victor Rafael',
+    githubHref: 'https://github.com/vict0r-rafael',
     whatsappNumber: '556699598519',
     phoneLabel: '+55 (66) 9959-8519',
     whatsappHref: whatsappUrl('556699598519'),

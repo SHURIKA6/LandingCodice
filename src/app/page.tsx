@@ -5,6 +5,7 @@ import { teamMembers } from '../data/team';
 import { Header } from '../components/experience/Header';
 import { Hero } from '../components/experience/Hero';
 import { Opening } from '../components/experience/Opening';
+import { ServicePanels } from '../components/experience/ServicePanels';
 import { ProjectStage } from '../components/experience/ProjectStage';
 import { Arrow } from '../components/experience/Arrow';
 import { MotionChapter } from '../components/experience/MotionChapter';
@@ -24,6 +25,10 @@ export default function Home() {
     <main id="conteudo" tabIndex={-1}>
       <Opening />
       <Hero href={offer.href} cta={offer.cta} />
+      <MotionChapter className="services-section" id="servico" labelledBy="servico-title"><div className="section-shell">
+        <div className="section-heading" data-reveal="heading"><p className="eyebrow">O que a gente faz <Arrow diagonal /></p><h2 id="servico-title">Quatro jeitos<br />de <em>ajudar.</em></h2><p>Cada um com seu jeito. Tudo combinado por escrito.</p></div>
+        <ServicePanels />
+      </div></MotionChapter>
       <MotionChapter className="work-section" id="trabalho" labelledBy="work-title"><div className="section-shell">
         <div className="section-heading" data-reveal="heading"><p className="eyebrow">Projetos selecionados <Arrow diagonal /></p><h2 id="work-title">Ideias que saíram<br />da <em>conversa.</em></h2><p>Cada negócio tem seu jeito.<br />O trabalho é fazer isso aparecer.</p></div>
         <article aria-labelledby="corretor-title">
