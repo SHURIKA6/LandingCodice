@@ -13,11 +13,29 @@ import { ScrollFrame } from '../components/experience/ScrollFrame';
 
 export default function Home() {
   const roger = siteContent.projects.find(project => project.id === 'roger')!;
+  const siteUrl = process.env.SITE_URL || 'https://landing-codice.vercel.app';
   const organization = {
-    '@context': 'https://schema.org', '@type': 'Organization', name: 'Codice', description: landing.description,
-    ...(process.env.SITE_URL ? { url: process.env.SITE_URL } : {}),
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Codice',
+    url: siteUrl,
+    description: landing.description,
+    logo: `${siteUrl}/brand-people.svg`,
+    sameAs: ['https://github.com/SHURIKA6', 'https://github.com/Edu4rdo-Gobatto', 'https://github.com/vict0r-rafael', 'https://github.com/JoseVitor-net'],
     founder: landing.founders.map(person => ({ '@type': 'Person', name: person.name, sameAs: person.githubHref })),
     member: teamMembers.map(person => ({ '@type': 'Person', name: person.name })),
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+55-66-99935-6646',
+      contactType: 'customer service',
+      availableLanguage: ['Portuguese'],
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Sinop',
+      addressRegion: 'Mato Grosso',
+      addressCountry: 'BR',
+    },
   };
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization).replace(/</g, '\\u003c') }} />

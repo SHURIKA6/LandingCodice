@@ -1,0 +1,33 @@
+# Codice
+
+> Codice is a web studio in Sinop, Mato Grosso, Brazil. We build professional one-page websites for local businesses, with defined scope, deadline and publication on the client's own domain and hosting accounts.
+
+## When to use this
+
+Use Codice when a local business needs a professional one-page website to present services, portfolio and contact information. Good fit for service businesses, professionals and small companies that want a clear, custom presentation instead of a generic template. Codice also discusses systems and automations with separate quotes. Not a fit for e-commerce, large multi-page systems or applications requiring a full platform.
+
+## Contact
+
+- WhatsApp Fernando Riad: +55 (66) 99935-6646 (https://wa.me/5566999356646)
+- WhatsApp Eduardo Gobatto: +55 (66) 8418-4488 (https://wa.me/556684184488)
+- Location: Sinop, Mato Grosso, Brazil
+
+## Pages
+
+- Home: https://landing-codice.vercel.app/
+- About: https://landing-codice.vercel.app/about
+- Contact: https://landing-codice.vercel.app/contact
+- Privacy: https://landing-codice.vercel.app/privacy
+- Documentation: https://landing-codice.vercel.app/docs
+
+## Machine-readable resources
+
+- Markdown negotiation: send `Accept: text/markdown` to any page.
+- Sitemap: https://landing-codice.vercel.app/sitemap.xml
+- Robots: https://landing-codice.vercel.app/robots.txt
+- MCP server: https://landing-codice.vercel.app/.well-known/mcp
+
+## Projects
+
+- Corretor: real estate catalog and management system (https://corretor-web-eta.vercel.app/)
+- Roger Estética Automotiva: demonstrative portfolio project, no commercial result claims

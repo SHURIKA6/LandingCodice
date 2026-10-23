@@ -7,15 +7,16 @@ import './globals.css';
 const displayFont = localFont({ src: '../../public/fonts/study/bricolage-grotesque-latin.woff2', variable: '--font-display', weight: '200 800', display: 'swap' });
 const bodyFont = localFont({ src: '../../public/fonts/source-sans-3-latin-wght-normal.woff2', variable: '--font-body', weight: '200 900', display: 'swap' });
 
-const siteUrl = process.env.SITE_URL;
+const siteUrl = process.env.SITE_URL || 'https://landing-codice.vercel.app';
 export const metadata: Metadata = {
-  ...(siteUrl ? { metadataBase: new URL(siteUrl), alternates: { canonical: '/' } } : {}),
+  metadataBase: new URL(siteUrl),
+  alternates: { canonical: '/' },
   title: landing.title,
   description: landing.description,
   icons: { icon: '/brand-people.svg' },
   robots: { index: true, follow: true },
-  openGraph: { type: 'website', locale: 'pt_BR', siteName: 'Codice', title: landing.title, description: landing.description, ...(siteUrl ? { url: siteUrl } : {}) },
-  twitter: { card: 'summary', title: landing.title, description: landing.description },
+  openGraph: { type: 'website', locale: 'pt_BR', siteName: 'Codice', title: landing.title, description: landing.description, url: siteUrl, images: [{ url: '/media/roger-shot.png', width: 1440, height: 1100, alt: 'Captura da interface do projeto Roger Estética Automotiva.' }] },
+  twitter: { card: 'summary_large_image', title: landing.title, description: landing.description, images: ['/media/roger-shot.png'] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
