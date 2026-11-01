@@ -23,6 +23,10 @@ typography:
 
 # Design System: Codice — Pessoas em cena
 
+## Prévia de compartilhamento — 01/11/2026
+
+A composição aprovada de 1200 × 630 px usa a marca textual atual `codice` com quadrado azul, Bricolage Grotesque local e a frase “Sites e sistemas” / “sob medida.” em duas linhas. A escultura azul/cromada existente ocupa 430 px à direita, sobre base `#f7f9fc`, com texto `#142033`, azul `#2f4bff` e margens de pelo menos 64 px. Exportar um PNG estático opaco, sem alterar os originais nem acrescentar dependências. A arte serve à prévia Open Graph/Twitter e preserva a experiência Pessoas em cena. [Fonte editável e instruções de exportação](docs/sharing-preview-2026-11-01/README.md).
+
 ## Cinemática 2 — execução autorizada em 23/10/2026
 
 Ampliação completa autorizada com **“go”**, intensidade cinematográfica. O momento principal continua sendo os retratos reais: planos paralelos com mais profundidade e giro comum, câmera em dolly, ponteiro graduado por profundidade e quatro paradas de leitura. Capítulos recebem lâmina de costura e skew que se resolve; projetos usam tilt independente do scroll; header, botões, contatos e wordmark recebem feedback sem deslocar caixas de ação. Plate e vídeo da abertura movem-se juntos sob o scrim estável. Não acrescentar loops, bibliotecas ou palcos fixos.

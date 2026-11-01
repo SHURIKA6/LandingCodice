@@ -8,6 +8,13 @@ const displayFont = localFont({ src: '../../public/fonts/study/bricolage-grotesq
 const bodyFont = localFont({ src: '../../public/fonts/source-sans-3-latin-wght-normal.woff2', variable: '--font-body', weight: '200 900', display: 'swap' });
 
 const siteUrl = process.env.SITE_URL || 'https://landing-codice.vercel.app';
+const sharingImage = {
+  url: '/media/codice-share-v1.png',
+  width: 1200,
+  height: 630,
+  type: 'image/png',
+  alt: 'Codice — sites e sistemas sob medida, com escultura azul de dois Cs entrelaçados.',
+};
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   alternates: { canonical: '/' },
@@ -16,8 +23,8 @@ export const metadata: Metadata = {
   keywords: ['Codice', 'Codice web design', 'estúdio de web design', 'sites profissionais', 'site de uma página', 'Sinop', 'Mato Grosso'],
   icons: { icon: '/brand-people.svg' },
   robots: { index: true, follow: true },
-  openGraph: { type: 'website', locale: 'pt_BR', siteName: 'Codice', title: landing.title, description: landing.description, url: siteUrl, images: [{ url: '/media/roger-shot.png', width: 1440, height: 1100, alt: 'Captura da interface do projeto Roger Estética Automotiva.' }] },
-  twitter: { card: 'summary_large_image', title: landing.title, description: landing.description, images: ['/media/roger-shot.png'] },
+  openGraph: { type: 'website', locale: 'pt_BR', siteName: 'Codice', title: landing.title, description: landing.description, url: siteUrl, images: [sharingImage] },
+  twitter: { card: 'summary_large_image', title: landing.title, description: landing.description, images: [sharingImage] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

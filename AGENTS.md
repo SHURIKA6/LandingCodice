@@ -1,3 +1,13 @@
+## Documentação e QA — orientação vigente de 01/11/2026
+
+Não salvar resultados de testes, relatórios de verificação, JSONs de execução, logs, capturas, miniaturas ou outros artefatos de QA em `docs/`, nem versioná-los em outro diretório. Informar os resultados somente no chat; se uma ferramenta precisar gerar arquivos temporários, usar a pasta temporária do sistema, fora do repositório. Esta orientação substitui as exigências históricas abaixo de registrar resultados e evidências em arquivos. Manter apenas a documentação técnica necessária, decisões de produto e fontes editáveis dos assets.
+
+## Prévia de compartilhamento — execução autorizada em 01/11/2026
+
+O plano aprovado substitui a captura de Roger nos metadados Open Graph e Twitter por uma composição própria da Codice: `/media/codice-share-v1.png`, PNG estático de 1200 × 630 px, com a marca textual atual, a frase “Sites e sistemas / sob medida.” e a escultura azul existente. Fonte editável e instruções de exportação no [registro desta entrega](docs/sharing-preview-2026-11-01/README.md).
+
+Conforme o plano aprovado, usar o checkout atual em `main`, sem nova branch/worktree. O fechamento inicial foi local; em 01/11/2026, o usuário pediu **“faça commit e push”**, autorizando registrar e enviar esta entrega para `origin/main`. Essa autorização substitui o limite inicial de não versionar esta alteração; o pedido de versionamento de 21/10 abaixo pertence à entrega daquela data. Verificar metadados por smoke HTTP e navegador, além dos checks aplicáveis, informando resultados somente no chat. Preservar os assets originais, a experiência e todo o histórico documental.
+
 ## Development — vigente desde 20/10/2026: Pessoas em cena
 
 O usuário aprovou a direção **Pessoas em cena** e autorizou explicitamente os retratos de Fernando Riad, Eduardo Gobatto e Victor Rafael. Este bloco prevalece sobre orientações anteriores que vedavam retratos ou definiam outra identidade visual. Manter **Next.js App Router + React + TypeScript + Tailwind CSS + Lenis + Framer Motion**, com **Three.js** como aprimoramento opcional da apresentação em desktop. Não reintroduzir Astro em `src/`.

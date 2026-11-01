@@ -1,5 +1,11 @@
 # Codice — landing e estudo visual
 
+## Prévia de compartilhamento — 01/11/2026
+
+O plano aprovado troca a captura de Roger por uma imagem própria de compartilhamento: marca `codice`, frase “Sites e sistemas / sob medida.” e escultura azul/cromada existente, em PNG de 1200 × 630 px. Open Graph e Twitter usam `/media/codice-share-v1.png`; a fonte editável fica em `docs/sharing-preview-2026-11-01/card.html`, sem dependências novas.
+
+[Fonte editável e instruções de exportação](docs/sharing-preview-2026-11-01/README.md). Após o fechamento local, o usuário autorizou commit e push em `main` para `origin/main` em 01/11/2026. A prévia remota e o cache do WhatsApp dependem de publicação e conferência posterior. Resultados de testes são informados somente no chat, sem gerar arquivos de QA na documentação.
+
 ## Versionamento autorizado — 21/10/2026
 
 Após o fechamento do QA da coreografia da página inteira, o usuário pediu **“Commit e push”**. A entrega e suas evidências são versionadas em `main`, com destino a `origin/main` no repositório existente. Os registros de “sem commit, push ou deploy” abaixo descrevem o fechamento local anterior a essa solicitação. Este registro não equivale a homologação de deploy remoto.
