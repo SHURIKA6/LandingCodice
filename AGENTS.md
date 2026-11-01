@@ -6,6 +6,8 @@ Não salvar resultados de testes, relatórios de verificação, JSONs de execuç
 
 O plano aprovado substitui a captura de Roger nos metadados Open Graph e Twitter por uma composição própria da Codice: `/media/codice-share-v1.png`, PNG estático de 1200 × 630 px, com a marca textual atual, a frase “Sites e sistemas / sob medida.” e a escultura azul existente. Fonte editável e instruções de exportação no [registro desta entrega](docs/sharing-preview-2026-11-01/README.md).
 
+O ajuste de recorte autorizado posteriormente com **“CLARO”** usa `/media/codice-share-v2.png`, mantendo 1200 × 630 px e a primeira arte preservada. Marca, escultura e frase ficam centralizadas dentro do quadrado central de 630 px, para acomodar miniaturas que cortam as laterais. Não criar rotas novas nem alterar a URL canônica para esse ajuste.
+
 Conforme o plano aprovado, usar o checkout atual em `main`, sem nova branch/worktree. O fechamento inicial foi local; em 01/11/2026, o usuário pediu **“faça commit e push”**, autorizando registrar e enviar esta entrega para `origin/main`. Essa autorização substitui o limite inicial de não versionar esta alteração; o pedido de versionamento de 21/10 abaixo pertence à entrega daquela data. Verificar metadados por smoke HTTP e navegador, além dos checks aplicáveis, informando resultados somente no chat. Preservar os assets originais, a experiência e todo o histórico documental.
 
 ## Development — vigente desde 20/10/2026: Pessoas em cena

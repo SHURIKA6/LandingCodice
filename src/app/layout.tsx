@@ -9,7 +9,7 @@ const bodyFont = localFont({ src: '../../public/fonts/source-sans-3-latin-wght-n
 
 const siteUrl = process.env.SITE_URL || 'https://landing-codice.vercel.app';
 const sharingImage = {
-  url: '/media/codice-share-v1.png',
+  url: '/media/codice-share-v2.png',
   width: 1200,
   height: 630,
   type: 'image/png',
