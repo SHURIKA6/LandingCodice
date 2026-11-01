@@ -29,6 +29,8 @@ A composição aprovada de 1200 × 630 px usa a marca textual atual `codice` com
 
 **Ajuste posterior de recorte:** a versão `codice-share-v2.png` mantém a identidade e o formato de 1200 × 630 px, mas reúne marca, escultura e frase em uma coluna dentro do quadrado central de 630 px. Marca de 104 px acima da escultura de 240 px, frase de 56 px em duas linhas abaixo; rodapé de localização secundário. A primeira versão lateral permanece preservada como histórico.
 
+**Escolha vigente:** o usuário esclareceu explicitamente que prefere a v1 lateral, com marca/texto à esquerda e escultura à direita. Essa composição (`codice-share-v1.png`) é a imagem do endereço original; a v2 central permanece como alternativa histórica. A fonte atual `card.html` corresponde à v1.
+
 ## Cinemática 2 — execução autorizada em 23/10/2026
 
 Ampliação completa autorizada com **“go”**, intensidade cinematográfica. O momento principal continua sendo os retratos reais: planos paralelos com mais profundidade e giro comum, câmera em dolly, ponteiro graduado por profundidade e quatro paradas de leitura. Capítulos recebem lâmina de costura e skew que se resolve; projetos usam tilt independente do scroll; header, botões, contatos e wordmark recebem feedback sem deslocar caixas de ação. Plate e vídeo da abertura movem-se juntos sob o scrim estável. Não acrescentar loops, bibliotecas ou palcos fixos.
