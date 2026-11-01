@@ -8,6 +8,8 @@ O plano aprovado substitui a captura de Roger nos metadados Open Graph e Twitter
 
 O ajuste de recorte autorizado posteriormente com **“CLARO”** usa `/media/codice-share-v2.png`, mantendo 1200 × 630 px e a primeira arte preservada. Marca, escultura e frase ficam centralizadas dentro do quadrado central de 630 px, para acomodar miniaturas que cortam as laterais. Não criar rotas novas nem alterar a URL canônica para esse ajuste.
 
+**Escolha final do usuário:** “quero o resultado do v2 no original, nao o v3” refere-se aos links de compartilhamento `?v=2` e `?v=3`. A composição escolhida é a lateral original, em `/media/codice-share-v1.png`, que volta a ser a imagem de Open Graph/Twitter do endereço normal, sem exigir parâmetros. A composição central de `/media/codice-share-v2.png` permanece somente como histórico; não confundir os parâmetros dos links com os nomes dos assets. `card.html` volta à fonte da composição lateral.
+
 Conforme o plano aprovado, usar o checkout atual em `main`, sem nova branch/worktree. O fechamento inicial foi local; em 01/11/2026, o usuário pediu **“faça commit e push”**, autorizando registrar e enviar esta entrega para `origin/main`. Essa autorização substitui o limite inicial de não versionar esta alteração; o pedido de versionamento de 21/10 abaixo pertence à entrega daquela data. Verificar metadados por smoke HTTP e navegador, além dos checks aplicáveis, informando resultados somente no chat. Preservar os assets originais, a experiência e todo o histórico documental.
 
 ## Development — vigente desde 20/10/2026: Pessoas em cena
