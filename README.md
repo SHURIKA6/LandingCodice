@@ -2,7 +2,7 @@
 
 ## Prévia de compartilhamento — 01/11/2026
 
-O plano aprovado troca a captura de Roger por uma imagem própria de compartilhamento: marca `codice`, frase “Sites e sistemas / sob medida.” e escultura azul/cromada existente, em PNG de 1200 × 630 px. A escolha final do usuário é a composição lateral que apareceu com `?v=2`: Open Graph e Twitter usam `/media/codice-share-v1.png` no endereço normal, sem exigir parâmetros. A composição central posterior permanece como histórico; a fonte editável atual fica em `docs/sharing-preview-2026-11-01/card.html`, sem dependências novas.
+O plano aprovado troca a captura de Roger por uma imagem própria de compartilhamento: marca `codice`, frase “Sites e sistemas / sob medida.” e escultura azul/cromada existente, em PNG de 1200 × 630 px. Open Graph e Twitter usam `/media/codice-share-v2.png`, com composição central para acomodar o recorte das miniaturas. A primeira arte permanece preservada; a fonte editável atual fica em `docs/sharing-preview-2026-11-01/card.html`, sem dependências novas.
 
 [Fonte editável e instruções de exportação](docs/sharing-preview-2026-11-01/README.md). Após o fechamento local, o usuário autorizou commit e push em `main` para `origin/main` em 01/11/2026. A prévia remota e o cache do WhatsApp dependem de publicação e conferência posterior. Resultados de testes são informados somente no chat, sem gerar arquivos de QA na documentação.
 
