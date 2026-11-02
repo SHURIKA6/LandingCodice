@@ -16,6 +16,13 @@ const config: NextConfig = {
   devIndicators: false,
   agentRules: false,
   allowedDevOrigins,
+  async redirects() {
+    return [{
+      source: '/media/codice-share-v2.png',
+      destination: '/media/codice-share-v1.png',
+      permanent: false,
+    }];
+  },
   async rewrites() {
     return [
       ...['', '/forma', '/fluxo', '/ritmo'].map(path => ({

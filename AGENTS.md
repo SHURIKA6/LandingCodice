@@ -10,6 +10,8 @@ O ajuste de recorte autorizado posteriormente com **“CLARO”** usa `/media/co
 
 **Escolha vigente, explicitamente esclarecida pelo usuário: v1.** Usar a composição lateral de `/media/codice-share-v1.png`, com marca/texto à esquerda e escultura à direita, no endereço original, com ou sem barra final. A composição central v2 permanece histórica. `card.html` representa a v1. Não inferir a escolha da arte a partir dos parâmetros dos links ou de prévias antigas; não afirmar a causa da diferença entre URLs sem evidência, nem tratar a publicação no servidor como confirmação da prévia no aplicativo.
 
+Compatibilidade de imagem: requisições ao antigo endereço público `/media/codice-share-v2.png` são redirecionadas temporariamente para a v1. O arquivo original da composição central permanece intacto no repositório e no histórico. Essa regra não altera a URL da página nem os assets de portfólio.
+
 Conforme o plano aprovado, usar o checkout atual em `main`, sem nova branch/worktree. O fechamento inicial foi local; em 01/11/2026, o usuário pediu **“faça commit e push”**, autorizando registrar e enviar esta entrega para `origin/main`. Essa autorização substitui o limite inicial de não versionar esta alteração; o pedido de versionamento de 21/10 abaixo pertence à entrega daquela data. Verificar metadados por smoke HTTP e navegador, além dos checks aplicáveis, informando resultados somente no chat. Preservar os assets originais, a experiência e todo o histórico documental.
 
 ## Development — vigente desde 20/10/2026: Pessoas em cena

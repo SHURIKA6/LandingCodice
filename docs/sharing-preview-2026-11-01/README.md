@@ -20,6 +20,8 @@ O usuário esclareceu explicitamente que prefere a v1: marca/texto à esquerda e
 
 ## Metadados
 
+O endereço antigo `/media/codice-share-v2.png` redireciona temporariamente para `/media/codice-share-v1.png`, para que consumidores que ainda solicitem aquele arquivo também recebam a arte lateral escolhida. O PNG central original permanece intacto no repositório; a URL pública passa a funcionar como compatibilidade com a imagem atual.
+
 Open Graph e Twitter devem apontar para o mesmo asset próprio, com dimensões coerentes e texto alternativo **“Codice — sites e sistemas sob medida, com escultura azul de dois Cs entrelaçados.”** A imagem deve ser acessível por HTTP e constar no HTML renderizado pelo servidor, sem depender de JavaScript do cliente.
 
 Alterações locais precisam ser publicadas para afetar o link compartilhado; o cache do WhatsApp pode conservar a prévia anterior.
