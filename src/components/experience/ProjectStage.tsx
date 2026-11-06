@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Arrow } from './Arrow';
 import { ScrollFrame } from './ScrollFrame';
 import { useMotionMode } from './useMotionMode';
 import './project-motion.css';
@@ -11,8 +10,8 @@ const views = [
   { name: 'Catálogo e filtros', src: '/media/corretor-catalog.webp', alt: 'Captura real do catálogo do Corretor, com filtros e anúncios de imóveis.', description: 'Filtros de busca para explorar o catálogo e encontrar os imóveis.' },
 ] as const;
 
-/** `links` is left out while the demonstration and the repository do not answer (site.ts, publicLinks). */
-export function ProjectStage({ links }: { links?: { demoHref: string; repositoryHref: string } }) {
+/** The Corretor's captures and their view controls. Its links sit with its words, as Roger's do (page.tsx). */
+export function ProjectStage() {
   const [selected, setSelected] = useState(0);
   const [displayed, setDisplayed] = useState(0);
   const [loadCatalog, setLoadCatalog] = useState(false);
@@ -57,7 +56,7 @@ export function ProjectStage({ links }: { links?: { demoHref: string; repository
       <div className="project-media-pan">{/* Loaded from the start at low priority, as the opening's former project tile did, so a jump to #trabalho never lands on an empty frame. */}<img className="project-capture project-capture-base" src={views[0].src} alt={views[0].alt} aria-hidden={displayed !== 0} width="1440" height="900" loading="eager" fetchPriority="low" decoding="async" />
       {loadCatalog && <img className="project-capture project-capture-next" data-visible={displayed === 1} src={views[1].src} alt={views[1].alt} aria-hidden={displayed !== 1} width="1440" height="900" onLoad={event => { void revealCatalog(event.currentTarget); }} onError={keepPresentation} />}
       </div></div><figcaption>Captura real · 17/10/2026</figcaption></figure></ScrollFrame>
-    <div className="project-controls"><div className="view-buttons" role="group" aria-label="Escolher captura do Corretor">{views.map((view, index) => <button key={view.src} type="button" aria-pressed={selected === index} data-loading={selected === index && selected !== displayed} onClick={() => selectView(index)}>{view.name}</button>)}</div><p aria-live="polite">{current.description}</p>{links && <div className="project-links"><a className="text-link" href={links.demoHref} target="_blank" rel="noopener noreferrer">Ver demonstração <Arrow direction="external" /><span className="sr-only"> do Corretor (abre em outra aba)</span></a><a className="text-link" href={links.repositoryHref} target="_blank" rel="noopener noreferrer">Ver no GitHub <Arrow direction="external" /><span className="sr-only"> o código do Corretor (abre em outra aba)</span></a></div>}</div>
+    <div className="project-controls"><div className="view-buttons" role="group" aria-label="Escolher captura do Corretor">{views.map((view, index) => <button key={view.src} type="button" aria-pressed={selected === index} data-loading={selected === index && selected !== displayed} onClick={() => selectView(index)}>{view.name}</button>)}</div><p aria-live="polite">{current.description}</p></div>
     <noscript><style>{'.view-buttons{display:none}'}</style><figure className="project-noscript"><img src={views[1].src} alt={views[1].alt} width="1440" height="900" loading="lazy" /><figcaption>Catálogo e filtros · captura real de 17/10/2026</figcaption></figure></noscript>
   </div>;
 }
