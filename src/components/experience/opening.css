@@ -119,6 +119,13 @@ html[data-large-text] .opening-backdrop { transform: none !important; will-chang
   .opening-mark { order: -1; width: clamp(128px, 12svh, 176px); margin: 0 0 20px; }
 }
 
+/* Owner, 06/11/2026: in the one-column layout (phones and portrait tablets) the logo sits centred,
+   as the sculpture above the words and as the mark beside the photo; the words keep their left line. */
+@media (max-width: 1023px) {
+  .opening-sculpture { margin-inline: auto; }
+  .opening-mark { align-self: center; }
+}
+
 /* Enlarged text: one flowing column, nothing held side by side. */
 html[data-large-text] .opening-stage { display: flex; flex-direction: column; justify-content: flex-start; }
 html[data-large-text] .opening-sculpture { width: 160px; }

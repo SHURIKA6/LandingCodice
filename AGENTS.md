@@ -14,6 +14,10 @@ Compatibilidade de imagem: requisições ao antigo endereço público `/media/co
 
 Conforme o plano aprovado, usar o checkout atual em `main`, sem nova branch/worktree. O fechamento inicial foi local; em 01/11/2026, o usuário pediu **“faça commit e push”**, autorizando registrar e enviar esta entrega para `origin/main`. Essa autorização substitui o limite inicial de não versionar esta alteração; o pedido de versionamento de 21/10 abaixo pertence à entrega daquela data. Verificar metadados por smoke HTTP e navegador, além dos checks aplicáveis, informando resultados somente no chat. Preservar os assets originais, a experiência e todo o histórico documental.
 
+## 06/11/2026 — Logo centralizada no celular e “Os combinados” em teste
+
+Pedido do dono: **“centralize a nossa logo no mobile.”** e **“retire a parte da landing ‘O combinado’ pode apenas comentar, para teste, mas acha desnecessária essa parte.”** Abaixo de 1024 px (uma coluna), a escultura azul da abertura fica centralizada; com a foto da equipe, a marca da coluna de texto também. Título, frase e botões continuam alinhados à esquerda, e o desktop não muda. O bloco “Os combinados” (`.package-conditions` em `#pacote`) está comentado em `src/app/page.tsx`, não apagado: remover de vez ou restaurar só por decisão do dono. `offer.conditions` e as superfícies para máquinas não mudaram.
+
 ## 06/11/2026 — Serviços no celular como as fotos
 
 Pedido do dono: **“Em tela de smartphone a parte das frases marcante estão feias, e muito pequenas, faça como se fosse a transição de nossas fotos. trocando junto com o scroll.”** A decisão autoriza um palco fixo novo só para `#servico` em celular e tablet em retrato, e prevalece, nesse ponto, sobre “sem novos palcos fixos” do bloco de 05/11.
@@ -23,6 +27,14 @@ Pedido do dono: **“Em tela de smartphone a parte das frases marcante estão fe
 - **Volta à lista:** em paisagem ou altura baixa (`mobile-flow`), com movimento reduzido, texto ampliado ou sem JavaScript, e sempre que captura e palavras não couberem na composição. Na lista do celular, a captura ocupa a largura da coluna e a frase vem em tinta.
 - **Teclado:** igual ao desktop. O foco visível traz a sua parada na hora, o clique não move a página, o foco é liberado se a parada for rolada para longe e só a parada ativa recebe ponteiro.
 - **Desktop:** o palco de 500vh e o fade-through não mudam.
+
+## 06/11/2026 — Projetos com o texto ao lado da captura
+
+Pedido do dono: **“Texto acima da foto = ruim; Texto ao lado da foto = bom. Se ajustar o do corretor fica top fazendo um dropdown de cada lado. Tente deixar os labels no mesmo padrão. Nos dois exemplos de projeto.”** “Um de cada lado” foi lido como lados alternados. Este bloco prevalece sobre a ordem do Corretor do bloco de 05/11 (título “Site e sistema imobiliário” acima das capturas).
+
+- **Composição:** a partir de 768 px, cada projeto é uma linha `.case` com o texto e a captura lado a lado. O Corretor fica com a captura e os botões de vista à esquerda e o texto à direita. O Roger fica com o texto à esquerda e a captura à direita. Até 767 px e com texto ampliado, os dois viram uma coluna, com o texto primeiro. O texto vem antes da captura no HTML e só o CSS troca os lados.
+- **Mesmo padrão de rótulos:** eyebrow com a categoria de `site.ts` (“Site e sistema imobiliário”, “Presença digital para um negócio local”), nome do projeto como `h3` (“Corretor.”, “Roger / Estética / Automotiva.”), status, descrição, etiquetas e links. Cada projeto mantém só o que já era dele: a frase “Por fora, apresenta. Por dentro, organiza.” no Corretor e a ressalva de projeto demonstrativo no Roger. Os links do Corretor saíram de `ProjectStage` e passaram para o texto, ainda ocultos por `publicLinks: false`.
+- **Sem mudança:** capturas, recortes, legendas, botões de vista, `ScrollFrame`, movimento e conteúdo comercial.
 
 ## 05/11/2026 — Limpeza e soluções tecnológicas
 
