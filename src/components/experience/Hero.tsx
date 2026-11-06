@@ -27,7 +27,7 @@ function PortraitProgress({ progress, active }: { progress: MotionValue<number>;
   </div>;
 }
 
-export function Hero({ href, cta }: { href: string; cta: string }) {
+export function Hero() {
   const hero = useRef<HTMLElement>(null);
   const stage = useRef<HTMLDivElement>(null);
   const story = useRef<HTMLDivElement>(null);
@@ -46,7 +46,6 @@ export function Hero({ href, cta }: { href: string; cta: string }) {
   const [ready, setReady] = useState(false);
   const [active, setActive] = useState(0);
   const [Scene, setScene] = useState<ComponentType<PortraitSceneProps> | null>(null);
-  const [introduced, setIntroduced] = useState(false);
   const [headerHeight, setHeaderHeight] = useState(72);
   const enhanced = mode === 'desktop';
   const pointer = usePointerMotion(stage, enhanced);
@@ -85,7 +84,6 @@ export function Hero({ href, cta }: { href: string; cta: string }) {
     if (mode === 'mobile-story') updateActive(getMobileStoryFrame(value).activeIndex);
   });
 
-  useEffect(() => { setIntroduced(true); }, []);
   useLayoutEffect(() => {
     const root = hero.current;
     if (!root) return;
@@ -180,7 +178,7 @@ export function Hero({ href, cta }: { href: string; cta: string }) {
   }, [enhanced, sceneError]);
 
   return <section ref={hero} className="people-hero" id="a-gente" aria-label="A gente"
-    data-mode={enhanced ? 'scroll' : mode} data-motion-mode={mode} data-renderer={enhanced && ready ? 'three' : 'html'} data-introduced={introduced && mode !== 'static'}>
+    data-mode={enhanced ? 'scroll' : mode} data-motion-mode={mode} data-renderer={enhanced && ready ? 'three' : 'html'}>
     <div ref={stage} className="hero-sticky section-shell">
       <div ref={story} className="people-story"><div className="people-stage">
         <div className="people-viewport"><div className="people-list">
@@ -189,7 +187,7 @@ export function Hero({ href, cta }: { href: string; cta: string }) {
           {enhanced && Scene && <div className="scene-container"><div className="scene-parallax"><Scene portraits={portraits} progress={desktopProgress} pointerX={pointer.x} pointerY={pointer.y} onReady={sceneReady} onError={sceneError} /></div></div>}
         </div>
         {(enhanced || mode === 'mobile-story') && <PortraitProgress progress={progress} active={active} />}
-        <div className="hero-bottom"><a className="hero-project-link" href="#trabalho">Conheça o que fazemos <motion.span className="hero-project-arrow" aria-hidden="true" style={mode === 'static' ? undefined : { y: projectArrowY }}><Arrow /></motion.span></a><div className="hero-actions"><span className="hero-scroll-note">Role para conhecer a gente <span aria-hidden="true">↓</span></span><a className="button button-primary" href={href} target="_blank" rel="noopener noreferrer">{cta}<Arrow diagonal /><span className="sr-only"> pelo WhatsApp de Fernando (abre em outra aba)</span></a></div></div>
+        <div className="hero-bottom"><a className="hero-project-link" href="#servico">Conheça o que fazemos <motion.span className="hero-project-arrow" aria-hidden="true" style={mode === 'static' ? undefined : { y: projectArrowY }}><Arrow direction="down" /></motion.span></a></div>
       </div></div>
     </div>
   </section>;

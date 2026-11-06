@@ -1,10 +1,10 @@
 # Codice
 
-> Codice is a web studio in Sinop, Mato Grosso, Brazil. We build professional one-page websites for local businesses, with defined scope, deadline and publication on the client's own domain and hosting accounts.
+> Codice is a web design and technology studio in Sinop, Mato Grosso, Brazil: custom websites and systems, technology consulting and technical assistance for local businesses. The packaged offer is a professional one-page website with up to six sections; custom software, consulting and technical assistance are quoted separately.
 
 ## When to use this
 
-Use Codice when a local business needs a professional one-page website to present services, portfolio and contact information. Good fit for service businesses, professionals and small companies that want a clear, custom presentation instead of a generic template. Codice also discusses systems and automations with separate quotes. Not a fit for e-commerce, large multi-page systems or applications requiring a full platform.
+Use Codice when a business in Sinop or the region needs a professional website, a custom system, technology consulting or technical assistance for computers and network equipment. The packaged offer is a one-page website with up to six sections, a defined scope and deadline, published on the client's own domain and hosting accounts. Custom software, consulting and technical assistance are quoted separately.
 
 ## Contact
 
@@ -41,5 +41,5 @@ Use Codice when a local business needs a professional one-page website to presen
 
 ## Projects
 
-- Corretor: real estate catalog and management system (https://corretor-web-eta.vercel.app/)
+- Corretor: real estate website and system with a property catalog and a management area
 - Roger Estética Automotiva: demonstrative portfolio project, no commercial result claims

@@ -3,7 +3,7 @@ import { checkRateLimit } from '../../lib/rate-limit';
 
 const API_INDEX = {
   name: 'Codice',
-  description: 'Public API of Codice, a web studio in Sinop, Mato Grosso, Brazil. Read-only and authentication-free.',
+  description: 'Public API of Codice, a web design and technology studio in Sinop, Mato Grosso, Brazil. Read-only and authentication-free.',
   version: '1.0.0',
   documentation: '/docs',
   openapi: '/openapi.json',

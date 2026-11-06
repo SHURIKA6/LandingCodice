@@ -14,33 +14,37 @@
 .nav-menu[open] nav:focus-within,
 .nav-menu[open] nav a:focus-visible { animation: none; }
 
-.site-header .header-cta svg,
-.nav-menu nav a svg,
-.motion-chapter .text-link svg,
-.button > svg,
-.founder-contact > svg,
-.colophon > a > svg,
-.view-buttons button > span {
-  transition: transform 260ms var(--motion-ease);
+/* Arrow nudges travel the way each arrow points. They use the individual translate property, so
+   they compose with the arrow's rotate (globals.css, Arrow system) instead of replacing it. */
+.arrow-external { --arrow-nudge: 4px -4px; }
+.arrow-next { --arrow-nudge: 4px 0; }
+.arrow-down { --arrow-nudge: 0 4px; }
+.arrow-up { --arrow-nudge: 0 -4px; }
+.site-header .header-cta .arrow,
+.nav-menu nav a .arrow,
+.motion-chapter .text-link .arrow,
+.button > .arrow,
+.founder-contact > .arrow,
+.colophon > a > .arrow {
+  transition: translate 260ms var(--motion-ease);
 }
-.site-header .header-cta:is(:hover, :focus-visible) svg,
-.motion-chapter .text-link:is(:hover, :focus-visible) svg,
-.button:is(:hover, :focus-visible) > svg,
-.founder-contact:is(:hover, :focus-visible) > svg,
-.view-buttons button:is(:hover, :focus-visible) > span {
-  transform: translate(4px, -4px);
+.site-header .header-cta:is(:hover, :focus-visible) .arrow,
+.nav-menu nav a:is(:hover, :focus-visible) .arrow,
+.motion-chapter .text-link:is(:hover, :focus-visible) .arrow,
+.button:is(:hover, :focus-visible) > .arrow,
+.founder-contact:is(:hover, :focus-visible) > .arrow,
+.colophon > a:is(:hover, :focus-visible) > .arrow {
+  translate: var(--arrow-nudge);
 }
-.nav-menu nav a:is(:hover, :focus-visible) svg { transform: translateX(4px); }
-.colophon > a:is(:hover, :focus-visible) > svg { transform: translateY(-4px); }
 .text-link { transition: text-decoration-color 180ms, text-underline-offset 180ms; }
 .text-link:is(:hover, :focus-visible) { text-underline-offset: 8px; }
 /* Focus resolves supporting feedback immediately, including CSS transitions
    created after the chapter's focusin handler has cancelled its WAAPI work. */
 .motion-chapter:focus-within :is(.button, .text-link, .founder-contact),
-.motion-chapter:focus-within :is(.button, .text-link, .founder-contact) > svg {
+.motion-chapter:focus-within :is(.button, .text-link, .founder-contact) > .arrow {
   transition: none;
 }
-.motion-chapter:focus-within :is(.button, .text-link, .founder-contact) > svg { transform: none; }
+.motion-chapter:focus-within :is(.button, .text-link, .founder-contact) > .arrow { translate: none; }
 .site-header .nav-menu[data-closing=true] .menu-strokes i:is(:first-child, :last-child) { transform: none; }
 .nav-menu summary:active { background: var(--mist); }
 .view-buttons button { transition: color 150ms, border-color 150ms; }
@@ -101,18 +105,16 @@ html[data-motion-paused] *, html[data-motion-paused] *::before, html[data-motion
   .nav-menu[open] nav a { animation: none; }
   .header-label-roll { transform: none !important; transition: none; }
   .button-primary::before, .founder::before, .founder::after { display: none; }
-  .site-header .header-cta svg,
-  .nav-menu nav a svg,
-  .motion-chapter .text-link svg,
-  .button > svg,
-  .founder-contact > svg,
-  .colophon > a > svg,
-  .view-buttons button > span { transition: none; }
-  .site-header .header-cta:is(:hover, :focus-visible) svg,
-  .motion-chapter .text-link:is(:hover, :focus-visible) svg,
-  .button:is(:hover, :focus-visible) > svg,
-  .founder-contact:is(:hover, :focus-visible) > svg,
-  .colophon > a:is(:hover, :focus-visible) > svg,
-  .view-buttons button:is(:hover, :focus-visible) > span,
-  .nav-menu nav a:is(:hover, :focus-visible) svg { transform: none; }
+  .site-header .header-cta .arrow,
+  .nav-menu nav a .arrow,
+  .motion-chapter .text-link .arrow,
+  .button > .arrow,
+  .founder-contact > .arrow,
+  .colophon > a > .arrow { transition: none; }
+  .site-header .header-cta:is(:hover, :focus-visible) .arrow,
+  .nav-menu nav a:is(:hover, :focus-visible) .arrow,
+  .motion-chapter .text-link:is(:hover, :focus-visible) .arrow,
+  .button:is(:hover, :focus-visible) > .arrow,
+  .founder-contact:is(:hover, :focus-visible) > .arrow,
+  .colophon > a:is(:hover, :focus-visible) > .arrow { translate: none; }
 }

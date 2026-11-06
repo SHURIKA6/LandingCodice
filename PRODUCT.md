@@ -2,6 +2,14 @@
 
 <!-- impeccable:product-schema 1 -->
 
+## 05/11/2026 — Limpeza e soluções tecnológicas
+
+O dono pediu: **“Sabemos que eu quero demonstrar que nossa empresa trás soluções tecnológicas e digitais. Precisamos passar isso ao cliente. Está com coisas desnecessárias soltas na tela. Vamos tentar ajustar isso.”** Decidiu **“Foto real da equipe”** (**“Vou enviar depois”**) para a abertura, **“O prompt deve pedir sim alterações”** e **“Manter como está”** para o movimento.
+
+Posicionamento vigente: a Codice, em Sinop (MT), entrega soluções tecnológicas e digitais — sites e sistemas sob medida, consultoria e assistência técnica (computadores e equipamentos de rede, na versão documentada). O pacote de entrada continua o site profissional de uma página, com até seis seções e sem preço na página; software personalizado, consultoria e assistência técnica têm orçamento separado. Título: “Codice Web Design — Sites, sistemas e soluções digitais em Sinop, MT”. A abertura passa a ter uma mensagem, uma ação principal (WhatsApp de Fernando, com mensagem neutra) e um visual: a escultura azul até a foto real da equipe chegar (`openingPhoto`, procedimento no AGENTS.md). Saíram widgets soltos, contadores, rótulos repetidos, CTAs duplicados e setas decorativas; seções, identidade, pessoas, contatos e oferta ficam.
+
+Corretor segue como trabalho real, sem links enquanto o demo e o repositório não respondem (404 em 05/11/2026); Roger segue demonstrativo. **Correções de fatos antigos:** são quatro pessoas (Fernando, Eduardo, Victor e Jose Vitor), não três; Victor e Jose Vitor têm contatos desde 22/10/2026; o preço não aparece desde 22/10/2026 — os blocos abaixo ficam como histórico. Em aberto com o dono: contatos públicos (quatro ou dois), links do GitHub, demo/repositório do Corretor, escopo da Consultoria, grafia “Jose”/“José”, “Web Design” no título, palcos de serviços e pessoas, passagens e revelações discretas.
+
 ## Cinemática 2 — execução autorizada em 23/10/2026
 
 O usuário escolheu a ampliação completa com intensidade cinematográfica e autorizou com **“go”**: apresentação das pessoas com câmera/profundidade mais expressivas, indicador de quatro paradas, projetos com tilt, passagens e feedback de interação. Preserva as quatro pessoas e todo o conteúdo comercial já presente no checkout; não restaura nem amplia a oferta dos registros históricos abaixo. Nenhum loop ambiente, dependência ou palco fixo novo.

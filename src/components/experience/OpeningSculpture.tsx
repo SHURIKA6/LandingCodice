@@ -8,9 +8,10 @@ import { useMotionMode } from './useMotionMode';
 /**
  * The blue sculpture keeps the motion it had in the previous opening: a finite arc driven by the
  * page scroll and, with a mouse on desktop, a sprung pointer parallax. Pointer state resets
- * whenever the opening is not the thing being watched.
+ * whenever the opening is not the thing being watched. `priority` marks it as the opening's visual
+ * (the only image allowed a high fetch priority) while the team photo has not arrived.
  */
-export function OpeningSculpture() {
+export function OpeningSculpture({ priority = false }: { priority?: boolean }) {
   const mode = useMotionMode();
   const { scrollY } = useScroll();
   const pointerX = useMotionValue(0);
@@ -43,5 +44,5 @@ export function OpeningSculpture() {
     };
   }, [mode, pointerX, pointerY, x, y]);
 
-  return <HeroSculpture mode={mode} scrollY={scrollY} pointerX={x} pointerY={y} />;
+  return <HeroSculpture mode={mode} scrollY={scrollY} pointerX={x} pointerY={y} priority={priority} />;
 }

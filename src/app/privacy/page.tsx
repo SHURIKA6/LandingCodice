@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <main id="conteudo" className="section-shell">
+      <p><a className="text-link" href="/">Voltar para o início</a></p>
       <h1>Privacidade</h1>
       <p>
         A Codice respeita a privacidade dos visitantes deste site. Coletamos apenas as informações que você envia

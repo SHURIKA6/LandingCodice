@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
   title: landing.title,
   description: landing.description,
-  keywords: ['Codice', 'Codice web design', 'estúdio de web design', 'sites profissionais', 'site de uma página', 'Sinop', 'Mato Grosso'],
+  keywords: ['Codice', 'Codice web design', 'estúdio de web design', 'sites profissionais', 'site de uma página', 'sites e sistemas sob medida', 'software personalizado', 'consultoria em tecnologia', 'assistência técnica', 'Sinop', 'Mato Grosso'],
   icons: { icon: '/brand-people.svg' },
   robots: { index: true, follow: true },
   openGraph: { type: 'website', locale: 'pt_BR', siteName: 'Codice', title: landing.title, description: landing.description, url: siteUrl, images: [sharingImage] },

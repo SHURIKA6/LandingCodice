@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function DevelopersPage() {
   return (
     <main id="conteudo" className="section-shell">
+      <p><a className="text-link" href="/">Voltar para o início</a></p>
       <h1>API e recursos para desenvolvedores da Codice</h1>
       <p>
         Os recursos abaixo são públicos e legíveis por máquina, criados para que agentes e integrações acessem

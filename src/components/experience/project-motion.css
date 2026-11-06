@@ -1,23 +1,23 @@
 /* The opaque SSR screenshot remains beneath the layer until load and decode. */
 .project-stage .project-screen { position: relative; }
 .project-screen > .project-media-pan { position: relative; width: 100%; height: 100%; }
-.roger-media > .project-media-crop { aspect-ratio: 1.25; overflow: hidden; }
+/* Both captures are 1440 x 900: the crop box keeps their 1.6 ratio, so nothing is cut at rest. */
+.roger-media > .project-media-crop { aspect-ratio: 1.6; overflow: hidden; }
 .roger-media > .project-media-crop > .project-media-pan { width: 100%; height: 100%; }
 .roger-media .project-media-pan > img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-@media (max-width: 767px) {
-  .roger-media > .project-media-crop { aspect-ratio: 1.18; }
+/* On desktop the whole frame (bar, capture, caption) fits under the 80 px header. */
+@media (min-width: 1024px) {
+  .project-stage { max-width: calc((100svh - 222px) * 1.6 + 24px); }
 }
-/* The mask keeps its exact layout size; only pixels inside it follow reading. */
+/* The mask keeps its exact layout size; only pixels inside it follow reading. The pan and its
+   overscan are written by ScrollFrame and are both zero when the frame settles. */
 .scroll-frame[data-scroll-motion=true] .project-media-pan {
-  transform-origin: center top;
-  transform: translate3d(0, var(--project-pan-y, 0%), 0) scale(1.1);
+  transform-origin: center center;
+  transform: translate3d(0, var(--project-pan-y, 0%), 0) scale(var(--project-pan-scale, 1));
 }
 .scroll-frame[data-frame-visible=true][data-scroll-motion=true] .project-media-pan { will-change: transform; }
 .scroll-frame { perspective: 1200px; }
 .scroll-frame-tilt { transform-origin: center; }
-.scroll-frame[data-kind=project][data-scroll-motion=true] .project-media-pan {
-  transform: translate3d(0, var(--project-pan-y, 0%), 0) scale(1.16);
-}
 /* The bar catches up with the frame; its layout and caption never shift. */
 .scroll-frame[data-scroll-motion=true] .browser-bar { transform: translateY(calc(var(--browser-bar-y, 0) * 1px)); }
 .scroll-frame:focus-within :is(.scroll-frame-tilt, .scroll-frame-surface, .project-media-pan, .browser-bar) { transform: none !important; }

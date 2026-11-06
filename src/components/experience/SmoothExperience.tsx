@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Lenis from 'lenis';
 import { MotionConfig } from 'framer-motion';
 import { shouldCancelWhenHidden } from './motionVisibility';
+import { registerScrollEngine } from './scrollEngine';
 import 'lenis/dist/lenis.css';
 
 export function SmoothExperience({ children }: { children: React.ReactNode }) {
@@ -15,6 +16,7 @@ export function SmoothExperience({ children }: { children: React.ReactNode }) {
       cancelAnimationFrame(frame);
       lenis?.destroy();
       lenis = undefined;
+      registerScrollEngine(undefined);
       document.documentElement.dataset.scrollEngine = 'native';
     };
     const start = () => {
@@ -22,6 +24,7 @@ export function SmoothExperience({ children }: { children: React.ReactNode }) {
       if (preference.matches || document.hidden) return;
       // Lenis already honors the target's CSS scroll-margin; don't add it twice.
       lenis = new Lenis({ lerp: 0.1, autoRaf: false, anchors: true, syncTouch: false });
+      registerScrollEngine(lenis);
       document.documentElement.dataset.scrollEngine = 'lenis';
       const raf = (time: number) => {
         lenis?.raf(time);

@@ -6,11 +6,12 @@ import type { MotionMode } from './useMotionMode';
 import './hero-sculpture.css';
 
 /** The former decorative mark returns as a raster; it needs no extra canvas. */
-export function HeroSculpture({ mode, scrollY, pointerX, pointerY }: {
+export function HeroSculpture({ mode, scrollY, pointerX, pointerY, priority = false }: {
   mode: MotionMode;
   scrollY: MotionValue<number>;
   pointerX: MotionValue<number>;
   pointerY: MotionValue<number>;
+  priority?: boolean;
 }) {
   // A finite arc hands the opening to the portraits. It is entirely determined
   // by scroll, so returning to the opening recomposes the original object.
@@ -23,7 +24,8 @@ export function HeroSculpture({ mode, scrollY, pointerX, pointerY }: {
     <motion.div className="hero-sculpture-parallax" style={mode === 'static' ? undefined : { x, y, rotate, scale }}>
       <motion.div className="hero-sculpture-pointer" style={mode === 'desktop' ? { x: pointerX, y: pointerY, rotate: pointerRotate } : undefined}>
         <div className="hero-sculpture-entry">
-          <img src="/brand/codice-sculpture-blue.webp" alt="" width="800" height="800" loading="eager" decoding="async" draggable="false" />
+          <img src="/brand/codice-sculpture-blue.webp" alt="" width="800" height="800" loading="eager" decoding="async" draggable="false"
+            fetchPriority={priority ? 'high' : undefined} />
         </div>
       </motion.div>
     </motion.div>

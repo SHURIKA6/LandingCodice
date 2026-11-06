@@ -10,10 +10,12 @@ export const metadata: Metadata = {
 export default function DocsPage() {
   return (
     <main id="conteudo" className="section-shell">
+      <p><a className="text-link" href="/">Voltar para o início</a></p>
       <h1>Documentação e recursos para desenvolvedores da Codice</h1>
       <p>
-        A Codice é um estúdio de sites profissionais em Sinop. Esta página reúne os recursos técnicos e os
-        documentos legíveis por agentes e desenvolvedores.
+        A Codice é um estúdio de web design e tecnologia em Sinop, MT: sites e sistemas sob medida, consultoria e
+        assistência técnica. O pacote de entrada é um site de uma página; o restante tem orçamento separado. Esta
+        página reúne os recursos técnicos e os documentos legíveis por agentes e desenvolvedores.
       </p>
       <p>
         Versionamento da API: <code>/api</code> é o alias da versão atual e <code>/api/v1</code> é o caminho

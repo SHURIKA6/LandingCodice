@@ -22,6 +22,9 @@ export function MotionChapter({ children, className, id, labelledBy }: {
   const revealed = useRef(new WeakSet<HTMLElement>());
   const mode = useMotionMode();
   const { scrollYProgress, scrollY } = useScroll({ target: section, offset: ['start end', 'start 20%'] });
+  // The heading lines keep their travel but end it earlier than the painted passage, so every
+  // heading is at rest before its top reaches mid-viewport (05/11/2026; it was 'start 20%').
+  const { scrollYProgress: titleProgress } = useScroll({ target: section, offset: ['start end', 'start 45%'] });
   const radius = useTransform(scrollYProgress, [0, 1], [64, 0]);
 
   useEffect(() => {
@@ -52,10 +55,12 @@ export function MotionChapter({ children, className, id, labelledBy }: {
       animation.addEventListener('cancel', finish, { once: true });
     };
 
-    // Preserve the original nodes, authored line breaks and inline emphasis.
+    // Preserve the original nodes, authored line breaks and inline emphasis. The split heading is a
+    // flex column, so the masks' negative margins never collapse and the lines keep their places.
     root.querySelectorAll<HTMLElement>('[data-reveal="heading"] h2').forEach(heading => {
       const original = Array.from(heading.childNodes);
       if (!original.some(node => node instanceof HTMLBRElement)) return;
+      heading.classList.add('chapter-title-split');
       const fragment = document.createDocumentFragment();
       let line: HTMLSpanElement;
       const nextLine = () => {
@@ -69,7 +74,7 @@ export function MotionChapter({ children, className, id, labelledBy }: {
       });
       original.filter(node => node instanceof SVGElement).forEach(node => fragment.append(node));
       heading.replaceChildren(fragment);
-      restores.push(() => heading.replaceChildren(...original));
+      restores.push(() => { heading.replaceChildren(...original); heading.classList.remove('chapter-title-split'); });
     });
 
     root.querySelectorAll<HTMLElement>('[data-reveal="heading"] > p:last-child:not(.eyebrow)').forEach(copy => {
@@ -157,7 +162,9 @@ export function MotionChapter({ children, className, id, labelledBy }: {
     const visible = new Set<HTMLElement>();
     const targets = [offer, inclusions, process, word].filter((node): node is HTMLElement => !!node);
     const updateEntry = () => {
-      if (!document.hidden && !largeText()) write(root, '--chapter-entry', clamp(scrollYProgress.get()));
+      if (document.hidden || largeText()) return;
+      write(root, '--chapter-entry', clamp(scrollYProgress.get()));
+      write(root, '--chapter-title-entry', clamp(titleProgress.get()));
     };
     const update = () => {
       if (document.hidden || largeText()) return;
@@ -195,6 +202,7 @@ export function MotionChapter({ children, className, id, labelledBy }: {
     const resizeObserver = new ResizeObserver(() => { updateEntry(); update(); });
     targets.forEach(target => resizeObserver.observe(target));
     const stopEntry = scrollYProgress.on('change', updateEntry);
+    const stopTitle = titleProgress.on('change', updateEntry);
     const stopScroll = scrollY.on('change', update);
     const stabilize = () => { cancel(); resetWordPointer(); };
     const visibility = () => { if (document.hidden) stabilize(); else { updateEntry(); update(); } };
@@ -209,7 +217,7 @@ export function MotionChapter({ children, className, id, labelledBy }: {
     window.addEventListener('resize', update, { passive: true });
     return () => {
       observer.disconnect(); localObserver.disconnect(); resizeObserver.disconnect(); textObserver.disconnect();
-      stopEntry(); stopScroll(); stabilize();
+      stopEntry(); stopTitle(); stopScroll(); stabilize();
       word?.removeEventListener('pointermove', moveWordPointer);
       word?.removeEventListener('pointerleave', resetWordPointer);
       window.removeEventListener('blur', resetWordPointer);
@@ -220,7 +228,7 @@ export function MotionChapter({ children, className, id, labelledBy }: {
       written.forEach((properties, target) => properties.forEach((_, property) => target.style.removeProperty(property)));
       restores.reverse().forEach(restore => restore());
     };
-  }, [mode, scrollY, scrollYProgress]);
+  }, [mode, scrollY, scrollYProgress, titleProgress]);
 
   return <motion.section ref={section} id={id} aria-labelledby={labelledBy}
     className={`${className} motion-chapter`} data-motion={mode !== 'static'} data-motion-mode={mode}

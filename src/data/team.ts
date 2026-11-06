@@ -44,7 +44,7 @@ export const teamMembers = [
     name: 'Victor Rafael',
     firstName: 'Victor',
     lastName: 'Rafael',
-    signature: 'Experiencia e Sistemas',
+    signature: 'Experiência e Sistemas',
     portrait: {
       src: '/team/victor.png',
       alt: 'Retrato de Victor Rafael',

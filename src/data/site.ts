@@ -19,6 +19,8 @@ export interface Project {
   };
   readonly href: string;
   readonly repositoryHref: string;
+  /** False while the demo and repository URLs do not answer; the page then renders neither link. */
+  readonly publicLinks?: boolean;
 }
 
 export interface SiteContent {
@@ -82,8 +84,11 @@ export const siteContent = {
         src: '/media/corretor-poster.webp',
         alt: 'Página pública do Corretor, com catálogo de imóveis e filtros de busca.',
       },
+      // 05/11/2026: the demo answered 404 (DEPLOYMENT_NOT_FOUND) and the repository 404. Both URLs stay
+      // here for when the owner restores them; set `publicLinks` back to true only after they answer again.
       href: 'https://corretor-web-eta.vercel.app/',
       repositoryHref: 'https://github.com/Edu4rdo-Gobatto/Corretor-web',
+      publicLinks: false,
     },
     {
       id: 'roger',
@@ -96,8 +101,10 @@ export const siteContent = {
         src: '/media/roger-shot.png',
         alt: 'Página de serviços do site Roger Estética Automotiva.',
       },
+      // Both answered 200 on 05/11/2026.
       href: 'https://roger-estetica-automotiva.vercel.app/',
       repositoryHref: 'https://github.com/SHURIKA6/roger-estetica-automotiva',
+      publicLinks: true,
     },
   ],
 } as const satisfies SiteContent;

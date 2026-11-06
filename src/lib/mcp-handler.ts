@@ -8,7 +8,7 @@ const CONTACTS = [
 const TOOLS = [
   {
     name: 'get_codice_contact',
-    description: 'Return public contact information for the Codice web studio in Sinop, Mato Grosso, Brazil.',
+    description: 'Return public contact information for Codice, a web design and technology studio in Sinop, Mato Grosso, Brazil.',
     inputSchema: { type: 'object', properties: {}, additionalProperties: false },
   },
 ];
@@ -40,7 +40,7 @@ export async function handleMcp(request: Request): Promise<Response> {
       {
         name: 'Codice',
         version: '0.1.0',
-        description: 'Web studio in Sinop, Mato Grosso, Brazil. Professional one-page websites for local businesses.',
+        description: 'Web design and technology studio in Sinop, Mato Grosso, Brazil: custom websites and systems, technology consulting and technical assistance. The packaged offer is a one-page website; custom software, consulting and technical assistance are quoted separately.',
         protocol: 'mcp',
         transport: 'streamable-http',
         endpoint: '/.well-known/mcp',

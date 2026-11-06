@@ -25,6 +25,15 @@ export interface ServiceRepository {
   };
 }
 
+/**
+ * What the service covers, in documented facts only (05/11/2026): the package's own inclusions, the
+ * Corretor case and Assistência técnica v1. A service with nothing documented has no scope line.
+ */
+export interface ServiceScope {
+  readonly text: string;
+  readonly link?: { readonly label: string; readonly href: string };
+}
+
 export interface ServicePanel {
   readonly id: string;
   readonly memberId: TeamMember['id'];
@@ -32,6 +41,7 @@ export interface ServicePanel {
   readonly kicker: string;
   readonly phrase: string;
   readonly repository: ServiceRepository;
+  readonly scope?: ServiceScope;
 }
 
 export const services = [
@@ -60,6 +70,7 @@ export const services = [
     side: 'right',
     kicker: 'Software personalizado',
     phrase: 'Software do tamanho do seu processo. Nem um clique a mais.',
+    scope: { text: 'Como o Corretor: site e sistema imobiliário com catálogo e área de gestão.' },
     repository: {
       owner: 'Edu4rdo-Gobatto',
       repo: 'Cattle-counter',
@@ -79,6 +90,10 @@ export const services = [
     side: 'left',
     kicker: 'Site profissional',
     phrase: 'Seu trabalho é bom. O site só precisa mostrar isso.',
+    scope: {
+      text: 'Uma página com até seis seções, adaptada ao celular e ao computador.',
+      link: { label: 'Ver o pacote', href: '#pacote' },
+    },
     repository: {
       owner: 'vict0r-rafael',
       repo: 'Projeto-e-commerce',
@@ -98,6 +113,7 @@ export const services = [
     side: 'right',
     kicker: 'Assistência técnica',
     phrase: 'Máquina parada é negócio parado. A gente volta ela pro trabalho.',
+    scope: { text: 'Computadores e equipamentos de rede.' },
     repository: {
       owner: 'JoseVitor-net',
       repo: 'NetPulse',

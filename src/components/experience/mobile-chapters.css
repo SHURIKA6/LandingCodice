@@ -15,15 +15,14 @@
   .motion-chapter :is(.button, .founder-contact, .text-link):active { scale: .97; }
 }
 @media (max-width: 1023px) and (prefers-reduced-motion: no-preference) {
-  section.motion-chapter:is([data-motion-mode=mobile-story], [data-motion-mode=mobile-flow]) { isolation: isolate; background: var(--paper); }
+  /* Each section keeps its own ground (globals.css) in every mode, enlarged text included. */
+  section.motion-chapter:is([data-motion-mode=mobile-story], [data-motion-mode=mobile-flow]) { isolation: isolate; }
   .motion-chapter:is([data-motion-mode=mobile-story], [data-motion-mode=mobile-flow]) > .chapter-surface-clip {
     display: block; position: absolute; inset: 0; z-index: -1; overflow: clip; pointer-events: none; border-radius: inherit;
   }
   .chapter-surface { position: absolute; inset: 0; background: var(--paper); }
   .work-section .chapter-surface { background: var(--mist); }
   .contact-section .chapter-surface { background: var(--blue); }
-  .chapter-title-line { display: block; overflow: clip; padding-block: .1em; margin-block: -.1em; }
-  .chapter-title-line > span { display: block; }
   .motion-chapter .footer-word > .footer-letters {
     display: inline-flex; font: inherit; letter-spacing: inherit; margin-block: -.1em; margin-inline: -.09em; gap: 0; overflow: clip; padding-block: .1em; padding-inline: .09em;
   }

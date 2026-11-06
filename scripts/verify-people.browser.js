@@ -191,7 +191,7 @@ async (page) => {
       await staticHTML(p);
       assert(await p.locator('canvas').count() === 0, 'fallback unexpectedly initialized WebGL');
       for (const name of ['Fernando Riad', 'Eduardo Gobatto', 'Victor Rafael', 'Jose Vitor']) assert(await p.getByRole('heading', { name, exact: true, level: 2 }).isVisible(), `fallback lost ${name}`);
-      await p.getByRole('link', { name: 'Explorar projetos' }).click();
+      await p.getByRole('link', { name: 'Os projetos', exact: true }).click();
       // With page JavaScript disabled, use a native anchor and direct inspection;
       // page.waitForFunction's RAF poller is not available in that document.
       await p.waitForTimeout(800);

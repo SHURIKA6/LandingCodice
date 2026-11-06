@@ -31,6 +31,16 @@ A composição aprovada de 1200 × 630 px usa a marca textual atual `codice` com
 
 **Escolha vigente:** o usuário esclareceu explicitamente que prefere a v1 lateral, com marca/texto à esquerda e escultura à direita. Essa composição (`codice-share-v1.png`) é a imagem do endereço original; a v2 central permanece como alternativa histórica. A fonte atual `card.html` corresponde à v1.
 
+## 05/11/2026 — Limpeza e soluções tecnológicas
+
+Pedido do dono: **“Está com coisas desnecessárias soltas na tela. Vamos tentar ajustar isso.”**, com **“Foto real da equipe”** / **“Vou enviar depois”** para a abertura e **“Manter como está”** para o movimento. Paleta, fontes, marca e favicon não mudam.
+
+- **Abertura:** um bloco no grid da página, como o card v1 — eyebrow, H1 em três linhas com “gente.” em azul sólido (contorno removido; regra de forced-colors mantida), uma frase, um botão primário e um link de texto alinhados na borda esquerda; à direita, o único visual (escultura até 400 px no desktop; 160/112 px antes do texto no celular). Fundo papel, sem foto de banco, tela `--k`, blocos, círculo, pontos ou cards. Com a foto da equipe: moldura grande à direita (no celular, largura total acima do eyebrow, até ~45svh), sem texto sobre rostos, e escultura de 128–176 px na coluna de texto.
+- **Setas:** um só desenho (`Arrow.tsx`) orientado por `rotate` — ↗ abre outra aba, → mesma página ou página interna, ↓ rolagem, ↑ volta ao início; empurrões de hover por `translate`, na direção da seta. Sem setas em eyebrows, títulos, barras de navegador ou na palavra final.
+- **Hierarquia:** serviços com o nome como `h3` e a frase abaixo; capturas do GitHub como miniaturas emolduradas (até ~40% do painel, recorte só por CSS); Corretor com o que é (título), o que faz (descrição e etiquetas) e depois as capturas; `.project-status` é rótulo, não pílula; etiquetas de recursos sem sublinhado; rótulo do pacote promovido.
+- **Serviços no celular (06/11/2026, pedido do dono: “faça como se fosse a transição de nossas fotos. trocando junto com o scroll.”):** em retrato, um palco de 300svh troca os serviços com a rolagem como os retratos de `#a-gente`. A captura 4:3 fica no topo e viaja como foto; nome do serviço e frase grande em tinta ficam no pé e entram e saem pela máscara como os nomes; o stepper fica embaixo. A lista volta em paisagem, movimento reduzido, texto ampliado e sem script.
+- **Movimento:** inalterado, salvo o que saiu com os elementos removidos e as correções: máscaras com folga de .25em/.1em, títulos em repouso antes do meio da tela, capturas sem recorte quando assentam, camadas invisíveis sem clique ou foco, CTA da abertura visível desde o início. Revelações discretas, passagens e palcos seguem como estão até decisão do dono.
+
 ## Cinemática 2 — execução autorizada em 23/10/2026
 
 Ampliação completa autorizada com **“go”**, intensidade cinematográfica. O momento principal continua sendo os retratos reais: planos paralelos com mais profundidade e giro comum, câmera em dolly, ponteiro graduado por profundidade e quatro paradas de leitura. Capítulos recebem lâmina de costura e skew que se resolve; projetos usam tilt independente do scroll; header, botões, contatos e wordmark recebem feedback sem deslocar caixas de ação. Plate e vídeo da abertura movem-se juntos sob o scrim estável. Não acrescentar loops, bibliotecas ou palcos fixos.

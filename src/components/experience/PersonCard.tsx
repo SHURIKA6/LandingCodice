@@ -4,7 +4,6 @@ import { useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import type { MotionValue } from 'framer-motion';
 import type { TeamMember } from '../../data/team';
-import { teamMembers } from '../../data/team';
 import type { MotionMode } from './useMotionMode';
 import { getMobileStoryFrame } from './mobilePortraitMotion';
 
@@ -38,15 +37,16 @@ export function PersonCard({ member, index, active, mode, progress, onReady, onE
   const flow = mode === 'mobile-flow';
   return <motion.article ref={ref} className="person-card" data-active={active} aria-labelledby={`person-${member.id}`} style={story ? { zIndex } : undefined}>
     <div className="person-copy-mask"><motion.div className="person-copy" style={story ? { y: nameY, opacity: nameOpacity } : flow ? { y: flowNameY } : undefined}>
-      <p className="person-kicker">Prazer, <span aria-hidden="true">{String(index + 1).padStart(2, '0')} / {String(teamMembers.length).padStart(2, '0')}</span></p>
+      <p className="person-kicker">Prazer,</p>
       <h2 className="person-name" id={`person-${member.id}`} aria-label={member.name}><span><span>{member.firstName}</span></span>{' '}<span><span>{member.lastName}<i aria-hidden="true">.</i></span></span></h2>
       <p className="person-signature">{member.signature}</p>
     </motion.div></div>
     <motion.figure className="person-portrait" style={story ? { x, y, scale, rotate, opacity } : flow ? { y: flowY, scale: flowScale, rotate: flowRotate } : undefined}>
+      {/* The mobile story waits for every photo to decode, so all four load from the server HTML on;
+          only the opening visual asks for high priority, and the later portraits yield to it. */}
       <img ref={image} src={member.portrait.src} alt={member.portrait.alt} width={member.portrait.width} height={member.portrait.height}
-        loading={mode.startsWith('mobile') || index === 0 ? 'eager' : 'lazy'} fetchPriority={index === 0 ? 'high' : 'auto'} draggable="false"
+        loading="eager" fetchPriority={index === 0 ? undefined : 'low'} draggable="false"
         onLoad={event => { const node = event.currentTarget; void node.decode().catch(() => {}).then(() => onReady(index)); }} onError={onError} />
-      <figcaption>Codice / {member.firstName}</figcaption>
     </motion.figure>
   </motion.article>;
 }

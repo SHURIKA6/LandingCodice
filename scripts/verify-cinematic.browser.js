@@ -25,16 +25,37 @@ async (page) => {
   const mobile = { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true };
 
   try {
-    await run('opening-background-travels-beneath-the-stable-scrim', async current => {
+    // 05/11/2026: the stock plate and its loop left the opening. Until the owner's team photo is set
+    // (src/data/opening.ts) the sculpture is the visual; once it is, the photo travels in a stable frame.
+    await run('opening-media-stays-local-and-the-photo-travels-in-a-stable-frame', async current => {
+      const media = await current.evaluate(() => {
+        const mediaFile = /\.(jpe?g|png|webp|avif|gif|mp4|webm|mov)(\?|$)/i;
+        return {
+          plate: document.querySelectorAll('.opening-plate').length,
+          video: document.querySelectorAll('video').length,
+          photo: document.querySelectorAll('.opening-photo').length,
+          sculpture: document.querySelectorAll('#inicio .opening-sculpture .hero-sculpture').length,
+          foreignMedia: performance.getEntriesByType('resource')
+            .filter(entry => ['img', 'image', 'video', 'audio', 'media'].includes(entry.initiatorType) || mediaFile.test(entry.name))
+            .map(entry => entry.name).filter(name => new URL(name).origin !== location.origin),
+        };
+      });
+      assert(media.plate === 0 && media.video === 0 && media.foreignMedia.length === 0, `opening media is not local: ${JSON.stringify(media)}`);
+      if (!media.photo) {
+        assert(media.sculpture === 1, `without the team photo the sculpture is the opening visual: ${JSON.stringify(media)}`);
+        return { photo: false, ...media };
+      }
+      const frame = () => current.locator('.opening-photo-frame').evaluate(node => ({ top: node.getBoundingClientRect().top + scrollY, transform: getComputedStyle(node).transform }));
+      const resting = await frame();
       const start = await transform(current, '.opening-backdrop');
       await current.evaluate(() => scrollTo({ top: 350, behavior: 'instant' }));
-      await current.waitForFunction(() => new DOMMatrix(getComputedStyle(document.querySelector('.opening-backdrop')).transform).f > 10);
+      await current.waitForFunction(() => new DOMMatrix(getComputedStyle(document.querySelector('.opening-backdrop')).transform).f > 2);
       const during = await transform(current, '.opening-backdrop');
-      const scrim = await transform(current, '.opening-scrim');
-      assert(start !== during && scrim === 'none', 'the background did not move independently of the reading layer');
+      const travelling = await frame();
+      assert(start !== during && travelling.transform === 'none' && Math.abs(travelling.top - resting.top) < 1, 'the photo did not travel inside a stable frame');
       await current.evaluate(() => scrollTo({ top: 0, behavior: 'instant' }));
       await current.waitForFunction(() => Math.abs(new DOMMatrix(getComputedStyle(document.querySelector('.opening-backdrop')).transform).f) < .1);
-      return { start, during, scrim, reversible: true };
+      return { photo: true, start, during, frame: travelling.transform, reversible: true };
     });
 
     await run('portrait-pointer-renders-on-demand-and-resets-on-blur', async current => {
@@ -216,7 +237,7 @@ async (page) => {
       await current.emulateMedia({ reducedMotion: 'reduce' });
       await current.waitForFunction(() => document.querySelector('.people-hero').dataset.mode === 'static');
       const state = await current.evaluate(() => ({
-        effects: [...document.querySelectorAll('.opening-backdrop, .scroll-frame-tilt, .scroll-frame-surface, .hero-project-arrow')].map(node => getComputedStyle(node).transform),
+        effects: [...document.querySelectorAll('.opening-backdrop, .hero-sculpture-parallax, .hero-sculpture-pointer, .scroll-frame-tilt, .scroll-frame-surface, .hero-project-arrow')].map(node => getComputedStyle(node).transform),
         chapters: document.querySelectorAll('.chapter-title-line, .chapter-copy-drift, .footer-letter-ink').length,
         canvas: document.querySelectorAll('canvas').length,
         people: document.querySelectorAll('.person-card').length,
@@ -233,16 +254,17 @@ async (page) => {
       const state = await current.evaluate(() => ({
         mode: document.querySelector('.people-hero').dataset.motionMode,
         canvas: document.querySelectorAll('canvas').length,
-        backdrop: getComputedStyle(document.querySelector('.opening-backdrop')).transform,
+        opening: [...document.querySelectorAll('.opening-backdrop, .hero-sculpture-parallax, .hero-sculpture-pointer')].map(node => getComputedStyle(node).transform),
         tilt: getComputedStyle(document.querySelector('.scroll-frame-tilt')).transform,
       }));
-      assert(state.canvas === 0 && state.backdrop === 'none' && state.tilt === 'none' && await noOverflow(current), JSON.stringify(state));
+      assert(state.canvas === 0 && state.opening.length > 0 && state.opening.every(value => value === 'none') && state.tilt === 'none' && await noOverflow(current), JSON.stringify(state));
       return state;
     }, { viewport: { width, height: 844 } });
 
     await run('no-js-retains-complete-html-and-native-menu', async current => {
       assert(await current.locator('.person-card').count() === 4, 'no-JS lost a person');
-      assert(await transform(current, '.opening-backdrop') === 'none' && await transform(current, '.scroll-frame-tilt') === 'none', 'SSR has an initial transform');
+      const opening = await current.evaluate(() => [...document.querySelectorAll('.opening-backdrop, .hero-sculpture-parallax, .hero-sculpture-pointer')].map(node => getComputedStyle(node).transform));
+      assert(opening.length > 0 && opening.every(value => value === 'none') && await transform(current, '.scroll-frame-tilt') === 'none', 'SSR has an initial transform');
       await current.locator('.nav-menu summary').click();
       assert(await current.locator('.nav-menu').evaluate(node => node.open), 'native menu failed');
       assert(await current.locator('.project-noscript').count() === 1 && await noOverflow(current), 'no-JS catalogue/flow incomplete');
@@ -250,7 +272,8 @@ async (page) => {
     }, { ...mobile, javaScriptEnabled: false });
 
     await run('hidden-tab-resets-without-replaying-the-opening', async current => {
-      await current.locator('.opening-dot').first().click();
+      // OpeningAnchor settles the entrance on focusin; a target=_blank link is never clicked.
+      await current.locator('#inicio').getByRole('link', { name: 'Ver soluções', exact: true }).focus();
       await scrollTo(current, '.footer-word', 500);
       await current.waitForFunction(() => document.querySelector('.footer-word').style.getPropertyValue('--word-progress') === '1');
       await current.locator('.footer-letter').nth(2).hover();

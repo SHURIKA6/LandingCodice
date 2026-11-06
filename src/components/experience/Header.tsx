@@ -1,10 +1,16 @@
 'use client';
 
 import { useEffect, useLayoutEffect, useRef } from 'react';
+import { landing } from '../../data/landing';
 import { Arrow } from './Arrow';
 import { useMotionMode } from './useMotionMode';
 import './interaction-motion.css';
 import './mobile-chapters.css';
+
+/** One list, in page order, for the header links and the menu; the menu also reaches #contato. */
+const navigation = landing.navigation;
+const menuLinks = [...landing.navigation, landing.menuContact];
+const navigationLabel = 'Navegação principal';
 
 export function Header({ contactHref }: { contactHref: string }) {
   const menu = useRef<HTMLDetailsElement>(null);
@@ -91,6 +97,13 @@ export function Header({ contactHref }: { contactHref: string }) {
       cancel();
       if (closing) details.open = false;
     };
+    // The open sheet spans the width under the header: once focus moves on past it, it closes so it
+    // never covers the control that receives focus. No relatedTarget (a window switch, or Safari
+    // blurring the summary on a link press) leaves it open.
+    const leave = (event: FocusEvent) => {
+      if (details.open && event.relatedTarget instanceof Node && !details.contains(event.relatedTarget)) { cancel(); details.open = false; }
+    };
+    details.addEventListener('focusout', leave);
     details.addEventListener('toggle', open);
     details.addEventListener('click', toggleClose);
     details.addEventListener('pointerdown', stabilize, { passive: true });
@@ -102,6 +115,7 @@ export function Header({ contactHref }: { contactHref: string }) {
       const closing = Boolean(details.dataset.closing);
       cancel();
       if (closing) details.open = false;
+      details.removeEventListener('focusout', leave);
       details.removeEventListener('toggle', open);
       details.removeEventListener('click', toggleClose);
       details.removeEventListener('pointerdown', stabilize);
@@ -111,13 +125,11 @@ export function Header({ contactHref }: { contactHref: string }) {
       document.removeEventListener('pointerdown', outside);
     };
   }, [mode]);
-  return <header className="site-header" data-motion-mode={mode}><a className="brand-type" href="#inicio" aria-label="Codice — início">codice<span className="brand-dot" aria-hidden="true" /></a>
-    <nav className="header-nav" aria-label="Seções da página">{[
-      { href: '#a-gente', label: 'A gente' }, { href: '#trabalho', label: 'Os projetos' }, { href: '#pacote', label: 'Seu site' },
-    ].map(link => <a key={link.href} href={link.href}><span className="header-label-mask"><span className="header-label-roll"><span>{link.label}</span><span aria-hidden="true">{link.label}</span></span></span></a>)}</nav>
-    <div className="header-actions"><a className="header-cta" href={contactHref} target="_blank" rel="noopener noreferrer">Vamos conversar <Arrow diagonal /><span className="sr-only"> pelo WhatsApp de Fernando (abre em outra aba)</span></a>
+  return <header className="site-header" data-motion-mode={mode}><a className="brand-type" href="#inicio" aria-label="Codice — início" translate="no">codice<span className="brand-dot" aria-hidden="true" /></a>
+    <nav className="header-nav" aria-label={navigationLabel}>{navigation.map(link => <a key={link.href} href={link.href}><span className="header-label-mask"><span className="header-label-roll"><span>{link.label}</span><span aria-hidden="true">{link.label}</span></span></span></a>)}</nav>
+    <div className="header-actions"><a className="header-cta" href={contactHref} target="_blank" rel="noopener noreferrer">Vamos conversar <Arrow direction="external" /><span className="sr-only"> pelo WhatsApp de Fernando (abre em outra aba)</span></a>
       <details ref={menu} className="nav-menu"><summary aria-label="Menu de navegação"><span className="menu-strokes" aria-hidden="true"><i /><i /></span></summary>
-        <nav aria-label="Navegação principal" onClick={event => { if ((event.target as HTMLElement).closest('a') && menu.current) menu.current.open = false; }}><span className="menu-panel-surface" aria-hidden="true" /><a href="#a-gente"><span className="menu-label-clip"><span className="menu-label">A gente</span></span><Arrow /></a><a href="#trabalho"><span className="menu-label-clip"><span className="menu-label">Os projetos</span></span><Arrow /></a><a href="#pacote"><span className="menu-label-clip"><span className="menu-label">Seu site</span></span><Arrow /></a><a href="#contato"><span className="menu-label-clip"><span className="menu-label">Vamos conversar</span></span><Arrow /></a><p>Sites para negócios de<br />Sinop e região.</p></nav>
+        <nav aria-label={navigationLabel} data-lenis-prevent onClick={event => { if ((event.target as HTMLElement).closest('a') && menu.current) menu.current.open = false; }}><span className="menu-panel-surface" aria-hidden="true" />{menuLinks.map(link => <a key={link.href} href={link.href}><span className="menu-label-clip"><span className="menu-label">{link.label}</span></span><Arrow /></a>)}<p>{landing.menuNote}</p></nav>
       </details>
     </div>
   </header>;

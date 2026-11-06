@@ -6,26 +6,26 @@ export function wantsMarkdown(accept: string | null): boolean {
 }
 
 export function homeMarkdown(): string {
-  return `# Codice — Estúdio de web design em Sinop
+  return `# Codice — Web design e tecnologia em Sinop
 
-Codice is a web studio in Sinop, Mato Grosso, Brazil, that builds professional one-page websites for local businesses.
-Fernando Riad, Eduardo Gobatto, Victor Rafael and Jose Vitor help businesses present their services, show their work
-and make contact with clients easier.
+Codice is a web design and technology studio in Sinop, Mato Grosso, Brazil: custom websites and systems, technology
+consulting and technical assistance for local businesses. Fernando Riad, Eduardo Gobatto, Victor Rafael and Jose Vitor
+help businesses present their services, organize their work and make contact with clients easier.
 
 ## When to use this
 
-Use Codice when a local business needs a professional one-page website to present services, portfolio and contact
-information, with a defined scope, deadline and publication on the client's own domain and hosting accounts.
-Codice is a good fit for service businesses, professionals and small companies that want a clear, custom presentation
-instead of a generic template. Do not use Codice for e-commerce, multi-page systems or applications; those are quoted
-separately.
+Use Codice when a business in Sinop or the region needs a professional website, a custom system, technology consulting
+or technical assistance for computers and network equipment. The packaged offer is a one-page website with up to six
+sections, a defined scope and deadline, published on the client's own domain and hosting accounts. Custom software,
+consulting and technical assistance are quoted separately.
 
 ## Services
 
-- One-page website with up to six sections.
-- Custom presentation, organized copy and real business photos.
+- Packaged offer: a one-page website with up to six sections, organized copy and real business photos.
+- Custom websites and systems, quoted separately.
+- Technology consulting, quoted separately.
+- Technical assistance for computers and network equipment, quoted separately.
 - Publication on the client's domain and hosting accounts.
-- Separate quotes for systems and automations.
 
 ## Contact
 
@@ -48,7 +48,7 @@ separately.
 
 ## Projects
 
-- Corretor: real estate catalog and management system (https://corretor-web-eta.vercel.app/).
+- Corretor: real estate website and system with a property catalog and a management area.
 - Roger Estética Automotiva: demonstrative portfolio project, no commercial result claims.
 `;
 }
@@ -67,7 +67,7 @@ See the agent guide: ${siteUrl}/llms.txt
 
 export function pageMarkdown(pathname: string): string {
   const clean = pathname.replace(/\/$/, '') || '/';
-  if (clean === '/about') return `# About Codice\n\nCodice is a web studio in Sinop, Mato Grosso, Brazil. Team: Fernando Riad, Eduardo Gobatto, Victor Rafael and Jose Vitor.\n\nHomepage: ${siteUrl}/\n`;
+  if (clean === '/about') return `# About Codice\n\nCodice is a web design and technology studio in Sinop, Mato Grosso, Brazil: custom websites and systems, technology consulting and technical assistance. The packaged offer is a one-page website; custom software, consulting and technical assistance are quoted separately. Team: Fernando Riad, Eduardo Gobatto, Victor Rafael and Jose Vitor.\n\nHomepage: ${siteUrl}/\n`;
   if (clean === '/contact') return `# Contact Codice\n\nWhatsApp Fernando: https://wa.me/5566999356646\nWhatsApp Eduardo: https://wa.me/556684184488\nLocation: Sinop, Mato Grosso, Brazil.\n`;
   if (clean === '/privacy') return `# Privacy — Codice\n\nCodice collects only information you send voluntarily when contacting the team and uses it only for service and proposals.\n`;
   if (clean === '/docs') return `# Documentation — Codice\n\nResources: ${siteUrl}/llms.txt, ${siteUrl}/sitemap.xml, ${siteUrl}/.well-known/mcp, ${siteUrl}/openapi.json, ${siteUrl}/api, ${siteUrl}/developers.\n`;

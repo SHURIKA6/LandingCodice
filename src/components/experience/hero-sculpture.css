@@ -1,5 +1,5 @@
-/* Only the decorative item moves. Its slot and every action stay stable. The sculpture now lives
-   in the opening's Sinop / 26 tile; opening.css sizes it and sequences its arrival. */
+/* Only the decorative item moves. Its slot and every action stay stable. The sculpture is the
+   opening's visual until the team photo arrives; opening.css sizes it and sequences its arrival. */
 .hero-sculpture-parallax, .hero-sculpture-pointer, .hero-sculpture-entry { width: 100%; height: 100%; }
 .hero-sculpture-entry img { width: 100%; height: 100%; object-fit: contain; }
 @keyframes sculpture-arrive {
