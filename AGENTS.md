@@ -35,6 +35,11 @@ Pedido do dono: **“Texto acima da foto = ruim; Texto ao lado da foto = bom. Se
 - **Composição:** a partir de 768 px, cada projeto é uma linha `.case` com o texto e a captura lado a lado. O Corretor fica com a captura e os botões de vista à esquerda e o texto à direita. O Roger fica com o texto à esquerda e a captura à direita. Até 767 px e com texto ampliado, os dois viram uma coluna, com o texto primeiro. O texto vem antes da captura no HTML e só o CSS troca os lados.
 - **Mesmo padrão de rótulos:** eyebrow com a categoria de `site.ts` (“Site e sistema imobiliário”, “Presença digital para um negócio local”), nome do projeto como `h3` (“Corretor.”, “Roger / Estética / Automotiva.”), status, descrição, etiquetas e links. Cada projeto mantém só o que já era dele: a frase “Por fora, apresenta. Por dentro, organiza.” no Corretor e a ressalva de projeto demonstrativo no Roger. Os links do Corretor saíram de `ProjectStage` e passaram para o texto, ainda ocultos por `publicLinks: false`.
 - **Sem mudança:** capturas, recortes, legendas, botões de vista, `ScrollFrame`, movimento e conteúdo comercial.
+- **Ajustes da revisão (07/11/2026):**
+  - O texto fica centralizado na altura da captura (`align-items:center`).
+  - As duas molduras têm o mesmo acabamento (padding de 12 px, sombra e barra iguais). A partir de 1024 px, as duas usam o mesmo limite de largura por altura, de modo que cabem inteiras sob o header de 80 px e espelham uma à outra também em janelas baixas. Com texto ampliado, esse limite continua valendo e as duas começam na borda esquerda.
+  - Os botões de vista ficam acima da captura em movimento (`.project-controls` posicionado), para o anel de foco nunca ficar coberto.
+  - Em cada projeto, o texto fica em `.case-copy-text` e os links ficam fora dele. Assim, a entrada do texto do Corretor continua quando os links voltarem, e o texto do Roger segue sem entrada, como antes. Dar entrada aos dois, ou a nenhum, é decisão do dono.
 
 ## 05/11/2026 — Limpeza e soluções tecnológicas
 

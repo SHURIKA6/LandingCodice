@@ -5,9 +5,13 @@
 .roger-media > .project-media-crop { aspect-ratio: 1.6; overflow: hidden; }
 .roger-media > .project-media-crop > .project-media-pan { width: 100%; height: 100%; }
 .roger-media .project-media-pan > img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-/* On desktop the whole frame (bar, capture, caption) fits under the 80 px header. */
+/* On desktop the whole frame (bar, capture, caption) fits under the 80 px header. Roger's frame takes
+   the same cap against the shell's right edge, so the two rows of the zigzag mirror on short windows. */
 @media (min-width: 1024px) {
   .project-stage { max-width: calc((100svh - 222px) * 1.6 + 24px); }
+  .roger-case > .scroll-frame { width: 100%; max-width: calc((100svh - 222px) * 1.6 + 24px); justify-self: end; }
+  /* Enlarged text stacks the rows: both frames then start on the left edge. */
+  html[data-large-text] .roger-case > .scroll-frame { justify-self: start; }
 }
 /* The mask keeps its exact layout size; only pixels inside it follow reading. The pan and its
    overscan are written by ScrollFrame and are both zero when the frame settles. */
