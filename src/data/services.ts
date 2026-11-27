@@ -70,7 +70,10 @@ export const services = [
     side: 'right',
     kicker: 'Software personalizado',
     phrase: 'Software do tamanho do seu processo. Nem um clique a mais.',
-    scope: { text: 'Como o Corretor: site e sistema imobiliário com catálogo e área de gestão.' },
+    scope: {
+      text: 'Como o Corretor: site e sistema imobiliário com catálogo e área de gestão.',
+      link: { label: 'Ver o sistema no trabalho real', href: '#trabalho' },
+    },
     repository: {
       owner: 'Edu4rdo-Gobatto',
       repo: 'Cattle-counter',

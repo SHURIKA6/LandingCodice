@@ -16,11 +16,11 @@ export const landing = {
     { href: '#a-gente', label: 'A gente' },
     { href: '#servico', label: 'Soluções' },
     { href: '#trabalho', label: 'Os projetos' },
-    { href: '#pacote', label: 'Seu site' },
+    { href: '#pacote', label: 'Começar' },
   ],
   /** The mobile menu also reaches the closing chapter. */
   menuContact: { href: '#contato', label: 'Contato' },
-  menuNote: 'Sites e sistemas sob medida em Sinop, MT.',
+  menuNote: 'Sistemas e sites sob medida em Sinop, MT.',
   process: [
     { title: 'Conversa e escopo', text: 'Entendemos seu negócio e registramos a proposta, o prazo e o que será entregue.' },
     { title: 'Entrada e materiais', text: 'Com o acordo feito e a entrada paga, você envia as informações e fotos reais do negócio.' },
