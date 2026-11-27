@@ -3,6 +3,7 @@ import { openingContent as content, openingPhoto } from '../../data/opening';
 import { Arrow } from './Arrow';
 import { OpeningAnchor } from './OpeningAnchor';
 import { OpeningBackdrop } from './OpeningBackdrop';
+import { OpeningCopyMotion } from './OpeningCopyMotion';
 import { OpeningSculpture } from './OpeningSculpture';
 import { openingVisual } from './openingState';
 import './opening.css';
@@ -35,7 +36,7 @@ export function Opening() {
           : <div className="opening-sculpture"><OpeningSculpture priority /></div>}
       </div>
 
-      <div className="opening-copy">
+      <OpeningCopyMotion>
         {photo && <div className="opening-mark"><OpeningSculpture /></div>}
         <p className="eyebrow opening-eyebrow">{content.eyebrow}</p>
         <h1 id="hero-title" className="opening-title">
@@ -50,7 +51,7 @@ export function Opening() {
           </a>
           <a className="text-link opening-link" href={content.secondary.href}>{content.secondary.label}<Arrow /></a>
         </div>
-      </div>
+      </OpeningCopyMotion>
     </div>
   </section>;
 }

@@ -55,7 +55,11 @@ function ServicePanelItem({ service, index, progress, storyProgress, stage, acti
 
   const opacity = useTransform(progress, [start, enterEnd, exitStart, end], [opacityIn, 1, 1, 0]);
   const mediaX = useTransform(progress, [start, enterEnd, exitStart, end], [xIn, 0, 0, dir * 48]);
+  // Depth cue only (transform + opacity): the entering panel settles from 94% while its
+  // words rise 24px; the exiting panel shrinks to 96% and drops 16px. No overlap change.
+  const mediaScale = useTransform(progress, [start, enterEnd, exitStart, end], [0.94, 1, 1, 0.96]);
   const textX = useTransform(progress, [start, enterEnd, exitStart, end], [-xIn * 0.6, 0, 0, -dir * 28]);
+  const textY = useTransform(progress, [start, enterEnd, exitStart, end], [24, 0, 0, -16]);
   const textOpacity = useTransform(progress, [start, enterEnd, exitStart, end], [opacityIn, 1, 1, 0]);
 
   // Phones: the capture travels like a portrait, the words like a name inside its mask.
@@ -75,11 +79,11 @@ function ServicePanelItem({ service, index, progress, storyProgress, stage, acti
     <motion.article className="service-panel" data-side={service.side} data-stop={index} data-active={active}
       aria-labelledby={`service-${service.id}`} style={desktop ? { opacity, x: 0 } : story ? { zIndex } : undefined}>
       <motion.div className="service-panel-media"
-        style={desktop ? { x: mediaX } : story ? { x: storyX, y: storyY, scale: storyScale, rotate: storyRotate, opacity: storyOpacity } : undefined}>
+        style={desktop ? { x: mediaX, scale: mediaScale } : story ? { x: storyX, y: storyY, scale: storyScale, rotate: storyRotate, opacity: storyOpacity } : undefined}>
         <img src={repository.print.src} alt={repository.print.alt} width={repository.print.width} height={repository.print.height} loading="lazy" decoding="async" draggable={false} />
       </motion.div>
       <div className="service-panel-copy-mask">
-        <motion.div className="service-panel-body" style={desktop ? { x: textX, opacity: textOpacity } : story ? { y: copyY, opacity: copyOpacity } : undefined}>
+        <motion.div className="service-panel-body" style={desktop ? { x: textX, y: textY, opacity: textOpacity } : story ? { y: copyY, opacity: copyOpacity } : undefined}>
           <h3 id={`service-${service.id}`} className="service-panel-kicker">{service.kicker}</h3>
           <p className="service-panel-phrase">{service.phrase}</p>
           <p className="service-panel-signature">{member.name}</p>

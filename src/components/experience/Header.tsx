@@ -1,9 +1,11 @@
 'use client';
 
 import { useEffect, useLayoutEffect, useRef } from 'react';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import { landing } from '../../data/landing';
 import { Arrow } from './Arrow';
 import { useMotionMode } from './useMotionMode';
+import { useLargeText } from './useLargeText';
 import './interaction-motion.css';
 import './mobile-chapters.css';
 
@@ -15,6 +17,12 @@ const navigationLabel = 'Navegação principal';
 export function Header({ contactHref }: { contactHref: string }) {
   const menu = useRef<HTMLDetailsElement>(null);
   const mode = useMotionMode();
+  const largeText = useLargeText();
+  // Orientation only: one 2px accent that fills as the page is read. Transform-only,
+  // hidden for static / reduced-motion / enlarged-text so it never carries meaning alone.
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 28, restDelta: .001 });
+  const showProgress = mode !== 'static' && !largeText;
   // The header floats over the opening only at the very top of the page. As soon as the page moves,
   // content would pass beneath a transparent bar, so it turns solid. Solid is the CSS default, so
   // without script the bar is never see-through over text. Layout effect: no flash after hydration.
@@ -132,5 +140,6 @@ export function Header({ contactHref }: { contactHref: string }) {
         <nav aria-label={navigationLabel} data-lenis-prevent onClick={event => { if ((event.target as HTMLElement).closest('a') && menu.current) menu.current.open = false; }}><span className="menu-panel-surface" aria-hidden="true" />{menuLinks.map(link => <a key={link.href} href={link.href}><span className="menu-label-clip"><span className="menu-label">{link.label}</span></span><Arrow /></a>)}<p>{landing.menuNote}</p></nav>
       </details>
     </div>
+    {showProgress && <motion.span className="header-progress" aria-hidden="true" style={{ scaleX: progress }} />}
   </header>;
 }

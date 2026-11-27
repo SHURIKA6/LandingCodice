@@ -51,6 +51,13 @@
 .view-buttons button[data-loading=true] { cursor: progress; }
 
 /* Only the lettering and painted surfaces move; link hit areas never chase a pointer. */
+.header-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--blue); transform-origin: left; pointer-events: none; }
+/* Press acknowledges the action without moving a neighbor: the button itself stays
+   in place, the 1.5% scale is the smallest change that reads as a press. */
+.button { transition: background .2s, color .2s, transform 150ms var(--motion-ease); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  html:not([data-large-text]) .button:active { transform: scale(.985); }
+}
 .header-label-mask { display: block; height: 1.5em; overflow: clip; }
 .header-label-roll { display: block; height: 1.5em; transition: transform 320ms var(--motion-ease); }
 .header-label-roll > span { display: block; height: 1.5em; line-height: 1.5; }
@@ -90,6 +97,7 @@ html[data-large-text] :is(.button-primary, .founder)::before,
 html[data-large-text] .founder::after { display: none; }
 /* Hidden-tab resets may write after the global cancellation handler. Do not
    let those writes create a fresh CSS transition while the tab is asleep. */
+html[data-large-text] .header-progress { display: none; }
 html[data-motion-paused] *, html[data-motion-paused] *::before, html[data-motion-paused] *::after { transition: none !important; }
 
 @keyframes interaction-menu-open {
@@ -101,6 +109,9 @@ html[data-motion-paused] *, html[data-motion-paused] *::before, html[data-motion
   to { transform: translateX(0); opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .header-progress { display: none; }
+  .button { transition: none; }
+  .button:active { transform: none; }
   .nav-menu[open] nav,
   .nav-menu[open] nav a { animation: none; }
   .header-label-roll { transform: none !important; transition: none; }
