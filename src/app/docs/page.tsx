@@ -13,8 +13,8 @@ export default function DocsPage() {
       <p><a className="text-link" href="/">Voltar para o início</a></p>
       <h1>Documentação e recursos para desenvolvedores da Codice</h1>
       <p>
-        A Codice é um estúdio de web design e tecnologia em Sinop, MT: sites e sistemas sob medida, consultoria e
-        assistência técnica. O pacote de entrada é um site de uma página; o restante tem orçamento separado. Esta
+        A Codice é um estúdio de programação e web design em Sinop, MT, atendendo todo o Mato Grosso: sites e sistemas
+        sob medida, consultoria e manutenção de PCs, notebooks e redes. O pacote de entrada é um site de uma página; o restante tem orçamento separado. Esta
         página reúne os recursos técnicos e os documentos legíveis por agentes e desenvolvedores.
       </p>
       <p>
@@ -25,6 +25,7 @@ export default function DocsPage() {
       </p>
       <ul>
         <li><a href="/llms.txt">llms.txt — guia para agentes e modelos de linguagem</a></li>
+        <li><a href="/llms-full.txt">llms-full.txt — guia completo para agentes</a></li>
         <li><a href="/sitemap.xml">sitemap.xml — lista de URLs indexáveis</a></li>
         <li><a href="/robots.txt">robots.txt — regras de rastreamento</a></li>
         <li><a href="/.well-known/mcp">MCP server — handshake JSON-RPC e informações de contato</a></li>

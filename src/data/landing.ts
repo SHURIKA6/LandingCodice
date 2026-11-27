@@ -4,8 +4,8 @@ import { siteContent, whatsappUrl } from './site';
 const contactMessage = 'Olá! Vim pelo site da Codice e quero conversar sobre um projeto.';
 
 export const landing = {
-  title: 'Codice Web Design — Sites, sistemas e soluções digitais em Sinop, MT',
-  description: 'Codice é um estúdio de web design e tecnologia em Sinop, MT: sites e sistemas sob medida, consultoria e assistência técnica para negócios da região.',
+  title: 'Codice Web Design — Programadores em Mato Grosso: sites, sistemas e suporte',
+  description: 'Codice é um estúdio de programação e web design em Sinop, MT, atendendo todo o Mato Grosso: sites e sistemas sob medida com nossos devs e programadores, consultoria e manutenção de PCs, notebooks e redes.',
   founders: siteContent.founders,
   project: siteContent.projects.find(project => project.id === 'corretor')!,
   contactMessage,

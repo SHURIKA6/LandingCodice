@@ -31,6 +31,7 @@ export default function DevelopersPage() {
         <li><a href="/.well-known/mcp">.well-known/mcp — servidor MCP, handshake JSON-RPC</a></li>
         <li><a href="/.well-known/mcp.json">.well-known/mcp.json — manifest MCP</a></li>
         <li><a href="/llms.txt">llms.txt — guia para agentes</a></li>
+        <li><a href="/llms-full.txt">llms-full.txt — guia completo para agentes</a></li>
         <li><a href="/sitemap.xml">sitemap.xml — lista de URLs indexáveis</a></li>
       </ul>
       <p>

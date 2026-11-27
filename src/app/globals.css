@@ -259,6 +259,19 @@ main.section-shell>p:first-child{margin-bottom:24px}
 @media(max-width:374px){.header-cta{font-size:11px;gap:8px}.header-actions{gap:10px}.brand-type{font-size:29px}.person-name{font-size:64px}.contact-heading h2{font-size:49px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
+/* FAQ (AEO/GEO): visible dropdown, one open at a time via details[name]. No motion dependency. */
+.faq-section{padding-block:110px}
+.faq-section .section-heading{margin-bottom:48px}
+.faq-list{border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:72px;padding:18px 0;font:500 21px/1.25 var(--display);letter-spacing:-.03em;list-style:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary svg{width:20px;height:20px;flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary svg{transform:rotate(180deg)}
+.faq-item summary:hover{color:var(--blue)}
+.faq-item p{font-size:16px;line-height:1.65;color:var(--ink);max-width:72ch;padding:0 0 24px}
+@media(max-width:767px){.faq-section{padding-block:56px}.faq-section .section-heading{margin-bottom:32px}.faq-item summary{min-height:64px;font-size:19px}.faq-item p{font-size:15px}}
+
 /* Editorial choreography extends the photographic stage into the next chapters. */
 .person-name>span{overflow:clip;padding-block:.12em;margin-block:-.12em}
 .person-name>span>span{display:block}

@@ -8,7 +8,7 @@ import { landing } from './landing';
 export const openingContent = {
   eyebrow: 'Soluções tecnológicas e digitais',
   headline: ['Tecnologia', 'feita por', 'gente.'],
-  lede: 'Sistemas e sites sob medida, consultoria e assistência técnica para negócios de Sinop e região.',
+  lede: 'Sites e sistemas sob medida, consultoria e manutenção de PCs, notebooks e redes para negócios de todo o Mato Grosso.',
   cta: { label: 'Vamos conversar no WhatsApp', href: landing.contactHref },
   secondary: { label: 'Ver soluções', href: '#servico' },
 } as const;

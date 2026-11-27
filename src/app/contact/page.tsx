@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contato — Codice',
-  description: 'Fale com a Codice pelo WhatsApp. Contatos diretos de Fernando, Eduardo, Victor e Jose Vitor.',
+  description: 'Fale com a Codice, programadores em Mato Grosso, pelo WhatsApp. Contatos diretos de Fernando, Eduardo, Victor e Jose Vitor.',
   alternates: { canonical: '/contact' },
 };
 
@@ -14,8 +14,8 @@ export default function ContactPage() {
       <p><a className="text-link" href="/">Voltar para o início</a></p>
       <h1>Contato</h1>
       <p>
-        A próxima conversa pode ser a sua. Somos Fernando, Eduardo, Victor e Jose Vitor, da Codice, em Sinop.
-        Conte o que o seu negócio precisa e combinamos escopo, prazo e valores na proposta.
+        A próxima conversa pode ser a sua. Somos Fernando, Eduardo, Victor e Jose Vitor, da Codice, em Sinop,
+        atendendo todo o Mato Grosso. Conte o que o seu negócio precisa e combinamos escopo, prazo e valores na proposta.
       </p>
       <ul>
         {siteContent.founders.map(founder => (

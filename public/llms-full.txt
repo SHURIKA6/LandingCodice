@@ -1,0 +1,81 @@
+# Codice — full agent guide
+
+> Codice is a programming and web design studio based in Sinop, Mato Grosso, Brazil, serving the whole state of Mato Grosso. Its devs and programmers build custom websites and systems, offer technology consulting, and maintain and repair PCs, notebooks and network equipment. The packaged offer is a professional one-page website with up to six sections; custom software, consulting and maintenance are quoted separately.
+
+## Identity
+
+- Name: Codice (Codice Web Design)
+- Base: Sinop, Mato Grosso, Brazil
+- Service area: all of Mato Grosso (remote service via WhatsApp)
+- Languages: Portuguese (pt-BR)
+- Team: Fernando Riad, Eduardo Gobatto, Victor Rafael, Jose Vitor
+
+## Offer (facts only)
+
+- Packaged offer: one page with up to six sections.
+- Adapted to mobile and desktop.
+- Copy organized from a briefing; real photos and business information provided and approved by the client.
+- WhatsApp, location and basic metadata.
+- One consolidated round of revisions.
+- Setup and publishing on the client's own domain and hosting accounts.
+- Domain and any hosting are paid separately by the client, on their own accounts.
+- Scope and conditions are agreed in writing before work starts; deadline is set in the proposal.
+- Later changes, new pages, stores and systems have a separate quote.
+
+## Services
+
+1. Consultoria — talk through the confusion; quoted separately.
+2. Software personalizado — like the Corretor case (real estate website and system with catalog and management area); quoted separately.
+3. Site profissional — the packaged one-page website with up to six sections.
+4. Assistência técnica — maintenance and repair of computers and network equipment (PCs, notebooks, redes); quoted separately.
+
+## FAQ (full answers, same as https://landing-codice.vercel.app/#faq)
+
+1. Vocês são programadores? O que a Codice faz?
+Sim. A Codice é um estúdio de programação e web design em Sinop, com devs e programadores que atendem todo o Mato Grosso: sites e sistemas sob medida, consultoria e manutenção de PCs, notebooks e redes. O pacote de entrada é um site de uma página com até seis seções; software personalizado, consultoria e assistência têm orçamento separado.
+
+2. Vocês atendem onde?
+Somos de Sinop, Mato Grosso, e atendemos todo o estado, com atendimento remoto pelo WhatsApp. O escopo, o prazo e os valores são combinados na proposta, antes de começar.
+
+3. O que vai com o meu site?
+Uma página com até seis seções, adaptada ao celular e ao computador, com textos organizados a partir de um briefing, fotos e informações reais do seu negócio, WhatsApp, localização e metadados básicos, uma rodada consolidada de alterações, além da configuração e publicação do site.
+
+4. Quanto custa e qual é o prazo?
+Escopo e valores são combinados na proposta, de acordo com o que o seu negócio precisa. Domínio e eventual hospedagem são pagos à parte, nas suas próprias contas. O prazo é combinado na proposta, conforme os materiais e a agenda.
+
+5. Vocês consertam computador, notebook e rede?
+Sim. Fazemos manutenção e conserto de PCs, notebooks e equipamentos de rede, com orçamento separado do site. Chame no WhatsApp, conte o defeito e combinamos o atendimento.
+
+6. Como começo?
+Chame no WhatsApp e conte o que o seu negócio precisa. A conversa é assim: escopo e proposta, entrada e materiais, criação e revisão, aprovação e publicação do site nas suas contas de domínio e hospedagem.
+
+## Projects
+
+- Corretor: real work — real estate website and system with a property catalog and a management area. Demo and repository links are hidden while they answer 404.
+- Roger Estética Automotiva: demonstrative portfolio project for a proposal that was not hired; no commercial result claims.
+
+## Contact
+
+- WhatsApp Fernando Riad: +55 (66) 99935-6646 — https://wa.me/5566999356646
+- WhatsApp Eduardo Gobatto: +55 (66) 8418-4488 — https://wa.me/556684184488
+- Location: Sinop, Mato Grosso, Brazil.
+
+## Resources
+
+- Home: https://landing-codice.vercel.app/
+- FAQ: https://landing-codice.vercel.app/#faq
+- About: https://landing-codice.vercel.app/about
+- Contact: https://landing-codice.vercel.app/contact
+- Privacy: https://landing-codice.vercel.app/privacy
+- Documentation: https://landing-codice.vercel.app/docs
+- Developers: https://landing-codice.vercel.app/developers
+- Sitemap: https://landing-codice.vercel.app/sitemap.xml
+- Robots: https://landing-codice.vercel.app/robots.txt
+- Short guide: https://landing-codice.vercel.app/llms.txt
+- MCP server: https://landing-codice.vercel.app/.well-known/mcp
+- OpenAPI specification: https://landing-codice.vercel.app/openapi.json
+- API index: https://landing-codice.vercel.app/api
+- API health: https://landing-codice.vercel.app/api/health
+- Public contacts: https://landing-codice.vercel.app/api/contacts
+
+_Last updated: 2026-11-27._

@@ -34,7 +34,10 @@ const config: NextConfig = {
     ];
   },
   async headers() {
-    return [{ source: '/estudo/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] }];
+    return [
+      { source: '/estudo/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] },
+      { source: '/api/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] },
+    ];
   },
 };
 export default config;

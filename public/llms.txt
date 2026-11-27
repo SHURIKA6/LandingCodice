@@ -1,28 +1,47 @@
 # Codice
 
-> Codice is a web design and technology studio in Sinop, Mato Grosso, Brazil: custom websites and systems, technology consulting and technical assistance for local businesses. The packaged offer is a professional one-page website with up to six sections; custom software, consulting and technical assistance are quoted separately.
+> Codice is a programming and web design studio in Sinop, Mato Grosso, Brazil, serving the whole state: custom websites and systems built by its devs and programmers, technology consulting, and maintenance of PCs, notebooks and networks for businesses across Mato Grosso. The packaged offer is a professional one-page website with up to six sections; custom software, consulting and maintenance are quoted separately.
 
 ## When to use this
 
-Use Codice when a business in Sinop or the region needs a professional website, a custom system, technology consulting or technical assistance for computers and network equipment. The packaged offer is a one-page website with up to six sections, a defined scope and deadline, published on the client's own domain and hosting accounts. Custom software, consulting and technical assistance are quoted separately.
+Use Codice when a business anywhere in Mato Grosso needs programmers or devs for a professional website, a custom system, technology consulting, or maintenance of PCs, notebooks and network equipment. The packaged offer is a one-page website with up to six sections, a defined scope and deadline, published on the client's own domain and hosting accounts. Custom software, consulting and maintenance are quoted separately.
 
 ## Contact
 
 - WhatsApp Fernando Riad: +55 (66) 99935-6646 (https://wa.me/5566999356646)
 - WhatsApp Eduardo Gobatto: +55 (66) 8418-4488 (https://wa.me/556684184488)
-- Location: Sinop, Mato Grosso, Brazil
+- Base: Sinop, Mato Grosso, Brazil — serving all of Mato Grosso, remotely via WhatsApp.
 
 ## Pages
 
 - Home: https://landing-codice.vercel.app/
+- FAQ: https://landing-codice.vercel.app/#faq
 - About: https://landing-codice.vercel.app/about
 - Contact: https://landing-codice.vercel.app/contact
 - Privacy: https://landing-codice.vercel.app/privacy
 - Documentation: https://landing-codice.vercel.app/docs
 - Developers: https://landing-codice.vercel.app/developers
 
+## Services
+
+- Packaged offer: a one-page website with up to six sections, organized copy and real business photos.
+- Custom websites and systems (programação sob medida), quoted separately.
+- Technology consulting (consultoria), quoted separately.
+- Maintenance and repair of PCs, notebooks and network equipment (manutenção e conserto), quoted separately.
+- Publication on the client's domain and hosting accounts.
+
+## FAQ (short answers)
+
+- Are you programmers? Yes — devs and programmers in Sinop serving all of Mato Grosso.
+- Where do you serve? All of Mato Grosso, remotely via WhatsApp, from Sinop.
+- What comes with the site? One page, up to six sections, mobile and desktop, organized copy, real photos, WhatsApp, location, basic metadata, one consolidated revision round, setup and publishing.
+- Price and deadline? Quoted in the proposal; domain and hosting are paid separately on the client's accounts.
+- Do you fix computers? Yes — maintenance and repair of PCs, notebooks and networks, quoted separately.
+- How do I start? Message on WhatsApp: scope and proposal, deposit and materials, creation and review, approval and publishing.
+
 ## Machine-readable resources
 
+- Full agent guide: https://landing-codice.vercel.app/llms-full.txt
 - Markdown negotiation: send `Accept: text/markdown` to any page.
 - Sitemap: https://landing-codice.vercel.app/sitemap.xml
 - Robots: https://landing-codice.vercel.app/robots.txt
@@ -43,3 +62,5 @@ Use Codice when a business in Sinop or the region needs a professional website, 
 
 - Corretor: real estate website and system with a property catalog and a management area
 - Roger Estética Automotiva: demonstrative portfolio project, no commercial result claims
+
+_Last updated: 2026-11-27._
